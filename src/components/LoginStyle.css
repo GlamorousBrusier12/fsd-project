@@ -1,0 +1,50 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+label {
+  width: 400px;
+  display: inline-block;
+  margin: 15px;
+  text-align: left;
+}
+input {
+  width: 80%;
+  padding: 12px 20px;
+}
+.Container {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  /* margin-top: 5%; */
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  margin-bottom: 20px;
+  text-align: center;
+}
+.submit {
+  margin: auto;
+  height: 40px;
+  width: 91%;
+  margin-top: 20px;
+}
+.signup {
+  margin: auto;
+  text-align: center;
+}
+.create-account {
+  height: 40px;
+  width: 400px;
+}
+#show-password {
+  text-align: left;
+  margin: 20px;
+}
+#show-password > input {
+  width: auto;
+}
+button {
+  font-size: 16px;
+}

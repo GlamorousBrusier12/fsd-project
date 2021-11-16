@@ -1,5 +1,7 @@
 import "../App.css";
 import Navbar from "./Navbar";
+import Login from "./Login";
+import Register from "./Register";
 import { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
@@ -19,7 +21,10 @@ class App extends Component {
           <Navbar change={this.onChange} />
           <Switch>
             <Route path="/login">
-              <h1>Login</h1>
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Register />
             </Route>
             <Route path="/wishlist">
               <h1>Wishlist</h1>
