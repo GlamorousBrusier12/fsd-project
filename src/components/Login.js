@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "./LoginStyle.css";
 
@@ -22,9 +23,6 @@ export default function Login() {
           "Incorrect Login Credentials.. Please try again";
       });
   };
-  const SignUp = () => {
-    history.push("/signup");
-  };
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -39,8 +37,8 @@ export default function Login() {
       <p ref={incorrectCredentials} style={{ textAlign: "center" }}></p>
       <div className="Container">
         <br />
-        <h1>Sign-in</h1>
-        <label htmlFor="useremail">
+        <h1>Sign In</h1>
+        <label className="Label" htmlFor="useremail">
           <b>Email or Mobile Phone Number</b>
         </label>
         <br />
@@ -54,7 +52,7 @@ export default function Login() {
           required
         />
         <br />
-        <label htmlFor="password">
+        <label className="Label" htmlFor="password">
           <b>Password</b>
         </label>
         <br />
@@ -79,16 +77,19 @@ export default function Login() {
         </div>
         <button className="submit" type="submit" onClick={LoginUser}>
           Submit
+          <br />
         </button>
-      </div>
-      <div className="signup">
-        <b>Don't have an account?</b>
         <br />
-        <b>
-          <button className="create-account" onClick={SignUp}>
-            Create an account
-          </button>
-        </b>
+        <br />
+        <br />
+        <div className="signup">
+          <b>Don't have an account? </b>
+          <b>
+            <Link to="/signup">Create an account</Link>
+          </b>
+        </div>
+        <br />
+        <br />
       </div>
     </div>
   );
