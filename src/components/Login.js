@@ -43,7 +43,7 @@ export default function Login() {
         </label>
         <br />
         <input
-          className="credentials"
+          className={["credentials", "login-input"].join(" ")}
           id="useremail"
           name="useremail"
           type="text"
@@ -57,7 +57,8 @@ export default function Login() {
         </label>
         <br />
         <input
-          className="credentials"
+          // this is used to give multiple classnames to a component
+          className={["credentials", "login-input"].join(" ")}
           placeholder="Password"
           id="password"
           name="password"

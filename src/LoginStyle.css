@@ -11,6 +11,8 @@
 }
 .credentials {
   height: 30px;
+}
+.login-input {
   width: 80%;
   margin: 15px;
   border: none;
