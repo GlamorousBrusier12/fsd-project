@@ -27,13 +27,13 @@ class Navbar extends Component {
         <div className="search-container">
           <input placeholder="Search" className="search-input" />
           <button className="search-button">
-            <i class="fas fa-search fa-2x"></i>
+            <i className="fas fa-search fa-2x"></i>
           </button>
         </div>
-        <div class="navbar-routes">
+        <div className="navbar-routes">
           <div className="links" style={styles.cartIconContainer}>
             <Link to="/cart">
-              <i class="fas fa-shopping-cart fa-2x"></i>
+              <i className="fas fa-shopping-cart fa-2x"></i>
               <span style={styles.cartCount}>5</span>
             </Link>
           </div>

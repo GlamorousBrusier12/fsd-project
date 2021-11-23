@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Login from "./Login";
 import Register from "./Register";
 import { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Home from "./Home";
 class App extends Component {
