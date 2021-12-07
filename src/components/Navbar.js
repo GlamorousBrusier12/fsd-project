@@ -21,11 +21,7 @@ class Navbar extends Component {
       <div className="navbar-container">
         <div className="links">
           <Link to="/">
-<<<<<<< HEAD
-            <img src={icon} className="navbar-icon" alt="navbaricon"/>
-=======
             <h1>Electorent</h1>
->>>>>>> 9ef6b64f31421e0050f5e2139a902a82957aecca
           </Link>
         </div>
         <div className="search-container">
