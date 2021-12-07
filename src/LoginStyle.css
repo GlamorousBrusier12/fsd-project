@@ -1,19 +1,29 @@
 * {
   padding: 0%;
   margin: 0%;
+  font-family: "Arial Rounded MT";
 }
-label {
-  width: 400px;
+.Label {
+  width: 350px;
   display: inline-block;
   margin: 15px;
   text-align: left;
 }
+.credentials {
+  height: 30px;
+}
 .login-input {
   width: 80%;
-  padding: 12px 20px;
+  margin: 15px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+.credentials:focus {
+  background-color: rgb(232, 240, 254);
 }
 .Container {
-  height: 400px;
+  height: 450px;
   width: 400px;
   margin: auto;
   /* margin-top: 5%; */
@@ -23,13 +33,15 @@ label {
 
   margin-bottom: 20px;
   text-align: center;
+  padding: 20px;
 }
 .submit {
   margin: auto;
   height: 40px;
-  width: 91%;
+  width: 80%;
   margin-top: 20px;
 }
+
 .signup {
   margin: auto;
   text-align: center;
@@ -40,7 +52,7 @@ label {
 }
 #show-password {
   text-align: left;
-  margin: 20px;
+  margin: 2% 0 2% 10%;
 }
 #show-password > input {
   width: auto;
