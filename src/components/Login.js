@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import "../LoginStyle.css";
+import "../styles/LoginStyle.css";
 
 export default function Login() {
   const [username1, setUsername] = useState(" ");

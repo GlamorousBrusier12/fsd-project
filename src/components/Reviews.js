@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react";
 import StarRatings from "react-star-ratings";
 import Review from "./Review";
-import './Reviews.css'
+import '../styles/Reviews.css'
 
 function Reviews(){
     const [review,setReview] = useState("");

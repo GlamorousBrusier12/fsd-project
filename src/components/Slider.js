@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { sliderData } from "../data";
 import BtnSlider from "./BtnSlider";
-import "./slider.css";
+import "../styles/slider.css";
 class Slider extends Component {
   constructor(props) {
     super(props);

@@ -1,4 +1,4 @@
-import "../App.css";
+import "../styles/App.css";
 import Navbar from "./Navbar";
 import Login from "./Login";
 import Register from "./Register";
