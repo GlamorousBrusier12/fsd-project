@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import "./RegisterStyle.css";
+import "../RegisterStyle.css";
 function Register() {
   const history = useHistory();
   const [firstname, setFirstname] = useState("");
