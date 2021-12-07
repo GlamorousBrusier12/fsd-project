@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import {data} from './../data'
+import {data} from '../data'
 import Reviews from './Reviews';
 import Faqs from './Faqs';
 import StarRatings from 'react-star-ratings';
-import './ProjectPage.css'
+import '../styles/ProjectPage.css'
 
 function ProjectPage(){
     const {title,image,price,description,rating} = data[0];

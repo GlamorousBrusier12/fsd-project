@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./slider.css";
+import "../styles/slider.css";
 class BtnSlider extends Component {
   render() {
     // console.log(this.props.moveSlide);
