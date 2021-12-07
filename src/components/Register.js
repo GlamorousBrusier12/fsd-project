@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import Slider from "./Slider";
 
-class Home extends Component {
+class Register extends Component {
   render() {
     return (
       <div>
-        <Slider />
+        <h1>Register</h1>
       </div>
     );
   }
 }
 
-export default Home;
+export default Register;

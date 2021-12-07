@@ -1,3 +1,35 @@
+import { v4 as uuidv4 } from "uuid";
+export const sliderData = [
+  {
+    id: uuidv4(),
+    title: "image1",
+  },
+  {
+    id: uuidv4(),
+    title: "image2",
+  },
+  {
+    id: uuidv4(),
+    title: "image3",
+  },
+  {
+    id: uuidv4(),
+    title: "image4",
+  },
+  {
+    id: uuidv4(),
+    title: "image5",
+  },
+  {
+    id: uuidv4(),
+    title: "image6",
+  },
+  {
+    id: uuidv4(),
+    title: "image7",
+  },
+];
+
 export const data = [
   {
     id: 1,

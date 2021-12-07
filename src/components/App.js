@@ -1,7 +1,9 @@
 import "../App.css";
 import Navbar from "./Navbar";
+import Login from "./Login";
+import Register from "./Register";
 import { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Home from "./Home";
 import ProductPage from './ProjectPage';
@@ -23,7 +25,10 @@ class App extends Component {
               <ProductPage/>
             </Route>
             <Route path="/login">
-              <h1>Login</h1>
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Register />
             </Route>
             <Route path="/wishlist">
               <h1>Wishlist</h1>
