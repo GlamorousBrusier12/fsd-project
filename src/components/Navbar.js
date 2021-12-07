@@ -8,7 +8,7 @@ class Navbar extends Component {
       <div className="navbar-container">
         <div className="links">
           <Link to="/">
-            <img src={icon} className="navbar-icon" />
+            <img src={icon} className="navbar-icon" alt="navbaricon"/>
           </Link>
         </div>
         <input placeholder="Search" className="search-input" />

@@ -4,6 +4,7 @@ import { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 import Home from "./Home";
+import ProductPage from './ProjectPage';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,9 @@ class App extends Component {
         <div className="App">
           <Navbar change={this.onChange} />
           <Switch>
+            <Route path="/productpage">
+              <ProductPage/>
+            </Route>
             <Route path="/login">
               <h1>Login</h1>
             </Route>
