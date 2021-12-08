@@ -24,9 +24,20 @@ function ProjectPage(){
             <h3>
               Rating: <StarRatings rating={rating.rate} starDimension="20px" starSpacing="2px"/> ({rating.count} reviews)
             </h3>
-            <div className="buttons">
-              <button>Add to Cart</button>
-              <button>Buy Now</button>
+            <label for="options">Option</label>
+
+            <select name="options" id="options">
+              <option value="S">Small</option>
+              <option value="M">Medium</option>
+              <option value="L">Large</option>
+              <option value="XL">Extra Large</option>
+            </select>
+            <div style={{margin:"10px"}}>
+              <div className="productpage-buttons">
+                <button>Add to Cart</button>
+                <button>Rent Now</button>
+              </div>
+              <button className="buynow-button">Buy Now</button>
             </div>
           </div>
         </div>

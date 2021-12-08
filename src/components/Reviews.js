@@ -45,7 +45,7 @@ function Reviews(){
               changeRating={changeStar}
 
             />
-            <textarea id="review-textarea" placeholder="Write a review" onChange={onReview} value={review} rows="10"></textarea>
+            <textarea id="review-textarea" placeholder="Write a review" onChange={onReview} value={review} rows="10" required></textarea>
             <button id="review-submit-button" onClick={addReview}>Submit</button>
           </div>
             
