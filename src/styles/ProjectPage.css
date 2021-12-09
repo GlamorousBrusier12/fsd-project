@@ -1,65 +1,64 @@
-.product{
-    display: flex;
-    align-items: center;
-    height: 90vh;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
+.product {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
 }
 
-.product-image{
-    width: 40%; 
+.product-image {
+  width: 40%;
 }
 
-.product-image > img{
-    height: 500px;
-    width: 500px;
-    margin: 30px 10px 0 10%;
+.product-image > img {
+  height: 500px;
+  width: 500px;
+  margin: 30px 10px 0 10%;
 }
 
-.product-info{
-    display: flex;
-    flex-direction: column;
-    margin-top: 35px;
-    padding: 70px;
-    width: 50%;
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  padding: 70px;
+  width: 50%;
 }
 
-.product-info h1,h2,h3,p{
-    margin: 10px;
+.product-info h1,
+h2,
+h3,
+p {
+  margin: 10px;
 }
 
-.productpage-buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+.productpage-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
-.productpage-buttons button{
-    margin-right: 15px;   
-    height: 40px;
-    width: 50%;
+.productpage-buttons button {
+  margin-right: 15px;
+  height: 40px;
+  width: 50%;
 }
 
-.buynow-button{
-    margin: 10px 10px 10px 0;   
-    height: 40px;
-    width: 98%
+.buynow-button {
+  margin: 10px 10px 10px 0;
+  height: 40px;
+  width: 98%;
 }
 
-.other-info{
-    text-align: center;
+.other-info {
+  text-align: center;
 }
 
-.reviews{
-    /* text-align: center; */
+textarea {
+  width: 50%;
 }
 
-textarea{
-    width: 50%;
-}
-
-.button-area > button{
-    padding: 10px;
-    font-size: 18px;
+.button-area > button {
+  padding: 10px;
+  font-size: 18px;
 }

@@ -43,6 +43,8 @@ export const data = [
       rate: 3.9,
       count: 120,
     },
+    type: "Size",
+    types: ["Small", "Medium", "Large", "Extra Large"],
   },
   {
     id: 2,
