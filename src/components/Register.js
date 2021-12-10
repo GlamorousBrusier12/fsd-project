@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "../styles/RegisterStyle.css";
 function Register() {
-  const history = useHistory();
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [useremail, setUseremail] = useState("");
-  const [mobile_number, setMobilenumber] = useState("");
-  const [password1, setPassword] = useState("");
+  const history = useHistory(); // eslint-disable-next-line
+  const [firstname, setFirstname] = useState(""); // eslint-disable-next-line
+  const [lastname, setLastname] = useState(""); // eslint-disable-next-line
+  const [useremail, setUseremail] = useState(""); // eslint-disable-next-line
+  const [mobile_number, setMobilenumber] = useState(""); // eslint-disable-next-line
+  const [password1, setPassword] = useState(""); // eslint-disable-next-line
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);

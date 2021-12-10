@@ -28,7 +28,7 @@ class Navbar extends Component {
           <input
             style={{
               textAlign: "left",
-              padding: 4,
+              padding: 3,
               outline: "none",
               fontSize: 20,
             }}
