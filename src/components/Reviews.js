@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from "react"
 import Review from "./Review"
 import "../styles/Reviews.css"
+import axios from "axios";
 
 function Reviews(){
   const [error, setError] = useState(null);
