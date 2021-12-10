@@ -25,7 +25,7 @@
   margin-left: 20px;
   border-radius: 10px;
 }
-.product-image {
+.productspage-image {
   width: 100%;
 }
 .img-size {
@@ -35,6 +35,7 @@
 }
 .product-details-mini {
   text-align: left;
+  margin: auto;
 }
 .discount_percentage {
   font-size: large;

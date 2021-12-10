@@ -6,7 +6,6 @@ import { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Home from "./Home";
-import ProductPage from "./ProjectPage";
 import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
