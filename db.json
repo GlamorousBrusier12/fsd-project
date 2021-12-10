@@ -1,0 +1,152 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "user": "Ravindra Tholuchuru",
+      "heading": "Amazing Product",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+      "stars": 3
+    },
+    {
+      "id": 2,
+      "user": "Naveen Kumar",
+      "heading": "Amazing Product",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+      "stars": 4
+    },
+    {
+      "id": 3,
+      "user": "Sravan Kumar",
+      "heading": "Amazing Product",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!",
+      "stars": 5
+    },
+    {
+      "id": 4,
+      "user": "Bhargav",
+      "heading": "Good Product",
+      "body": "I've been using this product since two weeks, and It's working fine, if you looking for a backpack which can store a minimum 5 to 10 backpacks, Then this is the one, just go for it!",
+      "stars": 4
+    },
+    {
+      "id": 5,
+      "user": "Chetan Guduru",
+      "heading": "Excellent Product",
+      "body": "The size,quality,everything is perfect with this, it is so branded I loved it. Buy it you will never regret fr this product!",
+      "stars": 5
+    },
+    {
+      "id": 6,
+      "user": "Rithwik Mannem",
+      "heading": "Worth it",
+      "body": "A really well made for this one.It's not at all flashy and fits a 15 inch laptop perfectly. I would have preferred the thread lining to be good. Overall happy with the purchase!",
+      "stars": 5
+    },
+    {
+      "id": 7,
+      "user": "Akhanda",
+      "heading": "It's Ok",
+      "body": "Actually I ordered Red one with Lord Shiva's image on it, but it came with blue one, And there is no lord's face on it. Both are not same. It's ok we imagine a lot but there is no chance to be what we imagined!",
+      "stars": 4
+    },
+    {
+      "id": 8,
+      "user": "Thomas Shelby",
+      "heading": "Nice",
+      "body": "I liked it, It is what it is it, A good one, Product size is perfect for me. And it's definitely Great Looking !",
+      "stars": 5
+    },
+    {
+      "id": 9,
+      "user": "Vito Corlene",
+      "heading": "Good Product",
+      "body": "I buyed it on offer, Which I can't Refuse to buy, But to be honest I kinda liked it!",
+      "stars": 4
+    },
+    {
+      "id": 10,
+      "user": "Joey Tribbianni",
+      "heading": "Oh Boy!",
+      "body": "This is so nice, I love it, and look at the zips it is so secured, its good, because I dont share food!",
+      "stars": 5
+    },
+    {
+      "id": 11,
+      "user": "Gunther",
+      "heading": "Amazing Product",
+      "body": "What is in the photos is a bit different when I got this bag . But the good thing is I liked the way it looks and a good build quality. The space is sufficient. Zip quality is OK. And the overall appearance is is nice.. I liked it!",
+      "stars": 5
+    },
+    {
+      "id": 12,
+      "user": "Raj",
+      "heading": "Nice Product",
+      "body": "good backpack. I am fully satisfied with this bag. good to use and it is lightweight. overall a good bag. I recommend all to buy this!",
+      "stars": 4
+    },
+    {
+      "id": 13,
+      "user": "Ram",
+      "heading": "Decent Product",
+      "body": "very good space and features with Laptop sleeve and spare pockets!",
+      "stars": 4
+    },
+    {
+      "id": 14,
+      "user": "Rahul",
+      "heading": "Excellent Product",
+      "body": "After using 3 months i am writing the review. Its exactly Worth for the money.good storage space, for my daily use. Good choice!",
+      "stars": 5
+    },
+    {
+      "id": 15,
+      "user": "Robert",
+      "heading": "Good Product",
+      "body": "Bag quantity is very good ... Space is good ... The only negative thing is bags rain cover.. cover is not properly fit and not able to protect from rain water ... Overall 4star bag .. should go for it",
+      "stars": 4
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "Heading",
+      "body": "Body",
+      "stars": 2,
+      "id": 16
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": [
+        "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Size",
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How is the stiching?",
+      "answers": [
+        "It is just AMAZING..ZING ZING",
+        "The quality is brilliant"
+      ],
+      "upvotes": 2
+    }
+  ]
+}

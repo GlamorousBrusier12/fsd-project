@@ -24,10 +24,7 @@
   width: 50%;
 }
 
-.product-info h1,
-h2,
-h3,
-p {
+.product-info h1 h2 h3 p {
   margin: 10px;
 }
 
