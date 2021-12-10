@@ -1,0 +1,39 @@
+{
+    "reviews":[
+        {"id":1,"user":"Ravindra Tholuchuru","heading":"Amazing Product","body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!","stars":3},
+        {"id":2,"user":"Naveen Kumar","heading":"Amazing Product","body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!","stars":4},
+        {"id":3,"user":"Sravan Kumar","heading":"Amazing Product","body":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!","stars":5}
+    ],
+    "products":[
+        {
+            "id":1,
+            "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            "price": 109.95,
+            "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+            "category": "men's clothing",
+            "image": [
+                "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "links",
+                "links"
+            ],
+            "rating": 
+                {
+                    "rate": 3.9,
+                    "count": 120
+                },
+            "type": "Size",
+            "types": ["Small", "Medium", "Large", "Extra Large"]
+        }
+    ],
+    "faqs":[
+        {
+            "id":1,
+            "question":"How is the stiching?",
+            "answers":[
+                "It is just AMAZING..ZING ZING",
+                "The quality is brilliant"
+            ],
+            "upvotes":2
+        }
+    ]
+}
