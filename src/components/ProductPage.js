@@ -12,7 +12,6 @@ function ProjectPage() {
   const product = location.state;
   const { title, image, price, description, rating, type, types } =
     product.product;
-  console.log(product);
   // rating = { rate: 4, count: 90 };
   return (
     <div>

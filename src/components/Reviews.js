@@ -1,8 +1,8 @@
-import React,{useEffect, useState} from "react"
-import Review from "./Review"
-import "../styles/Reviews.css"
+import React, { useEffect, useState } from "react";
+import Review from "./Review";
+import "../styles/Reviews.css";
 
-function Reviews(){
+function Reviews() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -11,8 +11,8 @@ function Reviews(){
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://localhost:3000/reviews")
-      .then(res => res.json())
+    fetch("http://localhost:3001/reviews")
+      .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
@@ -25,8 +25,8 @@ function Reviews(){
           setIsLoaded(true);
           setError(error);
         }
-      )
-  }, [])
+      );
+  }, []);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -35,8 +35,8 @@ function Reviews(){
   } else {
     return (
       <div className="display-reviews">
-        {items.map(item => (
-          <Review content={item}/>
+        {items.map((item) => (
+          <Review content={item} />
         ))}
       </div>
     );

@@ -20,7 +20,7 @@ class Home extends Component {
         <div className="deals-container">
           <h3>
             continue shopping
-            <i class="fas fa-arrow-right" style={{ marginLeft: 5 }}></i>
+            <i className="fas fa-arrow-right" style={{ marginLeft: 5 }}></i>
           </h3>
           <div className="mini-products">
             {deals.map((product) => (
