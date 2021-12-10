@@ -1,0 +1,51 @@
+import React from "react";
+import StarRatings from "react-star-ratings";
+import { Link } from "react-router-dom";
+function EachProduct(props) {
+  const { title, image, price, description, rating, type, types } =
+    props.content;
+  console.log(props);
+  return (
+    <div>
+      <div className="each-product">
+        <div>
+          <Link
+            to={{
+              pathname: "/productpage",
+              state: { product: props.content },
+            }}
+          >
+            <div className="img-size">
+              <img className="productspage-image" src={image[0]} />
+            </div>
+          </Link>
+        </div>
+        <div className="product-details-mini">
+          <h3>{title}</h3>
+          <h6>
+            {console.log(rating.rate)}
+            <h3>
+              Rating:{" "}
+              <StarRatings
+                rating={rating.rate}
+                starDimension="20px"
+                starSpacing="2px"
+                starC
+              />{" "}
+              ({rating.count} reviews)
+            </h3>
+          </h6>
+          <p>{type}</p>
+          <p>
+            <b>{price}</b> <strike> 1,29,999</strike>{" "}
+            <span className="discount_percentage">
+              <b>(15% off)</b>
+            </span>{" "}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default EachProduct;

@@ -1,23 +1,27 @@
 .main-container {
   display: flex;
-  flex-direction: row;
 }
 .filters-container {
-  width: 30vw;
+  position: relative;
+  margin-top: 2%;
+  width: 200px;
   height: 100;
-  background-color: cyan;
+  border: 1px solid black;
+  /* background-color: cyan; */
 }
 .products-container {
-  margin-top: 10%;
+  width: 85%;
+  margin-top: 2%;
   /* margin-left: 5%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: right;
 }
 .each-product {
   height: 450px;
   width: 300px;
-  /* margin: auto; */
+  margin: auto;
   display: flex;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -34,7 +38,7 @@
   align-items: center;
 }
 .product-details-mini {
-  text-align: left;
+  text-align: center;
   margin: auto;
 }
 .discount_percentage {
