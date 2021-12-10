@@ -4,11 +4,11 @@ import { useHistory } from "react-router-dom";
 import "../styles/RegisterStyle.css";
 function Register() {
   const history = useHistory();
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [useremail, setUseremail] = useState("");
-  const [mobile_number, setMobilenumber] = useState("");
-  const [password1, setPassword] = useState("");
+  // const [firstname, setFirstname] = useState("");
+  // const [lastname, setLastname] = useState("");
+  // const [useremail, setUseremail] = useState("");
+  // const [mobile_number, setMobilenumber] = useState("");
+  // const [password1, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -30,7 +30,7 @@ function Register() {
               name="fname"
               id="fname"
               placeholder="First Name"
-              onChange={(e) => setFirstname(e.target.value)}
+              // onChange={(e) => setFirstname(e.target.value)}
               required
             />
             <input
@@ -39,7 +39,7 @@ function Register() {
               name="lname"
               id="lname"
               placeholder="Last Name"
-              onChange={(e) => setLastname(e.target.value)}
+              // onChange={(e) => setLastname(e.target.value)}
               required
             />
           </div>
@@ -54,7 +54,7 @@ function Register() {
               name="email_id"
               id="email_id"
               placeholder="example@gmail.com"
-              onChange={(e) => setUseremail(e.target.value)}
+              // onChange={(e) => setUseremail(e.target.value)}
               required
             />
           </div>

@@ -14,7 +14,7 @@ code {
 
 .navbar-container {
   background-color: #3b5998;
-  width: 100vw;
+  /* width: 100vw; */
   height: 9vh;
   display: flex;
   flex-direction: row;
