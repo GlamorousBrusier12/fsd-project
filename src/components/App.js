@@ -6,7 +6,7 @@ import { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router";
 import Home from "./Home";
-import ProductPage from './ProjectPage';
+import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 class App extends Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class App extends Component {
           <Navbar change={this.onChange} />
           <Switch>
             <Route path="/reviewform">
-              <ReviewForm/>
+              <ReviewForm />
             </Route>
             <Route path="/productpage">
-              <ProductPage/>
+              <ProductPage />
             </Route>
             <Route path="/login">
               <Login />
