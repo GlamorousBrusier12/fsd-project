@@ -27,7 +27,7 @@ function ReviewForm(props) {
         stars:star 
       };
 
-    fetch('http://localhost:3000/reviews', {
+    fetch('http://localhost:3001/reviews', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',

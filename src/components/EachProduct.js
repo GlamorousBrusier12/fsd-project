@@ -2,7 +2,7 @@ import React from "react";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
 function EachProduct(props) {
-  const { title, image, price, description, rating, type, types } =
+  const { title, image, price, description, rating, type, types, category } =
     props.content;
   console.log(props);
   return (
@@ -16,14 +16,13 @@ function EachProduct(props) {
             }}
           >
             <div className="img-size">
-              <img className="productspage-image" src={image[0]} />
+              <img className="productspage-image" src={image[0]} alt={title} />
             </div>
           </Link>
         </div>
         <div className="product-details-mini">
           <h3>{title}</h3>
           <h6>
-            {console.log(rating.rate)}
             <h3>
               Rating:{" "}
               <StarRatings
@@ -35,9 +34,9 @@ function EachProduct(props) {
               ({rating.count} reviews)
             </h3>
           </h6>
-          <p>{type}</p>
+          <p>{category}</p>
           <p>
-            <b>{price}</b> <strike> 1,29,999</strike>{" "}
+            <b>{"₹" + price}</b> <strike> {"₹" + 1.15 * price}</strike>{" "}
             <span className="discount_percentage">
               <b>(15% off)</b>
             </span>{" "}

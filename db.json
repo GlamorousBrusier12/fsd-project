@@ -125,6 +125,13 @@
       "body": "This product has been vey useful",
       "stars": 4,
       "id": 18
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "Hello World!!!",
+      "body": "This is my first program output in my life.",
+      "stars": 3,
+      "id": 19
     }
   ],
   "products": [
@@ -152,237 +159,269 @@
       ]
     },
     {
-      "id":2,
+      "id": 2,
       "title": "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
       "price": 119300,
       "description": "Your perfect phone for everyday use.",
       "category": "Electronics",
       "image": [
-          "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
-          "links",
-          "links"
+        "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000",
+        "links",
+        "links"
       ],
-      "rating": 
-          {
-              "rate": 4.5,
-              "count": 1039
-          },
-      "type": "Rom",
-      "types": ["256GB", "128GB", "64GB"],
-      
+      "rating": {
+        "rate": 4.5,
+        "count": 1039
+      },
+      "type": "Specifications",
+      "types": [
+        "12GB 256GB",
+        " 12GB 128GB",
+        "6GB 64GB"
+      ],
       "Pixel": "Resolution",
-      "Pixels": ["2778 x 1284"]
-  },
-  {
-    "id":3,
-    "title": "Men Blue Regular Fit Faded Casual Denim Shirt",
-    "price": 674,
-    "description": "Blue faded casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem",
-    "category": "men's clothing",
-    "image": [
+      "Pixels": [
+        "2778 x 1284"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Men Blue Regular Fit Faded Casual Denim Shirt",
+      "price": 674,
+      "description": "Blue faded casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem",
+      "category": "men's clothing",
+      "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
         "links",
         "links"
-    ],
-    "rating": 
-        {
-            "rate": 4.5,
-            "count": 120
-        },
-    "type": "Size",
-    "types": ["Small", "Medium", "Large", "Extra Large"]
-},
-{
-  "id":4,
-  "title": "Men Blue Straight Fit Mid Rise Heavy Fade Stretchable Jeans",
-  "price": 3219,
-  "description": "Light shade, heavy fade blue jeansStraight fit, mid-rise Clean look Stretchable 5 pocket",
-  "category": "men's clothing",
-  "image": [
-      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.2,
-          "count": 1620
+      ],
+      "rating": {
+        "rate": 4.5,
+        "count": 120
       },
-  "type": "Size",
-  "types": ["Small", "Medium", "Large", "Extra Large"]
-},
-{
-  "id":5,
-  "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
-  "price": 13999,
-  "description": "An absolute perfect sports shoes for you, HURRY UP!",
-  "category": "men's Footwear",
-  "image": [
-      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.6,
-          "count": 98
+      "type": "Size",
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Men Blue Straight Fit Mid Rise Heavy Fade Stretchable Jeans",
+      "price": 3219,
+      "description": "Light shade, heavy fade blue jeansStraight fit, mid-rise Clean look Stretchable 5 pocket",
+      "category": "men's clothing",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.2,
+        "count": 1620
       },
-  "type": "Size",
-  "types": ["8", "9", "10", "11"]
-},
-{
-  "id":6,
-  "title": "Men Grey Analogue Watch FC-775G4S4",
-  "price": 153274,
-  "description": "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
-  "category": "Watches",
-  "image": [
-      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.7,
-          "count": 34
+      "type": "Size",
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
+      "price": 13999,
+      "description": "An absolute perfect sports shoes for you, HURRY UP!",
+      "category": "men's Footwear",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.6,
+        "count": 98
       },
-  "type": "Shape",
-  "types": ["Round"]
-},
-{
-  "id":7,
-  "title": "White 2nd Gen AirPods with Charging Case",
-  "price": 12990,
-  "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
-  "category": "Headphones",
-  "image": [
-      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9803279/2019/10/11/08d246d9-80d1-4c61-8826-2074624aa0521570782280949-Apple-White-2nd-Gen-AirPods-with-Charging-Case-MV7N2HNA-1181-4.jpg",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.5,
-          "count": 434
+      "type": "Size",
+      "types": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Men Grey Analogue Watch FC-775G4S4",
+      "price": 153274,
+      "description": "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
+      "category": "Watches",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.7,
+        "count": 34
       },
-  "type": "Connectivity",
-  "types": ["True Wireless"]
-},
-{
-  "id":8,
-  "title": "Men BT3211/15 Series 3000 Rechargeable Beard Trimmer - Olive Green",
-  "price": 1553,
-  "description": "Best Trimmer with # years warranty provided by Brand Oowner/Manufacturer",
-  "category": "Men Persoonal Care",
-  "image": [
-      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6518755/2021/2/10/7249229f-5eb1-43dd-9c31-547d43f799c41612945435520-Philips-Men-Corded--Cordless-Rechargeable-Beard-Trimmer-BT32-1.jpg",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.8,
-          "count": 3434
+      "type": "Shape",
+      "types": [
+        "Round"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "White 2nd Gen AirPods with Charging Case",
+      "price": 12990,
+      "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
+      "category": "Headphones",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9803279/2019/10/11/08d246d9-80d1-4c61-8826-2074624aa0521570782280949-Apple-White-2nd-Gen-AirPods-with-Charging-Case-MV7N2HNA-1181-4.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.5,
+        "count": 434
       },
-  "type": "Color",
-  "types": ["olive green","Black","Blue"]
-},
-{
-  "id":9,
-  "title": "acer Predator Helios 300 Octa Core i7 10th Gen - (16 GB/1 TB HDD/256 GB SSD/Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg)",
-  "price": 109990,
-  "description": "If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
-  "category": "Laptop",
-  "image": [
-      "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.8,
-          "count": 13434
+      "type": "Connectivity",
+      "types": [
+        "True Wireless"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Men BT3211/15 Series 3000 Rechargeable Beard Trimmer - Olive Green",
+      "price": 1553,
+      "description": "Best Trimmer with # years warranty provided by Brand Oowner/Manufacturer",
+      "category": "Men Persoonal Care",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6518755/2021/2/10/7249229f-5eb1-43dd-9c31-547d43f799c41612945435520-Philips-Men-Corded--Cordless-Rechargeable-Beard-Trimmer-BT32-1.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 3434
       },
-  "type": "Ram",
-  "types": ["32GB","16GB","8Gb"]
-},
-{
-  "id":10,
-  "title": "Canon EOS 7D Mark II DSLR Camera (Body only)  (Black)",
-  "price": 99999,
-  "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
-  "category": "Camera",
-  "image": [
-      "https://rukminim1.flixcart.com/image/312/312/camera/s/q/f/canon-eos-7d-mark-ii-body-dslr-original-imae3yryhwq7fgyx.jpeg?q=70",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.8,
-          "count": 6434
+      "type": "Color",
+      "types": [
+        "olive green",
+        "Black",
+        "Blue"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "acer Predator Helios 300 Octa Core i7 10th Gen - (16 GB/1 TB HDD/256 GB SSD/Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg)",
+      "price": 109990,
+      "description": "If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
+      "category": "Laptop",
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 13434
       },
-  "type": "lens",
-  "types": ["DSLR"]
-},
-{
-  "id":11,
-  "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches with Wi-Fi+5G",
-  "price": 140990,
-  "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet PC that is larger and offers higher resolution than Apple's other iPad models",
-  "category": "Tablet",
-  "image": [
-      "https://rukminim1.flixcart.com/image/312/312/kolsscw0/tablet/n/r/c/mhwd3hn-a-apple-original-imag3yr5xrqchvrg.jpeg?q=70",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.9,
-          "count": 12450
+      "type": "Ram",
+      "types": [
+        "32GB",
+        "16GB",
+        "8Gb"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Canon EOS 7D Mark II DSLR Camera (Body only)  (Black)",
+      "price": 99999,
+      "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
+      "category": "Camera",
+      "image": [
+        "https://m.media-amazon.com/images/I/81LSXTzgjOL._AC_SL1500_.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 6434
       },
-  "type": "Color",
-  "types": ["Silver", "Space Grey"]
-},
-{
-  "id":12,
-  "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV  (KD-65X80J)",
-  "price": 110990,
-  "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
-  "category": "Television",
-  "image": [
-      "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.5,
-          "count": 22970
+      "type": "lens",
+      "types": [
+        "DSLR"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches with Wi-Fi+5G",
+      "price": 140990,
+      "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet PC that is larger and offers higher resolution than Apple's other iPad models",
+      "category": "Tablet",
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/kolsscw0/tablet/n/r/c/mhwd3hn-a-apple-original-imag3yr5xrqchvrg.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.9,
+        "count": 12450
       },
-  "type": "size",
-  "types": ["65 inches", "55 inches", "45 inches"]
-},
-{"id":13,
-  "title": "SONY PlayStation 5 (CFI-1008B01R) 825 GB with Astro's Playroom",
-  "price": 39990,
-  "description": "PlayStation 5 Digital Edition",
-  "category": "Gaming",
-  "image": [
-      "https://rukminim1.flixcart.com/image/612/612/kj7gwi80/gamingconsole/n/3/c/cfi-1008b01r-825-sony-no-original-imafytxenahqnnpu.jpeg?q=70",
-      "links",
-      "links"
-  ],
-  "rating": 
-      {
-          "rate": 4.90,
-          "count": 222970
+      "type": "Color",
+      "types": [
+        "Silver",
+        "Space Grey"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV  (KD-65X80J)",
+      "price": 110990,
+      "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
+      "category": "Television",
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.5,
+        "count": 22970
       },
-  "type": "color",
-  "types": ["Black", "White"]}
-
-  
-],
+      "type": "size",
+      "types": [
+        "65 inches",
+        "55 inches",
+        "45 inches"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "SONY PlayStation 5 (CFI-1008B01R) 825 GB with Astro's Playroom",
+      "price": 39990,
+      "description": "PlayStation 5 Digital Edition",
+      "category": "Gaming",
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/kj7gwi80/gamingconsole/n/3/c/cfi-1008b01r-825-sony-no-original-imafytxenahqnnpu.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.9,
+        "count": 222970
+      },
+      "type": "color",
+      "types": [
+        "Black",
+        "White"
+      ]
+    }
+  ],
   "faqs": [
     {
       "id": 1,
@@ -394,82 +433,114 @@
       "upvotes": 2
     },
     {
-      "id":2,
-      "question":"Is it washable?",
-      "answers":[
-          "Yes, It is."
+      "id": 2,
+      "question": "Is it washable?",
+      "answers": [
+        "Yes, It is."
       ],
-      "upvotes":4
-  },
-  {
-      "id":3,
-      "question":"Is it a laptop bag or just a casual bag?",
-      "answers":[
-          "Both.",
-          "I think it's Both casual and laptop"
+      "upvotes": 4
+    },
+    {
+      "id": 3,
+      "question": "Is it a laptop bag or just a casual bag?",
+      "answers": [
+        "Both.",
+        "I think it's Both casual and laptop"
       ],
-      "upvotes":1
-  },
-  {
-      "id":4,
-      "question":"is laptop compartment is padded or not?",
-      "answers":[
-          "yes laptop compartment is padded and valuable bag journey and other purposes Anonymous"
+      "upvotes": 1
+    },
+    {
+      "id": 4,
+      "question": "is laptop compartment is padded or not?",
+      "answers": [
+        "yes laptop compartment is padded and valuable bag journey and other purposes Anonymous"
       ],
-      "upvotes":3
-  },
-  {
-      "id":5,
-      "question":"Is it fully water proof?",
-      "answers":[
-          "no",
-           "No, but there is extra provided rain cover."
+      "upvotes": 3
+    },
+    {
+      "id": 5,
+      "question": "Is it fully water proof?",
+      "answers": [
+        "no",
+        "No, but there is extra provided rain cover."
       ],
-      "upvotes":5
-  },
-  {
-      "id":6,
-      "question":"How much weight of bag?",
-      "answers":[
-          "Light weight",
-          " nice bag and light weighted."
+      "upvotes": 5
+    },
+    {
+      "id": 6,
+      "question": "How much weight of bag?",
+      "answers": [
+        "Light weight",
+        " nice bag and light weighted."
       ],
-      "upvotes":3
-  },
-  {
-      "id":7,
-      "question":"Is there any pocket for water bottle?",
-      "answers":[
-          "2 Sides",
-          "ya two side pockets are for water bottle."
+      "upvotes": 3
+    },
+    {
+      "id": 7,
+      "question": "Is there any pocket for water bottle?",
+      "answers": [
+        "2 Sides",
+        "ya two side pockets are for water bottle."
       ],
-      "upvotes":2
-  },
-  {
-      "id":8,
-      "question":"is it suitable for office work?",
-      "answers":[
-          "Yes, Absolutely.",
-          "Perfect for office and college too."
+      "upvotes": 2
+    },
+    {
+      "id": 8,
+      "question": "is it suitable for office work?",
+      "answers": [
+        "Yes, Absolutely.",
+        "Perfect for office and college too."
       ],
-      "upvotes":1
-  },
-  {
-      "id":9,
-      "question":"Can a 16 inch laptop fit in this bag?",
-      "answers":[
-          "Not really ...it's good for a school boy.",
-          "I dont know exactly, but I think it can't fit."
+      "upvotes": 1
+    },
+    {
+      "id": 9,
+      "question": "Can a 16 inch laptop fit in this bag?",
+      "answers": [
+        "Not really ...it's good for a school boy.",
+        "I dont know exactly, but I think it can't fit."
       ],
-      "upvotes":5
-  },
-  {
-      "id":10,
-      "question":"which type of cloth used?",
-      "answers":[
-          "Polyster One."
+      "upvotes": 5
+    },
+    {
+      "id": 10,
+      "question": "which type of cloth used?",
+      "answers": [
+        "Polyster One."
       ],
-      "upvotes":4
-  }
+      "upvotes": 4
+    }
+  ],
+  "users": [
+    {
+      "username": "tholuchururavindra@gmail.com",
+      "password": "test123",
+      "id": 1
+    },
+    {
+      "password": "Test@123",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "fullName": " ",
+      "email": "naveen.k19@iiits.in",
+      "mobileNumber": null,
+      "password": "Test@123",
+      "address": [
+        {
+          "area": "",
+          "district": "",
+          "state": "",
+          "country": "",
+          "pin-code": null
+        }
+      ],
+      "wishlist": [],
+      "purchases": [],
+      "cartItems": [],
+      "reviews": [],
+      "isLoggedIn": false
+    }
   ]
 }

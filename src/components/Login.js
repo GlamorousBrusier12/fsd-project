@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "../styles/LoginStyle.css";
@@ -9,6 +9,7 @@ export default function Login() {
   const [password1, setPassword] = useState(" ");
   const history = useHistory();
   const incorrectCredentials = useRef(null);
+
   const LoginUser = () => {
     axios
       .post("/login", { username: username1, password: password1 })
@@ -18,7 +19,6 @@ export default function Login() {
         history.push("/");
       })
       .catch((err) => {
-        console.log("Incorrect Login Credentials. Please try again\n", err);
         incorrectCredentials.current.innerText =
           "Incorrect Login Credentials.. Please try again";
       });
@@ -27,14 +27,16 @@ export default function Login() {
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
-
   return (
     <div className="login">
       <br />
       <br />
       <br />
       <br />
-      <p ref={incorrectCredentials} style={{ textAlign: "center" }}></p>
+      <p
+        ref={incorrectCredentials}
+        style={{ textAlign: "center", color: "red" }}
+      ></p>
       <div className="Container">
         <br />
         <h1>Sign In</h1>

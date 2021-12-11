@@ -12,8 +12,8 @@
 
 .product-image > img {
   height: 500px;
-  width: 500px;
-  margin: 30px 10px 0 10%;
+  width: 400px;
+  margin: 30px 10px 0 12%;
 }
 
 .product-info {
@@ -24,7 +24,7 @@
   width: 50%;
 }
 
-.product-info h1,h2,h3,p {
+.product-info h1 h2 h3 p {
   margin: 10px;
 }
 
