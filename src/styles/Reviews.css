@@ -3,11 +3,6 @@
     margin: auto;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-}
-
 .review-form{
     text-align: center;
     display: flex;

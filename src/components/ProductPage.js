@@ -7,7 +7,7 @@ import "../styles/ProjectPage.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProjectPage() {
-  const [resourceType, setResourceType] = useState(<Reviews />);
+  const [resourceType, setResourceType] = useState(<Faqs />);
   const location = useLocation();
   const product = location.state;
   const { title, image, price, description, rating, type, types } =
@@ -19,7 +19,7 @@ function ProjectPage() {
         <div className="product-image">
           <img src={image} alt="Product" />
         </div>
-        <div className="product-info">
+        <div className="product-info-productpage">
           <h1>{title}</h1>
           <p>{description}</p>
           <h2>₹ {price * 75}</h2>
