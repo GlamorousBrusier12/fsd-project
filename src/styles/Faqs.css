@@ -33,4 +33,12 @@
 .faqs{
     text-align: left;
     margin-left: 10%;
+    min-height: 400px;
+}
+
+.faqs-heading{
+    margin: 20px;
+}
+.search-area{
+    margin: 10px;
 }

@@ -46,8 +46,8 @@ function Faqs() {
       } else {
         return (
           <div className="display-faqs">
-            <h1>Frequently Question and Answers</h1>
-            <div>
+            <h1 className="faqs-heading">Frequently Question and Answers</h1>
+            <div className="search-area">
                 <input className="faq-search" type="text" placeholder="Search.." name="search" onChange={updateFaqs} value={input}/>
                 <button className="faq-search-button"><i class="fa fa-search"></i></button>
             </div>
