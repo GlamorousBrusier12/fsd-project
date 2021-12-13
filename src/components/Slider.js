@@ -42,7 +42,12 @@ class Slider extends Component {
                   process.env.PUBLIC_URL + `/images/slidebar${index + 1}.webp`
                 }
               /> */}
-              <img src="https://rukminim1.flixcart.com/flap/844/140/image/c292b4ade45a169e.jpg?q=50" alt="index"/>
+              {/* <img src="https://rukminim1.flixcart.com/flap/844/140/image/c292b4ade45a169e.jpg?q=50" alt="index"/> */}
+              <br />
+              <img
+                style={{ height: 600 }}
+                src={process.env.PUBLIC_URL + `/images/slider02.png`}
+              />
             </div>
           );
         })}
