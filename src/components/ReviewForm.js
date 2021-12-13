@@ -48,7 +48,7 @@ function ReviewForm(props) {
     }
     return (
       <div style={{display:"flex"}}>
-        <img style={{width:"40%"}} src="https://www.episervice.org/webres/Image/Blog%20Graphics%20(2).png" alt="review-matters" width="50%" height="650px"/>
+        <img style={{width:"40%", height:"91vh"}} src="https://www.episervice.org/webres/Image/Blog%20Graphics%20(2).png" alt="review-matters" width="50%" height="650px"/>
         <div style={{width:"60%"}} className="review-form">
           <h2>Submit your Review</h2>
           <StarRatings

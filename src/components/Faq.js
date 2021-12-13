@@ -1,10 +1,23 @@
 import React from "react";
+import Votes from "./Votes"
+import "../styles/Faq.css";
 
-function Faq(params) {
+function Faq(props) {
+    const {question,answers} = props.content;
+    let upvotes = props.content.upvotes;
     return (
-        <div style={{textAlign:"center",width:"70%"}}>
-            <h3>This is a question</h3>
-            <p>This is the answer to the question</p>
+        <div className="single-faq">
+            <Votes upvotes={upvotes}/>
+            <div className="qna">
+                <div>
+                    <h3>{question}</h3>
+                </div>
+                <div>
+                    {answers.map((answer,index)=>{
+                        return <p>{index+1}) {answer}</p>
+                    })}
+                </div>
+            </div>
         </div>
     )
 }

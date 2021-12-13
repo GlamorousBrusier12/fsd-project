@@ -35,9 +35,11 @@ class Navbar extends Component {
             placeholder="Search"
             className="search-input"
           />
-          <button className="search-button">
-            <i style={{ color: "black" }} className="fas fa-search fa-2x"></i>
-          </button>
+          <Link to="/products">
+            <button className="search-button">
+              <i style={{ color: "black" }} className="fas fa-search fa-2x"></i>
+            </button>
+          </Link>
         </div>
         <div className="navbar-routes">
           <div className="links" style={styles.cartIconContainer}>
