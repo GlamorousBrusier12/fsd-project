@@ -9,9 +9,13 @@ import Home from "./Home";
 import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
+import UserProfile from "./UserProfile";
+import Footer from "./Footer";
+import Adresslist from "./Adresslist";
+
 class App extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
   onChange = () => {
@@ -38,6 +42,12 @@ class App extends Component {
             <Route path="/signup">
               <Register />
             </Route>
+            <Route path="/userProfile">
+              <UserProfile />
+            </Route>
+            <Route exact path="/userProfileAdress">
+              <Adresslist />
+            </Route>
             <Route path="/wishlist">
               <h1>Wishlist</h1>
             </Route>
@@ -48,6 +58,7 @@ class App extends Component {
               <Home />
             </Route>
           </Switch>
+          <Footer change={this.onChange} />
         </div>
       </Router>
     );
