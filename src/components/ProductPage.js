@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
-import "../styles/ProjectPage.css";
+import "../styles/ProductPage.css";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProjectPage() {
@@ -10,6 +10,11 @@ function ProjectPage() {
   const location = useLocation();
   const product = location.state;
   const { title, image, price, description, rating } = product.product;
+  const [activeDiv, setActiveDiv] = useState(0);
+  const toggleAnimation = (index) => {
+    // const catDivs = document.querySelectorAll("#button-category button");
+    setActiveDiv(index);
+  };
   // rating = { rate: 4, count: 90 };
   return (
     <div>
@@ -48,17 +53,27 @@ function ProjectPage() {
         </div>
       </div>
       <div className="other-info">
-        <div className="button-area">
+        <div className="button-area" id="button-category">
           <button
             onClick={() => {
-              setResourceType(<Reviews />);
+              setResourceType(
+                <Reviews
+                  onClick={toggleAnimation(1)}
+                  className={activeDiv === 1 ? "gelatine" : ""}
+                />
+              );
             }}
           >
             Reviews
           </button>
           <button
             onClick={() => {
-              setResourceType(<Faqs />);
+              setResourceType(
+                <Faqs
+                  onClick={toggleAnimation(2)}
+                  className={activeDiv === 2 ? "gelatine" : ""}
+                />
+              );
             }}
           >
             FAQs
