@@ -10,9 +10,12 @@ import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
+import Footer from "./Footer";
+import Adresslist from "./Adresslist";
 
 class App extends Component {
   constructor(props) {
+    super();
     this.state = {};
   }
   onChange = () => {
