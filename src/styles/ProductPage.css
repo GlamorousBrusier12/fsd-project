@@ -5,24 +5,7 @@
   /* flex-direction: row; */
   /* flex-wrap: wrap; */
 }
-.gelatine {
-  animation: gelatine 0.5s 1;
-}
-@keyframes gelatine {
-  from,
-  to {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-}
+
 .product-image {
   width: 40%;
 }
@@ -74,8 +57,45 @@ p {
 textarea {
   width: 50%;
 }
-
-.button-area > button {
-  padding: 10px;
+.categories-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.categories-area > div {
+  background-color: rgb(239, 239, 239);
+  width: 20.5vw;
+  border-radius: 25px;
+}
+.categories-area > div button {
+  padding: 12px;
   font-size: 18px;
+  border-radius: 25px;
+  margin: 1%;
+  border: none;
+}
+
+.gelatine {
+  animation: gelatine 0.5s 1;
+  background-color: rgb(32, 49, 65);
+  color: whitesmoke;
+}
+.resource-display {
+  min-height: 500px;
+}
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }

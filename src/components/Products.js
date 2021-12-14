@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EachProduct from "./EachProduct";
 import "../styles/ProductsStyles.css";
+import Loader from "./Loader";
 function Products() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,7 +27,7 @@ function Products() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   } else {
     return (
       <div>
