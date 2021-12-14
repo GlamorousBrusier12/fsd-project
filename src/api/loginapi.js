@@ -12,7 +12,7 @@ app.post("/login", function (request, response) {
   let user1 = request.body.username;
   let passwd = request.body.password;
   var isUserEmailPresent = false;
-  fetch("http://localhost:3001/users")
+  fetch("http://localhost:3000/users")
     .then((res) => res.json())
     .then((json) => {
       json.forEach((e) => {

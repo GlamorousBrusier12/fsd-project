@@ -22,6 +22,7 @@ class MiniProduct extends Component {
                 justifyContent: "center",
                 display: "flex",
               }}
+              alt="productImage"
             />
           </Link>
         </div>

@@ -13,7 +13,7 @@ class Home extends Component {
           <h3>Deals of the day!!!</h3>
           <div className="mini-products">
             {deals.map((product) => (
-              <MiniProduct data={product} />
+              <MiniProduct data={product} key={product.id} />
             ))}
           </div>
         </div>
@@ -23,8 +23,8 @@ class Home extends Component {
             <i className="fas fa-arrow-right" style={{ marginLeft: 5 }}></i>
           </h3>
           <div className="mini-products">
-            {deals.map((product) => (
-              <MiniProduct data={product} />
+            {deals.map((product, index) => (
+              <MiniProduct data={product} key={product.id} />
             ))}
           </div>
         </div>

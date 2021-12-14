@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState, useRef, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
 import "../styles/LoginStyle.css";
 

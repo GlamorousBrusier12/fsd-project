@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { data } from "../data";
+import React, { useState } from "react";
 import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
@@ -10,8 +9,7 @@ function ProjectPage() {
   const [resourceType, setResourceType] = useState(<Faqs />);
   const location = useLocation();
   const product = location.state;
-  const { title, image, price, description, rating, type, types } =
-    product.product;
+  const { title, image, price, description, rating } = product.product;
   // rating = { rate: 4, count: 90 };
   return (
     <div>

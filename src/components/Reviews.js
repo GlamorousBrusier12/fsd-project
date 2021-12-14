@@ -11,7 +11,7 @@ function Reviews() {
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://localhost:3001/reviews")
+    fetch("http://localhost:3000/reviews")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,8 +35,8 @@ function Reviews() {
   } else {
     return (
       <div className="display-reviews">
-        {items.map((item) => (
-          <Review content={item} />
+        {items.map((item, index) => (
+          <Review content={item} key={index} />
         ))}
       </div>
     );

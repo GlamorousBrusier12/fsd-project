@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
+// import { useHistory } from "react-router-dom";
 import "../styles/RegisterStyle.css";
 function Register() {
-  const history = useHistory();
+  // const history = useHistory();
   // const [firstname, setFirstname] = useState("");
   // const [lastname, setLastname] = useState("");
   // const [useremail, setUseremail] = useState("");
