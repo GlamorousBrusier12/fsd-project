@@ -9,6 +9,7 @@ import Home from "./Home";
 import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
+import Footer from "./Footer";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +49,7 @@ class App extends Component {
               <Home />
             </Route>
           </Switch>
+          <Footer change={this.onChange} />
         </div>
       </Router>
     );
