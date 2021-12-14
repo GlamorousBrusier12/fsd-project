@@ -22,6 +22,7 @@ app.post("/login", function (request, response) {
             response.status(200).json("user authenticated");
             return;
           } else {
+            console.log("1" + user1, passwd);
             response.status(400).json("Wrong password");
             // stop further execution in this callback
             return;
@@ -29,6 +30,7 @@ app.post("/login", function (request, response) {
         }
       });
       if (!isUserEmailPresent) {
+        console.log("2" + user1, passwd);
         response.status(400).json("user does not exist");
         return;
       }
