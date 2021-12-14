@@ -9,6 +9,9 @@ import Home from "./Home";
 import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
+import UserProfile from "./UserProfile";
+import Adresslist from "./Adresslist";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +40,12 @@ class App extends Component {
             </Route>
             <Route path="/signup">
               <Register />
+            </Route>
+            <Route path="/userProfile">
+              <UserProfile />
+            </Route>
+            <Route exact path="/userProfileAdress">
+              <Adresslist />
             </Route>
             <Route path="/wishlist">
               <h1>Wishlist</h1>
