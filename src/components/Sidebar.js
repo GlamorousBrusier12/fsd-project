@@ -11,6 +11,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem active">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/present.png`}
@@ -24,6 +25,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/man.png`}
@@ -33,6 +35,7 @@ const Sidebar = () => {
             <div>
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/location.png`}
@@ -42,6 +45,7 @@ const Sidebar = () => {
             </div>
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/credit-card.png`}
@@ -55,6 +59,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/debit-card.png`}
@@ -63,6 +68,7 @@ const Sidebar = () => {
             </li>
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/mobile-payment.png`}
@@ -76,6 +82,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/logout.png`}
