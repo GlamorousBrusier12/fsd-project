@@ -10,8 +10,12 @@ import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
+import AdressList from "./AdressList";
+import UserProfileInformation from "./UserProfileInformation";
+import UserProfilePanCard from "./UserProfilePanCard";
+import UserProfileDebitCard from "./UserProfileDebitCard";
+import UserProfileUPI from "./UserProfileUPI";
 import Footer from "./Footer";
-import Adresslist from "./Adresslist";
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +51,19 @@ class App extends Component {
                 <UserProfile />
               </Route>
               <Route exact path="/userProfileAdress">
-                <Adresslist />
+                <AdressList />
+              </Route>
+              <Route exact path="/userProfileInformation">
+                <UserProfileInformation />
+              </Route>
+              <Route exact path="/userProfilePanCard">
+                <UserProfilePanCard />
+              </Route>
+              <Route exact path="/userProfileDebitCard">
+                <UserProfileDebitCard />
+              </Route>
+              <Route exact path="/userProfileUPI">
+                <UserProfileUPI />
               </Route>
               <Route path="/wishlist">
                 <h1>Wishlist</h1>

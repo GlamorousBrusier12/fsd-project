@@ -5,7 +5,6 @@
 .adressList {
   flex: 4;
   padding: 20px;
-  height: 550px;
 }
 
 .userTitleContainer {
@@ -52,4 +51,8 @@
 .userListDelete {
   color: red;
   cursor: pointer;
+}
+
+.datagrid {
+  height: 550px;
 }

@@ -6,6 +6,10 @@
   background-color: rgb(229, 229, 235);
 }
 
+.sidebar link {
+  text-decoration: none;
+}
+
 .sidebarWrapper {
   padding: 20px;
   color: #555;
