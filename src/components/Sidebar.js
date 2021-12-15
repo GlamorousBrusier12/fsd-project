@@ -40,6 +40,7 @@ const Sidebar = () => {
             <Link to="/userProfileAdress" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/location.png`}
@@ -89,6 +90,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/logout.png`}

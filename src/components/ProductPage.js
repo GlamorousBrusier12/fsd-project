@@ -10,12 +10,10 @@ function ProjectPage() {
   const location = useLocation();
   const product = location.state;
   const { title, image, price, description, rating } = product.product;
-  const [activeDiv, setActiveDiv] = useState(0);
+  const [activeDiv, setActiveDiv] = useState(2);
   const toggleAnimation = (index) => {
-    // const catDivs = document.querySelectorAll("#button-category button");
     setActiveDiv(index);
   };
-  // rating = { rate: 4, count: 90 };
   return (
     <div>
       <div className="product">
@@ -35,14 +33,6 @@ function ProjectPage() {
             />{" "}
             ({rating.count} reviews)
           </h3>
-          {/* <label for="options">{type}</label>
-
-          <select name="options" id="options">
-            <option value={types[0]}>{types[0]}</option>
-            <option value={types[1]}>{types[1]}</option>
-            <option value={types[2]}>{types[2]}</option>
-            <option value={types[3]}>{types[3]}</option>
-          </select> */}
           <div style={{ margin: "10px" }}>
             <div className="productpage-buttons">
               <button>Add to Cart</button>
@@ -53,40 +43,38 @@ function ProjectPage() {
         </div>
       </div>
       <div className="other-info">
-        <div className="button-area" id="button-category">
-          <button
-            onClick={() => {
-              setResourceType(
-                <Reviews
-                  onClick={toggleAnimation(1)}
-                  className={activeDiv === 1 ? "gelatine" : ""}
-                />
-              );
-            }}
-          >
-            Reviews
-          </button>
-          <button
-            onClick={() => {
-              setResourceType(
-                <Faqs
-                  onClick={toggleAnimation(2)}
-                  className={activeDiv === 2 ? "gelatine" : ""}
-                />
-              );
-            }}
-          >
-            FAQs
-          </button>
-          <button
-            onClick={() => {
-              setResourceType("Similar Items");
-            }}
-          >
-            Similar Items
-          </button>
+        <div className="categories-area" id="button-category">
+          <div className="button-area">
+            <button
+              onClick={() => {
+                setResourceType(<Reviews />);
+                toggleAnimation(1);
+              }}
+              className={activeDiv === 1 ? "gelatine" : ""}
+            >
+              Reviews
+            </button>
+            <button
+              onClick={() => {
+                setResourceType(<Faqs />);
+                toggleAnimation(2);
+              }}
+              className={activeDiv === 2 ? "gelatine" : ""}
+            >
+              FAQs
+            </button>
+            <button
+              onClick={() => {
+                toggleAnimation(3);
+                setResourceType("Similar Items");
+              }}
+              className={activeDiv === 3 ? "gelatine" : ""}
+            >
+              Similar Items
+            </button>
+          </div>
         </div>
-        {resourceType}
+        <div className="resource-display">{resourceType}</div>
       </div>
     </div>
   );

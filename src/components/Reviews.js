@@ -1,11 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Review from "./Review";
 import "../styles/Reviews.css";
+import Loader from "./Loader";
+import ReactPaginate from "react-paginate";
 
 function Reviews() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [reviews, setReviews] = useState([]);
+
+  const [pageNumber,setPageNumber] = useState(0);
+
+  const usersPerPage = 5;
+  const pagesVisited = pageNumber * usersPerPage;
+  const pageCount = Math.ceil(reviews.length/usersPerPage)
+  const changePage = ({selected})=>{
+    setPageNumber(selected);
+  }
+
+  const displayReviews = reviews.slice(pagesVisited,pagesVisited+usersPerPage).map((review)=>{
+    return <Review content={review} key={review.id} />
+  })
 
   // Note: the empty deps array [] means
   // this useEffect will run once
@@ -16,7 +31,7 @@ function Reviews() {
       .then(
         (result) => {
           setIsLoaded(true);
-          setItems(result);
+          setReviews(result);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -31,13 +46,23 @@ function Reviews() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   } else {
     return (
       <div className="display-reviews">
-        {items.map((item, index) => (
-          <Review content={item} key={index} />
-        ))}
+      <h1 className="reviews-heading">Reviews:</h1>
+        {displayReviews}
+        <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBtns"}
+            previousLinkClassName={"previousBtn"}
+            nextLinkClassName={"nextBtn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
       </div>
     );
   }
