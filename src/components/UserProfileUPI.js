@@ -1,13 +1,12 @@
-import "../styles/adressList.css";
+import "../styles/UserProfileUPI.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState } from "react";
-import userRows from "../dummyData";
-
-const Adresslist = () => {
-  const [data, setData] = useState(userRows);
+import { upi } from "../dummyData";
+const UserProfileUPI = () => {
+  const [data, setData] = useState(upi);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -20,31 +19,31 @@ const Adresslist = () => {
       width: 70,
     },
     {
-      field: "user",
-      headerName: "Name",
-      width: 180,
+      field: "types",
+      headerName: "UPI Type",
+      width: 220,
       renderCell: (params) => {
         return (
           <div className="userListUser">
             <img className="userListImg" src={params.row.avatar} alt="" />
-            {params.row.Name}
+            {params.row.type}
           </div>
         );
       },
     },
     {
+      field: "cardNo",
+      headerName: "UPI Id",
+      width: 220,
+    },
+    {
+      field: "name",
+      headerName: "Name on UPI",
+      width: 220,
+    },
+    {
       field: "phoneNo",
-      headerName: "Phone Number",
-      width: 180,
-    },
-    {
-      field: "address",
-      headerName: "Address",
-      width: 300,
-    },
-    {
-      field: "locationName",
-      headerName: "Location Name",
+      headerName: "Phone number",
       width: 200,
     },
     {
@@ -72,9 +71,9 @@ const Adresslist = () => {
       <Sidebar />
       <div className="adressList">
         <div className="userTitleContainer">
-          <h1 className="userTitle">Delivery Adresses</h1>
+          <h1 className="userTitle">Saved UPI</h1>
           <Link to="/newUser">
-            <button className="userAddButton">Add Adress</button>
+            <button className="userAddButton">Add UPI</button>
           </Link>
         </div>
         <DataGrid
@@ -90,4 +89,4 @@ const Adresslist = () => {
   );
 };
 
-export default Adresslist;
+export default UserProfileUPI;
