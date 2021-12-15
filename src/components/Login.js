@@ -19,6 +19,7 @@ export default function Login() {
         history.push("/");
       })
       .catch((err) => {
+        console.log(err);
         incorrectCredentials.current.innerText =
           "Incorrect Login Credentials.. Please try again";
       });

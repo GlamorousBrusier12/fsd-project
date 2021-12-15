@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Review from "./Review";
 import "../styles/Reviews.css";
+import Loader from "./Loader";
 
 function Reviews() {
   const [error, setError] = useState(null);
@@ -31,7 +32,7 @@ function Reviews() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
   } else {
     return (
       <div className="display-reviews">

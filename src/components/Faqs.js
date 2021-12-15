@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Faq from "./Faq";
 import "../styles/Faqs.css";
 import ReactPaginate from "react-paginate";
+import Loader from "./Loader";
 
 function Faqs() {
   const [error, setError] = useState(null);
@@ -56,7 +57,8 @@ function Faqs() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <Loader />;
+    return <div className="loader"></div>;
   } else {
     return (
       <div className="display-faqs">
