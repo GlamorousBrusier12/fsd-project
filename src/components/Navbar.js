@@ -15,6 +15,15 @@ const styles = {
   },
 };
 class Navbar extends Component {
+  componentDidMount() {
+    this.state = {
+      searchWord: "",
+    };
+  }
+  updateSearchWord = () => {
+    let { searchWord } = this.state;
+    // console.log("SEARCH TEXT", searchWord);
+  };
   render() {
     return (
       <div className="navbar-container">
@@ -24,21 +33,29 @@ class Navbar extends Component {
           </Link>
         </div>
         <div className="search-container">
-          <input
-            style={{
-              textAlign: "left",
-              padding: 3,
-              outline: "none",
-              fontSize: 20,
-            }}
-            placeholder="Search"
-            className="search-input"
-          />
-          <Link to="/products" style={{ marginLeft: "-1%" }}>
-            <button className="search-button">
-              <i style={{ color: "black" }} className="fas fa-search fa-2x"></i>
-            </button>
-          </Link>
+          <form>
+            <input
+              style={{
+                textAlign: "left",
+                padding: 3,
+                outline: "none",
+                fontSize: 20,
+              }}
+              placeholder="Search"
+              className="search-input"
+              onChange={(e) => {
+                this.setState({ ...this.state, searchWord: e.target.value });
+              }}
+            />
+            <Link to="/products" style={{ marginLeft: "-1%" }}>
+              <button className="search-button" onClick={this.updateSearchWord}>
+                <i
+                  style={{ color: "black" }}
+                  className="fas fa-search fa-2x"
+                ></i>
+              </button>
+            </Link>
+          </form>
         </div>
         <div className="navbar-routes">
           <div className="links" style={styles.cartIconContainer}>

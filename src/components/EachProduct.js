@@ -3,7 +3,7 @@ import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
 function EachProduct(props) {
   const { title, image, price, rating, category } = props.content;
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <div className="each-product">
