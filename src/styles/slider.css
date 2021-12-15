@@ -56,12 +56,12 @@
   height: 25px;
   pointer-events: none;
 }
-.prev {
+.prev-slide {
   top: 50%;
   left: 20px;
   transform: translateY(-60%);
 }
-.next {
+.next-slide {
   top: 50%;
   right: 20px;
   transform: translateY(-60%);

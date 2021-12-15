@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Faq from "./Faq";
 import "../styles/Faqs.css";
+import ReactPaginate from "react-paginate";
 
 function Faqs() {
   const [error, setError] = useState(null);
@@ -8,6 +9,15 @@ function Faqs() {
   const [faqsDefault, setFaqsDefault] = useState([]);
   const [faqs, setFaqs] = useState([]);
   const [input, setInput] = useState("");
+
+  const [pageNumber,setPageNumber] = useState(0);
+
+  const usersPerPage = 5;
+  const pagesVisited = pageNumber * usersPerPage;
+  const pageCount = Math.ceil(faqs.length/usersPerPage)
+  const changePage = ({selected})=>{
+    setPageNumber(selected);
+  }
 
   useEffect(() => {
     fetch("http://localhost:3000/faqs")
@@ -27,6 +37,10 @@ function Faqs() {
         }
       );
   }, []);
+
+  const displayFaqs = faqs.slice(pagesVisited,pagesVisited+usersPerPage).map((faq)=>{
+    return <Faq content={faq} key={faq.id} />
+  })
 
   const updateFaqs = (event) => {
     const filtered = faqsDefault.filter((faq) => {
@@ -62,9 +76,27 @@ function Faqs() {
         </div>
         {/* <input className="faqs-search"/> */}
         <div className="faqs">
-          {faqs.map((item) => (
+          {/* {faqs.map((item) => (
             <Faq content={item} key={item.id} />
-          ))}
+          ))} */}
+          {displayFaqs}
+          <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBtns"}
+            previousLinkClassName={"previousBtn"}
+            nextLinkClassName={"nextBtn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+
         </div>
       </div>
     );
