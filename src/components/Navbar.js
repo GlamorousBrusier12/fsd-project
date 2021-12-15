@@ -7,7 +7,6 @@ const styles = {
     marginRight: 30,
   },
   cartCount: {
-    // background: "gray",
     borderRadius: "50%",
     padding: "0px 6px",
     position: "absolute",
@@ -35,7 +34,7 @@ class Navbar extends Component {
             placeholder="Search"
             className="search-input"
           />
-          <Link to="/products">
+          <Link to="/products" style={{ marginLeft: "-1%" }}>
             <button className="search-button">
               <i style={{ color: "black" }} className="fas fa-search fa-2x"></i>
             </button>
