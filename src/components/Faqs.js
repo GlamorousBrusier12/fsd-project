@@ -58,11 +58,11 @@ function Faqs() {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return <Loader />;
-    return <div className="loader"></div>;
+    // return <div className="loader"></div>;
   } else {
     return (
       <div className="display-faqs">
-        <h1 className="faqs-heading">Frequently Question and Answers</h1>
+        <h1 className="faqs-heading">Frequent Questions and Answers</h1>
         <div className="search-area">
           <input
             className="faq-search"
