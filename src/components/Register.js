@@ -1,22 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "../styles/RegisterStyle.css";
 function Register() {
-  // const history = useHistory();
-  // const [firstname, setFirstname] = useState("");
-  // const [lastname, setLastname] = useState("");
-  // const [useremail, setUseremail] = useState("");
-  // const [mobile_number, setMobilenumber] = useState("");
-  // const [password1, setPassword] = useState("");
+  const [isAlreadyaUser, setIsAlreadyaUser] = useState(false);
+  const history = useHistory();
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [useremail, setUseremail] = useState("");
+  const [mobile_number, setMobilenumber] = useState("");
+  const [userPassword, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
+  const isUser = useRef(null);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
+  };
+  const registerUser = (event) => {
+    fetch(`http://localhost:3000/users?q=${useremail}`)
+      .then((res) => res.json())
+      .then((json) => json[0].email)
+      .then((email) => {
+        isUser.current.innerText =
+          "Email already in use. Please try again using another email id";
+      })
+      .catch((err) => {
+        isUser.current.innerText = " ";
+        const data = {
+          fulllName: firstname + " " + lastname,
+          email: useremail,
+          mobileNumber: mobile_number,
+          password: userPassword,
+          address: " ",
+          wishlist: [],
+          purchases: [],
+          cartItems: [],
+          reviews: [],
+          isLoggedIn: true,
+        };
+        fetch("http://localhost:3000/users", {
+          method: "POST", // or 'PUT'
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+        event.preventDefault();
+        history.push("/");
+      });
   };
   return (
     <React.Fragment>
       <div className="signup-form">
         <div className="form-container">
+          <p ref={isUser} style={{ textAlign: "center", color: "red" }}></p>
           <br />
           <h1 style={{ textAlign: "center" }}>Sign Up</h1>
           <div>
@@ -30,7 +73,7 @@ function Register() {
               name="fname"
               id="fname"
               placeholder="First Name"
-              // onChange={(e) => setFirstname(e.target.value)}
+              onChange={(e) => setFirstname(e.target.value)}
               required
             />
             <input
@@ -39,7 +82,7 @@ function Register() {
               name="lname"
               id="lname"
               placeholder="Last Name"
-              // onChange={(e) => setLastname(e.target.value)}
+              onChange={(e) => setLastname(e.target.value)}
               required
             />
           </div>
@@ -54,7 +97,7 @@ function Register() {
               name="email_id"
               id="email_id"
               placeholder="example@gmail.com"
-              // onChange={(e) => setUseremail(e.target.value)}
+              onChange={(e) => setUseremail(e.target.value)}
               required
             />
           </div>
@@ -69,6 +112,7 @@ function Register() {
               name="mobile_number"
               id="mobile_number"
               placeholder="8688358501"
+              onChange={(e) => setMobilenumber(e.target.value)}
               required
             />
           </div>
@@ -82,6 +126,7 @@ function Register() {
               id="password"
               name="password"
               type={passwordShown ? "text" : "password"}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <br />
@@ -95,20 +140,11 @@ function Register() {
             <b> Show Password</b>
             <br />
           </div>
-          {/* <div>
-            <label className="Label" htmlFor="password1">
-              <h3>Re-enter Password</h3>
-            </label>
-            <br />
-            <input
-              className="input-field width-43"
-              type="password"
-              name="password1"
-              id="password"
-              required
-            />
-          </div> */}
-          <button type="submit" className="submit-register">
+          <button
+            type="submit"
+            className="submit-register"
+            onClick={registerUser}
+          >
             Register
           </button>
           <br />
