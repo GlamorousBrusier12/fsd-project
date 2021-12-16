@@ -4,12 +4,18 @@ import EachProduct from "./EachProduct";
 import Categories from "./Categories";
 import "../styles/ProductsStyles.css";
 import Loader from "./Loader";
-function Products() {
+import { connect } from "react-redux";
+function Products(props) {
+  console.log("PROPS: ", props.searchResults);
+  let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  if (searchResults.length === 0) {
+    searchResults = items;
+  }
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch(`http://localhost:3000/products`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -290,7 +296,7 @@ function Products() {
             </div>
           </div>
           <div className="products-container">
-            {items.map((item, index) => {
+            {searchResults.map((item, index) => {
               return <EachProduct content={item} key={index} />;
             })}
           </div>
@@ -300,4 +306,9 @@ function Products() {
   }
 }
 
-export default Products;
+function mapStateToProps(state) {
+  return {
+    searchResults: state.search,
+  };
+}
+export default connect(mapStateToProps)(Products);
