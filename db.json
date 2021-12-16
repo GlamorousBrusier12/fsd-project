@@ -135,17 +135,10 @@
     },
     {
       "user": "Topper Naveen",
-      "heading": "Excellent Product at this price range",
-      "body": "Been using this product for ages",
-      "stars": 5,
+      "heading": "not a great product",
+      "body": "the build could have been better",
+      "stars": 2,
       "id": 20
-    },
-    {
-      "user": "Topper Naveen",
-      "heading": "Penultimate Check",
-      "body": "Checking whether it is working or not",
-      "stars": 4,
-      "id": 21
     }
   ],
   "products": [
@@ -153,7 +146,6 @@
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
       "price": 109.95,
-      "discount": 15,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
       "image": [
@@ -166,13 +158,17 @@
         "count": 120
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 2,
       "title": "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
       "price": 119300,
-      "discount": 25,
       "description": "Your perfect phone for everyday use.",
       "category": "Electronics",
       "image": [
@@ -185,15 +181,20 @@
         "count": 1039
       },
       "type": "Specifications",
-      "types": ["12GB 256GB", " 12GB 128GB", "6GB 64GB"],
+      "types": [
+        "12GB 256GB",
+        " 12GB 128GB",
+        "6GB 64GB"
+      ],
       "Pixel": "Resolution",
-      "Pixels": ["2778 x 1284"]
+      "Pixels": [
+        "2778 x 1284"
+      ]
     },
     {
       "id": 3,
       "title": "Men Blue Regular Fit Faded Casual Denim Shirt",
       "price": 674,
-      "discount": 10,
       "description": "Blue faded casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem",
       "category": "men's clothing",
       "image": [
@@ -206,13 +207,17 @@
         "count": 120
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 4,
       "title": "Men Blue Straight Fit Mid Rise Heavy Fade Stretchable Jeans",
       "price": 3219,
-      "discount": 55,
       "description": "Light shade, heavy fade blue jeansStraight fit, mid-rise Clean look Stretchable 5 pocket",
       "category": "men's clothing",
       "image": [
@@ -225,13 +230,17 @@
         "count": 1620
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 5,
       "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
       "price": 13999,
-      "discount": 9,
       "description": "An absolute perfect sports shoes for you, HURRY UP!",
       "category": "men's Footwear",
       "image": [
@@ -244,13 +253,17 @@
         "count": 98
       },
       "type": "Size",
-      "types": ["8", "9", "10", "11"]
+      "types": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
     },
     {
       "id": 6,
       "title": "Men Grey Analogue Watch FC-775G4S4",
       "price": 153274,
-      "discount": 23,
       "description": "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
       "category": "Watches",
       "image": [
@@ -263,13 +276,14 @@
         "count": 34
       },
       "type": "Shape",
-      "types": ["Round"]
+      "types": [
+        "Round"
+      ]
     },
     {
       "id": 7,
       "title": "White 2nd Gen AirPods with Charging Case",
       "price": 12990,
-      "discount": 12,
       "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
       "category": "Headphones",
       "image": [
@@ -282,13 +296,14 @@
         "count": 434
       },
       "type": "Connectivity",
-      "types": ["True Wireless"]
+      "types": [
+        "True Wireless"
+      ]
     },
     {
       "id": 8,
       "title": "Men BT3211/15 Series 3000 Rechargeable Beard Trimmer - Olive Green",
       "price": 1553,
-      "discount": 30,
       "description": "Best Trimmer with # years warranty provided by Brand Oowner/Manufacturer",
       "category": "Men Persoonal Care",
       "image": [
@@ -301,14 +316,17 @@
         "count": 3434
       },
       "type": "Color",
-      "types": ["olive green", "Black", "Blue"]
+      "types": [
+        "olive green",
+        "Black",
+        "Blue"
+      ]
     },
     {
       "id": 9,
-      "title": "Acer Predator Helios 300 Octa Core i7 10th Gen (16 GB/1 TB HDD/256 GB)",
+      "title": "acer Predator Helios 300 Octa Core i7 10th Gen - (16 GB/1 TB HDD/256 GB SSD/Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg)",
       "price": 109990,
-      "discount": 45,
-      "description": "(16 GB/1 TB HDD/256 GB SSD/Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg). If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
+      "description": "If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
       "category": "Laptop",
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
@@ -320,13 +338,16 @@
         "count": 13434
       },
       "type": "Ram",
-      "types": ["32GB", "16GB", "8Gb"]
+      "types": [
+        "32GB",
+        "16GB",
+        "8Gb"
+      ]
     },
     {
       "id": 10,
       "title": "Canon EOS 7D Mark II DSLR Camera (Body only)  (Black)",
       "price": 99999,
-      "discount": 19,
       "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
       "category": "Camera",
       "image": [
@@ -339,17 +360,18 @@
         "count": 6434
       },
       "type": "lens",
-      "types": ["DSLR"]
+      "types": [
+        "DSLR"
+      ]
     },
     {
       "id": 11,
-      "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches ",
+      "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches with Wi-Fi+5G",
       "price": 140990,
-      "discount": 27,
-      "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet with Wi-Fi+5G PC that is larger and offers higher resolution than Apple's other iPad models",
+      "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet PC that is larger and offers higher resolution than Apple's other iPad models",
       "category": "Tablet",
       "image": [
-        "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-air-select-wifi-blue-202009_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&.v=1599672435000",
+        "https://rukminim1.flixcart.com/image/312/312/kolsscw0/tablet/n/r/c/mhwd3hn-a-apple-original-imag3yr5xrqchvrg.jpeg?q=70",
         "links",
         "links"
       ],
@@ -358,13 +380,15 @@
         "count": 12450
       },
       "type": "Color",
-      "types": ["Silver", "Space Grey"]
+      "types": [
+        "Silver",
+        "Space Grey"
+      ]
     },
     {
       "id": 12,
       "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV  (KD-65X80J)",
       "price": 110990,
-      "discount": 33,
       "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
       "category": "Television",
       "image": [
@@ -377,13 +401,16 @@
         "count": 22970
       },
       "type": "size",
-      "types": ["65 inches", "55 inches", "45 inches"]
+      "types": [
+        "65 inches",
+        "55 inches",
+        "45 inches"
+      ]
     },
     {
       "id": 13,
       "title": "SONY PlayStation 5 (CFI-1008B01R) 825 GB with Astro's Playroom",
       "price": 39990,
-      "discount": 6,
       "description": "PlayStation 5 Digital Edition",
       "category": "Gaming",
       "image": [
@@ -396,26 +423,37 @@
         "count": 222970
       },
       "type": "color",
-      "types": ["Black", "White"]
+      "types": [
+        "Black",
+        "White"
+      ]
     }
   ],
   "faqs": [
     {
       "id": 1,
       "question": "How is the stiching?",
-      "answers": ["It is just AMAZING..ZING ZING", "The quality is brilliant"],
+      "answers": [
+        "It is just AMAZING..ZING ZING",
+        "The quality is brilliant"
+      ],
       "upvotes": 2
     },
     {
       "id": 2,
       "question": "Is it washable?",
-      "answers": ["Yes, It is."],
+      "answers": [
+        "Yes, It is."
+      ],
       "upvotes": 4
     },
     {
       "id": 3,
       "question": "Is it a laptop bag or just a casual bag?",
-      "answers": ["Both.", "I think it's Both casual and laptop"],
+      "answers": [
+        "Both.",
+        "I think it's Both casual and laptop"
+      ],
       "upvotes": 1
     },
     {
@@ -429,25 +467,37 @@
     {
       "id": 5,
       "question": "Is it fully water proof?",
-      "answers": ["no", "No, but there is extra provided rain cover."],
+      "answers": [
+        "no",
+        "No, but there is extra provided rain cover."
+      ],
       "upvotes": 5
     },
     {
       "id": 6,
       "question": "How much weight of bag?",
-      "answers": ["Light weight", " nice bag and light weighted."],
+      "answers": [
+        "Light weight",
+        " nice bag and light weighted."
+      ],
       "upvotes": 3
     },
     {
       "id": 7,
       "question": "Is there any pocket for water bottle?",
-      "answers": ["2 Sides", "ya two side pockets are for water bottle."],
+      "answers": [
+        "2 Sides",
+        "ya two side pockets are for water bottle."
+      ],
       "upvotes": 2
     },
     {
       "id": 8,
       "question": "is it suitable for office work?",
-      "answers": ["Yes, Absolutely.", "Perfect for office and college too."],
+      "answers": [
+        "Yes, Absolutely.",
+        "Perfect for office and college too."
+      ],
       "upvotes": 1
     },
     {
@@ -462,361 +512,42 @@
     {
       "id": 10,
       "question": "which type of cloth used?",
-      "answers": ["Polyster One."],
+      "answers": [
+        "Polyster One."
+      ],
       "upvotes": 4
     }
   ],
   "users": [
     {
-      "id": 1,
-      "fullName": "Ravindra Tholuchuru",
-      "email": "ravindra.t19@iiits.in",
-      "mobileNumber": "8688358501",
-      "password": "Test@123",
-      "address": "251 Springview Road",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
+      "username": "tholuchururavindra@gmail.com",
+      "password": "test123",
+      "id": 1
     },
     {
-      "id": 2,
-      "fullName": " ",
-      "email": "naveenkumar.k19@iiits.in",
-      "mobileNumber": null,
       "password": "Test@123",
-      "address": "Vizag, Andhra Pradesh",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
+      "id": 2
     },
     {
       "id": 3,
-      "fullName": "Chetan Guduru",
-      "email": "chetan.g19@iiits.in",
-      "mobileNumber": "1105315339",
+      "fullName": " ",
+      "email": "naveen.k19@iiits.in",
+      "mobileNumber": null,
       "password": "Test@123",
-      "address": "4 Swallow Alley",
+      "address": [
+        {
+          "area": "",
+          "district": "",
+          "state": "",
+          "country": "",
+          "pin-code": null
+        }
+      ],
       "wishlist": [],
       "purchases": [],
       "cartItems": [],
       "reviews": [],
       "isLoggedIn": false
-    },
-    {
-      "id": 4,
-      "fullName": "Corrianne Nann",
-      "email": "cnann3@chronoengine.com",
-      "mobileNumber": "2124965379",
-      "password": "MOn2U4Mf",
-      "address": "9 Lakewood Gardens Circle",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 5,
-      "fullName": "Margit Cabbell",
-      "email": "mcabbell4@addtoany.com",
-      "mobileNumber": "9503504996",
-      "password": "w9UyEsSKVGGh",
-      "address": "70876 Jackson Way",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 6,
-      "fullName": "Ilse Tranmer",
-      "email": "itranmer5@nsw.gov.au",
-      "mobileNumber": "8807963248",
-      "password": "dMxBsw",
-      "address": "7767 Morningstar Plaza",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 7,
-      "fullName": "Norene Cleaves",
-      "email": "ncleaves6@smh.com.au",
-      "mobileNumber": "4694414429",
-      "password": "Q72mrMFK",
-      "address": "51 Center Avenue",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 8,
-      "fullName": "Pierette Trask",
-      "email": "ptrask7@blogger.com",
-      "mobileNumber": "8829894885",
-      "password": "SghmK3",
-      "address": "63585 Armistice Pass",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 9,
-      "fullName": "Lockwood Tinsey",
-      "email": "ltinsey8@msn.com",
-      "mobileNumber": "0435805908",
-      "password": "pDfMcSmh",
-      "address": "1883 Nobel Point",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 10,
-      "fullName": "Brandea Clarkin",
-      "email": "bclarkin9@scientificamerican.com",
-      "mobileNumber": "2037097743",
-      "password": "StKfovdizZ",
-      "address": "626 Holmberg Plaza",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 11,
-      "fullName": "Abran Tuffley",
-      "email": "atuffleya@wunderground.com",
-      "mobileNumber": "6844186487",
-      "password": "eraRujuOexs",
-      "address": "7251 Eastwood Parkway",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 12,
-      "fullName": "Wilma Wennam",
-      "email": "wwennamb@berkeley.edu",
-      "mobileNumber": "0302014462",
-      "password": "fGSVj2jSG",
-      "address": "42 Mockingbird Avenue",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 13,
-      "fullName": "Terrell O'Carroll",
-      "email": "tocarrollc@elpais.com",
-      "mobileNumber": "6750408176",
-      "password": "19nVEyOXe5Ck",
-      "address": "498 Oak Valley Way",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 14,
-      "fullName": "Antonietta Baswall",
-      "email": "abaswalld@fema.gov",
-      "mobileNumber": "3698074524",
-      "password": "XwSvDS4dRz",
-      "address": "3878 Eagan Junction",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 15,
-      "fullName": "Elvin Speariett",
-      "email": "espeariette@marketwatch.com",
-      "mobileNumber": "3568676869",
-      "password": "sshyiG",
-      "address": "29077 Oak Valley Trail",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 16,
-      "fullName": "Melany Medforth",
-      "email": "mmedforthf@livejournal.com",
-      "mobileNumber": "1013345290",
-      "password": "uMjDgGOFQW",
-      "address": "3 7th Hill",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 17,
-      "fullName": "Annora Lummus",
-      "email": "alummusg@google.es",
-      "mobileNumber": "4664372620",
-      "password": "Ifrn9UXC",
-      "address": "83521 Village Green Alley",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 18,
-      "fullName": "Eal Delbergue",
-      "email": "edelbergueh@feedburner.com",
-      "mobileNumber": "2653968045",
-      "password": "hXHi8I9",
-      "address": "4 Messerschmidt Point",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 19,
-      "fullName": "Humberto Capron",
-      "email": "hcaproni@home.pl",
-      "mobileNumber": "5392149685",
-      "password": "kxPQp2qxgzEF",
-      "address": "721 Almo Place",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 20,
-      "fullName": "Germayne Purse",
-      "email": "gpursej@gov.uk",
-      "mobileNumber": "0144500213",
-      "password": "4FnCE9",
-      "address": "20 Michigan Center",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 21,
-      "fullName": "Adelbert McGiff",
-      "email": "amcgiffk@hud.gov",
-      "mobileNumber": "6842567653",
-      "password": "0iDcg2AOLwCp",
-      "address": "996 Ridge Oak Crossing",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 22,
-      "fullName": "Sharla Revan",
-      "email": "srevanl@blogs.com",
-      "mobileNumber": "0627731597",
-      "password": "DkfNpOj3",
-      "address": "557 Ryan Lane",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 23,
-      "fullName": "Randi Jessel",
-      "email": "rjesselm@adobe.com",
-      "mobileNumber": "1213387752",
-      "password": "JR7mXNKpnUX",
-      "address": "7 Karstens Circle",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 24,
-      "fullName": "Charin Trevan",
-      "email": "ctrevann@github.io",
-      "mobileNumber": "9778267642",
-      "password": "urofLJB4vXmj",
-      "address": "4 Warbler Court",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "id": 25,
-      "fullName": "Constancy Pollett",
-      "email": "cpolletto@springer.com",
-      "mobileNumber": "5260685369",
-      "password": "XOKmJUL33Mlv",
-      "address": "21 Fuller Circle",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": false
-    },
-    {
-      "fulllName": "John Kennedy",
-      "email": "johnkennedy@gmail.com",
-      "mobileNumber": "5054123897",
-      "password": "Test@123",
-      "address": " ",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": true,
-      "id": 26
-    },
-    {
-      "fulllName": "Ravindra Tholuchuru",
-      "email": "tholuchururavindra@gmail.com",
-      "mobileNumber": "8688358501",
-      "password": "Test@123",
-      "address": " ",
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
-      "isLoggedIn": true,
-      "id": 27
     }
   ]
 }
