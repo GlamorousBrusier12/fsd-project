@@ -56,7 +56,7 @@ function Products(props) {
                   id="department1"
                   value="Electronics"
                 />
-                <label for="department1"> Electronics</label>
+                <label htmlFor="department1"> Electronics</label>
                 <br />
                 <input
                   type="checkbox"
@@ -64,7 +64,7 @@ function Products(props) {
                   id="department2"
                   value="Fashion"
                 />
-                <label for="department2"> Fashion</label>
+                <label htmlFor="department2"> Fashion</label>
                 <br />
                 <input
                   type="checkbox"
@@ -72,7 +72,7 @@ function Products(props) {
                   id="department3"
                   value="Home Aplliances"
                 />
-                <label for="department3"> Home Aplliances</label>
+                <label htmlFor="department3"> Home Aplliances</label>
                 <br />
                 <input
                   type="checkbox"
@@ -80,7 +80,7 @@ function Products(props) {
                   id="department4"
                   value="Furniture"
                 />
-                <label for="department4"> Furniture</label>
+                <label htmlFor="department4"> Furniture</label>
                 <br />
               </div>
             </div>
@@ -93,7 +93,7 @@ function Products(props) {
                   id="brand1"
                   value="Apple"
                 />
-                <label for="brand1"> Apple</label>
+                <label htmlFor="brand1"> Apple</label>
                 <br />
                 <input
                   type="checkbox"
@@ -101,7 +101,7 @@ function Products(props) {
                   id="brand2"
                   value="Relame"
                 />
-                <label for="brand2"> Relame</label>
+                <label htmlFor="brand2"> Relame</label>
                 <br />
                 <input
                   type="checkbox"
@@ -109,7 +109,7 @@ function Products(props) {
                   id="brand3"
                   value="Samsung"
                 />
-                <label for="brand3"> Samsung</label>
+                <label htmlFor="brand3"> Samsung</label>
                 <br />
                 <input
                   type="checkbox"
@@ -117,13 +117,13 @@ function Products(props) {
                   id="brand4"
                   value="Redmi"
                 />
-                <label for="brand4"> Redmi</label>
+                <label htmlFor="brand4"> Redmi</label>
                 <br />
                 <input type="checkbox" name="brand5" id="brand5" value="Oppo" />
-                <label for="brand5"> Oppo</label>
+                <label htmlFor="brand5"> Oppo</label>
                 <br />
                 <input type="checkbox" name="brand6" id="brand6" value="Vivo" />
-                <label for="brand6"> Vivo</label>
+                <label htmlFor="brand6"> Vivo</label>
                 <br />
                 <input
                   type="checkbox"
@@ -131,7 +131,7 @@ function Products(props) {
                   id="brand7"
                   value="Passionfruit"
                 />
-                <label for="brand7"> Passionfruit</label>
+                <label htmlFor="brand7"> Passionfruit</label>
                 <br />
               </div>
             </div>
@@ -139,7 +139,7 @@ function Products(props) {
               <p className="filter-headings">Avg. Customer Review</p>
               <div className="sub-filters">
                 <input type="checkbox" name="rating4" id="rating4" value="4" />
-                <label for="rating4">
+                <label htmlFor="rating4">
                   {" "}
                   <StarRatings
                     rating={4}
@@ -151,7 +151,7 @@ function Products(props) {
                 </label>
                 <br />
                 <input type="checkbox" name="rating3" id="rating3" value="3" />
-                <label for="rating3">
+                <label htmlFor="rating3">
                   {" "}
                   <StarRatings
                     rating={3}
@@ -163,7 +163,7 @@ function Products(props) {
                 </label>
                 <br />
                 <input type="checkbox" name="rating2" id="rating2" value="2" />
-                <label for="rating2">
+                <label htmlFor="rating2">
                   {" "}
                   <StarRatings
                     rating={2}
@@ -175,7 +175,7 @@ function Products(props) {
                 </label>
                 <br />
                 <input type="checkbox" name="rating1" id="rating1" value="1" />
-                <label for="rating1">
+                <label htmlFor="rating1">
                   {" "}
                   <StarRatings
                     rating={1}
@@ -197,7 +197,7 @@ function Products(props) {
                   id="itemtype1"
                   value="Buyonly"
                 />
-                <label for="itemtype1"> Buy only</label>
+                <label htmlFor="itemtype1"> Buy only</label>
                 <br />
                 <input
                   type="checkbox"
@@ -205,7 +205,7 @@ function Products(props) {
                   id="itemtype2"
                   value="Rentonly"
                 />
-                <label for="itemtype2"> Rent only</label>
+                <label htmlFor="itemtype2"> Rent only</label>
                 <br />
                 <input
                   type="checkbox"
@@ -213,14 +213,14 @@ function Products(props) {
                   id="itemtype3"
                   value="BuyandRent"
                 />
-                <label for="itemtype3"> Buy and Rent</label>
+                <label htmlFor="itemtype3"> Buy and Rent</label>
                 <br />
               </div>
             </div>
             <div className="filter-department">
               <p className="filter-headings">Price</p>
               <div className="sub-filters">
-                <input type="range" class="form-range" id="customRange1" />
+                <input type="range" className="form-range" id="customRange1" />
                 <br />
               </div>
             </div>
@@ -228,13 +228,13 @@ function Products(props) {
               <p className="filter-headings">Deals</p>
               <div className="sub-filters">
                 <input type="checkbox" name="deal1" id="deal1" value="DOTD" />
-                <label for="deal1"> Deals of the Day</label>
+                <label htmlFor="deal1"> Deals of the Day</label>
                 <br />
                 <input type="checkbox" name="deal2" id="deal2" value="EOTS" />
-                <label for="deal2"> End of the Season</label>
+                <label htmlFor="deal2"> End of the Season</label>
                 <br />
                 <input type="checkbox" name="deal3" id="deal3" value="MS" />
-                <label for="deal3"> Mega Sale</label>
+                <label htmlFor="deal3"> Mega Sale</label>
                 <br />
               </div>
             </div>
@@ -247,7 +247,7 @@ function Products(props) {
                   name="discount1"
                   value="75"
                 />
-                <label for="discount1"> 75% and more</label>
+                <label htmlFor="discount1"> 75% and more</label>
                 <br />
                 <input
                   type="checkbox"
@@ -255,7 +255,7 @@ function Products(props) {
                   name="discount2"
                   value="50"
                 />
-                <label for="discount2"> 50% and more</label>
+                <label htmlFor="discount2"> 50% and more</label>
                 <br />
                 <input
                   type="checkbox"
@@ -263,7 +263,7 @@ function Products(props) {
                   name="discount3"
                   value="25"
                 />
-                <label for="discount3"> 25% and more</label>
+                <label htmlFor="discount3"> 25% and more</label>
                 <br />
                 <input
                   type="checkbox"
@@ -271,7 +271,7 @@ function Products(props) {
                   name="discount4"
                   value="10"
                 />
-                <label for="discount4"> 10% and more</label>
+                <label htmlFor="discount4"> 10% and more</label>
                 <br />
               </div>
             </div>
@@ -279,7 +279,7 @@ function Products(props) {
               <p className="filter-headings">Cash on Delivery</p>
               <div className="sub-filters">
                 <input type="checkbox" id="COD" name="COD" value="COD" />
-                <label for="COD"> Cash on Delivery</label>
+                <label htmlFor="COD"> Cash on Delivery</label>
               </div>
             </div>
             <div className="filter-department">
@@ -291,7 +291,7 @@ function Products(props) {
                   name="outOfStock"
                   value="outOfStock"
                 />
-                <label for="outOfStock"> Out of Stock</label>
+                <label htmlFor="outOfStock"> Out of Stock</label>
               </div>
             </div>
           </div>

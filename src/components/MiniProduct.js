@@ -15,7 +15,7 @@ class MiniProduct extends Component {
             }}
           >
             <img
-              src={image}
+              src={image[0]}
               style={{
                 padding: 10,
                 alignContent: "center",

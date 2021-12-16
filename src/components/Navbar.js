@@ -6,7 +6,7 @@ import { handleProductSearch } from "../actions";
 const styles = {
   cartIconContainer: {
     position: "relative",
-    marginRight: 30,
+    // marginRight: 30,
   },
   cartCount: {
     borderRadius: "50%",
@@ -17,13 +17,17 @@ const styles = {
   },
 };
 class Navbar extends Component {
-  componentDidMount() {
+  constructor() {
+    super();
     this.state = {
       searchWord: "",
     };
   }
   updateSearchWord = () => {
-    let { searchWord } = this.state;
+    console.log("staet: ", this.state);
+    let searchWord =
+      this.state.searchWord === undefined ? "" : this.state.searchWord;
+
     console.log("SEARCH TEXT", searchWord);
     this.props.dispatch(handleProductSearch(searchWord));
   };
@@ -94,12 +98,11 @@ class Navbar extends Component {
           </div>
           <div className="links">
             <Link to="/login">
-              {/* <img
+              <img
                 style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/logout.png`}
+                src={process.env.PUBLIC_URL + `/images/login.png`}
                 alt="Login/Logout"
-              />{" "} */}
-              <i class="fas fa-sign-in-alt fa-2x"></i>
+              />
             </Link>
           </div>
         </div>

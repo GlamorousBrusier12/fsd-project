@@ -23,15 +23,15 @@ function EachProduct(props) {
         <div className="product-details-mini">
           {/* <h3>{title}</h3> */}
           <p>{title}</p>
-          <p>
-            <StarRatings
-              rating={rating.rate}
-              starDimension="20px"
-              starSpacing="2px"
-              starRatedColor="#FF9529"
-            />
-            ({rating.count} ratings)
-          </p>
+          {/* <p> */}
+          <StarRatings
+            rating={rating.rate}
+            starDimension="20px"
+            starSpacing="2px"
+            starRatedColor="#FF9529"
+          />
+          ({rating.count} ratings)
+          {/* </p> */}
           <p>
             <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>{" "}
             <strike> {"₹" + price}</strike>{" "}
@@ -42,7 +42,6 @@ function EachProduct(props) {
                 ("(" + discount + "%" + ")")}
             </span>{" "}
           </p>
-          <div></div>
         </div>
       </div>
     </div>

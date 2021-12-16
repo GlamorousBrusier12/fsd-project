@@ -18,7 +18,7 @@ code {
   height: 9vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -27,6 +27,7 @@ code {
 .navbar-routes {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .navbar-icon {
@@ -88,6 +89,7 @@ code {
   display: flex;
   flex-direction: column;
   width: 90%;
+  min-height: 220px;
 }
 .deals-container h3 {
   margin-left: 5px;
