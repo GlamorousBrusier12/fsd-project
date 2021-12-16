@@ -139,6 +139,34 @@
       "body": "the build could have been better",
       "stars": 2,
       "id": 20
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "Very nice product",
+      "body": "oh boooy",
+      "stars": 4,
+      "id": 21
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "very nice",
+      "body": "wow what a product",
+      "stars": 3,
+      "id": 22
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "Could be better",
+      "body": "Can be much much better",
+      "stars": 3,
+      "id": 23
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "Superb ",
+      "body": "what a product!",
+      "stars": 4,
+      "id": 24
     }
   ],
   "products": [
@@ -159,7 +187,12 @@
         "count": 120
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 2,
@@ -178,9 +211,15 @@
         "count": 1039
       },
       "type": "Specifications",
-      "types": ["12GB 256GB", " 12GB 128GB", "6GB 64GB"],
+      "types": [
+        "12GB 256GB",
+        " 12GB 128GB",
+        "6GB 64GB"
+      ],
       "Pixel": "Resolution",
-      "Pixels": ["2778 x 1284"]
+      "Pixels": [
+        "2778 x 1284"
+      ]
     },
     {
       "id": 3,
@@ -199,7 +238,12 @@
         "count": 120
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 4,
@@ -218,7 +262,12 @@
         "count": 1620
       },
       "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "types": [
+        "Small",
+        "Medium",
+        "Large",
+        "Extra Large"
+      ]
     },
     {
       "id": 5,
@@ -237,7 +286,12 @@
         "count": 98
       },
       "type": "Size",
-      "types": ["8", "9", "10", "11"]
+      "types": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
     },
     {
       "id": 6,
@@ -256,7 +310,9 @@
         "count": 34
       },
       "type": "Shape",
-      "types": ["Round"]
+      "types": [
+        "Round"
+      ]
     },
     {
       "id": 7,
@@ -275,7 +331,9 @@
         "count": 434
       },
       "type": "Connectivity",
-      "types": ["True Wireless"]
+      "types": [
+        "True Wireless"
+      ]
     },
     {
       "id": 8,
@@ -294,7 +352,11 @@
         "count": 3434
       },
       "type": "Color",
-      "types": ["olive green", "Black", "Blue"]
+      "types": [
+        "olive green",
+        "Black",
+        "Blue"
+      ]
     },
     {
       "id": 9,
@@ -313,7 +375,11 @@
         "count": 13434
       },
       "type": "Ram",
-      "types": ["32GB", "16GB", "8Gb"]
+      "types": [
+        "32GB",
+        "16GB",
+        "8Gb"
+      ]
     },
     {
       "id": 10,
@@ -332,7 +398,9 @@
         "count": 6434
       },
       "type": "lens",
-      "types": ["DSLR"]
+      "types": [
+        "DSLR"
+      ]
     },
     {
       "id": 11,
@@ -351,7 +419,10 @@
         "count": 12450
       },
       "type": "Color",
-      "types": ["Silver", "Space Grey"]
+      "types": [
+        "Silver",
+        "Space Grey"
+      ]
     },
     {
       "id": 12,
@@ -370,7 +441,11 @@
         "count": 22970
       },
       "type": "size",
-      "types": ["65 inches", "55 inches", "45 inches"]
+      "types": [
+        "65 inches",
+        "55 inches",
+        "45 inches"
+      ]
     },
     {
       "id": 13,
@@ -389,26 +464,37 @@
         "count": 222970
       },
       "type": "color",
-      "types": ["Black", "White"]
+      "types": [
+        "Black",
+        "White"
+      ]
     }
   ],
   "faqs": [
     {
       "id": 1,
       "question": "How is the stiching?",
-      "answers": ["It is just AMAZING..ZING ZING", "The quality is brilliant"],
+      "answers": [
+        "It is just AMAZING..ZING ZING",
+        "The quality is brilliant"
+      ],
       "upvotes": 2
     },
     {
       "id": 2,
       "question": "Is it washable?",
-      "answers": ["Yes, It is."],
+      "answers": [
+        "Yes, It is."
+      ],
       "upvotes": 4
     },
     {
       "id": 3,
       "question": "Is it a laptop bag or just a casual bag?",
-      "answers": ["Both.", "I think it's Both casual and laptop"],
+      "answers": [
+        "Both.",
+        "I think it's Both casual and laptop"
+      ],
       "upvotes": 1
     },
     {
@@ -422,25 +508,37 @@
     {
       "id": 5,
       "question": "Is it fully water proof?",
-      "answers": ["no", "No, but there is extra provided rain cover."],
+      "answers": [
+        "no",
+        "No, but there is extra provided rain cover."
+      ],
       "upvotes": 5
     },
     {
       "id": 6,
       "question": "How much weight of bag?",
-      "answers": ["Light weight", " nice bag and light weighted."],
+      "answers": [
+        "Light weight",
+        " nice bag and light weighted."
+      ],
       "upvotes": 3
     },
     {
       "id": 7,
       "question": "Is there any pocket for water bottle?",
-      "answers": ["2 Sides", "ya two side pockets are for water bottle."],
+      "answers": [
+        "2 Sides",
+        "ya two side pockets are for water bottle."
+      ],
       "upvotes": 2
     },
     {
       "id": 8,
       "question": "is it suitable for office work?",
-      "answers": ["Yes, Absolutely.", "Perfect for office and college too."],
+      "answers": [
+        "Yes, Absolutely.",
+        "Perfect for office and college too."
+      ],
       "upvotes": 1
     },
     {
@@ -455,7 +553,9 @@
     {
       "id": 10,
       "question": "which type of cloth used?",
-      "answers": ["Polyster One."],
+      "answers": [
+        "Polyster One."
+      ],
       "upvotes": 4
     }
   ],
@@ -810,6 +910,32 @@
       "reviews": [],
       "isLoggedIn": true,
       "id": 27
+    },
+    {
+      "fulllName": "Guduru Chetan",
+      "email": "guduruchetan@gmail.com",
+      "mobileNumber": "+446300014049",
+      "password": "test@123",
+      "address": " ",
+      "wishlist": [],
+      "purchases": [],
+      "cartItems": [],
+      "reviews": [],
+      "isLoggedIn": true,
+      "id": 28
+    },
+    {
+      "fulllName": "Chetan Guduru",
+      "email": "guduru@gmail.com",
+      "mobileNumber": "749587934",
+      "password": "test@123",
+      "address": " ",
+      "wishlist": [],
+      "purchases": [],
+      "cartItems": [],
+      "reviews": [],
+      "isLoggedIn": true,
+      "id": 29
     }
   ]
 }
