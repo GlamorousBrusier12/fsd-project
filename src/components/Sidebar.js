@@ -12,6 +12,7 @@ const Sidebar = () => {
             <Link to="/userProfile" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem ">
                 <img
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/present.png`}
@@ -30,6 +31,7 @@ const Sidebar = () => {
             >
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/man.png`}
@@ -40,7 +42,7 @@ const Sidebar = () => {
             <Link to="/userProfileAdress" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem">
                 <img
-                  alt="sidebar"
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/location.png`}
@@ -51,6 +53,7 @@ const Sidebar = () => {
             <Link to="/userProfilePanCard" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/credit-card.png`}
@@ -66,6 +69,7 @@ const Sidebar = () => {
             <Link to="/userProfileDebitCard" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/debit-card.png`}
@@ -76,6 +80,7 @@ const Sidebar = () => {
             <Link to="/userProfileUPI" style={{ textDecoration: "none" }}>
               <li className="sidebarListItem">
                 <img
+                  alt="sidebar-categories"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/mobile-payment.png`}
@@ -90,7 +95,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
-                alt="sidebar"
+                alt="sidebar-categories"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/logout.png`}

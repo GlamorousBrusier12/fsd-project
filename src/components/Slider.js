@@ -63,9 +63,7 @@ class Slider extends Component {
                 key={index}
                 onClick={() => this.moveDot(index + 1)}
                 className={slideIndex === index + 1 ? "dot active" : "dot"}
-              >
-                {" "}
-              </div>
+              ></div>
             );
           })}
         </div>

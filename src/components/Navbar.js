@@ -84,7 +84,7 @@ class Navbar extends Component {
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/heart.png`}
                 alt="wishlist"
-              />{" "}
+              />
             </Link>
           </div>
           <div className="links">
