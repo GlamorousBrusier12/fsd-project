@@ -40,7 +40,7 @@ function EachProduct(props) {
               {" Save " +
                 " ₹" +
                 Math.ceil(price - ((100 - discount) / 100) * price) +
-                ("(" + discount + "%" + ")")}
+                ("(" + discount + "% )")}
             </span>{" "}
           </p>
         </div>

@@ -23,7 +23,7 @@ export default function Login() {
         console.log(err);
         incorrectCredentials.current.innerText =
           "Incorrect Login Credentials.. Please try again";
-      });git
+      });
   };
   // Show password feature
   const [passwordShown, setPasswordShown] = useState(false);
