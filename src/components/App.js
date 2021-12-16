@@ -15,7 +15,7 @@ import UserProfilePanCard from "./UserProfilePanCard";
 import UserProfileDebitCard from "./UserProfileDebitCard";
 import UserProfileUPI from "./UserProfileUPI";
 import Footer from "./Footer";
-import AdressList from "./Adresslist";
+import AdressList from "./AdressList";
 
 class App extends Component {
   constructor(props) {
