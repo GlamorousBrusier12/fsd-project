@@ -47,7 +47,7 @@ class Slider extends Component {
                 style={{ height: 600 }}
                 src={
                   process.env.PUBLIC_URL +
-                  `/images/slider0${(index % 2) + 1}.png`
+                  `/images/slider${(index % 7) + 1}.png`
                 }
                 alt={index}
               />

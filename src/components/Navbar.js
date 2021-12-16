@@ -84,12 +84,22 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/login">
+            <Link to="/userProfile">
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
-                alt="user page"
+                alt="User Profile"
               />
+            </Link>
+          </div>
+          <div className="links">
+            <Link to="/login">
+              {/* <img
+                style={{ height: 30, width: 30 }}
+                src={process.env.PUBLIC_URL + `/images/logout.png`}
+                alt="Login/Logout"
+              />{" "} */}
+              <i class="fas fa-sign-in-alt fa-2x"></i>
             </Link>
           </div>
         </div>

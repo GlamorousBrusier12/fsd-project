@@ -3,7 +3,7 @@ import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
 function EachProduct(props) {
   // console.log("each product:", props.content);
-  const { title, image, price, rating, category } = props.content;
+  const { title, image, price, rating, discount } = props.content;
   // console.log(props);
   return (
     <div>
@@ -21,26 +21,28 @@ function EachProduct(props) {
           </Link>
         </div>
         <div className="product-details-mini">
-          <h3>{title}</h3>
-          <h6>
-            <h3>
-              Rating:{" "}
-              <StarRatings
-                rating={rating.rate}
-                starDimension="20px"
-                starSpacing="2px"
-                starC
-              />{" "}
-              ({rating.count} reviews)
-            </h3>
-          </h6>
-          <p>{category}</p>
+          {/* <h3>{title}</h3> */}
+          <p>{title}</p>
           <p>
-            <b>{"₹" + price}</b> <strike> {"₹" + 1.15 * price}</strike>{" "}
+            <StarRatings
+              rating={rating.rate}
+              starDimension="20px"
+              starSpacing="2px"
+              starRatedColor="#FF9529"
+            />
+            ({rating.count} ratings)
+          </p>
+          <p>
+            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>{" "}
+            <strike> {"₹" + price}</strike>{" "}
             <span className="discount_percentage">
-              <b>(15% off)</b>
+              {" Save " +
+                " ₹" +
+                Math.ceil(price - ((100 - discount) / 100) * price) +
+                ("(" + discount + "%" + ")")}
             </span>{" "}
           </p>
+          <div></div>
         </div>
       </div>
     </div>
