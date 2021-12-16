@@ -2,6 +2,7 @@ import React from "react";
 import StarRatings from "react-star-ratings";
 import { Link } from "react-router-dom";
 function EachProduct(props) {
+  // console.log("each product:", props.content);
   const { title, image, price, rating, category } = props.content;
   // console.log(props);
   return (

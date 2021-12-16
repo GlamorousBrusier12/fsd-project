@@ -10,7 +10,6 @@ import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
-import AdressList from "./AdressList";
 import UserProfileInformation from "./UserProfileInformation";
 import UserProfilePanCard from "./UserProfilePanCard";
 import UserProfileDebitCard from "./UserProfileDebitCard";
@@ -52,7 +51,7 @@ class App extends Component {
                 <UserProfile />
               </Route>
               <Route exact path="/userProfileAdress">
-                <AdressList />
+                <Adresslist />
               </Route>
               <Route exact path="/userProfileInformation">
                 <UserProfileInformation />

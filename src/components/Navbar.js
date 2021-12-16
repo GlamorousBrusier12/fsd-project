@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { handleProductSearch } from "../actions";
 // import { Switch } from "react-router";
 const styles = {
   cartIconContainer: {
@@ -22,7 +24,8 @@ class Navbar extends Component {
   }
   updateSearchWord = () => {
     let { searchWord } = this.state;
-    // console.log("SEARCH TEXT", searchWord);
+    console.log("SEARCH TEXT", searchWord);
+    this.props.dispatch(handleProductSearch(searchWord));
   };
   render() {
     return (
@@ -94,5 +97,9 @@ class Navbar extends Component {
     );
   }
 }
-
-export default Navbar;
+function mapStateToProps(state) {
+  return {
+    searchResults: state.search,
+  };
+}
+export default connect(mapStateToProps)(Navbar);
