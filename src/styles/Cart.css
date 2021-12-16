@@ -1,0 +1,72 @@
+.Cart {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.Item1 {
+  display: flex;
+  margin: 10px 20px 10px;
+  border: 400px;
+  border-radius: 4px;
+  border-color: blueviolet;
+  background-color: white;
+  box-shadow: 0 5px 10px;
+}
+.Item2 {
+  display: flex;
+  margin: 20px 10px 20px;
+  border: 400px;
+  border-radius: 4px;
+  border-color: blueviolet;
+  background-color: white;
+  box-shadow: 0 5px 10px;
+}
+.Item3 {
+  display: flex;
+  margin: 20px 10px 20px;
+  border: 400px;
+  border-radius: 4px;
+  border-color: blueviolet;
+  background-color: white;
+  box-shadow: 0 5px 10px;
+}
+.image {
+  width: 200px;
+  float: left;
+  display: flex;
+}
+.image > img {
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px 10px;
+}
+.column {
+  width: 400px;
+  margin-top: 30px;
+  float: left;
+  margin-left: 10px;
+}
+.item .column .h1 {
+  text-align: justify;
+}
+.cart-button {
+  margin: 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  float: left;
+  align-items: center;
+}
+.cart-button button {
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 70px;
+  height: 30px;
+  color: rgb(12, 4, 4);
+  background-color: rgb(242, 248, 248);
+  font-size: medium;
+  font-family: fantasy;
+}
+.cart-button button:hover {
+  background-color: rgba(90, 224, 224, 0.582);
+}

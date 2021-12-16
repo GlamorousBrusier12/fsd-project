@@ -3,11 +3,13 @@ import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useLocation,Link } from "react-router-dom/cjs/react-router-dom.min";
+import { data } from "../data";
 
 function ProjectPage() {
   const [resourceType, setResourceType] = useState(<Faqs />);
   const location = useLocation();
+  
   const product = location.state;
   const { title, image, price, description, rating, discount } =
     product.product;

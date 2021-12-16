@@ -16,7 +16,7 @@ import UserProfileDebitCard from "./UserProfileDebitCard";
 import UserProfileUPI from "./UserProfileUPI";
 // import Footer from "./Footer";
 import AdressList from "./AdressList";
-
+import Cart from './Cart';
 class App extends Component {
   constructor(props) {
     super();
@@ -69,7 +69,7 @@ class App extends Component {
                 <h1>Wishlist</h1>
               </Route>
               <Route path="/cart">
-                <h1>cart</h1>
+                <Cart/>
               </Route>
               <Route path="/">
                 <Home />
