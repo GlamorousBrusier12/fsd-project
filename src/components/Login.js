@@ -11,6 +11,7 @@ export default function Login() {
   const incorrectCredentials = useRef(null);
 
   const LoginUser = () => {
+    //Hitting the Login api using axios by sending the useremail and password to authenticate
     axios
       .post("/login", { username: username1, password: password1 })
       .then((result) => {
@@ -24,6 +25,7 @@ export default function Login() {
           "Incorrect Login Credentials.. Please try again";
       });
   };
+  // Show password feature
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);

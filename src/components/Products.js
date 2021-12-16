@@ -15,6 +15,7 @@ function Products(props) {
     searchResults = items;
   }
   useEffect(() => {
+    //Fetching the products data from JSON-Server
     fetch(`http://localhost:3000/products`)
       .then((res) => res.json())
       .then(
@@ -36,6 +37,7 @@ function Products(props) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return (
+      //Rendering the Loader animation while loading the data
       <div>
         <Loader />
       </div>
@@ -46,6 +48,7 @@ function Products(props) {
         <br />
         <Categories />
         <div className=" main-container">
+          {/* Filter Container each sub-filter has one div and that div contains the filters */}
           <div className="filters-container">
             <div className="filter-department">
               <p className="filter-headings">Department</p>
@@ -295,6 +298,7 @@ function Products(props) {
               </div>
             </div>
           </div>
+          {/* Rendering EachProduct component using map function and sending data through props. */}
           <div className="products-container">
             {searchResults.map((item, index) => {
               return <EachProduct content={item} key={index} />;

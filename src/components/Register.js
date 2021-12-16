@@ -3,23 +3,28 @@ import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disa
 import { useHistory } from "react-router-dom";
 import "../styles/RegisterStyle.css";
 function Register() {
-  const [isAlreadyaUser, setIsAlreadyaUser] = useState(false);
   const history = useHistory();
+  //Declaring React Hooks to store the user data and post it to the JSON-Server.
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [useremail, setUseremail] = useState("");
   const [mobile_number, setMobilenumber] = useState("");
   const [userPassword, setPassword] = useState("");
+  // Hooks created for Show Password feature.
   const [passwordShown, setPasswordShown] = useState(false);
   const isUser = useRef(null);
+  // Show password function to toggle the password type from text to password.
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+  // Function declared to post the users details to the JSON-Server.
   const registerUser = (event) => {
+    //Fetching the JSON-Server
     fetch(`http://localhost:3000/users?q=${useremail}`)
       .then((res) => res.json())
       .then((json) => json[0].email)
       .then((email) => {
+        //Checking whether User Already Exists
         isUser.current.innerText =
           "Email already in use. Please try again using another email id";
       })
