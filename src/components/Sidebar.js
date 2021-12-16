@@ -9,66 +9,80 @@ const Sidebar = () => {
           <h1 className="sidebarTitleHello">My Account Details</h1>
           <h1 className="sidebarTitle">Orders</h1>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <img
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/present.png`}
-              />
-              My Orders
-            </li>
+            <Link to="/userProfile" style={{ textDecoration: "none" }}>
+              <li className="sidebarListItem ">
+                <img
+                  className="sidebarIcon"
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/present.png`}
+                />
+                My Orders
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Account Settings</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <img
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/man.png`}
-              />
-              Profile Information
-            </li>
-            <div>
+            <Link
+              to="/userProfileInformation"
+              style={{ textDecoration: "none" }}
+            >
               <li className="sidebarListItem">
                 <img
+                  className="sidebarIcon"
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/man.png`}
+                />
+                Profile Information
+              </li>
+            </Link>
+            <Link to="/userProfileAdress" style={{ textDecoration: "none" }}>
+              <li className="sidebarListItem">
+                <img
+                  alt="sidebar"
                   className="sidebarIcon"
                   style={{ height: 30, width: 30 }}
                   src={process.env.PUBLIC_URL + `/images/location.png`}
                 />
                 Manage Adresses
               </li>
-            </div>
-            <li className="sidebarListItem">
-              <img
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/credit-card.png`}
-              />
-              Pan card Information
-            </li>
+            </Link>
+            <Link to="/userProfilePanCard" style={{ textDecoration: "none" }}>
+              <li className="sidebarListItem">
+                <img
+                  className="sidebarIcon"
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/credit-card.png`}
+                />
+                Electorent card
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Payment Information</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <img
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/debit-card.png`}
-              />
-              Saved Cards
-            </li>
-            <li className="sidebarListItem">
-              <img
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/mobile-payment.png`}
-              />
-              Saved UPI
-            </li>
+            <Link to="/userProfileDebitCard" style={{ textDecoration: "none" }}>
+              <li className="sidebarListItem">
+                <img
+                  className="sidebarIcon"
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/debit-card.png`}
+                />
+                Saved Cards
+              </li>
+            </Link>
+            <Link to="/userProfileUPI" style={{ textDecoration: "none" }}>
+              <li className="sidebarListItem">
+                <img
+                  className="sidebarIcon"
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/mobile-payment.png`}
+                />
+                Saved UPI
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
@@ -76,6 +90,7 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <img
+                alt="sidebar"
                 className="sidebarIcon"
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/logout.png`}

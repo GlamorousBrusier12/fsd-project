@@ -10,12 +10,16 @@ import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
-import Adresslist from "./Adresslist";
+import UserProfileInformation from "./UserProfileInformation";
+import UserProfilePanCard from "./UserProfilePanCard";
+import UserProfileDebitCard from "./UserProfileDebitCard";
+import UserProfileUPI from "./UserProfileUPI";
+// import Footer from "./Footer";
+import AdressList from "./AdressList";
 import Cart from './Cart';
-
 class App extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {};
   }
   onChange = () => {
@@ -26,38 +30,53 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar change={this.onChange} />
-          <Switch>
-            <Route path="/reviewform">
-              <ReviewForm />
-            </Route>
-            <Route path="/productpage">
-              <ProductPage />
-            </Route>
-            <Route path="/products">
-              <Products />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Register />
-            </Route>
-            <Route path="/userProfile">
-              <UserProfile />
-            </Route>
-            <Route exact path="/userProfileAdress">
-              <Adresslist />
-            </Route>
-            <Route path="/wishlist">
-              <h1>Wishlist</h1>
-            </Route>
-            <Route path="/cart">
-              <Cart/>
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <div className="content-container">
+            <Switch>
+              <Route path="/reviewform">
+                <ReviewForm />
+              </Route>
+              <Route path="/productpage">
+                <ProductPage />
+              </Route>
+              <Route path="/products">
+                <Products />
+              </Route>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/signup">
+                <Register />
+              </Route>
+              <Route path="/userProfile">
+                <UserProfile />
+              </Route>
+              <Route exact path="/userProfileAdress">
+                <AdressList />
+              </Route>
+              <Route exact path="/userProfileInformation">
+                <UserProfileInformation />
+              </Route>
+              <Route exact path="/userProfilePanCard">
+                <UserProfilePanCard />
+              </Route>
+              <Route exact path="/userProfileDebitCard">
+                <UserProfileDebitCard />
+              </Route>
+              <Route exact path="/userProfileUPI">
+                <UserProfileUPI />
+              </Route>
+              <Route path="/wishlist">
+                <h1>Wishlist</h1>
+              </Route>
+              <Route path="/cart">
+                <Cart/>
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+          {/* <Footer change={this.onChange} /> */}
         </div>
       </Router>
     );
@@ -65,3 +84,5 @@ class App extends Component {
 }
 
 export default App;
+
+/* this is a comment */

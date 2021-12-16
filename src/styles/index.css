@@ -92,3 +92,7 @@ code {
 .deals-container h3 {
   margin-left: 5px;
 }
+
+.content-container {
+  min-height: 90vh;
+}

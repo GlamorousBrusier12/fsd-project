@@ -2,15 +2,25 @@ import React, { Component } from "react";
 import MiniProduct from "./MiniProduct";
 import Slider from "./Slider";
 import { data } from "../data";
-
+import "../styles/home.css";
+import Categories from "./Categories";
 class Home extends Component {
   render() {
     let deals = data.slice(0, 8);
     return (
       <div>
+        <Categories />
         <Slider />
         <div className="deals-container">
           <h3>Deals of the day!!!</h3>
+          <div className="mini-products">
+            {deals.map((product) => (
+              <MiniProduct data={product} key={product.id} />
+            ))}
+          </div>
+        </div>
+        <div className="deals-container">
+          <h3>Rents of the day!!!</h3>
           <div className="mini-products">
             {deals.map((product) => (
               <MiniProduct data={product} key={product.id} />

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { handleProductSearch } from "../actions";
 // import { Switch } from "react-router";
 const styles = {
   cartIconContainer: {
@@ -7,7 +9,6 @@ const styles = {
     marginRight: 30,
   },
   cartCount: {
-    // background: "gray",
     borderRadius: "50%",
     padding: "0px 6px",
     position: "absolute",
@@ -16,6 +17,16 @@ const styles = {
   },
 };
 class Navbar extends Component {
+  componentDidMount() {
+    this.state = {
+      searchWord: "",
+    };
+  }
+  updateSearchWord = () => {
+    let { searchWord } = this.state;
+    console.log("SEARCH TEXT", searchWord);
+    this.props.dispatch(handleProductSearch(searchWord));
+  };
   render() {
     return (
       <div className="navbar-container">
@@ -25,21 +36,29 @@ class Navbar extends Component {
           </Link>
         </div>
         <div className="search-container">
-          <input
-            style={{
-              textAlign: "left",
-              padding: 3,
-              outline: "none",
-              fontSize: 20,
-            }}
-            placeholder="Search"
-            className="search-input"
-          />
-          <Link to="/products">
-            <button className="search-button">
-              <i style={{ color: "black" }} className="fas fa-search fa-2x"></i>
-            </button>
-          </Link>
+          <form>
+            <input
+              style={{
+                textAlign: "left",
+                padding: 3,
+                outline: "none",
+                fontSize: 20,
+              }}
+              placeholder="Search"
+              className="search-input"
+              onChange={(e) => {
+                this.setState({ ...this.state, searchWord: e.target.value });
+              }}
+            />
+            <Link to="/products" style={{ marginLeft: "-1%" }}>
+              <button className="search-button" onClick={this.updateSearchWord}>
+                <i
+                  style={{ color: "black" }}
+                  className="fas fa-search fa-2x"
+                ></i>
+              </button>
+            </Link>
+          </form>
         </div>
         <div className="navbar-routes">
           <div className="links" style={styles.cartIconContainer}>
@@ -65,12 +84,22 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/login">
+            <Link to="/userProfile">
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
-                alt="user page"
+                alt="User Profile"
               />
+            </Link>
+          </div>
+          <div className="links">
+            <Link to="/login">
+              {/* <img
+                style={{ height: 30, width: 30 }}
+                src={process.env.PUBLIC_URL + `/images/logout.png`}
+                alt="Login/Logout"
+              />{" "} */}
+              <i class="fas fa-sign-in-alt fa-2x"></i>
             </Link>
           </div>
         </div>
@@ -78,5 +107,9 @@ class Navbar extends Component {
     );
   }
 }
-
-export default Navbar;
+function mapStateToProps(state) {
+  return {
+    searchResults: state.search,
+  };
+}
+export default connect(mapStateToProps)(Navbar);

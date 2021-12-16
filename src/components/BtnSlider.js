@@ -6,7 +6,7 @@ class BtnSlider extends Component {
     return (
       <button
         className={
-          this.props.direction === "next" ? "btn-slide next" : "btn-slide prev"
+          this.props.direction === "next" ? "btn-slide next-slide" : "btn-slide prev-slide"
         }
         onClick={this.props.moveSlide}
       >
