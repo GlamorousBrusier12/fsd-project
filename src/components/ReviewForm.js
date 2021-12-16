@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
-
+import { useHistory } from "react-router-dom";
 function ReviewForm(props) {
+  const history = useHistory();
   const [body, setBody] = useState("");
   const [heading, setHeading] = useState("");
   // const [reviews,setReviews] = useState([]);
@@ -20,31 +21,34 @@ function ReviewForm(props) {
   };
 
   const addReview = (event) => {
-    const data = {
-      user: "Topper Naveen",
-      heading: heading,
-      body: body,
-      stars: star,
-    };
+    if (body && heading) {
+      const data = {
+        user: "Topper Naveen",
+        heading: heading,
+        body: body,
+        stars: star,
+      };
 
-    fetch("http://localhost:3000/reviews", {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
+      fetch("http://localhost:3000/reviews", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    event.preventDefault();
-    setBody("");
-    setHeading("");
-    setStar(0);
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      event.preventDefault();
+      setBody("");
+      setHeading("");
+      setStar(0);
+      history.push("/");
+    }
   };
   return (
     <div style={{ display: "flex" }}>
