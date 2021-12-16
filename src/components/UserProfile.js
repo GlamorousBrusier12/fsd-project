@@ -17,7 +17,7 @@ const UserProfile = () => {
     {
       field: "id",
       headerName: "ID",
-      width: 70,
+      width: 50,
     },
     {
       field: "user",
@@ -40,7 +40,7 @@ const UserProfile = () => {
     {
       field: "adress",
       headerName: "Address",
-      width: 200,
+      width: 180,
     },
     {
       field: "seller",
@@ -60,12 +60,12 @@ const UserProfile = () => {
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      width: 200,
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/user/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+            <Link to={"/reviewform"}>
+              <button className="userListEdit">Post Review</button>
             </Link>
             <DeleteOutlineIcon
               className="userListDelete"
