@@ -10,12 +10,12 @@ import Products from "./Products";
 import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
-import AdressList from "./AdressList";
 import UserProfileInformation from "./UserProfileInformation";
 import UserProfilePanCard from "./UserProfilePanCard";
 import UserProfileDebitCard from "./UserProfileDebitCard";
 import UserProfileUPI from "./UserProfileUPI";
 import Footer from "./Footer";
+import AdressList from "./Adresslist";
 
 class App extends Component {
   constructor(props) {
