@@ -6,7 +6,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState } from "react";
 import userRows from "../dummyData";
 
-const Adresslist = () => {
+const AdressList = () => {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -90,4 +90,4 @@ const Adresslist = () => {
   );
 };
 
-export default Adresslist;
+export default AdressList;
