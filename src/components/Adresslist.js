@@ -84,6 +84,7 @@ const AdressList = () => {
           pageSize={6}
           rowsPerPageOptions={[5]}
           checkboxSelection
+          sx={{ boxShadow: 20 }}
         />
       </div>
     </div>
