@@ -11,6 +11,7 @@ import ProductPage from "./ProductPage";
 import ReviewForm from "./ReviewForm";
 import UserProfile from "./UserProfile";
 import Adresslist from "./Adresslist";
+import Cart from './Cart';
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class App extends Component {
               <h1>Wishlist</h1>
             </Route>
             <Route path="/cart">
-              <h1>cart</h1>
+              <Cart/>
             </Route>
             <Route path="/">
               <Home />
