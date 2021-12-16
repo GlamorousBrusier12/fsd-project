@@ -83,6 +83,12 @@ const UserProfileDebitCard = () => {
           pageSize={6}
           rowsPerPageOptions={[5]}
           checkboxSelection
+          rowHeight={80}
+          sx={{
+            boxShadow: 20,
+            borderBottom: "none",
+            borderRadius: 7,
+          }}
         />
       </div>
     </div>

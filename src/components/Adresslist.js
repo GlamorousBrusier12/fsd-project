@@ -78,13 +78,19 @@ const AdressList = () => {
           </Link>
         </div>
         <DataGrid
+          GridLines="None"
+          rowHeight={80}
           rows={data}
           disableSelectionOnClick
           columns={columns}
           pageSize={6}
           rowsPerPageOptions={[5]}
           checkboxSelection
-          sx={{ boxShadow: 20 }}
+          sx={{
+            boxShadow: 20,
+            borderBottom: "none",
+            borderRadius: 7,
+          }}
         />
       </div>
     </div>

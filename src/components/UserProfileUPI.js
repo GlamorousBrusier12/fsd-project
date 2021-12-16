@@ -83,6 +83,12 @@ const UserProfileUPI = () => {
           pageSize={6}
           rowsPerPageOptions={[5]}
           checkboxSelection
+          sx={{
+            boxShadow: 20,
+            borderBottom: "none",
+            borderRadius: 7,
+          }}
+          rowHeight={80}
         />
       </div>
     </div>

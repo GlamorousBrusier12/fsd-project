@@ -277,5 +277,119 @@ const upi = [
   },
 ];
 
+const myOrders = [
+  {
+    id: 1,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 2,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 3,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 4,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 5,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 6,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 7,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 8,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 9,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+  {
+    id: 10,
+    avatar:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
+    name: "Iphone 13 Pro Max",
+    quantity: 1,
+    seller: "Apple",
+    adress: "ABC Street",
+
+    price: 1000,
+    status: "Delivered on 19th November",
+  },
+];
+
 export default userRows;
-export { cards, upi };
+export { cards, upi, myOrders };
