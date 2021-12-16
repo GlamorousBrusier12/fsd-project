@@ -518,36 +518,573 @@
       "upvotes": 4
     }
   ],
-  "users": [
+  "users":[
     {
-      "username": "tholuchururavindra@gmail.com",
-      "password": "test123",
-      "id": 1
+      "id": 1,
+      "fullName": "Ravindra Tholuchuru",
+      "email": "ravindra.t19@iiits.in",
+      "mobileNumber": "8688358501",
+      "password": "Test@123",
+      "address": "251 Springview Road",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
     },
     {
+      "id": 2,
+      "fullName": " ",
+      "email": "naveenkumar.k19@iiits.in",
+      "mobileNumber": null,
       "password": "Test@123",
-      "id": 2
+      "address": "Vizag, Andhra Pradesh",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
     },
     {
       "id": 3,
-      "fullName": " ",
-      "email": "naveen.k19@iiits.in",
-      "mobileNumber": null,
+      "fullName": "Chetan Guduru",
+      "email": "chetan.g19@iiits.in",
+      "mobileNumber": "1105315339",
       "password": "Test@123",
-      "address": [
-        {
-          "area": "",
-          "district": "",
-          "state": "",
-          "country": "",
-          "pin-code": null
-        }
+      "address": "4 Swallow Alley",
+      "wishlist": [
+        
       ],
-      "wishlist": [],
-      "purchases": [],
-      "cartItems": [],
-      "reviews": [],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
       "isLoggedIn": false
+    },
+    {
+      "id": 4,
+      "fullName": "Corrianne Nann",
+      "email": "cnann3@chronoengine.com",
+      "mobileNumber": "2124965379",
+      "password": "MOn2U4Mf",
+      "address": "9 Lakewood Gardens Circle",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 5,
+      "fullName": "Margit Cabbell",
+      "email": "mcabbell4@addtoany.com",
+      "mobileNumber": "9503504996",
+      "password": "w9UyEsSKVGGh",
+      "address": "70876 Jackson Way",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 6,
+      "fullName": "Ilse Tranmer",
+      "email": "itranmer5@nsw.gov.au",
+      "mobileNumber": "8807963248",
+      "password": "dMxBsw",
+      "address": "7767 Morningstar Plaza",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 7,
+      "fullName": "Norene Cleaves",
+      "email": "ncleaves6@smh.com.au",
+      "mobileNumber": "4694414429",
+      "password": "Q72mrMFK",
+      "address": "51 Center Avenue",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 8,
+      "fullName": "Pierette Trask",
+      "email": "ptrask7@blogger.com",
+      "mobileNumber": "8829894885",
+      "password": "SghmK3",
+      "address": "63585 Armistice Pass",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 9,
+      "fullName": "Lockwood Tinsey",
+      "email": "ltinsey8@msn.com",
+      "mobileNumber": "0435805908",
+      "password": "pDfMcSmh",
+      "address": "1883 Nobel Point",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 10,
+      "fullName": "Brandea Clarkin",
+      "email": "bclarkin9@scientificamerican.com",
+      "mobileNumber": "2037097743",
+      "password": "StKfovdizZ",
+      "address": "626 Holmberg Plaza",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 11,
+      "fullName": "Abran Tuffley",
+      "email": "atuffleya@wunderground.com",
+      "mobileNumber": "6844186487",
+      "password": "eraRujuOexs",
+      "address": "7251 Eastwood Parkway",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 12,
+      "fullName": "Wilma Wennam",
+      "email": "wwennamb@berkeley.edu",
+      "mobileNumber": "0302014462",
+      "password": "fGSVj2jSG",
+      "address": "42 Mockingbird Avenue",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 13,
+      "fullName": "Terrell O'Carroll",
+      "email": "tocarrollc@elpais.com",
+      "mobileNumber": "6750408176",
+      "password": "19nVEyOXe5Ck",
+      "address": "498 Oak Valley Way",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 14,
+      "fullName": "Antonietta Baswall",
+      "email": "abaswalld@fema.gov",
+      "mobileNumber": "3698074524",
+      "password": "XwSvDS4dRz",
+      "address": "3878 Eagan Junction",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 15,
+      "fullName": "Elvin Speariett",
+      "email": "espeariette@marketwatch.com",
+      "mobileNumber": "3568676869",
+      "password": "sshyiG",
+      "address": "29077 Oak Valley Trail",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 16,
+      "fullName": "Melany Medforth",
+      "email": "mmedforthf@livejournal.com",
+      "mobileNumber": "1013345290",
+      "password": "uMjDgGOFQW",
+      "address": "3 7th Hill",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 17,
+      "fullName": "Annora Lummus",
+      "email": "alummusg@google.es",
+      "mobileNumber": "4664372620",
+      "password": "Ifrn9UXC",
+      "address": "83521 Village Green Alley",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 18,
+      "fullName": "Eal Delbergue",
+      "email": "edelbergueh@feedburner.com",
+      "mobileNumber": "2653968045",
+      "password": "hXHi8I9",
+      "address": "4 Messerschmidt Point",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 19,
+      "fullName": "Humberto Capron",
+      "email": "hcaproni@home.pl",
+      "mobileNumber": "5392149685",
+      "password": "kxPQp2qxgzEF",
+      "address": "721 Almo Place",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 20,
+      "fullName": "Germayne Purse",
+      "email": "gpursej@gov.uk",
+      "mobileNumber": "0144500213",
+      "password": "4FnCE9",
+      "address": "20 Michigan Center",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 21,
+      "fullName": "Adelbert McGiff",
+      "email": "amcgiffk@hud.gov",
+      "mobileNumber": "6842567653",
+      "password": "0iDcg2AOLwCp",
+      "address": "996 Ridge Oak Crossing",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 22,
+      "fullName": "Sharla Revan",
+      "email": "srevanl@blogs.com",
+      "mobileNumber": "0627731597",
+      "password": "DkfNpOj3",
+      "address": "557 Ryan Lane",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 23,
+      "fullName": "Randi Jessel",
+      "email": "rjesselm@adobe.com",
+      "mobileNumber": "1213387752",
+      "password": "JR7mXNKpnUX",
+      "address": "7 Karstens Circle",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 24,
+      "fullName": "Charin Trevan",
+      "email": "ctrevann@github.io",
+      "mobileNumber": "9778267642",
+      "password": "urofLJB4vXmj",
+      "address": "4 Warbler Court",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "id": 25,
+      "fullName": "Constancy Pollett",
+      "email": "cpolletto@springer.com",
+      "mobileNumber": "5260685369",
+      "password": "XOKmJUL33Mlv",
+      "address": "21 Fuller Circle",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": false
+    },
+    {
+      "fulllName": "John Kennedy",
+      "email": "johnkennedy@gmail.com",
+      "mobileNumber": "5054123897",
+      "password": "Test@123",
+      "address": " ",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": true,
+      "id": 26
+    },
+    {
+      "fulllName": "Ravindra Tholuchuru",
+      "email": "tholuchururavindra@gmail.com",
+      "mobileNumber": "8688358501",
+      "password": "Test@123",
+      "address": " ",
+      "wishlist": [
+        
+      ],
+      "purchases": [
+        
+      ],
+      "cartItems": [
+        
+      ],
+      "reviews": [
+        
+      ],
+      "isLoggedIn": true,
+      "id": 27
     }
   ]
 }
