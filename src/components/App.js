@@ -14,7 +14,7 @@ import UserProfileInformation from "./UserProfileInformation";
 import UserProfilePanCard from "./UserProfilePanCard";
 import UserProfileDebitCard from "./UserProfileDebitCard";
 import UserProfileUPI from "./UserProfileUPI";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import AdressList from "./AdressList";
 
 class App extends Component {
@@ -76,7 +76,7 @@ class App extends Component {
               </Route>
             </Switch>
           </div>
-          <Footer change={this.onChange} />
+          {/* <Footer change={this.onChange} /> */}
         </div>
       </Router>
     );
