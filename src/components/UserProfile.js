@@ -83,7 +83,7 @@ const UserProfile = () => {
       <div className="myOrders">
         <div className="userTitleContainer">
           <h1 className="userTitle">My Orders</h1>
-          <Link to="/newUser">
+          <Link to="/products">
             <button className="userAddButton">Continue Shopping</button>
           </Link>
         </div>
