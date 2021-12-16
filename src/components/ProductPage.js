@@ -19,7 +19,7 @@ function ProjectPage() {
     <div>
       <div className="product">
         <div className="product-image">
-          <img src={image} alt="Product" />
+          <img src={image[0]} alt="Product" />
         </div>
         <div className="product-info-productpage">
           <h1>{title}</h1>
