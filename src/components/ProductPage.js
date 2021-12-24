@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
 import { useLocation,Link } from "react-router-dom/cjs/react-router-dom.min";
-import { data } from "../data";
+import SimilarItems from "./SimilarItems";
 
 function ProjectPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [resourceType, setResourceType] = useState(<Faqs />);
   const location = useLocation();
   
   const product = location.state;
-  const { title, image, price, description, rating, discount } =
+  const { title, image, price, description, rating, discount,type } =
     product.product;
   const [activeDiv, setActiveDiv] = useState(2);
   const toggleAnimation = (index) => {
@@ -79,7 +84,7 @@ function ProjectPage() {
             <button
               onClick={() => {
                 toggleAnimation(3);
-                setResourceType("Similar Items");
+                setResourceType(<SimilarItems type={type}/>);
               }}
               className={activeDiv === 3 ? "gelatine" : ""}
             >
