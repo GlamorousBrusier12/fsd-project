@@ -6,7 +6,7 @@ import "../styles/ProductsStyles.css";
 import Loader from "./Loader";
 import { connect } from "react-redux";
 function Products(props) {
-  console.log("PROPS: ", props.searchResults);
+  // console.log("PROPS: ", props.searchResults);
   let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -143,7 +143,6 @@ function Products(props) {
               <div className="sub-filters">
                 <input type="checkbox" name="rating4" id="rating4" value="4" />
                 <label htmlFor="rating4">
-                  {" "}
                   <StarRatings
                     rating={4}
                     starDimension="20px"
@@ -155,7 +154,6 @@ function Products(props) {
                 <br />
                 <input type="checkbox" name="rating3" id="rating3" value="3" />
                 <label htmlFor="rating3">
-                  {" "}
                   <StarRatings
                     rating={3}
                     starDimension="20px"
@@ -167,7 +165,6 @@ function Products(props) {
                 <br />
                 <input type="checkbox" name="rating2" id="rating2" value="2" />
                 <label htmlFor="rating2">
-                  {" "}
                   <StarRatings
                     rating={2}
                     starDimension="20px"
@@ -179,7 +176,6 @@ function Products(props) {
                 <br />
                 <input type="checkbox" name="rating1" id="rating1" value="1" />
                 <label htmlFor="rating1">
-                  {" "}
                   <StarRatings
                     rating={1}
                     starDimension="20px"

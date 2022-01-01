@@ -34,14 +34,14 @@ function EachProduct(props) {
           ({rating.count} ratings)
           {/* </p> */}
           <p>
-            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>{" "}
-            <strike> {"₹" + price}</strike>{" "}
+            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>
+            <strike> {"₹" + price}</strike>
             <span className="discount_percentage">
               {" Save " +
                 " ₹" +
                 Math.ceil(price - ((100 - discount) / 100) * price) +
                 ("(" + discount + "% )")}
-            </span>{" "}
+            </span>
           </p>
         </div>
       </div>

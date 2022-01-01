@@ -14,7 +14,7 @@ function ProjectPage() {
 
   const [resourceType, setResourceType] = useState(<Faqs />);
   const location = useLocation();
-  
+
   const product = location.state;
   const { title, image, price, description, rating, discount,type } =
     product.product;
@@ -32,23 +32,23 @@ function ProjectPage() {
           <h1>{title}</h1>
           <p>{description}</p>
           <p>
-            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>{" "}
-            <strike> {"₹" + price}</strike>{" "}
+            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>
+            <strike> {"₹" + price}</strike>
             <span className="discount_percentage">
               {" Save " +
                 " ₹" +
                 Math.ceil(price - ((100 - discount) / 100) * price) +
-                ("(" + discount + "%" + ")")}
-            </span>{" "}
+                ("(" + discount + "%)")}
+            </span>
           </p>
           <h3>
-            Rating:{" "}
+            Rating:
             <StarRatings
               rating={rating.rate}
               starDimension="20px"
               starSpacing="2px"
               starRatedColor="#FF9529"
-            />{" "}
+            />
             ({rating.count} reviews)
           </h3>
           <div style={{ margin: "10px" }}>
