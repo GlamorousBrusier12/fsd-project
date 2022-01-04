@@ -4,18 +4,13 @@ import { Link } from "react-router-dom";
 function EachProduct(props) {
   // console.log("each product:", props.content);
   // Getting the data from Products.js as Props
-  const { title, image, price, rating, discount } = props.content;
+  const { title, image, price, rating, discount, id } = props.content;
   // console.log(props);
   return (
     <div>
       <div className="each-product">
         <div>
-          <Link
-            to={{
-              pathname: "/productpage",
-              state: { product: props.content },
-            }}
-          >
+          <Link to={`/products/${id}`} target="_blank">
             <div className="img-size">
               <img className="productspage-image" src={image[0]} alt={title} />
             </div>

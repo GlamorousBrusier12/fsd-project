@@ -45,7 +45,7 @@ class Home extends Component {
           <h3>Rents of the day!!!</h3>
           <div className="mini-products">
             {deals.map((product) => (
-              <MiniProduct data={product} key={product.id} />
+              <MiniProduct data={product} key={product.id} pid={product.id} />
             ))}
           </div>
         </div>

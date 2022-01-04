@@ -7,7 +7,6 @@ import Loader from "./Loader";
 import { connect } from "react-redux";
 import ReactPaginate from "react-paginate";
 function Products(props) {
-  // console.log("PROPS: ", props.searchResults);
   let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
