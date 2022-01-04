@@ -1,101 +1,126 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
-import { useLocation,Link } from "react-router-dom/cjs/react-router-dom.min";
 import SimilarItems from "./SimilarItems";
-
-function ProjectPage() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
+import { useParams } from "react-router-dom";
+import Loader from "./Loader";
+function ProductPage() {
   const [resourceType, setResourceType] = useState(<Faqs />);
-  const location = useLocation();
-
-  const product = location.state;
-  const { title, image, price, description, rating, discount,type } =
-    product.product;
+  const { productId } = useParams();
+  const [item, setItem] = useState({});
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState(null);
   const [activeDiv, setActiveDiv] = useState(2);
   const toggleAnimation = (index) => {
     setActiveDiv(index);
   };
-  return (
-    <div>
-      <div className="product">
-        <div className="product-image">
-          <img src={image[0]} alt="Product" />
-        </div>
-        <div className="product-info-productpage">
-          <h1>{title}</h1>
-          <p>{description}</p>
-          <p>
-            <b>{"₹" + Math.ceil(((100 - discount) / 100) * price)}</b>
-            <strike> {"₹" + price}</strike>
-            <span className="discount_percentage">
-              {" Save " +
-                " ₹" +
-                Math.ceil(price - ((100 - discount) / 100) * price) +
-                ("(" + discount + "%)")}
-            </span>
-          </p>
-          <h3>
-            Rating:
-            <StarRatings
-              rating={rating.rate}
-              starDimension="20px"
-              starSpacing="2px"
-              starRatedColor="#FF9529"
-            />
-            ({rating.count} reviews)
-          </h3>
-          <div style={{ margin: "10px" }}>
-            <div className="productpage-buttons">
-              <button>Add to Cart</button>
-              <button>Rent Now</button>
+  console.log("productId, ", productId);
+  useEffect(() => {
+    fetch(`http://localhost:3000/products/${productId}`)
+      .then((res) => res.json())
+      .then(
+        (i) => {
+          setItem(i);
+          setIsLoaded(true);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+    window.scrollTo(0, 0);
+  }, [productId]);
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return (
+      //Rendering the Loader animation while loading the data
+      <div>
+        <Loader />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="product">
+          <div className="product-image">
+            <img src={item.image[0]} alt="Product" />
+          </div>
+          <div className="product-info-productpage">
+            <h1>{item.title}</h1>
+            <p>{item.description}</p>
+            <p>
+              <b>
+                {"₹" + Math.ceil(((100 - item.discount) / 100) * item.price)}
+              </b>
+              <strike> {"₹" + item.price}</strike>
+              <span className="discount_percentage">
+                {" Save " +
+                  " ₹" +
+                  Math.ceil(
+                    item.price - ((100 - item.discount) / 100) * item.price
+                  ) +
+                  ("(" + item.discount + "%)")}
+              </span>
+            </p>
+            <h3>
+              Rating:
+              <StarRatings
+                rating={item.rating.rate}
+                starDimension="20px"
+                starSpacing="2px"
+                starRatedColor="#FF9529"
+              />
+              ({item.rating.count} reviews)
+            </h3>
+            <div style={{ margin: "10px" }}>
+              <div className="productpage-buttons">
+                <button>Add to Cart</button>
+                <button>Rent Now</button>
+              </div>
+              <button className="buynow-button">Buy Now</button>
             </div>
-            <button className="buynow-button">Buy Now</button>
           </div>
         </div>
-      </div>
-      <div className="other-info">
-        <div className="categories-area" id="button-category">
-          <div className="button-area">
-            <button
-              onClick={() => {
-                setResourceType(<Reviews />);
-                toggleAnimation(1);
-              }}
-              className={activeDiv === 1 ? "gelatine" : ""}
-            >
-              Reviews
-            </button>
-            <button
-              onClick={() => {
-                setResourceType(<Faqs />);
-                toggleAnimation(2);
-              }}
-              className={activeDiv === 2 ? "gelatine" : ""}
-            >
-              FAQs
-            </button>
-            <button
-              onClick={() => {
-                toggleAnimation(3);
-                setResourceType(<SimilarItems type={type}/>);
-              }}
-              className={activeDiv === 3 ? "gelatine" : ""}
-            >
-              Similar Items
-            </button>
+        <div className="other-info">
+          <div className="categories-area" id="button-category">
+            <div className="button-area">
+              <button
+                onClick={() => {
+                  setResourceType(<Reviews />);
+                  toggleAnimation(1);
+                }}
+                className={activeDiv === 1 ? "gelatine" : ""}
+              >
+                Reviews
+              </button>
+              <button
+                onClick={() => {
+                  setResourceType(<Faqs />);
+                  toggleAnimation(2);
+                }}
+                className={activeDiv === 2 ? "gelatine" : ""}
+              >
+                FAQs
+              </button>
+              <button
+                onClick={() => {
+                  toggleAnimation(3);
+                  setResourceType(<SimilarItems type={item.type} />);
+                }}
+                className={activeDiv === 3 ? "gelatine" : ""}
+              >
+                Similar Items
+              </button>
+            </div>
           </div>
+          <div className="resource-display">{resourceType}</div>
         </div>
-        <div className="resource-display">{resourceType}</div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default ProjectPage;
+export default ProductPage;

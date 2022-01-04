@@ -6,14 +6,10 @@ import "../styles/ProductsStyles.css";
 import Loader from "./Loader";
 import { connect } from "react-redux";
 function Products(props) {
-  // console.log("PROPS: ", props.searchResults);
   let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  if (searchResults.length === 0) {
-    searchResults = items;
-  }
   useEffect(() => {
     //Fetching the products data from JSON-Server
     fetch(`http://localhost:3000/products`)

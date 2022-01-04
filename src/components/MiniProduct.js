@@ -4,16 +4,12 @@ import "../styles/miniProduct.css";
 import { Link } from "react-router-dom";
 class MiniProduct extends Component {
   render() {
-    const { image, price, rating } = this.props.data;
+    const { image, price, rating, id } = this.props.data;
+    // console.log
     return (
       <div className="mini-product-container">
         <div className="mini-product-image-container">
-          <Link
-            to={{
-              pathname: "/productpage",
-              state: { product: this.props.data },
-            }}
-          >
+          <Link to={`/products/${id}`} target="_blank">
             <img
               src={image[0]}
               style={{

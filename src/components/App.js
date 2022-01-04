@@ -35,7 +35,7 @@ class App extends Component {
               <Route path="/reviewform">
                 <ReviewForm />
               </Route>
-              <Route path="/productpage">
+              <Route path="/products/:productId">
                 <ProductPage />
               </Route>
               <Route path="/products">
