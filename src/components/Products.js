@@ -5,12 +5,24 @@ import Categories from "./Categories";
 import "../styles/ProductsStyles.css";
 import Loader from "./Loader";
 import { connect } from "react-redux";
+import ReactPaginate from "react-paginate";
 function Products(props) {
   // console.log("PROPS: ", props.searchResults);
   let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+
+  const [pageNumber,setPageNumber] = useState(0);
+
+  const usersPerPage = 8;
+  const pagesVisited = pageNumber * usersPerPage;
+  const pageCount = Math.ceil(searchResults.length/usersPerPage)
+  const changePage = ({selected})=>{
+    setPageNumber(selected);
+  }
+
+
   if (searchResults.length === 0) {
     searchResults = items;
   }
@@ -296,9 +308,24 @@ function Products(props) {
           </div>
           {/* Rendering EachProduct component using map function and sending data through props. */}
           <div className="products-container">
-            {searchResults.map((item, index) => {
+            {/* {searchResults.map((item, index) => {
+              return <EachProduct content={item} key={index} />;
+            })} */}
+
+            {searchResults.slice(pagesVisited,pagesVisited+usersPerPage).map((item, index) => {
               return <EachProduct content={item} key={index} />;
             })}
+            <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBtns"}
+            previousLinkClassName={"previousBtn"}
+            nextLinkClassName={"nextBtn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+          />
           </div>
         </div>
       </div>
