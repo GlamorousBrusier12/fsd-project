@@ -26,7 +26,9 @@ class Navbar extends Component {
   updateSearchWord = () => {
     console.log("state: ", this.state);
     let searchWord =
-      this.state.searchWord === undefined ? "" : this.state.searchWord;
+      this.state.searchWord === undefined || this.state.searchWord === ""
+        ? " "
+        : this.state.searchWord;
 
     console.log("SEARCH TEXT", searchWord);
     this.props.dispatch(handleProductSearch(searchWord));
