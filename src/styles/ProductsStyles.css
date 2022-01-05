@@ -65,3 +65,8 @@
 .discount_percentage {
   font-size: medium;
 }
+
+.products-pagination{
+  /* position: relative;
+  bottom: 10px; */
+}
