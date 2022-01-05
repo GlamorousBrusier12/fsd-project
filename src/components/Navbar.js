@@ -32,8 +32,18 @@ class Navbar extends Component {
 
     console.log("SEARCH TEXT", searchWord);
     this.props.dispatch(handleProductSearch(searchWord));
+    console.log("this.props ", this.props.history);
   };
+  checkUserLogin() {
+    const { isLoggedIn } = this.props;
+    if (isLoggedIn) {
+      // history.push('/)
+    } else {
+      // history.push('/userProfile)
+    }
+  }
   render() {
+    const { isLoggedIn } = this.props;
     return (
       <div className="navbar-container">
         <div className="links">
@@ -90,7 +100,7 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/userProfile">
+            <Link to={isLoggedIn ? "/userProfile" : "login"}>
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
@@ -118,6 +128,7 @@ class Navbar extends Component {
 function mapStateToProps(state) {
   return {
     searchResults: state.search,
+    isLoggedIn: state.user.isLoggedIn,
   };
 }
 export default connect(mapStateToProps)(Navbar);
