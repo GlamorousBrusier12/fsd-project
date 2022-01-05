@@ -100,7 +100,7 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to={isLoggedIn ? "/userProfile" : "login"}>
+            <Link to={isLoggedIn ? "/userProfile" : "/login"}>
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
