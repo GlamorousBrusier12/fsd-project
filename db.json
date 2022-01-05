@@ -106,18 +106,18 @@
       "stars": 4
     },
     {
-      "user": "Topper Naveen",
+      "user": "Hacker Ravindra",
       "heading": "Heading",
       "body": "Body",
       "stars": 2,
       "id": 16
     },
     {
-      "user": "Topper Naveen",
-      "heading": "kdjflskdjflksdjf",
-      "body": "kdjflskdjflksdjf",
+      "user": "Debugger Chetan",
+      "heading": "Heading",
+      "body": "Body",
       "stars": 2,
-      "id": 17
+      "id": 16
     },
     {
       "user": "Topper Naveen",
@@ -127,14 +127,14 @@
       "id": 18
     },
     {
-      "user": "Topper Naveen",
+      "user": "Debugger Chetan",
       "heading": "Hello World!!!",
       "body": "This is my first program output in my life.",
       "stars": 3,
       "id": 19
     },
     {
-      "user": "Topper Naveen",
+      "user": "Hacker Ravindra",
       "heading": "not a great product",
       "body": "the build could have been better",
       "stars": 2,
@@ -148,25 +148,53 @@
       "id": 21
     },
     {
-      "user": "Topper Naveen",
+      "user": "Debugger Chetan",
       "heading": "very nice",
       "body": "wow what a product",
       "stars": 3,
       "id": 22
     },
     {
-      "user": "Topper Naveen",
+      "user": "Borabanda Bhargav",
       "heading": "Could be better",
       "body": "Can be much much better",
       "stars": 3,
       "id": 23
     },
     {
-      "user": "Topper Naveen",
+      "user": "Borabanda Bhargav",
+      "heading": "Could be better",
+      "body": "Can be much much better",
+      "stars": 3,
+      "id": 23
+    },
+    {
+      "user": "Hacker Ravindra",
       "heading": "Superb ",
       "body": "what a product!",
       "stars": 4,
       "id": 24
+    },
+    {
+      "user": "Radeshyam Rithwik",
+      "heading": "blah",
+      "body": "blah blah",
+      "stars": 4,
+      "id": 25
+    },
+    {
+      "user": "Radeshyam Rithwik",
+      "heading": "blah",
+      "body": "blah blah",
+      "stars": 4,
+      "id": 25
+    },
+    {
+      "user": "Super sampangi",
+      "heading": "blah",
+      "body": "blah blah",
+      "stars": 4,
+      "id": 25
     }
   ],
   "products": [
@@ -186,6 +214,7 @@
         "rate": 3.9,
         "count": 120
       },
+<<<<<<< HEAD
       
       "type": "Buy",
         
@@ -379,6 +408,12 @@
   ]
   },
   {
+=======
+      "type": "Size",
+      "types": ["Small", "Medium", "Large", "Extra Large"]
+    },
+    {
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
       "id": 2,
       "title":  "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
       "price": 119300,
@@ -394,6 +429,7 @@
         "rate": 4.9,
         "count": 209
       },
+<<<<<<< HEAD
       "type": "Rent",
   
   "Category":"Electronics",
@@ -538,6 +574,14 @@
   ]
   },
   {
+=======
+      "type": "Specifications",
+      "types": ["12GB 256GB", " 12GB 128GB", "6GB 64GB"],
+      "Pixel": "Resolution",
+      "Pixels": ["2778 x 1284"]
+    },
+    {
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
       "id": 3,
       "title": "Men Blue Regular Fit Faded Casual Denim Shirt",
       "price": 6354,
@@ -553,6 +597,7 @@
         "rate": 4.5,
         "count": 180
       },
+<<<<<<< HEAD
       "type": "Buy",
       "Category":"Mens",
       "Reviews":[
@@ -709,6 +754,10 @@
     "Answer":"Size 40 is M sir, i unit is available in stock"
    }
   ]
+=======
+      "type": "Size",
+      "types": ["Small", "Medium", "Large", "Extra Large"]
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
     },
     {
       "id": 4,
@@ -718,14 +767,39 @@
       "description": "Light shade, heavy fade blue jeans Straight fit, mid-rise Clean look Stretchable 5 pocket",
       "category": "men's clothing",
       "image": [
+<<<<<<< HEAD
           "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
           "links",
+=======
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.2,
+        "count": 1620
+      },
+      "type": "Size",
+      "types": ["Small", "Medium", "Large", "Extra Large"]
+    },
+    {
+      "id": 5,
+      "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
+      "price": 13999,
+      "discount": 24,
+      "description": "An absolute perfect sports shoes for you, HURRY UP!",
+      "category": "men's Footwear",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
+        "links",
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
         "links"
       ],
       "rating": {
         "rate": 3.7,
         "count": 1240
       },
+<<<<<<< HEAD
       "type": "Buy",
       "Category":"Mens",
       "Reviews":[
@@ -1011,6 +1085,12 @@
          ]
            },
       {
+=======
+      "type": "Size",
+      "types": ["8", "9", "10", "11"]
+    },
+    {
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
       "id": 6,
       "title": "Men Grey Analogue Watch FC-775G4S4",
       "price": 153274,
@@ -1034,6 +1114,7 @@
       "Rating":"5 stars",
       "Review":"Very nice product"
       },
+<<<<<<< HEAD
       {
        "UserName":"Nani",
        "Rating":5,
@@ -1467,6 +1548,111 @@
       "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV",
       "price": 105500,
       "discount": 15,
+=======
+      "type": "Shape",
+      "types": ["Round"]
+    },
+    {
+      "id": 7,
+      "title": "Apple 2nd Gen AirPods with Charging Case",
+      "price": 12990,
+      "discount": 37,
+      "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
+      "category": "Headphones",
+      "image": [
+        "data:image/jpeg;base64,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",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.5,
+        "count": 434
+      },
+      "type": "Connectivity",
+      "types": ["True Wireless"]
+    },
+    {
+      "id": 8,
+      "title": "Men BT3211/15 Series 3000 Rechargeable Beard Trimmer - Olive Green",
+      "price": 1553,
+      "discount": 26,
+      "description": "Best Trimmer with # years warranty provided by Brand Oowner/Manufacturer",
+      "category": "Men Persoonal Care",
+      "image": [
+        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6518755/2021/2/10/7249229f-5eb1-43dd-9c31-547d43f799c41612945435520-Philips-Men-Corded--Cordless-Rechargeable-Beard-Trimmer-BT32-1.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 3434
+      },
+      "type": "Color",
+      "types": ["olive green", "Black", "Blue"]
+    },
+    {
+      "id": 9,
+      "title": "Acer Predator Helios 300 Octa Core i7 10th Gen - (16 GB/1 TB HDD/256 GB SSD)",
+      "price": 109990,
+      "discount": 45,
+      "description": " 16 GB/1 TB HDD/256 GB SSD Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg) If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
+      "category": "Laptop",
+      "image": [
+        "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 13434
+      },
+      "type": "Ram",
+      "types": ["32GB", "16GB", "8Gb"]
+    },
+    {
+      "id": 10,
+      "title": "Canon EOS 7D Mark II DSLR Camera (Body only)  (Black)",
+      "price": 99999,
+      "discount": 82,
+      "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
+      "category": "Camera",
+      "image": [
+        "https://m.media-amazon.com/images/I/81LSXTzgjOL._AC_SL1500_.jpg",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.8,
+        "count": 6434
+      },
+      "type": "lens",
+      "types": ["DSLR"]
+    },
+    {
+      "id": 11,
+      "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches ",
+      "price": 140990,
+      "discount": 47,
+      "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet PC with Wi-Fi+5G that is larger and offers higher resolution than Apple's other iPad models",
+      "category": "Tablet",
+      "image": [
+        "data:image/jpeg;base64,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",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.9,
+        "count": 12450
+      },
+      "type": "Color",
+      "types": ["Silver", "Space Grey"]
+    },
+    {
+      "id": 12,
+      "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV with Apple Airplay Feature  (KD-65X80J)",
+      "price": 110990,
+      "discount": 8,
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
       "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
       "category": "Electroonics",
       "image": [
@@ -1479,6 +1665,7 @@
           "rate": 4.5,
           "count": 22970
       },
+<<<<<<< HEAD
       
       "type": "Rent",
       "Category":"Electronics",
@@ -1577,32 +1764,48 @@
   }    
    ]
   }
+=======
+      "type": "size",
+      "types": ["65 inches", "55 inches", "45 inches"]
+    },
+    {
+      "id": 13,
+      "title": "SONY PlayStation 5 (CFI-1008B01R) 825 GB with Astro's Playroom",
+      "price": 39990,
+      "discount": 10,
+      "description": "PlayStation 5 Digital Edition",
+      "category": "Gaming",
+      "image": [
+        "https://rukminim1.flixcart.com/image/612/612/kj7gwi80/gamingconsole/n/3/c/cfi-1008b01r-825-sony-no-original-imafytxenahqnnpu.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 4.9,
+        "count": 222970
+      },
+      "type": "color",
+      "types": ["Black", "White"]
+    }
+>>>>>>> 23dc8593cc8266eff0bb6edf89a4e046aaaaeb1f
   ],
   "faqs": [
     {
       "id": 1,
       "question": "How is the stiching?",
-      "answers": [
-        "It is just AMAZING..ZING ZING",
-        "The quality is brilliant"
-      ],
+      "answers": ["It is just AMAZING..ZING ZING", "The quality is brilliant"],
       "upvotes": 2
     },
     {
       "id": 2,
       "question": "Is it washable?",
-      "answers": [
-        "Yes, It is."
-      ],
+      "answers": ["Yes, It is."],
       "upvotes": 4
     },
     {
       "id": 3,
       "question": "Is it a laptop bag or just a casual bag?",
-      "answers": [
-        "Both.",
-        "I think it's Both casual and laptop"
-      ],
+      "answers": ["Both.", "I think it's Both casual and laptop"],
       "upvotes": 1
     },
     {
@@ -1616,37 +1819,25 @@
     {
       "id": 5,
       "question": "Is it fully water proof?",
-      "answers": [
-        "no",
-        "No, but there is extra provided rain cover."
-      ],
+      "answers": ["no", "No, but there is extra provided rain cover."],
       "upvotes": 5
     },
     {
       "id": 6,
       "question": "How much weight of bag?",
-      "answers": [
-        "Light weight",
-        " nice bag and light weighted."
-      ],
+      "answers": ["Light weight", " nice bag and light weighted."],
       "upvotes": 3
     },
     {
       "id": 7,
       "question": "Is there any pocket for water bottle?",
-      "answers": [
-        "2 Sides",
-        "ya two side pockets are for water bottle."
-      ],
+      "answers": ["2 Sides", "ya two side pockets are for water bottle."],
       "upvotes": 2
     },
     {
       "id": 8,
       "question": "is it suitable for office work?",
-      "answers": [
-        "Yes, Absolutely.",
-        "Perfect for office and college too."
-      ],
+      "answers": ["Yes, Absolutely.", "Perfect for office and college too."],
       "upvotes": 1
     },
     {
@@ -1661,9 +1852,7 @@
     {
       "id": 10,
       "question": "which type of cloth used?",
-      "answers": [
-        "Polyster One."
-      ],
+      "answers": ["Polyster One."],
       "upvotes": 4
     }
   ],
