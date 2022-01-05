@@ -9,7 +9,7 @@ function Products(props) {
   let { searchResults } = props;
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]); //eslint-disable-line
   useEffect(() => {
     //Fetching the products data from JSON-Server
     fetch(`http://localhost:3000/products`)
