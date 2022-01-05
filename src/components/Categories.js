@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { handleProductSearch } from "../actions";
+import { handleCategorySearch } from "../actions";
 
 class Categories extends Component {
   handleCategoryClick = (category) => {
-    this.props.dispatch(handleProductSearch(category));
+    this.props.dispatch(handleCategorySearch(category));
   };
   render() {
     return (
@@ -19,7 +19,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/mens.png`}
                     onClick={() => {
-                      this.handleCategoryClick("mens");
+                      this.handleCategoryClick("Mens");
                     }}
                   />
                   <p> Mens</p>
@@ -61,7 +61,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/mobiles.png`}
                     onClick={() => {
-                      this.handleCategoryClick("mobiles");
+                      this.handleCategoryClick("Electronics");
                     }}
                   />
                   <p> Mobiles</p>
@@ -75,7 +75,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/laptop.png`}
                     onClick={() => {
-                      this.handleCategoryClick("laptop");
+                      this.handleCategoryClick("Accessories");
                     }}
                   />
                   <p> accessories</p>
@@ -89,7 +89,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/home-appliance.png`}
                     onClick={() => {
-                      this.handleCategoryClick("home");
+                      this.handleCategoryClick("Electronics");
                     }}
                   />
                   <p> Appliances</p>
@@ -103,7 +103,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/household.png`}
                     onClick={() => {
-                      this.handleCategoryClick("household");
+                      this.handleCategoryClick("Accessories");
                     }}
                   />
                 </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { handleProductSearch } from "../actions";
+import { handleProductSearch, userLogout } from "../actions";
 // import { Switch } from "react-router";
 const styles = {
   cartIconContainer: {
@@ -99,11 +99,14 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/login">
+            <Link to="/">
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/login.png`}
                 alt="Login/Logout"
+                onClick={() => {
+                  this.props.dispatch(userLogout());
+                }}
               />
             </Link>
           </div>

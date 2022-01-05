@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState, useRef } from "react";
+import { connect } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
+import { handleUser } from "../actions";
 import "../styles/LoginStyle.css";
 
-export default function Login() {
+function Login(props) {
   const [username1, setUsername] = useState(" ");
   const [password1, setPassword] = useState(" ");
   const history = useHistory();
@@ -18,6 +20,8 @@ export default function Login() {
         console.log("Successfully Logged In\n", result);
         incorrectCredentials.current.innerText = " ";
         history.push("/");
+        // dispatch the user
+        props.dispatch(handleUser(username1));
       })
       .catch((err) => {
         console.log(err);
@@ -100,3 +104,9 @@ export default function Login() {
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps)(Login);
