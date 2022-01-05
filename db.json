@@ -214,239 +214,1397 @@
         "rate": 3.9,
         "count": 120
       },
-      "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
-    },
-    {
+      
+      "type": "Buy",
+        
+      "Category":"Mens",
+      "Reviews":[
+       {
+        "UserName":"Rithwik",
+       "Rating":5,
+       "Review":"Very nice product"
+       },
+       {
+        "UserName":"Chetan",
+       "Rating":5,
+       "Review":"Too good fully satisfied"
+       },
+       {
+        "UserName":"Ravindra",
+         "Rating":2,
+         "Review":" Not good"
+         },
+         {
+          "UserName":"Sravan",
+         "Rating":1,
+         "Review":" Low quality product."
+         },
+         {
+         "UserName":"Naveen",
+         "Rating":5,
+         "Review":" Useful multi-purpose"
+         },
+         {
+          "UserName":"Bhargav",
+         "Rating":5,
+         "Review":" Good quality.."
+         },
+         {
+          "UserName":"Mahesh",
+         "Rating":3,
+         "Review":"Not Bad!"
+         },
+         {
+          "UserName":"Akhanda",
+         "Rating":5,
+         "Review":"Good for students"
+         },
+         {
+          "UserName":"Nani",
+         "Rating":5,
+         "Review":"5.0 out of 5 stars Best bag at best price"
+         },
+         {
+          "UserName":"Naresh",
+         "Rating":3 ,
+         "Review":" Good looking bag but chains are not good"
+         },
+         {
+          "UserName":"Pavan",
+         "Rating":4,
+         "Review":"Useful and beneficial"
+         },
+         {
+          "UserName":"Chaari",
+         "Rating":3,
+         "Review":" Not of Good Quality"
+         },
+         {
+          "UserName":"Ram",
+         "Rating":3,
+         "Review":" Overall ok"
+         },
+         {
+          "UserName":"Messi",
+         "Rating":2,
+         "Review":"no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+         },
+         {
+          "UserName":"Mbappe",
+         "Rating":2,
+         "Review":"2.0 out of 5 stars Average quality, OK value."
+         },
+         {
+          "UserName":"Robert",
+         "Rating":5,
+         "Review":" Best at this price"
+         },
+         {
+          "UserName":"Chris",
+         "Rating":5,
+         "Review":"Best laptap bag or backpack on Amazon. Justifies it's ranking of Number 1 in its category."
+         },
+         {
+          "UserName":"Bruce",
+         "Rating":4,
+         "Review":" Value for money"
+         },
+         {
+          "UserName":"Bobby",
+         "Rating":5,
+         "Review":"Good quality at low price"
+         },
+         {
+          "UserName":"Jimmy",
+         "Rating":3 ,
+         "Review":" Packaging need to improve"
+         }
+         
+        
+  ],
+  "Faq":[
+      {
+     "Question":"Is there any warranty",
+    "Answer":"I don't know. But this is super product ..."
+  },
+  {
+      "Question":"Does it have Rain cover?",
+     "Answer":"yes"
+   },
+   {
+      "Question":"Return policy is available or not",
+     "Answer":"Available"
+   },
+   {
+      "Question":"15.6 inch laptop fits in this bag?",
+     "Answer":"Yes, 15.6 inch laptop can easily fit in this bag. Thanks"
+   },
+   {
+      "Question":"In heavy rain does it work without rain cover",
+     "Answer":"No, during heavy rain you should use raincover."
+   },
+   {
+      "Question":"Is it available gray color",
+     "Answer":"Search Half Moon bags on Amazon to check any color variation if available."
+   },
+   {
+      "Question":"Does it have Laptop Compartment",
+     "Answer":"Yes, it has a padded laptop compartment"
+   },
+   {
+      "Question":"Custom logo Possible qty 20Pic Order",
+     "Answer":"No"
+   },
+   {
+      "Question":"Does this product has return policy??",
+     "Answer":"Yes"
+   },
+   {
+      "Question":"Can i carry a small size umbrella in it?",
+     "Answer":"Yes"
+   },
+   {
+      "Question":"How can i buy buy option not available",
+     "Answer":"If buy now option is not available then try 'Add to Cart' option which is always available. Thanks"
+   },
+   {
+      "Question":"Is this suitable for class 8",
+     "Answer":"Yes, it is suitable for 8th class"
+   },
+   {
+      "Question":"What's the maximum weight it can hold safely?",
+     "Answer":"Simple Answer: This backpack can carry upto 70 kgs of normal weight easily."
+   },
+   {
+      "Question":"Is this bags water proof",
+     "Answer":"Yes waterproof bag."
+   },
+   {
+      "Question":"Cash on delivery options is available",
+     "Answer":"Yes"
+   },
+   {
+      "Question":"Can I carry clothes?",
+     "Answer":"Yes, about 3 to 4 set of clothes"
+   },
+   {
+      "Question":"Does it has organiset",
+     "Answer":"No this bag is without organiser"
+   },
+   {
+      "Question":"Does it have any power bank port for charging phone",
+     "Answer":"No"
+   },
+   {
+      "Question":"what is the actual weight (kgs) of the bag kgs?",
+     "Answer":"Approximately 1kg"
+   },
+   {
+      "Question":"is this bag good for class 10",
+     "Answer":"Good bag but not heavy load can handle it."
+   }
+     
+  ]
+  },
+  {
       "id": 2,
-      "title": "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
+      "title":  "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
       "price": 119300,
-      "discount": 20,
+      "discount": 15,
       "description": "Your perfect phone for everyday use.",
       "category": "Electronics",
       "image": [
-        "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1631652956000",
+          "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
         "links",
         "links"
       ],
       "rating": {
-        "rate": 4.5,
-        "count": 1039
+        "rate": 4.9,
+        "count": 209
       },
-      "type": "Specifications",
-      "types": ["12GB 256GB", " 12GB 128GB", "6GB 64GB"],
-      "Pixel": "Resolution",
-      "Pixels": ["2778 x 1284"]
-    },
-    {
+      "type": "Rent",
+  
+  "Category":"Electronics",
+  "Reviews":[
+   {
+    "UserName":"Rithwik",
+   "Rating":5,
+   "Review":"Very nice product"
+   },
+   {
+    "UserName":"Naveen",
+   "Rating":5,
+   "Review":"Best in the market!"
+   },
+   {
+      "UserName":"Nani",
+     "Rating":5,
+     "Review":"Fabulous!"
+     },
+     {
+      "UserName":"Ravindra",
+     "Rating":5,
+     "Review":"Terrific purchase"
+     },
+     {
+      "UserName":"Chetan",
+     "Rating":5,
+     "Review":"Classy product"
+     },
+     {
+      "UserName":"Bhargav",
+     "Rating":5,
+     "Review":"Mind-blowing purchase"
+     },
+     {
+      "UserName":"Sravan",
+     "Rating":5,
+     "Review":"Awesome"
+     },
+     {
+      "UserName":"Bobby",
+     "Rating":5,
+     "Review":"Best smartphone in this year Camera is just awesome I will say worth it"
+     },
+     {
+      "UserName":"Jagan",
+     "Rating":5,
+     "Review":"One Of The Powerful And Flagship Phone That Can't Get Down In Any Generation"
+     },
+     {
+      "UserName":"Pavan",
+     "Rating":5,
+     "Review":"Nice phone and camera extra awesome"
+     },
+     {
+      "UserName":"Kumar",
+     "Rating":5,
+     "Review":"Literally the best iphone ever. Such a fluid screen. Beast of a camera."
+     },
+     {
+      "UserName":"Messi",
+     "Rating":5,
+     "Review":"Awesome phone nice camera thanks flipkart providing my favourite colour and fast delivery"
+     },
+     {
+      "UserName":"Raghav",
+     "Rating":5,
+     "Review":"Very Good Mobile phone Truest Company in Flipkart Superb Performance & Awesome Camera"
+     },
+     {
+      "UserName":"Cristiano",
+     "Rating":4,
+     "Review":"Great phone and price is to high"
+     },
+     {
+      "UserName":"Ravi",
+     "Rating":5,
+     "Review":"Switched from Android to ios Sierra blue colour is awesome Macroshot is best part Seen best battery life"
+     }
+  ],
+  "Faq":[
+  {
+  "Question":"Does iphone 13 series sapport satelite phone call connectvity?",
+  "Answer":"Yes, if you duct tape the satellite phone to it"
+  },
+  {
+    "Question":"What is new in this version?",
+    "Answer":"120HZ display, Bigger battery, A15 Bionic chip, Improved performance and many more."
+  },
+  {
+    "Question":"Refresh rate of iphone 13 pro max?",
+    "Answer":"120HZ(Adaptive)"
+  },
+  {
+    "Question":"battle ground mobile india support in 90 fps or not?",
+    "Answer":"Yes, it supports highest possible fps option, it is the best phone on market. Has 120fps display so 90fps is supported."
+  },
+  {
+    "Question":"how many mh battery in phone?",
+    "Answer":"Around 4375 MaH"
+  },
+  {
+    "Question":"How much time will it take until a hundred percent charge from zero",
+    "Answer":"Around 80 mins."
+  },
+  {
+    "Question":"iPhone 13 pro Max is bullet proof",
+    "Answer":"No"
+  },
+  {
+    "Question":"Which charger will be the best for quick charging of this phone?",
+    "Answer":"Any charger with 30w or more should do. I prefer Anker though.."
+  },
+  {
+    "Question":"I need front camera 50",
+    "Answer":"Find oppo or vivo this phone is only 12"
+  },
+  {
+    "Question":"How much Nanometer in this chipset a 15bionic",
+    "Answer":"5nm"
+  },
+  {
+    "Question":"Samsung z fold 3 or iphone 13 pro max",
+    "Answer":"iPhone 13 pro max"
+  },
+  {
+    "Question":"256gb vs 128gb prefer for 4k video",
+    "Answer":"256gb, or even more. 4k videos for 10-15mnts will go in gb's so you can imagine if you make too many videos then you need more space!!"
+  },
+  {
+    "Question":"Iphone 13 in Display Fingerprint?",
+    "Answer":"No, only face id"
+  },
+  {
+    "Question":"Does it come with a wall charger?",
+    "Answer":"No"
+  },
+  {
+    "Question":"Does it have 1tb storage.",
+  "Answer":"Yes, you can choose between 128gb, 256gb, 512gb & 1tb (if it is available)"
+  }
+  ]
+  },
+  {
       "id": 3,
       "title": "Men Blue Regular Fit Faded Casual Denim Shirt",
-      "price": 674,
-      "discount": 18,
+      "price": 6354,
+      "discount": 65,
       "description": "Blue faded casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem",
-      "category": "men's clothing",
+      "category": "Mens",
       "image": [
-        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
+          "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
         "links",
         "links"
       ],
       "rating": {
         "rate": 4.5,
-        "count": 120
+        "count": 180
       },
-      "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
+      "type": "Buy",
+      "Category":"Mens",
+      "Reviews":[
+       {
+        "UserName":"Rithwik",
+       "Rating":4,
+       "Review":"Very nice product"
+       },
+       {
+        "UserName":"Bhargav",
+       "Rating":4,
+       "Review":"Good quality very comfortable"
+       },
+       {
+          "UserName":"Ravindra",
+         "Rating":5,
+         "Review":"Good Fitting"
+         },
+         {
+          "UserName":"Chetan",
+         "Rating":4,
+         "Review":"Nice shirt"
+         },
+         {
+          "UserName":"Bobby",
+         "Rating":3,
+         "Review":"Quality is verry good"
+         },
+         {
+          "UserName":"Naveen",
+         "Rating":4,
+         "Review":"Grt shirt, fits me comfortably, looks grt.very happy with the shirt."
+         },
+         {
+          "UserName":"Mahesh",
+         "Rating":5,
+         "Review":"it's too good."
+         },
+         {
+          "UserName":"Sravan",
+         "Rating":2,
+         "Review":"Very bad,small in size..."
+         },
+         {
+          "UserName":"Nani",
+         "Rating":1,
+         "Review":"Poor quality"
+         },
+         {
+          "UserName":"Ramesh",
+         "Rating":4,
+         "Review":"Good Product you should try it"
+         },
+         {
+          "UserName":"Ravi",
+         "Rating":3,
+         "Review":"Not bad"
+         },
+         {
+          "UserName":"Tyson",
+         "Rating":5,
+         "Review":"Wowww!! Just awesome product..I'm very happy... Perfect fittings, high quality cloth..."
+         },
+         {
+          "UserName":"Kalyan",
+         "Rating":3,
+         "Review":"Material don like it"
+         },
+         {
+          "UserName":"Messi",
+         "Rating":4,
+         "Review":"Shirt is Good Hight is slightly Long."
+         },
+         {
+          "UserName":"Gagan",
+         "Rating":2,
+         "Review":"Not Good, it's Average"
+         },
+         {
+          "UserName":"Omkar",
+         "Rating":4,
+         "Review":"Good.. Overall"
+         },
+         {
+          "UserName":"Lalith",
+         "Rating":4,
+         "Review":"OSSAM UNBILIVEBEL CLOTH WAS VERY NICE"
+         },
+         {
+          "UserName":"Farhan",
+         "Rating":3,
+         "Review":"Very thin"
+         }
+  ],
+  "Faq":[
+      {
+     "Question":"My chest is 42. Which size will I buy?",
+     "Answer":"L That means 42"
+  },
+  {
+    "Question":"Size chart?",
+    "Answer":"You can find the size chart below the images on the mobile app and on desktop you can find it below the size drop-down list"
+   },
+   {
+    "Question":"Is that color feeded?",
+    "Answer":"So far not. Can't say for future"
+   },
+   {
+    "Question":"Can you send the original photo of shirt",
+    "Answer":"I am sorry sir but there is no options to send images in answers, but I can assure you that the product will look the same."
+   }, 
+   {
+    "Question":"It's it returnable",
+    "Answer":"No"
+   }, 
+   {
+    "Question":"Hey when M size will be available in medium blue colour",
+    "Answer":"Sir by tomorrow max"
+   }, 
+   {
+    "Question":"Sir , i want light blue in small",
+    "Answer":"Hello sir the stock is on its way, it will be available by tomorrow evening."
+   }, 
+   {
+    "Question":"I want jeans shirt in 50xl size",
+    "Answer":"I do not think that this size is available"
+   }, 
+   {
+    "Question":"My shirt size is 42 is it called large",
+    "Answer":"Yes. It is large."
+   }, 
+   {
+    "Question":"Can you tell me the model which is shown in this page wear which size T-shirt.? Actually my body figure and the model's fig is same.which size I need?",
+    "Answer":"The model wore and L size in this Photoshoot, so accordingly you can order sir"
+   }, 
+   {
+    "Question":"My hight is 5.5 and chest is 44 which size fit for me",
+    "Answer":"Medium"
+   }, 
+   {
+    "Question":"which size will be perfect for 38 chest size",
+    "Answer":"Size Chart Says Size S but for my experience i too have chest size 38 and i have athletic body but i bought Size M which fits perfectly on me neither to tight nor to loose, somewhat lengthy as i m only 5'3. i guess this will give u idea which size u should bought otherwise you have option of exchange"
+   }, 
+   {
+    "Question":"May i change my shipping address because deleivery date is too late ?",
+    "Answer":"Yes sir you can do that if you still have not places the order"
+   }, 
+   {
+    "Question":"My size is M what should i order?",
+    "Answer":"Sir you should order M size only then, it will fit you"
+   }, 
+   {
+    "Question":"Small size not available?",
+    "Answer":"Size 40 is M sir, i unit is available in stock"
+   }
+  ]
     },
     {
       "id": 4,
       "title": "Men Blue Straight Fit Mid Rise Heavy Fade Stretchable Jeans",
-      "price": 3219,
-      "discount": 31,
-      "description": "Light shade, heavy fade blue jeansStraight fit, mid-rise Clean look Stretchable 5 pocket",
+      "price": 3291,
+      "discount": 55,
+      "description": "Light shade, heavy fade blue jeans Straight fit, mid-rise Clean look Stretchable 5 pocket",
       "category": "men's clothing",
       "image": [
-        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
-        "links",
+          "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+          "links",
         "links"
       ],
       "rating": {
-        "rate": 4.2,
-        "count": 1620
+        "rate": 3.7,
+        "count": 1240
       },
-      "type": "Size",
-      "types": ["Small", "Medium", "Large", "Extra Large"]
-    },
-    {
-      "id": 5,
-      "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
-      "price": 13999,
-      "discount": 24,
-      "description": "An absolute perfect sports shoes for you, HURRY UP!",
-      "category": "men's Footwear",
-      "image": [
-        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.6,
-        "count": 98
-      },
-      "type": "Size",
-      "types": ["8", "9", "10", "11"]
-    },
-    {
+      "type": "Buy",
+      "Category":"Mens",
+      "Reviews":[
+          {
+           "UserName":"Nani",
+          "Rating":5,
+          "Review":"Very nice product"
+          },
+          {
+           "UserName":"Naveen",
+          "Rating":5,
+          "Review":"Very good product"
+          },
+          {
+              "UserName":"Rithwik",
+             "Rating":4,
+             "Review":"Good cloth and nice fit"
+             },
+             {
+              "UserName":"Ravindra",
+             "Rating":3,
+             "Review":"Color is not as expected. The piece is like an old one"
+             },
+             {
+              "UserName":"Battu",
+             "Rating":2,
+             "Review":"Bad quality in first st wear itself loop stiches came out ens pockst cloth started getting hole"
+             },
+             {
+              "UserName":"Chetan",
+             "Rating":3,
+             "Review":"Good fitting. Nice look."
+             },
+             {
+              "UserName":"Bhargav",
+             "Rating":5,
+             "Review":"Right now it's hard to get a standard regular fit with all these newfangled design names like 'carrot fit' which frankly I don't even understand what they are trying to convey."
+             },
+             {
+              "UserName":"Sravan",
+             "Rating":1,
+             "Review":"Total waste of money, very unsatisfied with product.....Please dont waste your money......"
+             },
+             {
+              "UserName":"David",
+             "Rating":4,
+             "Review":"Reading the reviews it was with trepidation that i ordered these jeans. they are very good in terms of thickness of cloth, stitching and finish. Look a lot like Levis, but at an affordable rate."
+             },
+             {
+              "UserName":"John",
+             "Rating":5,
+             "Review":"Very thin jeans, of course comfortable. Being streached one size should be one less than usual size. Please mention TC of cloth always, otherwise difficult to understand quality of cloth."
+             },
+             {
+              "UserName":"Kumar",
+             "Rating":5,
+            "Review":" The product is having a share more towards grey than olive green. It goes good with black shirts and dark colors. It is quite long in length as expected. Fit is good. Overall s nice product."
+             },
+             {
+              "UserName":"Viktor",
+             "Rating":3,
+             "Review":"Same size 32 and same brand jeans but look the difference light blue color jeans is little smaller in fitting and height is also smaller. Didn't aspect this from you."
+             },
+             {
+              "UserName":"Lohith",
+             "Rating":1,
+             "Review":"First I bought a pant of this brand which was brilliant so I opted to buy another. Second one I received is horrible. Material, stitching , size, comfort-all are bad. Length is also smaller."
+             },
+             {
+              "UserName":"Drake Ramoray",
+             "Rating":4,
+             "Review":"It is a standard brand ...no cheating and always the products are too good ....this one is also very nice."
+             },
+             {
+              "UserName":"Pankaj",
+             "Rating":3,
+             "Review":"The jeans even though they were regular stretch fit it was clinging to the thighs. The waist etc were perfect.The colour is yet to be tested"
+             },
+             {
+              "UserName":"Venkat",
+             "Rating":4,
+             "Review":"material is good. color as expected and as shown on amazon. size is a little too large than the size ordered. carries a tag of 36'' as ordered, but it is closer to 37'' and not possible to have it altered because of the design."
+             }
+  
+     ],
+     "Faq":[
+         {
+        "Question":"Whats the length ?",
+        "Answer":"Min 40 inch from waist"
+     },
+     {
+      "Question":"If not fitted on phisicaly then what i do",
+      "Answer":"If jeans doesn't fit you, u can return the same"
+   },
+   {
+    "Question":"what is the cotton percentage in jeans?",
+    "Answer":"70% COTTON"
+   },
+   {
+    "Question":"Is this stechable",
+    "Answer":"Yes it is... littke .much.....its very soft.. go for it"
+   },
+   {
+    "Question":"how to 40inch stecheble",
+    "Answer":"It expand 2 inches,I ordered 48 size, perfect size and color"
+   },
+   {
+    "Question":"What is difference between relaxed fit,regular fit and skin fit?",
+    "Answer":"It s a comfset fit"
+   },
+   {
+    "Question":"What is my promo code ?",
+    "Answer":"Nothing"
+   },
+   {
+    "Question":"I reacved not exact colour,i booked dark colour.it is quality wise very poor,i want replace the product",
+    "Answer":"Plz apply for return request"
+   },
+   {
+    "Question":"How can I get this product",
+    "Answer":"In Corrier"
+   },
+   {
+    "Question":"What's it's delivery charge",
+    "Answer":"No delivery charges"
+   },
+   {
+    "Question":"what is the breadth at lower end for size 30 and 32",
+    "Answer":"32"
+   },
+   {
+    "Question":"Whats the length ?",
+    "Answer":"40+ inch from waist"
+   },
+   {
+    "Question":"These are high waisted?",
+    "Answer":"No they are mid waist jeans"
+   },
+   {
+    "Question":"42 size is available in this jeans???",
+    "Answer":"It is available"
+   },
+   {
+    "Question":"IT'S cloth to fat ?",
+    "Answer":"Yes the clothes are true to their size."
+   },
+   {
+    "Question":"Is this material 100% cotton ?",
+    "Answer":"Yes"
+   },
+   {
+    "Question":"Color fades or not?",
+     "Answer":"No color is as usual like new quality is good go for it"
+   }   
+     ]
+       },
+       {
+          "id": 5,
+          "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
+          "price": 5600,
+          "discount": 25,
+          "description": "An absolute perfect sports shoes for you, HURRY UP!",
+          "category": "men's footwear",
+          "image": [
+              "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
+              "links",
+            "links"
+          ],
+          "rating": {
+            "rate": 4.6,
+            "count": 5586
+          },
+          "type": "Buy",
+          "Category":"Mens",
+          "Reviews":[
+           {
+              "UserName":"Naveen",
+              "Rating":5,
+              "Review":"Very nice product"
+              },
+              {
+              "UserName":"Nani",
+              "Rating":5,
+              "Review":"They are good for walking but definitely not for running. Look wise they are great. comfortable in wearing for long hours and you will surely love its foam padding."
+              },
+              {
+              "UserName":"Naresh",
+              "Rating":5,
+              "Review":"Value for money ...in this price its a very good product light weight and grippy ....And it have memory foam too.."
+              },
+              {
+              "UserName":"Rakesh",
+              "Rating":5,
+              "Review":"good quality... premium finish... price worthy"
+              },
+              {
+              "UserName":"Rithwik",
+              "Rating":5,
+              "Review":"This is too good to buy Worth the money It has memory foam"
+              },
+              {
+              "UserName":"Ravindra",
+              "Rating":4,
+              "Review":"One of the Nice shoes in rage"
+              },
+              {
+              "UserName":"Chetan",
+              "Rating":5,
+              "Review":"Very very soft interiors. Go for one size big as my std size fits only without socks.One star less bcoz the back of the ankle scrubs the skin causing irritation. With socks shouldn’t be an issue."
+              },
+              {
+              "UserName":"Eshwar",
+              "Rating":5,
+              "Review":"Best shoes in this price , very comfortable ,lightweight, stylish . Awesome shoes"
+              },
+              {
+              "UserName":"Srinu",
+              "Rating":3,
+              "Review":"small difrence between picture or reality in color."
+              },
+              {
+              "UserName":"Tagore",
+              "Rating":5,
+              "Review":"Excellent delivery, but packaging could have been better. Just a flimsy shoe box with packing tape."
+              },
+              {
+              "UserName":"Ivan",
+              "Rating":5,
+              "Review":"Comfortable out of the box, light weight, good cushioning. The shoes fit well and have ample toe room. The quality seems good. Hope the shoes last at least a season. Good for Day to day casual wear, definitely not for running."
+              },
+              {
+              "UserName":"Yash",
+              "Rating":5,
+              "Review":"Nice shoes perfectly fit but colour should be more bright little dull.."
+              },
+              {
+               "UserName":"The shoes are soft and light, but do note that you cannot wear them without socks, if you want to avoid biting injury above the heels. I bought them to use them as quick slip on shoes without socks, but after single use, I suffered sever injury on both my legs (above the heels). Couldn't return as the shoes had gotten dirty after use.",
+              "Rating":5,
+              "Review":"Very nice product"
+              }
+         ],
+         "Faq":[
+             {
+            "Question":"How is the Sole, is it rigid or bending while walking?",
+            "Answer":"It's not rigid , it's bending"
+         },
+         {
+          "Question":"do we need to wear socks for this shoe? if not wearing socks, will there be bad smell?",
+          "Answer":"You can use them both with shocks and without shocks."
+       },
+       {
+        "Question":"can i use with out socks? if not wearing socks, It will be bad smell ?",
+        "Answer":"It is pretty good shoe you can use it without socks . No tension"
+       },
+       {
+        "Question":"What is the meaning of Vega 1,2,3 and which one is best?",
+        "Answer":"I don't think literally there is any difference other than colour.."
+       },
+       {
+        "Question":"how about Ventilation? is upper material soft ? please help.!!",
+        "Answer":"Ventilation is good. Material is soft feel like little nylon stuff. Light and fits well."
+       },
+       {
+        "Question":"Why smaller sizes are not available? I need size 5",
+        "Answer":"May be out of stock, notify seller though customer care."
+       },
+       {
+        "Question":"what is the actual weight of each one shoe? is it water proof and can use in wet soil and when raining",
+        "Answer":"Light weight. Not at all water resistant. Synthetic cloth shoe."
+       },
+       {
+        "Question":"Is these are waterproof?",
+        "Answer":"No. Made from knitted fabric called mesh. So, they can't be waterproof. But you may wash it."
+       },
+       {
+        "Question":"can i use this shoe in rainy season?",
+        "Answer":"No it’s not Rainy Season shoes"
+       },
+         {
+          "Question":"The insoles have damaged. Can i buy them individually from the store?",
+         "Answer":"Only if you are comfortable with the soles."
+       }  
+         ]
+           },
+      {
       "id": 6,
       "title": "Men Grey Analogue Watch FC-775G4S4",
       "price": 153274,
-      "discount": 19,
-      "description": "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
-      "category": "Watches",
+      "discount": 65,
+      "description":  "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
+      "category": "Accessories",
       "image": [
-        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.7,
-        "count": 34
+              "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
+              "links",
+              "links"
+              ],
+              "rating": {
+                "rate": 4.5,
+                "count": 190
+              },
+              "type": "Buy",
+      "Category":"Accessories",
+      "Reviews":[
+      {
+      "UserName":"Naveen",
+      "Rating":"5 stars",
+      "Review":"Very nice product"
       },
-      "type": "Shape",
-      "types": ["Round"]
-    },
-    {
-      "id": 7,
-      "title": "Apple 2nd Gen AirPods with Charging Case",
-      "price": 12990,
-      "discount": 37,
-      "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
-      "category": "Headphones",
-      "image": [
-        "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PEBUPDRARDw8PDg4PDxAQEhAPDw0QFREXFhYSFhUYHSggGB0lGxUVIT0tJykxLjouFx8zODMvOCkuLisBCgoKDQ0NDg0NDjcZFRkrKysrLSstKysrKysrKystKysrKystKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAwQFBgcIAQL/xABKEAACAQMABQYJCQUECwAAAAAAAQIDBBEFBxIhMQYTQWFxgRQiNVFScnORoTIzdIKxsrO0wTRCksLwCBaDoiMkJVNUYmN1lNHh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwDRoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFdobQ9ze1Vb2dGderJNqEFwS4ybe6K3re928ChBufQWoarKKlpC7jSb40reHONdTqSaSfYmusr9I6hKOz/qt9VjP/rU4Ti+rxWmviINEgvfKjktd6NqKF1BbM1mlWpS5yhXXTsTX2PD4bt6LIAALtyb5O3Wka3M2kFJpbVSc2oUqMPTnN7kvj5sgWkG89E6haTgnd305TaTxb04xhHslPLl7kU+m9Qk1FysLxTklup3MNnP+JDP3RBpQFy09oK7sKroXtGdCot6Ut8Zr0oSW6S602W0AAAAAAAAAAAAAAAAAAAAAAAACW0t5VakKUMbVScIRzuW1JpLPvOu+R3Ja00VbqhaxWWk6tZpc7cTx8qT+xcEcn8nf2y3+lW/4sTsVyaj4uHLZ3J7k3jdllwVOQWDkreX9Sg5aUowoV+dmowptNOmsbMniUknna6eCReo1SjDeUXIKFzCtbx5uNncRlUUGntWV2vk1qKSwk23lZW5vzvPMWlNH1bWvUt68dmrRqTpzW/5UXjK86fFdTR2jKRz3/aG0KqN9RvIJJXlFxnhcatHCcm/UnTX1SaNXWltOtUhRpRc6lWcadOK4znJ4il3s6a5M6vY2tGlaz5uVrGMat1jLqX910qosY5qO7Cy+zpeqtQehVcaTdeccwsqMqqfQqs/Egvc5v6p0hGQwfa3cBkilULTynu7ynbSno2lGvcqUNmnNxScXJbTW1KKbSzxa/Qo++VHJy10nbytryG1GW+E1hVKE+ipCXQ/g+DytxyJpey8HuKtu5bToV6tHaxs7WxNxzjozg7Itak3CDqpRqOEHUjF5jGeytpJ9Kzk5G5beU73/ALje/jzJosoAIAAAAAAAAAAAAAAAAAAAAACewuXRqwqpZdKpColwy4yTx8DrfQenre/oRubSe3TmuyVOXTCS6JI5BLvyb5SXejqvO2dVwbxtwfjUqqXROPT09azuaA6zlVIvCkmsvGWal0RrpoTile29SlPplRxVpy3ccSw49m/tPjTutmz2X4PTrV5tbtpKlBdreX7kVG7pvdk1jr8tJVdFxq7KStryk1LOXKE6coy3Y3eM4+fgbB0PcOrZUKrxmpbUKjxwzKmm8e8xLW+trQV1/wAsrVr/AMmmv1Csb/s72zhaXNxGKfO3cKE23suEKdFzyt3jeNUSxu456Db1J7smu9SUdnQkH6dzcS/zKP8AKZ/ObjQnJcY05yXaotgUkrpOTSecM+41TTOgNbFqopXVOrRnje4Yq031remvc+0rNKa6LaEWrShVrT6HU2aVNde7Mn7kEbT0rpihZ0ZXF1UVKlTWZSfT5opdLfBJHJenb5XN1XuEnFXFzXrJPGYqpUcsPr3lbyn5V3uk57d3UzGPyKUPFo0vVj5+t5fWWQigAAAAAAAAAAAAAAAAAAAAAAAAAAAADr7kn5Ks/oFp+DEsOtGG1oS8T6IUZe6vB/oX7kl5Ks/oFp+DEsesvyLe+yh+LAootTnkOh7a5/GkZzX/AGer7Gr9xmDanfIdv7a5/GkZzX/Z6vsan3GBxiACAAAAAAAAAAAAAAAAAAAAAAAAAAABt7kHqclXjG40s6lKMkpQtIeLXlHodWT+bT82M7+Ke4oNRnJWN1cyva8FKlZuCpRksxncy3xfXsJbXa4m+bnSkKT2Yrbl+8+jP6lFBonkTo21S5iytYOPCbpRrVV/iVMy+JX3WgrOe+tQt5vz1KNCXxlEpJaVnLpa6luPlTz2gXjYjGkowSUIrZiopKKitySS3JY8xT0aEKsZQqRjOEmsxlGMovp3ppp8CoXzUewisnx7UUR1LaFGmoUoxhBSbUYRjCKzve6KSKqkk6bT4NNPPDBFevcvW/Qkp/Ny7H9gFJbaDs4vNGhbxa4OFGgmu+MSj0pyN0ddJ+EWVrUclhy5mNOrj2kMSQlPB6tJzh0t9T3kGqOXOpnYjKvohzk4pylZ1HtScVx5mf73qvf15wjTc4uLakmmm001hprimjsW30tCp4k1st8JLhn9DSmvrkrGjVhpKhHZVxN0rpLhz6WY1MdG1FPPXHPFsDUYAIAAAAAAAAAAAAAAAAAAAAADpDUfQjT0PCcVvq17qrJ+eSewvhBGTzoZ39Jg2oHS8aljVtW/Htbh1Mb99GtHj3SjP4Gxq9Fx4b10PzFFtdPHRwJaMT6q4bz0n3Q3NFRd180uwgtXul2oko1Yzp/6Nqey3CWz42zJPfF44NFFTu6abpucFUk/FhtLblje8LjuCqm6fir1v0J6fzb7GW+re0s81zkOdWzJ09qO2oyyoy2eOG4y9zKypWjTpOVVqnFuME5+KnKclGMcvpcmkutoC0V4kKp56OJV3G9kVNJPPEI8hb4LHrfoKroW4bxmEbWqm+iSrRTfbs5XeZRRpOfZ0swXXrpWFHRfg+Vt3lelThHKzzdGSqSnjzKSgvrIiudgAQAAAAAAAAAAAAAAAAAAAAAGw9UOidLxvI3lhbt0VBqrKtmlQuaLklKnGbXjPMc7s4cd50bGnLHDCxwfGPUYnqWlnQlr2XK911VRnM+HcXBaa1nnzJ9X/op/Aai4NNdpdJke2yigjYvLeIpy3yabTk8Yy8cXgip6MUJOcKdOM2sOSxtYznGeOC57b/rB5tv+sBFuraMU2pThCUo7oyeNqK8yfHBJKxe7cnsvMctvZeOKz0737yt23/WD3bYFA7Go/R95UUbLHHDZUbbPuAHzzUvNu6vsRz9rm0TperdeFXNvLwWNOUaHM7Vanb0YPe6jisQk85bfYm1E6Op8O5mK60HjQ95j/hpr3tEVyYACAAAAAAAAAAAAAAAAAAAAAA6i1J+RLbtuvzVUzyfDuMC1JeRLb1rr8zUM8nw7jQpahCyaoQsI8AAAAAeolgRIlgBV0+HczFNaXke8+jS+1GV0+HczE9afke8+jv7yIrk4AEAAAAAAAAAAAAAAAAAAAAAB1DqS8iW3rXX5moZ7Ph3GA6kX/sS39a6/M1DPZcO40KWoQsmmQsI8APAPQeHoHqJYESJYAVdPh3MxLWp5HvPo7+9Ey2nw7mYjrW8j3nsP54kVygACAAAAAAAAAAAAAAAAAAAAAA6f1IeRaHr3P5iZn0uHcYBqP8i0PXufx5mfy4dxoUkyJksyFhHgAAAAD6RLAhRLACsp8O5mI61vI957D+eJl1Ph3Mw/Ww8aGu/YJe+pEiuUgAQAAAAAAAAAAAAAAAAAAAAAHS+omupaHpx/3de4g++e1/MbFk93caI1A6fUFXsZvDclc0k+ncoVF8IPvZuTw1Y4lFRUZC2Uc7wid2VFwyeZLf4X1nnhYFxye5Lb4We+FgXJMlpstKuyWF51gX2D3dxg2uavsaFueGZKhD+KvBP4ZMmV6sYyam1+coF4PSsYvMqtTn6iT+TThlRz2yf+RkVo8AEAAAAAAAAAAAAAAAAAAAAABV6K0jVta0LihLZqU5bUX0Pzxa6U1u7zevJnlzQvqa2ZKnWS8ejJ+NF9Lj6Uev34Ofz6hNxalFuLW9NPDT6mB0tLSPWRvSHWaHtOVt9TWFWc0ljFRKfxe/4lS+XF96UP4EWjd3h/WPD+s0h/fe/9OH8CH997704fwIUbv8P6x4f1mkly5vvSpv6n/wBPl8t7704L6i3ijeC0h1kkdI9Zotct7704P6iIbrlffVFjnnBYafNpRfv4ruYo3Pyh5aW9jDaqy2pteJSjvnN/outmitO6Xq3txO5rvM6j3L92EV8mEepIoqtSU25TblJ73KTbb7Wz4IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k=",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.5,
-        "count": 434
+      {
+       "UserName":"Nani",
+       "Rating":5,
+       "Review":"Wow very nice watch. Original product good leather belt and looking so cool. Thank u amazon send me original fastrack watch"
+                 },
+                 {
+                  "UserName":"Naresh",
+                 "Rating":4,
+                 "Review":"Very nice watch with a cool look."
+                 },
+                 {
+                  "UserName":"Mohan",
+                 "Rating":5,
+                 "Review":"To be very frank I am telling you..."
+                 },
+                 {
+                  "UserName":"Manoj",
+                 "Rating":5,
+                 "Review":"A Genuine Fastrack Watch. I got it checked from Nearest Titan World showroom. Go for it if you sepect this one for you."
+                 },
+                 {
+                  "UserName":"Charan",
+                 "Rating":5,
+                 "Review":"I bought this watch for someone special on his birthday and he loved the watch and the watch was also delivered on time."
+                 },
+                 {
+                  "UserName":"Tharak",
+                 "Rating":4,
+                 "Review":"Nice watch came with good packing.Dail is little weight and the time adjusting button is very loose.If the seller could provide warranty of the product that will be great.Otherwise its nice."
+                 },
+                 {
+                  "UserName":"Karan",
+                 "Rating":4,
+                 "Review":"The watch is good I had bought it for my brother and he really liked it"
+                 },
+                 {
+                  "UserName":"Irfan",
+                 "Rating":3,
+                 "Review":"The dial is awesome.. but the belt quality can be better"
+                 },
+               {
+                "UserName":"Rohith",
+               "Rating":4,
+               "Review":"Watch is good quality is best but the look doesn't suit heavy arms but good for those having thin arms"
+               }
+          ],
+          "Faq":[
+              {
+             "Question":"is it a big dial watch ? can it fit in skinny hands ?",
+             "Answer":"Not big dial"
+          },
+          {
+            "Question":"does the dial is Fourty one mm or Thirty mm? in description it is showing as Thirty mm.",
+            "Answer":"Thirty mm"
+           },
+           {
+            "Question":"its warranty is for how many times",
+            "Answer":"2 years"
+           },
+           {
+            "Question":"How to get warranty card ?",
+            "Answer":"warranty card is inside the watch box . if you have not received ,please contact the seller"
+           },
+           {
+            "Question":"this product is waterproof ?",
+            "Answer":"yes upto 50 meters"
+           },
+           {
+            "Question":"does the strap get discoloured due to sweat",
+            "Answer":"Yes"
+           },
+           {
+            "Question":"What is the Strap size?",
+            "Answer":"Fit for a average size man"
+           },
+           {
+            "Question":"where can I find strap for this watch?",
+            "Answer":"company outlet."
+           },
+           {
+            "Question":"is it a big dial watch ? can it fit in skinny hands ?",
+            "Answer":"Yes. It fits perfectly."
+           },
+          {
+            "Question":"What are the dimensions of this item?",
+             "Answer":"5ATM/50m Water resistance. Genuine calf leather strap. Stainless steel back cover. High precision"
+           }    
+          ]
+            },
+            {
+              "id": 7,
+              "title": "White 2nd Gen AirPods with Charging Case",
+              "price": 12990,
+              "discount": 45,
+              "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
+              "category": "Electrnics",
+              "image": [
+                      "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9803279/2019/10/11/08d246d9-80d1-4c61-8826-2074624aa0521570782280949-Apple-White-2nd-Gen-AirPods-with-Charging-Case-MV7N2HNA-1181-4.jpg",
+                      "links",
+                "links"
+              ],
+              "rating": {
+                "rate": 4.9,
+                "count": 120
+              },
+              "type": "Rent",
+              "Category":"Electronics",
+              "Reviews":[
+               {
+                "UserName":"Nani",
+               "Rating":4,
+               "Review":"Got it delivered before time, i think apple products are overpriced but the quality is par excellence, the new version comes with wireless case support and the new H1 chip and other than that there is no difference in quality if you compare with previous generation Airpods.One star less because i did not find it worth in terms of price"
+               },
+               {
+                  "UserName":"Naveen",
+                 "Rating":5,
+                 "Review":"Quality product. Nice sound and also durable. Wireless charging is a plus point."
+                 },
+                 {
+                  "UserName":"Naresh",
+                 "Rating":5,
+                 "Review":"It's really premium quality product from Apple and quality do not comes cheap. Whoever think about Apple better you do not consider price."
+                 },
+                 {
+                  "UserName":"Rithwik",
+                 "Rating":5,
+                 "Review":"Great experience, makes life easy"
+                 },
+                 {
+                  "UserName":"Ravindra",
+                 "Rating":5,
+                 "Review":"Of course it's expensive Cus it's APPLE BUT simply amazing # TECHNOLOGY# is amazing I love it # highly recommended# 10 stars for the seller"
+                 },
+                 {
+                  "UserName":"Chetan",
+                 "Rating":2,
+                 "Review":"Just few months after an year, to be accurate 12 months since purchase left AirPod failed."
+                 },
+                 {
+                  "UserName":"Jadhav",
+                 "Rating":5,
+                 "Review":"Writing this after ten days of usage.The delivery was delayed, but the product works as expected.Sound quality is perfect - no complaints."
+                 },
+                 {
+                  "UserName":"Kamal",
+                 "Rating":5,
+                 "Review":"Very good product its compact easy to use especially with iPhones"
+                 },
+                 {
+                  "UserName":"Harsha",
+                 "Rating":5,
+                 "Review":"It's a no brainer if you own an apple iphone. It's connects seamlessly every time and unlike other ear buds, the call or music is transferred from the iphone automatically."
+                 },
+               {
+                "UserName":"Murali",
+               "Rating":5,
+               "Review":" Just the perfect one ! "
+               }
+          ],
+          "Faq":[
+              {
+             "Question":"Does all the feautre work with iphone 6",
+             "Answer":"AirPods work with all iPhone, iPad, and iPod touch models that run iOS 10 or later. This includes the iPhone 5 and newer, the iPad mini 2 and newer, the fourth-generation iPad and newer, the iPad Air models, all iPad Pro models, and the 6th-generation iPod touch."
+          },
+          {
+            "Question":"Why warrenty is not been shown here???",
+            "Answer":"Warranty is for a year."
+           },
+           {
+            "Question":"What about music and bass",
+            "Answer":"Both Superb"
+           },
+           {
+            "Question":"Microphone exist or not",
+            "Answer":"No"
+           },
+           {
+            "Question":"Is it returnable.??",
+            "Answer":"I dont know we can return them or not but honestly I didn't even tried for that i just wanted airpods and just ordered one"
+           },
+           {
+            "Question":"What's the difference between wired and wireless in AirPods 2",
+            "Answer":"I believe the latter supports wireless charging."
+           },
+           {
+            "Question":"Will we get refund",
+            "Answer":"Depends why you are claiming the refund...please refer to the T&C of Electrorent related to this product."
+           },
+           {
+            "Question":"This air pods using samsung j7nxt phone",
+            "Answer":"Android user can't use all features AirPods it's specially made for apple users"
+           },
+           {
+            "Question":"Can it work on honor 9lite",
+            "Answer":"Yes, but all feature and function doesn't work."
+           }, 
+          {
+            "Question":"Does it work on nokia 8.1",
+             "Answer":"As per my understanding It will work on any Bluetooth device phone..."
+           }  
+          ]
+            },
+            {
+              "id": 8,
+              "title": "acer Predator Helios 300 Octa Core i7 10th Gen",
+              "price": 109990,
+              "discount": 15,
+              "description": "If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
+              "category": "Electronics",
+              "image": [
+                      "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
+                      "links",
+                "links"
+              ],
+              "rating": {
+                "rate": 4.7,
+                "count": 120
+              },
+              "type": "Rent",
+              "Category":"Electronics",
+              "Reviews":[
+               {
+                "UserName":"Nani",
+               "Rating":5,
+               "Review":"Very nice product"
+               },
+               {
+                  "UserName":"Naveen",
+                 "Rating":5,
+                 "Review":" Go For it....!!"
+                 },
+                 {
+                  "UserName":"Naresh",
+                 "Rating":5,
+                 "Review":"one of the best thermals out there intels new Alder Lake CPU with Nvidia RTX 3050 for smooth gaming personally using it and liked it so much"
+                 },
+                 {
+                  "UserName":"Rithwik",
+                 "Rating":5,
+                 "Review":"Amazing Product"
+                 },
+                 {
+                  "UserName":"Ravindra",
+                 "Rating":5,
+                 "Review":"The perfect processor for gaming and multitasking, really competes with 5600h processor, for gaming go for Intel."
+                 },
+                 {
+                  "UserName":"Chetan",
+                 "Rating":5,
+                 "Review":"For gaming and productivity this is hell of a beast in this price range. Aah and yeah battery is not too good but it can easily survive for approx 2:30 hr of normal usage. And at first I got deffective piece but got replaced in 2-3 days which is impressive. "
+                 },
+                 {
+                  "UserName":"Bhargav",
+                 "Rating":5,
+                 "Review":" Its an excellent laptop, Worth the price!!"
+                 },
+                 {
+                  "UserName":"Ram",
+                 "Rating":4,
+                 "Review":" Amazing Product but not perfect."
+                 },
+                 {
+                  "UserName":"Yash",
+                 "Rating":5,
+                 "Review":"I bought this laptop , great experience apart from the speakers you can barely hear anything on full volume & the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
+                 },
+               {
+                "UserName":"Stalin",
+               "Rating":4,
+               "Review":" Good laptop but poor battery!"
+              }
+            ],
+            "Faq":[
+             {
+            "Question":"Can i upgrade windows 11",
+            "Answer":"Yes"
+            },
+            {
+              "Question":"If we add 1tb hardisk",
+              "Answer":"It's already come with 1tb hdd"
+            },
+            {
+              "Question":"Whether it has seperate numeric keypad",
+              "Answer":"Yes it has separate numeric keypad"
+            },
+            {
+              "Question":"Is there any button to control cooling fan system like asus tuf??",
+              "Answer":"Yes,It has"
+            },
+            {
+              "Question":"Does it have an addition ram slot?",
+              "Answer":"yes"
+           },
+          {
+            "Question":"Does it have an international warraty",
+            "Answer":"Yes"
+         },
+         {
+          "Question":"Mane electricals seller safe or not it's cheap on this seller will I get fully working product",
+          "Answer":"I also got it from the same seller n it's all good"
+          },
+          {
+            "Question":"Does it have a charger?",
+            "Answer":"Yes"
+          },
+          {
+            "Question":"We can extend graphic card?",
+            "Answer":"Yes"
+          },
+          {
+            "Question":"in 16gb viariant, is there one ram of 16gb in one slot or 2 8gb rams in two slots? basically (1x16gb) or (2x8gb)? please answer for latest.",
+          "Answer":"Not sure. It should one 16GB variant because the memory can be upgraded even further"
+          }    
+           ]
+         },
+         {
+          "id": 9,
+          "title": "Canon EOS 7D Mark II DSLR Camera",
+          "price": 100999,
+          "discount": 15,
+          "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
+      "category": "Electronics",
+          "image": [
+              "https://rukminim1.flixcart.com/image/312/312/camera/s/q/f/canon-eos-7d-mark-ii-body-dslr-original-imae3yryhwq7fgyx.jpeg?q=70",
+              "links",
+              "links"
+          ],
+          "rating": {
+            "rate": 4.6,
+            "count": 120
+          },
+          "type": "Rent",
+          "Category":"Electronics",
+          "Reviews":[
+           {
+            "UserName":"Nani",
+           "Rating":5,
+           "Review":"Very nice product"
+           },
+           {
+              "UserName":"Naveen",
+             "Rating":5,
+             "Review":" Go For it....!!"
+             },
+             {
+              "UserName":"Naresh",
+             "Rating":5,
+             "Review":" Good camera for beginners, must try it!"
+             },
+             {
+              "UserName":"Rithwik",
+             "Rating":5,
+             "Review":"Amazing Product"
+             },
+             {
+              "UserName":"Ravindra",
+             "Rating":5,
+             "Review":"Great camera. Perfect product for young budding photographer."
+             },
+             {
+              "UserName":"Chetan",
+             "Rating":5,
+             "Review":" Best basic level dslr mainly for wireless remote controlling worth for group pics"
+             },
+             {
+              "UserName":"Bhargav",
+             "Rating":4,
+             "Review":" Its an excellent Camera, Worth the price!!"
+             },
+             {
+              "UserName":"Ram",
+             "Rating":4,
+             "Review":" Amazing Product but not perfect."
+             },
+             {
+              "UserName":"Yash",
+             "Rating":5,
+             "Review":"I bought this Camera, great experience apart from that the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
+             },
+           {
+            "UserName":"Stalin",
+           "Rating":4,
+           "Review":" Good Camera but poor battery!"
+          }
+        ],
+        "Faq":[
+         {
+        "Question":"Will this support canon EF 50mm lens?",
+        "Answer":"Yes it support 50 mm lens"
+        },
+        {
+          "Question":"Is canon 1500d camera a good functional camera",
+          "Answer":"Yes Very Good.."
+        },
+        {
+          "Question":"Where can I buy extra memory card for this camera?",
+          "Answer":"Order separately"
+        },
+        {
+          "Question":"It include screen protector for lcd??",
+          "Answer":"No u have to buy it saperately"
+        },
+        {
+          "Question":"Can I use boya external microphone",
+          "Answer":"No"
+       },
+      {
+        "Question":"What will be the price with 55-250mm if i toake it in great indian festival or sale",
+        "Answer":"About 12500.00"
+     },
+     {
+      "Question":"Does this dslr have an articulating screen?",
+      "Answer":"i need Exchange off ..?? i have buy canon 1500D Apr"
       },
-      "type": "Connectivity",
-      "types": ["True Wireless"]
-    },
-    {
-      "id": 8,
-      "title": "Men BT3211/15 Series 3000 Rechargeable Beard Trimmer - Olive Green",
-      "price": 1553,
-      "discount": 26,
-      "description": "Best Trimmer with # years warranty provided by Brand Oowner/Manufacturer",
-      "category": "Men Persoonal Care",
-      "image": [
-        "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6518755/2021/2/10/7249229f-5eb1-43dd-9c31-547d43f799c41612945435520-Philips-Men-Corded--Cordless-Rechargeable-Beard-Trimmer-BT32-1.jpg",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.8,
-        "count": 3434
+      {
+        "Question":"Is it work in zoom app in live classes",
+        "Answer":"No"
       },
-      "type": "Color",
-      "types": ["olive green", "Black", "Blue"]
-    },
-    {
-      "id": 9,
-      "title": "Acer Predator Helios 300 Octa Core i7 10th Gen - (16 GB/1 TB HDD/256 GB SSD)",
-      "price": 109990,
-      "discount": 45,
-      "description": " 16 GB/1 TB HDD/256 GB SSD Windows 10 Home/6 GB Graphics/NVIDIA GeForce RTX 3060/144 Hz) PH315-53 Gaming Laptop  (15.6 inch, Black, 2.3 kg) If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
-      "category": "Laptop",
-      "image": [
-        "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.8,
-        "count": 13434
+      {
+        "Question":"What are the items that bag included?",
+        "Answer":"Camera, lense"
       },
-      "type": "Ram",
-      "types": ["32GB", "16GB", "8Gb"]
-    },
-    {
+      {
+        "Question":"Can i get this camera in Rent?",
+      "Answer":"Yes, We have Buy/Rent option"
+      }    
+       ]
+     },
+     {
       "id": 10,
-      "title": "Canon EOS 7D Mark II DSLR Camera (Body only)  (Black)",
-      "price": 99999,
-      "discount": 82,
-      "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
-      "category": "Camera",
-      "image": [
-        "https://m.media-amazon.com/images/I/81LSXTzgjOL._AC_SL1500_.jpg",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.8,
-        "count": 6434
-      },
-      "type": "lens",
-      "types": ["DSLR"]
-    },
-    {
-      "id": 11,
-      "title": "APPLE iPad Pro 2021 (5th Generation) 8 GB RAM 512 GB ROM 12.9 inches ",
-      "price": 140990,
-      "discount": 47,
-      "description": "The Apple iPad Pro is a 12.9-inch touch screen tablet PC with Wi-Fi+5G that is larger and offers higher resolution than Apple's other iPad models",
-      "category": "Tablet",
-      "image": [
-        "data:image/jpeg;base64,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",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.9,
-        "count": 12450
-      },
-      "type": "Color",
-      "types": ["Silver", "Space Grey"]
-    },
-    {
-      "id": 12,
-      "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV with Apple Airplay Feature  (KD-65X80J)",
-      "price": 110990,
-      "discount": 8,
+      "title": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV",
+      "price": 105500,
+      "discount": 15,
       "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
-      "category": "Television",
+      "category": "Electroonics",
       "image": [
-        "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
-        "links",
-        "links"
+          "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
+          "links",
+          "links"
       ],
-      "rating": {
-        "rate": 4.5,
-        "count": 22970
+      "rating": 
+      {
+          "rate": 4.5,
+          "count": 22970
       },
-      "type": "size",
-      "types": ["65 inches", "55 inches", "45 inches"]
+      
+      "type": "Rent",
+      "Category":"Electronics",
+      "Reviews":[
+       {
+        "UserName":"Nani",
+       "Rating":5,
+       "Review":"Very nice product"
+       },
+       {
+          "UserName":"Naveen",
+         "Rating":4,
+         "Review":" Go For it....!!"
+         },
+         {
+          "UserName":"Naresh",
+         "Rating":5,
+         "Review":"It's quite a big TV with stunning display and excellent sound. Installation was excellent. Nice service as well."
+         },
+         {
+          "UserName":"Rithwik",
+         "Rating":5,
+         "Review":"Amazing Product"
+         },
+         {
+          "UserName":"Ravindra",
+         "Rating":3,
+         "Review":"Overall nice tv. but only 4.4 gb storage??????? and 1.2 gb only usable storage????? Can't install more than 4-5apps, it says delete some data. Forget about games."
+         },
+         {
+          "UserName":"Chetan",
+         "Rating":5,
+         "Review":" An excellent television with the latest features!"
+         },
+         {
+          "UserName":"Bhargav",
+         "Rating":5,
+         "Review":" Its an excellent Television, Worth the price!!"
+         },
+         {
+          "UserName":"Ram",
+         "Rating":4,
+         "Review":" Amazing Product but not perfect."
+         },
+         {
+          "UserName":"Yash",
+         "Rating":3,
+         "Review":" No Display, Only Sound after 45 days."
+         },
+       {
+        "UserName":"Stalin",
+       "Rating":4,
+       "Review":" Good tv but poor Display!"
+      }
+    ],
+    "Faq":[
+     {
+    "Question":"This tv have google play store ? This is fully android tv ?",
+    "Answer":"Hi, thank you for the query.KD-65X80J- The first google TV, powered with an all-new Triluminos Pro, X1 4K HDR Processor, X-Balanced Speaker & Dolby Atmos Vision. Users can install from the “Search for Apps” Bar to install the available app."
     },
     {
-      "id": 13,
-      "title": "SONY PlayStation 5 (CFI-1008B01R) 825 GB with Astro's Playroom",
-      "price": 39990,
-      "discount": 10,
-      "description": "PlayStation 5 Digital Edition",
-      "category": "Gaming",
-      "image": [
-        "https://rukminim1.flixcart.com/image/612/612/kj7gwi80/gamingconsole/n/3/c/cfi-1008b01r-825-sony-no-original-imafytxenahqnnpu.jpeg?q=70",
-        "links",
-        "links"
-      ],
-      "rating": {
-        "rate": 4.9,
-        "count": 222970
-      },
-      "type": "color",
-      "types": ["Black", "White"]
-    }
+      "Question":"Does it have ethernet connection?",
+      "Answer":"Yes"
+    },
+    {
+      "Question":"What is the minimum distance required for optimum viewing of this TV?",
+      "Answer":"Thanks for your query.Recommended distance for viewing a 4K TV is 1.5 times the TV vertical screen size. Viewed from this distance, individual pixels cannot be differentiated by naked eyes."
+    },
+    {
+      "Question":"Whats the panel type of sony x80j 50 inches tv - va or ips ?",
+      "Answer":"Direct led type panel..high quality picture"
+    },
+    {
+      "Question":"Post delivery do we need to call someone for installation or Sony will automatically arrange?",
+      "Answer":"In my case Sony Center called and installed the same day. Excellent service and fast installation"
+   },
+  {
+    "Question":"What's the best price offered in offline",
+    "Answer":"Electorent offers best price"
+  },
+  {
+    "Question":"This tv doesnt have USB?",
+   "Answer":"This model has 2 USB ports at the side of the TV."
+  },
+  {
+    "Question":"Does this tv support installation & running of tata sky app just like it supports airtel xtreme app using which dth can be viewed without stb",
+    "Answer":"Hi,It has the play store to download the available applications. Users can download the available and supported applications from the play store."
+  },
+  {
+    "Question":"Can it be mounted on the wall?",
+    "Answer":"Yes, it can be mounted on wall."
+  },
+  {
+    "Question":"Dts x and dolby atmas support",
+  "Answer":"This model supports Dolby audio and Dolby Atmos."
+  }    
+   ]
+  }
   ],
   "faqs": [
     {
