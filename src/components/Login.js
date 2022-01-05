@@ -17,7 +17,7 @@ function Login(props) {
     axios
       .post("/login", { username: username1, password: password1 })
       .then((result) => {
-        console.log("Successfully Logged In\n", result);
+        // console.log("Successfully Logged In\n", result);
         incorrectCredentials.current.innerText = " ";
         history.push("/");
         // dispatch the user
