@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
+import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 function ReviewForm(props) {
   const history = useHistory();
   const [body, setBody] = useState("");
   const [heading, setHeading] = useState("");
+  const { user } = props;
+  console.log("user ", user);
   // const [reviews,setReviews] = useState([]);
   const [star, setStar] = useState(0);
 
@@ -23,7 +26,7 @@ function ReviewForm(props) {
   const addReview = (event) => {
     if (body && heading) {
       const data = {
-        user: "Topper Naveen",
+        user: user.fullName,
         heading: heading,
         body: body,
         stars: star,
@@ -91,5 +94,9 @@ function ReviewForm(props) {
     </div>
   );
 }
-
-export default ReviewForm;
+function mapStateToProps(state) {
+  return {
+    user: state.user.userData,
+  };
+}
+export default connect(mapStateToProps)(ReviewForm);
