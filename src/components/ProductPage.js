@@ -7,16 +7,15 @@ import SimilarItems from "./SimilarItems";
 import { useParams,Link } from "react-router-dom";
 import Loader from "./Loader";
 function ProductPage() {
-  const [resourceType, setResourceType] = useState(<Faqs />);
   const { productId } = useParams();
   const [item, setItem] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
-  const [activeDiv, setActiveDiv] = useState(2);
+  const [resourceType, setResourceType] = useState();
+  const [activeDiv, setActiveDiv] = useState(3);
   const toggleAnimation = (index) => {
     setActiveDiv(index);
   };
-  console.log("productId, ", productId);
   useEffect(() => {
     fetch(`http://localhost:3000/products/${productId}`)
       .then((res) => res.json())
@@ -24,6 +23,7 @@ function ProductPage() {
         (i) => {
           setItem(i);
           setIsLoaded(true);
+          setResourceType(<SimilarItems type={i.type} />);
         },
         (error) => {
           setIsLoaded(true);
@@ -80,7 +80,11 @@ function ProductPage() {
                 <button>Add to Cart</button>
                 <button>Rent Now</button>
               </div>
-              <Link to={'/payment'}><button className="buynow-button">Buy Now</button></Link>
+            <Link to={{
+              pathname: "/payment",
+              state: { product: item },
+            }}
+          ><button className="buynow-button">Buy Now</button></Link>
             </div>
           </div>
         </div>
@@ -89,7 +93,7 @@ function ProductPage() {
             <div className="button-area">
               <button
                 onClick={() => {
-                  setResourceType(<Reviews />);
+                  setResourceType(<Reviews items={item.Reviews}/>);
                   toggleAnimation(1);
                 }}
                 className={activeDiv === 1 ? "gelatine" : ""}
@@ -98,7 +102,7 @@ function ProductPage() {
               </button>
               <button
                 onClick={() => {
-                  setResourceType(<Faqs />);
+                  setResourceType(<Faqs items={item.Faq}/>);
                   toggleAnimation(2);
                 }}
                 className={activeDiv === 2 ? "gelatine" : ""}
