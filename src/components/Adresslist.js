@@ -3,14 +3,23 @@ import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { useState } from "react";
-import userRows from "../dummyData";
+import { useState, useEffect } from "react";
 
 const AdressList = () => {
-  const [data, setData] = useState(userRows);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/users/1")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success: data from server", data.deliveryAdress);
+        setData(data.deliveryAdress);
+      });
+  }, []);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    console.log("Deleting" + id);
+    /* setData(data.filter((item) => item.id !== id)); */
   };
 
   const columns = [
@@ -73,7 +82,7 @@ const AdressList = () => {
       <div className="adressList">
         <div className="userTitleContainer">
           <h1 className="userTitle">Delivery Adresses</h1>
-          <Link to="/newUser">
+          <Link to="/newAdress">
             <button className="userAddButton">Add Adress</button>
           </Link>
         </div>

@@ -3,13 +3,22 @@ import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { useState } from "react";
-import { upi } from "../dummyData";
+import { useState, useEffect } from "react";
 const UserProfileUPI = () => {
-  const [data, setData] = useState(upi);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/users/1")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success: data from server", data.upi);
+        setData(data.upi);
+      });
+  }, []);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    console.log(id);
+    //setData(data.filter((item) => item.id !== id));
   };
 
   const columns = [
@@ -72,7 +81,7 @@ const UserProfileUPI = () => {
       <div className="adressList">
         <div className="userTitleContainer">
           <h1 className="userTitle">Saved UPI</h1>
-          <Link to="/newUser">
+          <Link to="/newUPI">
             <button className="userAddButton">Add UPI</button>
           </Link>
         </div>
