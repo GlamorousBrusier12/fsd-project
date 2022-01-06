@@ -4,7 +4,7 @@ import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
 import SimilarItems from "./SimilarItems";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import Loader from "./Loader";
 function ProductPage() {
   const [resourceType, setResourceType] = useState(<Faqs />);
@@ -80,7 +80,7 @@ function ProductPage() {
                 <button>Add to Cart</button>
                 <button>Rent Now</button>
               </div>
-              <button className="buynow-button">Buy Now</button>
+              <Link to={'/payment'}><button className="buynow-button">Buy Now</button></Link>
             </div>
           </div>
         </div>

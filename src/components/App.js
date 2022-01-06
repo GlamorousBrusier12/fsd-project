@@ -17,6 +17,7 @@ import UserProfileUPI from "./UserProfileUPI";
 import Footer from "./Footer";
 import AdressList from "./AdressList";
 import Cart from "./Cart";
+import Payment from "./Payment";
 class App extends Component {
   constructor(props) {
     super();
@@ -32,6 +33,9 @@ class App extends Component {
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>
+              <Route path="/payment">
+                <Payment />
+              </Route>
               <Route path="/reviewform">
                 <ReviewForm />
               </Route>
