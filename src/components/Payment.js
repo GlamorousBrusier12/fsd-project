@@ -1,11 +1,57 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/Payment.css";
+import {connect} from "react-redux"
+// import AddressForm from "./AddressForm";
 
-function Payment() {
+function Payment(props) {
+  const deliveryAddress = props.address;
+  const upis = props.upi;
+  console.log(deliveryAddress);
   const location = useLocation();
   const product = location.state.product;
-  console.log("My product", product);
+  const [quantity,setQuantity] = useState(1);
+  const [address,setAddress] = useState(deliveryAddress);
+
+  const [newAddress,setNewAddress] = useState({
+    Name:"",
+    email:"",
+    address:"",
+    city:"",
+    state:"",
+    phoneNo:"",
+    zip:""
+})
+
+const handleChange = (e)=>{
+    const {name,value} = e.target;
+    setNewAddress(prevValues=>{
+        return {
+            ...prevValues,
+            [name]:value
+        }
+    })
+}
+const addAddress = (e)=>{
+  setAddress(prevValues=>{
+    return [
+      ...prevValues,
+      newAddress
+    ]
+  })
+
+  setNewAddress({
+    Name:"",
+    email:"",
+    address:"",
+    city:"",
+    state:"",
+    phoneNo:"",
+    zip:""
+})
+  e.preventDefault();
+}
+
   return (
     <div>
       <div className="item-summary">
@@ -18,10 +64,10 @@ function Payment() {
           />
           <div className="item-details-text">
             <h2>{product.title}</h2>
-            <h3>Price: {product.price}</h3>
-            <h3>Quantity: 2</h3>
+            <h3>Price: ₹{product.price}</h3>
+            <h3>Quantity: <input type="number" id="qty-product" value={quantity} onChange={(e)=>{if(e.target.value>0)setQuantity(e.target.value)}}/></h3>
             <h3>
-              Total Amount: ${product.price} x 2 = ${product.price * 2}
+              Total Amount: ₹{product.price} x {quantity} = ₹{product.price * quantity}
             </h3>
           </div>
         </div>
@@ -30,26 +76,23 @@ function Payment() {
         <h1>Shipping Address</h1>
         <div className="address-list">
           <h3>Please select your preffered shippping address:</h3>
-          <div className="address-pack">
-            <input type="radio" id="address1" name="address" />
-            <label for="address1">
-              Sherlock Holmes, 221B, Baker Street, London,100008
+          {address.map((addr)=>{
+            return(<div className="address-pack">
+            <input type="radio" id="address" name="address" />
+            <label for="address">
+            <div>
+              {addr.Name}, {addr.address}, {addr.city}, {addr.state}, {addr.zip}
+            </div> 
+            <div>
+              Phone: {addr.phoneNo}, email: {addr.email}
+            </div>
             </label>
-            <br />
-          </div>
-          <div className="address-pack">
-            <input type="radio" id="address2" name="address" />
-            <label for="address2">Some random address</label>
-            <br />
-          </div>
-          <div className="address-pack">
-            <input type="radio" id="address3" name="address" />
-            <label for="address3">Some other random address</label>
-          </div>
+          </div>);
+          })}
         </div>
         <h1>Want to ship to a different Address?</h1>
         <p> Fill the details in the given form</p>
-      <div className="form-parent">
+        <div className="form-parent">
         <form action="">
           <div className="form-content">
             <h2>Billing Address</h2>
@@ -59,8 +102,11 @@ function Payment() {
             <input
               type="text"
               id="fname"
-              name="firstname"
+              name="Name"
               placeholder="Sravan Kumar"
+              onChange={handleChange}
+              value={newAddress.Name}
+              required
             />
             <label for="email">
               <i className="fa fa-envelope"></i> Email
@@ -70,6 +116,9 @@ function Payment() {
               id="email"
               name="email"
               placeholder="sravan@example.com"
+              onChange={handleChange}
+              value={newAddress.email}
+              required
             />
             <label for="adr">
               <i className="fa fa-address-card-o"></i> Address
@@ -79,11 +128,14 @@ function Payment() {
               id="adr"
               name="address"
               placeholder="542 W. 15th Street"
+              onChange={handleChange}
+              value={newAddress.address}
+              required
             />
             <label for="city">
               <i className="fa fa-institution"></i> City
             </label>
-            <input type="text" id="city" name="city" placeholder="Hyderabad" />
+            <input type="text" id="city" name="city" placeholder="Hyderabad" onChange={handleChange} value={newAddress.city} required/>
 
             <label for="state">State</label>
             <input
@@ -91,21 +143,21 @@ function Payment() {
               id="state"
               name="state"
               placeholder="Telangana"
+              onChange={handleChange}
+              value={newAddress.state}
+              required
             />
 
-            <label for="zip">Zip</label>
-            <input type="text" id="zip" name="zip" placeholder="500007" />
+            <label for="zip">Pincode</label>
+            <input type="text" id="zip" name="zip" placeholder="500007" onChange={handleChange} value={newAddress.zip} required/>
+
+            <label for="phoneNo">Phone Number</label>
+            <input type="text" id="phoneNo" name="phoneNo" placeholder="9989486489" onChange={handleChange} value={newAddress.phoneNo} required/>
           </div>
 
-          <label>
-            <input type="checkbox" checked="checked" name="sameadr" /> Shipping
-            address same as billing
-          </label>
-          <br />
-          <input type="submit" value="Add Address" className="btn" />
+          <button onClick={addAddress} className="btn">Add Address</button>
         </form>
       </div>
-
       </div>
       
       <div className="payment-method">
@@ -128,6 +180,17 @@ function Payment() {
             <input type="radio" id="net" name="address" />
             <label for="net">Net Banking</label>
           </div>
+        </div>
+        <h2>Saved UPI</h2>
+        <div className="payment-list">
+          {upis.map(upi=>{
+            return (
+            <div className="address-pack">
+              <input type="radio" id="debit" name="address" />
+              <label for="debit">{upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}</label>
+            </div>
+            )
+          })}
         </div>
         <div className="form-parent">
           <div class="form-content">
@@ -170,7 +233,15 @@ function Payment() {
       </div>
       <button className="proceed-btn">Proceed <i class="fas fa-arrow-right"></i></button>
     </div>
-  );
-}
+  );}
+// }
 
-export default Payment;
+function mapStateToProps(state) {
+  return {
+    address: state.user.userData.deliveryAdress,
+    upi:state.user.userData.upi,
+    isLoggedIn: state.user.isLoggedIn,
+  };
+}
+export default connect(mapStateToProps)(Payment);
+

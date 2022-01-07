@@ -243,7 +243,6 @@
         "count": 120
       },
       "type": "Buy",
-
       "Category": "Mens",
       "Reviews": [
         {
@@ -401,7 +400,6 @@
         "count": 209
       },
       "type": "Rent",
-
       "Category": "Electronics",
       "Reviews": [
         {
@@ -764,7 +762,6 @@
           "Answer": "Yes it is... littke .much.....its very soft.. go for it",
           "Upvotes": 6
         },
-
         {
           "Question": "how to 40inch stecheble",
           "Answer": "It expand 2 inches,I ordered 48 size, perfect size and color",
@@ -1597,19 +1594,27 @@
     {
       "id": 1,
       "question": "How is the stiching?",
-      "answers": ["It is just AMAZING..ZING ZING", "The quality is brilliant"],
+      "answers": [
+        "It is just AMAZING..ZING ZING",
+        "The quality is brilliant"
+      ],
       "upvotes": 2
     },
     {
       "id": 2,
       "question": "Is it washable?",
-      "answers": ["Yes, It is."],
+      "answers": [
+        "Yes, It is."
+      ],
       "upvotes": 4
     },
     {
       "id": 3,
       "question": "Is it a laptop bag or just a casual bag?",
-      "answers": ["Both.", "I think it's Both casual and laptop"],
+      "answers": [
+        "Both.",
+        "I think it's Both casual and laptop"
+      ],
       "upvotes": 1
     },
     {
@@ -1623,25 +1628,37 @@
     {
       "id": 5,
       "question": "Is it fully water proof?",
-      "answers": ["no", "No, but there is extra provided rain cover."],
+      "answers": [
+        "no",
+        "No, but there is extra provided rain cover."
+      ],
       "upvotes": 5
     },
     {
       "id": 6,
       "question": "How much weight of bag?",
-      "answers": ["Light weight", " nice bag and light weighted."],
+      "answers": [
+        "Light weight",
+        " nice bag and light weighted."
+      ],
       "upvotes": 3
     },
     {
       "id": 7,
       "question": "Is there any pocket for water bottle?",
-      "answers": ["2 Sides", "ya two side pockets are for water bottle."],
+      "answers": [
+        "2 Sides",
+        "ya two side pockets are for water bottle."
+      ],
       "upvotes": 2
     },
     {
       "id": 8,
       "question": "is it suitable for office work?",
-      "answers": ["Yes, Absolutely.", "Perfect for office and college too."],
+      "answers": [
+        "Yes, Absolutely.",
+        "Perfect for office and college too."
+      ],
       "upvotes": 1
     },
     {
@@ -1656,7 +1673,9 @@
     {
       "id": 10,
       "question": "which type of cloth used?",
-      "answers": ["Polyster One."],
+      "answers": [
+        "Polyster One."
+      ],
       "upvotes": 4
     }
   ],
@@ -1740,6 +1759,50 @@
       "phoneNo": "447944649472",
       "address": "Albequerky",
       "locationName": "Los Pollos"
+    },
+    {
+      "Name": "Guduru Chetan",
+      "email": "a@b",
+      "address": "C 609 Kendriya Vihar Phase 3",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "phoneNo": "6300014049",
+      "zip": "500091",
+      "userId": "undefined",
+      "id": 11
+    },
+    {
+      "Name": "Guduru Chetan",
+      "email": "a@b",
+      "address": "C 609 Kendriya Vihar Phase 3",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "phoneNo": "+446300014049",
+      "zip": "500091",
+      "userId": "undefined",
+      "id": 12
+    },
+    {
+      "Name": "Guduru Chetan",
+      "email": "a@b",
+      "address": "C 609 Kendriya Vihar Phase 3",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "phoneNo": "+446300014049",
+      "zip": "500091",
+      "userId": "undefined",
+      "id": 13
+    },
+    {
+      "Name": "Guduru Chetan",
+      "email": "a@b",
+      "address": "C 609 Kendriya Vihar Phase 3",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "phoneNo": "+446300014049",
+      "zip": "500091",
+      "userId": "3",
+      "id": 14
     }
   ],
   "debitCards": [
@@ -2026,48 +2089,22 @@
           "Name": "Ravindra",
           "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
           "phoneNo": "123456",
-          "address": "Ananthauram",
-          "locationName": "ABC Street"
+          "city": "Ananthauram",
+          "state": "Andhra Pradesh",
+          "address": "ABC Street",
+          "zip": "500099",
+          "email": "abaswalld@fema.gov"
         },
         {
           "id": 2,
           "Name": "Chetan",
           "avatar": "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
           "phoneNo": "34681999929",
-          "address": "Hyderabad",
-          "locationName": "Jublee Hills"
-        },
-        {
-          "id": 3,
-          "Name": "Bhargav",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
-          "phoneNo": "34681568929",
-          "address": "Vizag",
-          "locationName": "oppsite Jagadhamba Theatre"
-        },
-        {
-          "id": 4,
-          "Name": "Sravan",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
-          "phoneNo": "972552992025",
-          "address": "Guntur",
-          "locationName": "Children's Park"
-        },
-        {
-          "id": 5,
-          "Name": "Rithwik",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
-          "phoneNo": "972552992024",
-          "address": "Nellore",
-          "locationName": "Ramji Nagar"
-        },
-        {
-          "id": 6,
-          "Name": "Chandler Bing",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
-          "phoneNo": "48727801893",
-          "address": "Ls Angeles",
-          "locationName": "Centrel Perk"
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "address": "Jublee Hills",
+          "zip": "500089",
+          "email": "amcgiffk@hud.gov"
         },
         {
           "id": 7,
@@ -2240,30 +2277,6 @@
           "cardNo": "mahesh028@gmail.com",
           "name": "Mahesh",
           "phoneNo": 6456385852
-        },
-        {
-          "id": 8,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhDTdW326JcXKYweltkqa8teThw8vAzpInA&usqp=CAU",
-          "type": "Phonepay",
-          "cardNo": "joey30@gmsil.com",
-          "name": "joey",
-          "phoneNo": 5582436910
-        },
-        {
-          "id": 9,
-          "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
-          "type": "PayTm",
-          "cardNo": "Chandler62@gmail.com",
-          "name": "Chandler",
-          "phoneNo": 1239876540
-        },
-        {
-          "id": 10,
-          "avatar": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePay_Lockup.max-1200x1200.png",
-          "type": "GooglPay",
-          "cardNo": "Ross87@gmail.com",
-          "name": "Ross",
-          "phoneNo": 7896441238
         }
       ],
       "myOrders": [
@@ -2382,7 +2395,74 @@
       "address": "Vizag, Andhra Pradesh",
       "wishlist": [],
       "purchases": [],
-      "deliveryAdress": [],
+      "deliveryAdress": [
+        {
+          "id": 1,
+          "Name": "Bhargav",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
+          "phoneNo": "34681568929",
+          "city": "Vizag",
+          "state": "Andhra Pradesh",
+          "address": "oppsite Jagadhamba Theatre",
+          "zip": "500074",
+          "email": "cnann3@chronoengine.com"
+        },
+        {
+          "id": 2,
+          "Name": "Sravan",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+          "phoneNo": "972552992025",
+          "city": "Guntur",
+          "state": "Andhra Pradesh",
+          "address": "Children's Park",
+          "zip": "500067",
+          "email": "hcaproni@home.pl"
+        }
+      ],
+      "debitCards": [
+        {
+          "id": 1,
+          "avatar": "https://bfsi.eletsonline.com/wp-content/uploads/2020/09/Bajaj-Finserv-inks-Kwik.ID-as-their-Exclusive-Video-KYC-Partner.jpg",
+          "type": "Bajaj Finance",
+          "cardNo": "12345***9",
+          "name": "Ravindra",
+          "expiry": "10/2022"
+        },
+        {
+          "id": 2,
+          "avatar": "https://banksifsccode.com/blog/media/2020-03/how-to-login-to-union-bank-s-net-banking-account-step-4.jpg",
+          "type": "Union Bank",
+          "cardNo": "62545***1",
+          "name": "Chetan",
+          "expiry": "9/2022"
+        },
+        {
+          "id": 3,
+          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb-tVpgHO9nYzyW8JaPyBvdbfIJGElM-9f-A&usqp=CAU",
+          "type": "SBI",
+          "cardNo": "32588***6",
+          "name": "Bhargav",
+          "expiry": "11/2023"
+        }
+      ],
+      "upi": [
+        {
+          "id": 1,
+          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhDTdW326JcXKYweltkqa8teThw8vAzpInA&usqp=CAU",
+          "type": "Phonepay",
+          "cardNo": "joey30@gmsil.com",
+          "name": "joey",
+          "phoneNo": 5582436910
+        },
+        {
+          "id": 2,
+          "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
+          "type": "PayTm",
+          "cardNo": "Chandler62@gmail.com",
+          "name": "Chandler",
+          "phoneNo": 1239876540
+        }
+      ],
       "cartItems": [],
       "reviews": [],
       "isLoggedIn": false
@@ -2397,7 +2477,24 @@
       "address": "4 Swallow Alley",
       "wishlist": [],
       "purchases": [],
-      "deliveryAdress": [],
+      "deliveryAdress": [
+        {
+          "id": 5,
+          "Name": "Rithwik",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
+          "phoneNo": "972552992024",
+          "address": "Nellore",
+          "locationName": "Ramji Nagar"
+        },
+        {
+          "id": 6,
+          "Name": "Chandler Bing",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
+          "phoneNo": "48727801893",
+          "address": "Ls Angeles",
+          "locationName": "Centrel Perk"
+        }
+      ],
       "cartItems": [],
       "reviews": [],
       "isLoggedIn": false

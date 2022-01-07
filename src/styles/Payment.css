@@ -1,3 +1,7 @@
+#qty-product{
+  width: 30px;
+}
+
 .item-summary{
     margin: 2em;
     border: 1px solid black;
@@ -98,4 +102,8 @@
 
 .icon-container i{
   margin: 2px;
+}
+
+.payment-list{
+  display: flex;
 }

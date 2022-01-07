@@ -8,6 +8,7 @@ import { useParams, Link } from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
+
 function ProductPage(props) {
   const { productId } = useParams();
   const [item, setItem] = useState({});
@@ -89,7 +90,7 @@ function ProductPage(props) {
               <Link
                 to={{
                   pathname: "/payment",
-                  state: { product: item },
+                  state: { product: item, productId:productId },
                 }}
               >
                 <button className="buynow-button">Buy Now</button>
