@@ -13,7 +13,7 @@ function MiniCart(props) {
   return (
     <div className="Item1">
       <div className="image">
-        <img src={newitem.image} alt={newitem.title} />
+        <img src={newitem.image[0]} alt={newitem.title} />
       </div>
       <div className="column">
         <h4>{newitem.title}</h4>

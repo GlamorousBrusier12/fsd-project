@@ -9,7 +9,7 @@ class MiniProduct extends Component {
     return (
       <div className="mini-product-container">
         <div className="mini-product-image-container">
-          <Link to={`/products/${id}`} >
+          <Link to={`/products/${id}`}>
             <img
               src={image[0]}
               style={{

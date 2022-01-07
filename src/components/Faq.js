@@ -3,23 +3,19 @@ import Votes from "./Votes";
 import "../styles/Faq.css";
 
 function Faq(props) {
-  const { question, answers } = props.content;
-  let upvotes = props.content.upvotes;
+  const { Question, Answer } = props.content;
+  let upvotes = props.content.Upvotes;
+
+  console.log("Faqs ",props.content);
   return (
     <div className="single-faq">
       <Votes upvotes={upvotes} />
       <div className="qna">
         <div>
-          <h3>{question}</h3>
+          <h3>{Question}</h3>
         </div>
         <div>
-          {answers.map((answer, index) => {
-            return (
-              <p key={index}>
-                {index + 1}) {answer}
-              </p>
-            );
-          })}
+          {Answer}
         </div>
       </div>
     </div>

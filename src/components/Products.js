@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import StarRatings from "react-star-ratings";
 import EachProduct from "./EachProduct";
 import Categories from "./Categories";
 import "../styles/ProductsStyles.css";
-import Loader from "./Loader";
 import { connect } from "react-redux";
 import ReactPaginate from "react-paginate";
 function Products(props) {
   let { searchResults } = props;
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
 
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -20,35 +16,6 @@ function Products(props) {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-  // useEffect(() => {
-  //   //Fetching the products data from JSON-Server
-  //   fetch(`http://localhost:3000/products`)
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded(true);
-  //         setItems(result);
-  //       },
-  //       // Note: it's important to handle errors here
-  //       // instead of a catch() block so that we don't swallow
-  //       // exceptions from actual bugs in components.
-  //       (error) => {
-  //         setIsLoaded(true);
-  //         setError(error);
-  //       }
-  //     );
-  // }, []);
-
-  // if (error) {
-  //   return <div>Error: {error.message}</div>;
-  // } else if (!isLoaded) {
-  //   return (
-  //     //Rendering the Loader animation while loading the data
-  //     <div>
-  //       <Loader />
-  //     </div>
-  //   );
-  // } else {
   return (
     <div>
       <br />
@@ -320,3 +287,4 @@ function mapStateToProps(state) {
   };
 }
 export default connect(mapStateToProps)(Products);
+// { store:{user, search}}
