@@ -51,7 +51,7 @@ const UserProfileInformation = () => {
               <span className="userShowTitle">Account Details</span>
               <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
-                <span className="userShowInfoTitle">emmawat27</span>
+                <span className="userShowInfoTitle">{info.data.userName}</span>
               </div>
               <div className="userShowInfo">
                 <CalendarToday className="userShowIcon" />

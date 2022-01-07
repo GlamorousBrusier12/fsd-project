@@ -20,6 +20,7 @@ import Cart from "./Cart";
 import NewAdress from "./NewAdress";
 import NewCard from "./NewCard";
 import NewUPI from "./NewUPI";
+import Payment from "./Payment";
 class App extends Component {
   constructor(props) {
     super();
@@ -35,6 +36,9 @@ class App extends Component {
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>
+              <Route path="/payment">
+                <Payment />
+              </Route>
               <Route path="/reviewform">
                 <ReviewForm />
               </Route>

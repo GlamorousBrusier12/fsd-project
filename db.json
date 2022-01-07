@@ -195,6 +195,34 @@
       "body": "blah blah",
       "stars": 4,
       "id": 25
+    },
+    {
+      "user": "Topper Naveen",
+      "heading": "blah",
+      "body": "fsda",
+      "stars": 4,
+      "id": 26
+    },
+    {
+      "user": " ",
+      "heading": "narukutha bidda",
+      "body": "em ro balsindha fake product amminav?",
+      "stars": 4,
+      "id": 27
+    },
+    {
+      "user": "Naveen mowa",
+      "heading": "narukutha bidda",
+      "body": "bad",
+      "stars": 1,
+      "id": 28
+    },
+    {
+      "user": "Naveen mowa",
+      "heading": "chetan",
+      "body": "bruh",
+      "stars": 4,
+      "id": 29
     }
   ],
   "products": [
@@ -215,189 +243,144 @@
         "count": 120
       },
       "type": "Buy",
+
       "Category": "Mens",
       "Reviews": [
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": "Too good fully satisfied"
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
         },
         {
           "UserName": "Ravindra",
           "Rating": 2,
-          "Review": " Not good"
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
         },
         {
           "UserName": "Sravan",
           "Rating": 1,
-          "Review": " Low quality product."
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": " Useful multi-purpose"
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
         },
         {
           "UserName": "Bhargav",
           "Rating": 5,
-          "Review": " Good quality.."
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
         },
         {
           "UserName": "Mahesh",
           "Rating": 3,
-          "Review": "Not Bad!"
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
         },
         {
           "UserName": "Akhanda",
           "Rating": 5,
-          "Review": "Good for students"
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
         },
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "5.0 out of 5 stars Best bag at best price"
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
         },
         {
           "UserName": "Naresh",
           "Rating": 3,
-          "Review": " Good looking bag but chains are not good"
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
         },
         {
           "UserName": "Pavan",
           "Rating": 4,
-          "Review": "Useful and beneficial"
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
         },
         {
           "UserName": "Chaari",
           "Rating": 3,
-          "Review": " Not of Good Quality"
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
         },
         {
           "UserName": "Ram",
           "Rating": 3,
-          "Review": " Overall ok"
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
         },
         {
           "UserName": "Messi",
           "Rating": 2,
-          "Review": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
-        },
-        {
-          "UserName": "Mbappe",
-          "Rating": 2,
-          "Review": "2.0 out of 5 stars Average quality, OK value."
-        },
-        {
-          "UserName": "Robert",
-          "Rating": 5,
-          "Review": " Best at this price"
-        },
-        {
-          "UserName": "Chris",
-          "Rating": 5,
-          "Review": "Best laptap bag or backpack on Amazon. Justifies it's ranking of Number 1 in its category."
-        },
-        {
-          "UserName": "Bruce",
-          "Rating": 4,
-          "Review": " Value for money"
-        },
-        {
-          "UserName": "Bobby",
-          "Rating": 5,
-          "Review": "Good quality at low price"
-        },
-        {
-          "UserName": "Jimmy",
-          "Rating": 3,
-          "Review": " Packaging need to improve"
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
         }
       ],
       "Faq": [
         {
           "Question": "Is there any warranty",
-          "Answer": "I don't know. But this is super product ..."
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
         },
         {
           "Question": "Does it have Rain cover?",
-          "Answer": "yes"
+          "Answer": "yes",
+          "Upvotes": 2
         },
         {
           "Question": "Return policy is available or not",
-          "Answer": "Available"
+          "Answer": "Available",
+          "Upvotes": 3
         },
         {
           "Question": "15.6 inch laptop fits in this bag?",
-          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks"
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
         },
         {
           "Question": "In heavy rain does it work without rain cover",
-          "Answer": "No, during heavy rain you should use raincover."
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
         },
         {
           "Question": "Is it available gray color",
-          "Answer": "Search Half Moon bags on Amazon to check any color variation if available."
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
         },
         {
           "Question": "Does it have Laptop Compartment",
-          "Answer": "Yes, it has a padded laptop compartment"
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
         },
         {
           "Question": "Custom logo Possible qty 20Pic Order",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 4
         },
         {
           "Question": "Does this product has return policy??",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 5
         },
         {
           "Question": "Can i carry a small size umbrella in it?",
-          "Answer": "Yes"
-        },
-        {
-          "Question": "How can i buy buy option not available",
-          "Answer": "If buy now option is not available then try 'Add to Cart' option which is always available. Thanks"
-        },
-        {
-          "Question": "Is this suitable for class 8",
-          "Answer": "Yes, it is suitable for 8th class"
-        },
-        {
-          "Question": "What's the maximum weight it can hold safely?",
-          "Answer": "Simple Answer: This backpack can carry upto 70 kgs of normal weight easily."
-        },
-        {
-          "Question": "Is this bags water proof",
-          "Answer": "Yes waterproof bag."
-        },
-        {
-          "Question": "Cash on delivery options is available",
-          "Answer": "Yes"
-        },
-        {
-          "Question": "Can I carry clothes?",
-          "Answer": "Yes, about 3 to 4 set of clothes"
-        },
-        {
-          "Question": "Does it has organiset",
-          "Answer": "No this bag is without organiser"
-        },
-        {
-          "Question": "Does it have any power bank port for charging phone",
-          "Answer": "No"
-        },
-        {
-          "Question": "what is the actual weight (kgs) of the bag kgs?",
-          "Answer": "Approximately 1kg"
-        },
-        {
-          "Question": "is this bag good for class 10",
-          "Answer": "Good bag but not heavy load can handle it."
+          "Answer": "Yes",
+          "Upvotes": 1
         }
       ]
     },
@@ -418,144 +401,120 @@
         "count": 209
       },
       "type": "Rent",
+
       "Category": "Electronics",
       "Reviews": [
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "The iPhone 13 Pro Max has a design very similar to the iPhone 12 Pro Max — the only discernible change is the thicker camera bump which also has a larger square now. This highlights the one part of the phone that has seen significant change over the past year."
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": "Best in the market!"
+          "Heading": "Best in the market!",
+          "Body": "Need camera software update rest of that everything is fine."
         },
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "Fabulous!"
+          "Heading": "Fabulous!",
+          "Body": " The phone is excellent. this is my first iPhone. I was considering Samsung galaxy s 21 ultra because of its macro photography. After iPhone launched this new one and announced macro photography ability of the phone I decided to go for this one blindfoldedly. The delivery was delayed because of demand supply difference but it was worth the wait. The first thing I did it was put on the the glass shield and cover. I thought it would kill the looks but it still looks nice. The iOS is very easy to use. Simple to go to all the settings."
         },
         {
           "UserName": "Ravindra",
           "Rating": 5,
-          "Review": "Terrific purchase"
+          "Heading": "Terrific purchase",
+          "Body": "With all the incremental improvements in the areas which really matter - camera, battery and display - this is a beast of an iPhone."
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": "Classy product"
+          "Heading": "Classy product",
+          "Body": "I previously owned the 12 Pro Max and shifted to the 13 and boy I am not disappointed. What I loved most is the camera(pic attached of night photography The pic I uploaded was shot at 7 pm. Apart from the camera, what I liked is the refresh rate when scrolling through supported apps giving me less lag input. Overall I'd choose the iPhone any day over all other smartphone because it's super good and has value for the money that I spent on and the only down side being the cost of it."
         },
         {
           "UserName": "Bhargav",
           "Rating": 5,
-          "Review": "Mind-blowing purchase"
+          "Heading": "Mind-blowing purchase",
+          "Body": "Well I switched from One plus to iphone. Now the fact is this was a dream for me to but a iphone. So bought it. Everything is marvellous.. there are various technical reviews so I am not going to write about it again… Comparing ios with android never made any sense to me because two are completely different platform and for different purpose. Various people gave reviews comparing with android phone which is not practical… understand your need and if you have the money the just go for it.. you wont regret"
         },
         {
           "UserName": "Sravan",
           "Rating": 5,
-          "Review": "Awesome"
+          "Heading": "Awesome",
+          "Body": "This is the best iPhone so far, earlier i used to think iPhones doesn’t have the best battery backup but with this iPhone 13 pro max , it completely changed my view!!!"
         },
         {
           "UserName": "Bobby",
           "Rating": 5,
-          "Review": "Best smartphone in this year Camera is just awesome I will say worth it"
+          "Heading": "Best smartphone in this year Camera is just awesome I will say worth it",
+          "Body": "It elevates the already great Iphone experience with a much better (pro motion) display and excellent camera!"
         },
         {
           "UserName": "Jagan",
           "Rating": 5,
-          "Review": "One Of The Powerful And Flagship Phone That Can't Get Down In Any Generation"
+          "Heading": "One Of The Powerful And Flagship Phone That Can't Get Down In Any Generation",
+          "Body": " I switched from 11 pro max to 13 pro max.As for the phone, it is the best iPhone experience you can have, simple. Yes it is expensive, but if you have your sight set for it, it is the best phone you can buy."
         },
         {
           "UserName": "Pavan",
           "Rating": 5,
-          "Review": "Nice phone and camera extra awesome"
-        },
-        {
-          "UserName": "Kumar",
-          "Rating": 5,
-          "Review": "Literally the best iphone ever. Such a fluid screen. Beast of a camera."
-        },
-        {
-          "UserName": "Messi",
-          "Rating": 5,
-          "Review": "Awesome phone nice camera thanks flipkart providing my favourite colour and fast delivery"
-        },
-        {
-          "UserName": "Raghav",
-          "Rating": 5,
-          "Review": "Very Good Mobile phone Truest Company in Flipkart Superb Performance & Awesome Camera"
-        },
-        {
-          "UserName": "Cristiano",
-          "Rating": 4,
-          "Review": "Great phone and price is to high"
-        },
-        {
-          "UserName": "Ravi",
-          "Rating": 5,
-          "Review": "Switched from Android to ios Sierra blue colour is awesome Macroshot is best part Seen best battery life"
+          "Heading": "Nice phone and camera extra awesome",
+          "Body": "I was very skeptical about the genuineness of the product that I would receive as it was not available in stock in stores. So, I brought all my gut feeling together and made this purchase."
         }
       ],
       "Faq": [
         {
           "Question": "Does iphone 13 series sapport satelite phone call connectvity?",
-          "Answer": "Yes, if you duct tape the satellite phone to it"
+          "Answer": "Yes, if you duct tape the satellite phone to it",
+          "Upvotes": 1
         },
         {
           "Question": "What is new in this version?",
-          "Answer": "120HZ display, Bigger battery, A15 Bionic chip, Improved performance and many more."
+          "Answer": "120HZ display, Bigger battery, A15 Bionic chip, Improved performance and many more.",
+          "Upvotes": 2
         },
         {
           "Question": "Refresh rate of iphone 13 pro max?",
-          "Answer": "120HZ(Adaptive)"
+          "Answer": "120HZ(Adaptive)",
+          "Upvotes": 3
         },
         {
           "Question": "battle ground mobile india support in 90 fps or not?",
-          "Answer": "Yes, it supports highest possible fps option, it is the best phone on market. Has 120fps display so 90fps is supported."
+          "Answer": "Yes, it supports highest possible fps option, it is the best phone on market. Has 120fps display so 90fps is supported.",
+          "Upvotes": 2
         },
         {
           "Question": "how many mh battery in phone?",
-          "Answer": "Around 4375 MaH"
+          "Answer": "Around 4375 MaH",
+          "Upvotes": 7
         },
         {
           "Question": "How much time will it take until a hundred percent charge from zero",
-          "Answer": "Around 80 mins."
+          "Answer": "Around 80 mins.",
+          "Upvotes": 4
         },
         {
           "Question": "iPhone 13 pro Max is bullet proof",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 3
         },
         {
           "Question": "Which charger will be the best for quick charging of this phone?",
-          "Answer": "Any charger with 30w or more should do. I prefer Anker though.."
+          "Answer": "Aycharger with 30w or more should do. I prefer Anker though..",
+          "Upvotes": 5
         },
         {
           "Question": "I need front camera 50",
-          "Answer": "Find oppo or vivo this phone is only 12"
+          "Answer": "Find oppo or vivo this phone is only 12",
+          "Upvotes": 2
         },
         {
           "Question": "How much Nanometer in this chipset a 15bionic",
-          "Answer": "5nm"
-        },
-        {
-          "Question": "Samsung z fold 3 or iphone 13 pro max",
-          "Answer": "iPhone 13 pro max"
-        },
-        {
-          "Question": "256gb vs 128gb prefer for 4k video",
-          "Answer": "256gb, or even more. 4k videos for 10-15mnts will go in gb's so you can imagine if you make too many videos then you need more space!!"
-        },
-        {
-          "Question": "Iphone 13 in Display Fingerprint?",
-          "Answer": "No, only face id"
-        },
-        {
-          "Question": "Does it come with a wall charger?",
-          "Answer": "No"
-        },
-        {
-          "Question": "Does it have 1tb storage.",
-          "Answer": "Yes, you can choose between 128gb, 256gb, 512gb & 1tb (if it is available)"
+          "Answer": "5nm",
+          "Upvotes": 1
         }
       ]
     },
@@ -581,154 +540,126 @@
         {
           "UserName": "Rithwik",
           "Rating": 4,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "Best quality but big size"
         },
         {
           "UserName": "Bhargav",
           "Rating": 4,
-          "Review": "Good quality very comfortable"
+          "Heading": "Good quality very comfortable",
+          "Body": "Fit as expected"
         },
         {
           "UserName": "Ravindra",
           "Rating": 5,
-          "Review": "Good Fitting"
+          "Heading": "Good Fitting",
+          "Body": "Good product, same delivery sas hown in the pictures"
         },
         {
           "UserName": "Chetan",
           "Rating": 4,
-          "Review": "Nice shirt"
+          "Heading": "Nice shirt",
+          "Body": "My size is Medium (M), so I ordered Medium size (M), But it seems like I received large (L) or extra large (XL). But when I saw the size label on the shirt itself it said Medium (M)."
         },
         {
           "UserName": "Bobby",
           "Rating": 3,
-          "Review": "Quality is verry good"
+          "Heading": "Quality is verry good",
+          "Body": "Yes I do like this product as it is good looking. Exact denim colour required. Absolutely good budget shirt."
         },
         {
           "UserName": "Naveen",
           "Rating": 4,
-          "Review": "Grt shirt, fits me comfortably, looks grt.very happy with the shirt."
+          "Heading": "Grt shirt, fits me comfortably, looks grt.very happy with the shirt.",
+          "Body": "The product was very good ..."
         },
         {
           "UserName": "Mahesh",
           "Rating": 5,
-          "Review": "it's too good."
+          "Heading": "it's too good.",
+          "Body": "Color was change... I didn't get which is ur displaying the color in screen.. But whatever i receiving is somewhat better.. That's why iam cool."
         },
         {
           "UserName": "Sravan",
-          "Rating": 2,
-          "Review": "Very bad,small in size..."
+          "Rating": 5,
+          "Heading": "Very Good,small in size...",
+          "Body": "Yes I do like this product as it is good looking. Exact denim colour required. Absolutely good budget shirt."
         },
         {
           "UserName": "Nani",
-          "Rating": 1,
-          "Review": "Poor quality"
+          "Rating": 4,
+          "Heading": "Goood quality",
+          "Body": "Good enough"
         },
         {
           "UserName": "Ramesh",
           "Rating": 4,
-          "Review": "Good Product you should try it"
+          "Heading": "Good Product you should try it",
+          "Body": "good fine jeans shirt,fits well,fabric is good,colour is also good,but material is not 100 percent cotton,mix of cotton Nd viscose,good for Oct,Nov but a bit hot in July,aug,overall satisfied,thnks"
         },
         {
           "UserName": "Ravi",
           "Rating": 3,
-          "Review": "Not bad"
+          "Heading": "Not bad",
+          "Body": "Looking great and fitting is also great.. Nice material.. One star reduced because there is no hole for one button.. Otherwise very nice shirt.."
         },
         {
           "UserName": "Tyson",
           "Rating": 5,
-          "Review": "Wowww!! Just awesome product..I'm very happy... Perfect fittings, high quality cloth..."
-        },
-        {
-          "UserName": "Kalyan",
-          "Rating": 3,
-          "Review": "Material don like it"
-        },
-        {
-          "UserName": "Messi",
-          "Rating": 4,
-          "Review": "Shirt is Good Hight is slightly Long."
-        },
-        {
-          "UserName": "Gagan",
-          "Rating": 2,
-          "Review": "Not Good, it's Average"
-        },
-        {
-          "UserName": "Omkar",
-          "Rating": 4,
-          "Review": "Good.. Overall"
-        },
-        {
-          "UserName": "Lalith",
-          "Rating": 4,
-          "Review": "OSSAM UNBILIVEBEL CLOTH WAS VERY NICE"
-        },
-        {
-          "UserName": "Farhan",
-          "Rating": 3,
-          "Review": "Very thin"
+          "Heading": "Wowww!",
+          "Body": "Just awesome product..I'm very happy... Perfect fittings, high quality cloth..."
         }
       ],
       "Faq": [
         {
           "Question": "My chest is 42. Which size will I buy?",
-          "Answer": "L That means 42"
+          "Answer": "L That means 42",
+          "Upvotes": 6
         },
         {
           "Question": "Size chart?",
-          "Answer": "You can find the size chart below the images on the mobile app and on desktop you can find it below the size drop-down list"
+          "Answer": "You can find the size chart below the images on the mobile app and on desktop you can find it below the size drop-down list",
+          "Upvotes": 1
         },
         {
           "Question": "Is that color feeded?",
-          "Answer": "So far not. Can't say for future"
+          "Answer": "So far not. Can't say for future",
+          "Upvotes": 2
         },
         {
           "Question": "Can you send the original photo of shirt",
-          "Answer": "I am sorry sir but there is no options to send images in answers, but I can assure you that the product will look the same."
+          "Answer": "I am sorry sir but there is no options to send images in answers, but I can assure you that the product will look the same.",
+          "Upvotes": 3
         },
         {
           "Question": "It's it returnable",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 7
         },
         {
           "Question": "Hey when M size will be available in medium blue colour",
-          "Answer": "Sir by tomorrow max"
+          "Answer": "Sir by tomorrow max",
+          "Upvotes": 2
         },
         {
           "Question": "Sir , i want light blue in small",
-          "Answer": "Hello sir the stock is on its way, it will be available by tomorrow evening."
+          "Answer": "Hello sir the stock is on its way, it will be available by tomorrow evening.",
+          "Upvotes": 3
         },
         {
           "Question": "I want jeans shirt in 50xl size",
-          "Answer": "I do not think that this size is available"
+          "Answer": "I do not think that this size is available",
+          "Upvotes": 5
         },
         {
           "Question": "My shirt size is 42 is it called large",
-          "Answer": "Yes. It is large."
+          "Answer": "Yes. It is large.",
+          "Upvotes": 1
         },
         {
           "Question": "Can you tell me the model which is shown in this page wear which size T-shirt.? Actually my body figure and the model's fig is same.which size I need?",
-          "Answer": "The model wore and L size in this Photoshoot, so accordingly you can order sir"
-        },
-        {
-          "Question": "My hight is 5.5 and chest is 44 which size fit for me",
-          "Answer": "Medium"
-        },
-        {
-          "Question": "which size will be perfect for 38 chest size",
-          "Answer": "Size Chart Says Size S but for my experience i too have chest size 38 and i have athletic body but i bought Size M which fits perfectly on me neither to tight nor to loose, somewhat lengthy as i m only 5'3. i guess this will give u idea which size u should bought otherwise you have option of exchange"
-        },
-        {
-          "Question": "May i change my shipping address because deleivery date is too late ?",
-          "Answer": "Yes sir you can do that if you still have not places the order"
-        },
-        {
-          "Question": "My size is M what should i order?",
-          "Answer": "Sir you should order M size only then, it will fit you"
-        },
-        {
-          "Question": "Small size not available?",
-          "Answer": "Size 40 is M sir, i unit is available in stock"
+          "Answer": "The model wore and L size in this Photoshoot, so accordingly you can order sir",
+          "Upvotes": 2
         }
       ]
     },
@@ -754,152 +685,115 @@
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "super quality with good fitting.."
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": "Very good product"
+          "Heading": "Very good product",
+          "Body": "Same as picture. My husband hip sz 34 I bought 32 it's perfect for him. He love it. Thanks for Electorent."
         },
         {
           "UserName": "Rithwik",
           "Rating": 4,
-          "Review": "Good cloth and nice fit"
+          "Heading": "Good cloth and nice fit",
+          "Body": "Waist was wrongly sent as 34 instead of 32. Otherwise also it was too tight at thighs. I had returned it"
         },
         {
           "UserName": "Ravindra",
           "Rating": 3,
-          "Review": "Color is not as expected. The piece is like an old one"
+          "Heading": "Color Changed!",
+          "Body": "Color is not as expected. The piece is like an old one"
         },
         {
           "UserName": "Battu",
           "Rating": 2,
-          "Review": "Bad quality in first st wear itself loop stiches came out ens pockst cloth started getting hole"
+          "Heading": "Bad quality!",
+          "Body": "In 1st wear itself loop stiches came out ens pockst cloth started getting hole"
         },
         {
           "UserName": "Chetan",
           "Rating": 3,
-          "Review": "Good fitting. Nice look."
+          "Heading": "Good fitting. Nice look.",
+          "Body": "INNER SIDE SHOULD BE UNDYED,SO PLEASE RECTIFYFABRIC QUALITY"
         },
         {
           "UserName": "Bhargav",
           "Rating": 5,
-          "Review": "Right now it's hard to get a standard regular fit with all these newfangled design names like 'carrot fit' which frankly I don't even understand what they are trying to convey."
+          "Heading": "Excellent!",
+          "Body": "Right now it's hard to get a standard regular fit with all these newfangled design names like 'carrot fit' which frankly I don't even understand what they are trying to convey."
         },
         {
           "UserName": "Sravan",
           "Rating": 1,
-          "Review": "Total waste of money, very unsatisfied with product.....Please dont waste your money......"
+          "Heading": "Total waste of money",
+          "Body": "very unsatisfied with product.....Please dont waste your money......"
         },
         {
           "UserName": "David",
           "Rating": 4,
-          "Review": "Reading the reviews it was with trepidation that i ordered these jeans. they are very good in terms of thickness of cloth, stitching and finish. Look a lot like Levis, but at an affordable rate."
+          "Heading": "Decent Product.",
+          "Body": "Reading the reviews it was with trepidation that i ordered these jeans. they are very good in terms of thickness of cloth, stitching and finish. Look a lot like Levis, but at an affordable rate."
         },
         {
           "UserName": "John",
           "Rating": 5,
-          "Review": "Very thin jeans, of course comfortable. Being streached one size should be one less than usual size. Please mention TC of cloth always, otherwise difficult to understand quality of cloth."
-        },
-        {
-          "UserName": "Kumar",
-          "Rating": 5,
-          "Review": " The product is having a share more towards grey than olive green. It goes good with black shirts and dark colors. It is quite long in length as expected. Fit is good. Overall s nice product."
-        },
-        {
-          "UserName": "Viktor",
-          "Rating": 3,
-          "Review": "Same size 32 and same brand jeans but look the difference light blue color jeans is little smaller in fitting and height is also smaller. Didn't aspect this from you."
-        },
-        {
-          "UserName": "Lohith",
-          "Rating": 1,
-          "Review": "First I bought a pant of this brand which was brilliant so I opted to buy another. Second one I received is horrible. Material, stitching , size, comfort-all are bad. Length is also smaller."
-        },
-        {
-          "UserName": "Drake Ramoray",
-          "Rating": 4,
-          "Review": "It is a standard brand ...no cheating and always the products are too good ....this one is also very nice."
-        },
-        {
-          "UserName": "Pankaj",
-          "Rating": 3,
-          "Review": "The jeans even though they were regular stretch fit it was clinging to the thighs. The waist etc were perfect.The colour is yet to be tested"
-        },
-        {
-          "UserName": "Venkat",
-          "Rating": 4,
-          "Review": "material is good. color as expected and as shown on amazon. size is a little too large than the size ordered. carries a tag of 36'' as ordered, but it is closer to 37'' and not possible to have it altered because of the design."
+          "Heading": "WWWOOWWW!.",
+          "Body": "Very thin jeans, of course comfortable. Being streached one size should be one less than usual size. Please mention TC of cloth always, otherwise difficult to understand quality of cloth."
         }
       ],
       "Faq": [
         {
           "Question": "Whats the length ?",
-          "Answer": "Min 40 inch from waist"
+          "Answer": "Min 40 inch from waist",
+          "Upvotes": 1
         },
         {
           "Question": "If not fitted on phisicaly then what i do",
-          "Answer": "If jeans doesn't fit you, u can return the same"
+          "Answer": "If jeans doesn't fit you, u can return the same",
+          "Upvotes": 8
         },
         {
           "Question": "what is the cotton percentage in jeans?",
-          "Answer": "70% COTTON"
+          "Answer": "70% COTTON",
+          "Upvotes": 5
         },
         {
           "Question": "Is this stechable",
-          "Answer": "Yes it is... littke .much.....its very soft.. go for it"
+          "Answer": "Yes it is... littke .much.....its very soft.. go for it",
+          "Upvotes": 6
         },
+
         {
           "Question": "how to 40inch stecheble",
-          "Answer": "It expand 2 inches,I ordered 48 size, perfect size and color"
+          "Answer": "It expand 2 inches,I ordered 48 size, perfect size and color",
+          "Upvotes": 1
         },
         {
           "Question": "What is difference between relaxed fit,regular fit and skin fit?",
-          "Answer": "It s a comfset fit"
+          "Answer": "It s a comfset fit",
+          "Upvotes": 6
         },
         {
           "Question": "What is my promo code ?",
-          "Answer": "Nothing"
+          "Answer": "Nothing",
+          "Upvotes": 8
         },
         {
           "Question": "I reacved not exact colour,i booked dark colour.it is quality wise very poor,i want replace the product",
-          "Answer": "Plz apply for return request"
+          "Answer": "Plz apply for return request",
+          "Upvotes": 2
         },
         {
           "Question": "How can I get this product",
-          "Answer": "In Corrier"
+          "Answer": "In Corrier",
+          "Upvotes": 1
         },
         {
           "Question": "What's it's delivery charge",
-          "Answer": "No delivery charges"
-        },
-        {
-          "Question": "what is the breadth at lower end for size 30 and 32",
-          "Answer": "32"
-        },
-        {
-          "Question": "Whats the length ?",
-          "Answer": "40+ inch from waist"
-        },
-        {
-          "Question": "These are high waisted?",
-          "Answer": "No they are mid waist jeans"
-        },
-        {
-          "Question": "42 size is available in this jeans???",
-          "Answer": "It is available"
-        },
-        {
-          "Question": "IT'S cloth to fat ?",
-          "Answer": "Yes the clothes are true to their size."
-        },
-        {
-          "Question": "Is this material 100% cotton ?",
-          "Answer": "Yes"
-        },
-        {
-          "Question": "Color fades or not?",
-          "Answer": "No color is as usual like new quality is good go for it"
+          "Answer": "No delivery charges",
+          "Upvotes": 3
         }
       ]
     },
@@ -925,109 +819,114 @@
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "They are good for walking but definitely not for running. Look wise they are great. comfortable in wearing for long hours and you will surely love its foam padding."
         },
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "They are good for walking but definitely not for running. Look wise they are great. comfortable in wearing for long hours and you will surely love its foam padding."
+          "Heading": "Awesome!",
+          "Body": "They are good for walking but definitely not for running. Look wise they are great. comfortable in wearing for long hours and you will surely love its foam padding."
         },
         {
           "UserName": "Naresh",
           "Rating": 5,
-          "Review": "Value for money ...in this price its a very good product light weight and grippy ....And it have memory foam too.."
+          "Heading": "Value for money.",
+          "Body": "in this price its a very good product light weight and grippy ....And it have memory foam too."
         },
         {
           "UserName": "Rakesh",
           "Rating": 5,
-          "Review": "good quality... premium finish... price worthy"
+          "Heading": "good quality.",
+          "Body": "premium finish... price worthy"
         },
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "This is too good to buy Worth the money It has memory foam"
+          "Heading": "TOO GOOD!",
+          "Body": "This is too good to buy Worth the money It has memory foam"
         },
         {
           "UserName": "Ravindra",
           "Rating": 4,
-          "Review": "One of the Nice shoes in rage"
+          "Heading": "GOOODDDD!",
+          "Body": "One of the Nice shoes in rage"
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": "Very very soft interiors. Go for one size big as my std size fits only without socks.One star less bcoz the back of the ankle scrubs the skin causing irritation. With socks shouldn’t be an issue."
+          "Heading": "Very Good!",
+          "Body": "Very very soft interiors. Go for one size big as my std size fits only without socks.One star less bcoz the back of the ankle scrubs the skin causing irritation. With socks shouldn’t be an issue."
         },
         {
           "UserName": "Eshwar",
           "Rating": 5,
-          "Review": "Best shoes in this price , very comfortable ,lightweight, stylish . Awesome shoes"
+          "Heading": "Amazing!",
+          "Body": "Best shoes in this price , very comfortable ,lightweight, stylish . Awesome shoes"
         },
         {
           "UserName": "Srinu",
           "Rating": 3,
-          "Review": "small difrence between picture or reality in color."
+          "Heading": "OK!",
+          "Body": "small difrence between picture or reality in color."
         },
         {
           "UserName": "Tagore",
           "Rating": 5,
-          "Review": "Excellent delivery, but packaging could have been better. Just a flimsy shoe box with packing tape."
-        },
-        {
-          "UserName": "Ivan",
-          "Rating": 5,
-          "Review": "Comfortable out of the box, light weight, good cushioning. The shoes fit well and have ample toe room. The quality seems good. Hope the shoes last at least a season. Good for Day to day casual wear, definitely not for running."
-        },
-        {
-          "UserName": "Yash",
-          "Rating": 5,
-          "Review": "Nice shoes perfectly fit but colour should be more bright little dull.."
-        },
-        {
-          "UserName": "The shoes are soft and light, but do note that you cannot wear them without socks, if you want to avoid biting injury above the heels. I bought them to use them as quick slip on shoes without socks, but after single use, I suffered sever injury on both my legs (above the heels). Couldn't return as the shoes had gotten dirty after use.",
-          "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Excellent!.",
+          "Body": "Excellent delivery, but packaging could have been better. Just a flimsy shoe box with packing tape"
         }
       ],
       "Faq": [
         {
           "Question": "How is the Sole, is it rigid or bending while walking?",
-          "Answer": "It's not rigid , it's bending"
+          "Answer": "It's not rigid , it's bending",
+          "Upvotes": 2
         },
         {
           "Question": "do we need to wear socks for this shoe? if not wearing socks, will there be bad smell?",
-          "Answer": "You can use them both with shocks and without shocks."
+          "Answer": "You can use them both with shocks and without shocks.",
+          "Upvotes": 5
         },
         {
           "Question": "can i use with out socks? if not wearing socks, It will be bad smell ?",
-          "Answer": "It is pretty good shoe you can use it without socks . No tension"
+          "Answer": "It is pretty good shoe you can use it without socks . No tension",
+          "Upvotes": 3
         },
         {
           "Question": "What is the meaning of Vega 1,2,3 and which one is best?",
-          "Answer": "I don't think literally there is any difference other than colour.."
+          "Answer": "I don't think literally there is any difference other than colour..",
+          "Upvotes": 1
         },
         {
           "Question": "how about Ventilation? is upper material soft ? please help.!!",
-          "Answer": "Ventilation is good. Material is soft feel like little nylon stuff. Light and fits well."
+          "Answer": "Ventilation is good. Material is soft feel like little nylon stuff. Light and fits well.",
+          "Upvotes": 3
         },
         {
           "Question": "Why smaller sizes are not available? I need size 5",
-          "Answer": "May be out of stock, notify seller though customer care."
+          "Answer": "May be out of stock, notify seller though customer care.",
+          "Upvotes": 3
         },
         {
           "Question": "what is the actual weight of each one shoe? is it water proof and can use in wet soil and when raining",
-          "Answer": "Light weight. Not at all water resistant. Synthetic cloth shoe."
+          "Answer": "Light weight. Not at all water resistant. Synthetic cloth shoe.",
+          "Upvotes": 3
         },
         {
           "Question": "Is these are waterproof?",
-          "Answer": "No. Made from knitted fabric called mesh. So, they can't be waterproof. But you may wash it."
+          "Answer": "No. Made from knitted fabric called mesh. So, they can't be waterproof. But you may wash it.",
+          "Upvotes": 2
         },
         {
           "Question": "can i use this shoe in rainy season?",
-          "Answer": "No it’s not Rainy Season shoes"
+          "Answer": "No it’s not Rainy Season shoes",
+          "Upvotes": 6
         },
         {
           "Question": "The insoles have damaged. Can i buy them individually from the store?",
-          "Answer": "Only if you are comfortable with the soles."
+          "Answer": "Only if you are comfortable with the soles.",
+          "Upvotes": 4
         }
       ]
     },
@@ -1063,84 +962,102 @@
         {
           "UserName": "Naresh",
           "Rating": 4,
-          "Review": "Very nice watch with a cool look."
+          "Heading": "Very Impressive",
+          "Body": "Very nice watch with a cool look."
         },
         {
           "UserName": "Mohan",
           "Rating": 5,
-          "Review": "To be very frank I am telling you..."
+          "Heading": " Cool...Value for money",
+          "Body": "Overall very satisfying but In my case I don't found any warranty card in the box and after contacting amzaon they tell me your invoice will also work as warranty card."
         },
         {
           "UserName": "Manoj",
           "Rating": 5,
-          "Review": "A Genuine Fastrack Watch. I got it checked from Nearest Titan World showroom. Go for it if you sepect this one for you."
+          "Heading": "this one for you!",
+          "Body": "A Genuine Fastrack Watch. I got it checked from Nearest Titan World showroom. Go for it if you sepect this one for you."
         },
         {
           "UserName": "Charan",
           "Rating": 5,
-          "Review": "I bought this watch for someone special on his birthday and he loved the watch and the watch was also delivered on time."
+          "Heading": "Excellent!",
+          "Body": "I bought this watch for someone special on his birthday and he loved the watch and the watch was also delivered on time."
         },
         {
           "UserName": "Tharak",
           "Rating": 4,
-          "Review": "Nice watch came with good packing.Dail is little weight and the time adjusting button is very loose.If the seller could provide warranty of the product that will be great.Otherwise its nice."
+          "Heading": "very Nice!",
+          "Body": "Nice watch came with good packing.Dail is little weight and the time adjusting button is very loose.If the seller could provide warranty of the product that will be great.Otherwise its nice."
         },
         {
           "UserName": "Karan",
           "Rating": 4,
-          "Review": "The watch is good I had bought it for my brother and he really liked it"
+          "Heading": "Absolutely AMazing!",
+          "Body": "The watch is good I had bought it for my brother and he really liked it"
         },
         {
           "UserName": "Irfan",
           "Rating": 3,
-          "Review": "The dial is awesome.. but the belt quality can be better"
+          "Heading": "Okay!",
+          "Body": "The dial is awesome.. but the belt quality can be better"
         },
         {
           "UserName": "Rohith",
           "Rating": 4,
-          "Review": "Watch is good quality is best but the look doesn't suit heavy arms but good for those having thin arms"
+          "Heading": "Good!",
+          "Body": "Watch is good quality is best but the look doesn't suit heavy arms but good for those having thin arms"
         }
       ],
       "Faq": [
         {
           "Question": "is it a big dial watch ? can it fit in skinny hands ?",
-          "Answer": "Not big dial"
+          "Answer": "Not big dial",
+          "Upvotes": 1
         },
         {
           "Question": "does the dial is Fourty one mm or Thirty mm? in description it is showing as Thirty mm.",
-          "Answer": "Thirty mm"
+          "Answer": "Thirty mm",
+          "Upvotes": 2
         },
         {
           "Question": "its warranty is for how many times",
-          "Answer": "2 years"
+          "Answer": "2 years",
+          "Upvotes": 4
         },
         {
           "Question": "How to get warranty card ?",
-          "Answer": "warranty card is inside the watch box . if you have not received ,please contact the seller"
+          "Answer": "warranty card is inside the watch box . if you have not received ,please contact the seller",
+          "Upvotes": 5
         },
         {
           "Question": "this product is waterproof ?",
-          "Answer": "yes upto 50 meters"
+          "Answer": "yes upto 50 meters",
+          "Upvotes": 3
         },
         {
           "Question": "does the strap get discoloured due to sweat",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 3
         },
         {
           "Question": "What is the Strap size?",
-          "Answer": "Fit for a average size man"
+          "Answer": "Fit for a average size man",
+          "Upvotes": 1
         },
         {
           "Question": "where can I find strap for this watch?",
-          "Answer": "company outlet."
+          "Answer": "company outlet.",
+          "Upvotes": 5
         },
         {
           "Question": "is it a big dial watch ? can it fit in skinny hands ?",
-          "Answer": "Yes. It fits perfectly."
+          "Answer": "Yes. It fits perfectly.",
+          "Upvotes": 3
         },
         {
           "Question": "What are the dimensions of this item?",
-          "Answer": "5ATM/50m Water resistance. Genuine calf leather strap. Stainless steel back cover. High precision"
+          "Answer": "5ATM/50m Water resistance. Genuine calf leather strap. Stainless steel back cover. High precision",
+          "Upvotes": 2
         }
       ]
     },
@@ -1166,94 +1083,114 @@
         {
           "UserName": "Nani",
           "Rating": 4,
-          "Review": "Got it delivered before time, i think apple products are overpriced but the quality is par excellence, the new version comes with wireless case support and the new H1 chip and other than that there is no difference in quality if you compare with previous generation Airpods.One star less because i did not find it worth in terms of price"
+          "Heading": "Good!",
+          "Body": "Got it delivered before time, i think apple products are overpriced but the quality is par excellence, the new version comes with wireless case support and the new H1 chip and other than that there is no difference in quality if you compare with previous generation Airpods.One star less because i did not find it worth in terms of price"
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": "Quality product. Nice sound and also durable. Wireless charging is a plus point."
+          "Heading": "Nice Product!",
+          "Body": "Quality product. Nice sound and also durable. Wireless charging is a plus point."
         },
         {
           "UserName": "Naresh",
           "Rating": 5,
-          "Review": "It's really premium quality product from Apple and quality do not comes cheap. Whoever think about Apple better you do not consider price."
+          "Heading": "Premium quality!",
+          "Body": "It's really premium quality product from Apple and quality do not comes cheap. Whoever think about Apple better you do not consider price."
         },
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Great experience, makes life easy"
+          "Heading": "Great!",
+          "Body": "Great experience, makes life easy"
         },
         {
           "UserName": "Ravindra",
           "Rating": 5,
-          "Review": "Of course it's expensive Cus it's APPLE BUT simply amazing # TECHNOLOGY# is amazing I love it # highly recommended# 10 stars for the seller"
+          "Heading": "I love it!",
+          "Body": "Of course it’s expensive Cus it’s APPLE BUT simply amazing # TECHNOLOGY# is amazing I love it # highly recommended# 10 stars for the seller"
         },
         {
           "UserName": "Chetan",
           "Rating": 2,
-          "Review": "Just few months after an year, to be accurate 12 months since purchase left AirPod failed."
+          "Heading": "Poor!",
+          "Body": "Just few months after an year, to be accurate 12 months since purchase left AirPod failed."
         },
         {
           "UserName": "Jadhav",
           "Rating": 5,
-          "Review": "Writing this after ten days of usage.The delivery was delayed, but the product works as expected.Sound quality is perfect - no complaints."
+          "Heading": "Worth it!",
+          "Body": "Writing this after ten days of usage.The delivery was delayed, but the product works as expected.Sound quality is perfect - no complaints."
         },
         {
           "UserName": "Kamal",
           "Rating": 5,
-          "Review": "Very good product its compact easy to use especially with iPhones"
+          "Heading": "Very good product!",
+          "Body": "Very good product its compact easy to use especially with iPhones"
         },
         {
           "UserName": "Harsha",
           "Rating": 5,
-          "Review": "It's a no brainer if you own an apple iphone. It's connects seamlessly every time and unlike other ear buds, the call or music is transferred from the iphone automatically."
+          "Heading": "Amazing!",
+          "Body": "It’s a no brainer if you own an apple iphone. It’s connects seamlessly every time and unlike other ear buds, the call or music is transferred from the iphone automatically."
         },
         {
           "UserName": "Murali",
           "Rating": 5,
-          "Review": " Just the perfect one ! "
+          "Heading": " Just the perfect one ! ",
+          "Body": "Very very very Gooooddddd I Loved It."
         }
       ],
       "Faq": [
         {
           "Question": "Does all the feautre work with iphone 6",
-          "Answer": "AirPods work with all iPhone, iPad, and iPod touch models that run iOS 10 or later. This includes the iPhone 5 and newer, the iPad mini 2 and newer, the fourth-generation iPad and newer, the iPad Air models, all iPad Pro models, and the 6th-generation iPod touch."
+          "Answer": "AirPods work with all iPhone, iPad, and iPod touch models that run iOS 10 or later. This includes the iPhone 5 and newer, the iPad mini 2 and newer, the fourth-generation iPad and newer, the iPad Air models, all iPad Pro models, and the 6th-generation iPod touch.",
+          "Upvotes": 1
         },
         {
           "Question": "Why warrenty is not been shown here???",
-          "Answer": "Warranty is for a year."
+          "Answer": "Warranty is for a year.",
+          "Upvotes": 5
         },
         {
           "Question": "What about music and bass",
-          "Answer": "Both Superb"
+          "Answer": "Both Superb",
+          "Upvotes": 4
         },
         {
           "Question": "Microphone exist or not",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 1
         },
         {
           "Question": "Is it returnable.??",
-          "Answer": "I dont know we can return them or not but honestly I didn't even tried for that i just wanted airpods and just ordered one"
+          "Answer": "I dont know we can return them or not but honestly I didn’t even tried for that i just wanted airpods and just ordered one",
+          "Upvotes": 9
         },
         {
-          "Question": "What's the difference between wired and wireless in AirPods 2",
-          "Answer": "I believe the latter supports wireless charging."
+          "Question": "What’s the difference between wired and wireless in AirPods 2",
+          "Answer": "I believe the latter supports wireless charging.",
+          "Upvotes": 5
         },
         {
           "Question": "Will we get refund",
-          "Answer": "Depends why you are claiming the refund...please refer to the T&C of Electrorent related to this product."
+          "Answer": "Depends why you are claiming the refund...please refer to the T&C of Electrorent related to this product.",
+          "Upvotes": 14
         },
         {
           "Question": "This air pods using samsung j7nxt phone",
-          "Answer": "Android user can't use all features AirPods it's specially made for apple users"
+          "Answer": "Android user can’t use all features AirPods it’s specially made for apple users",
+          "Upvotes": 7
         },
         {
           "Question": "Can it work on honor 9lite",
-          "Answer": "Yes, but all feature and function doesn't work."
+          "Answer": "Yes, but all feature and function doesn't work.",
+          "Upvotes": 5
         },
         {
           "Question": "Does it work on nokia 8.1",
-          "Answer": "As per my understanding It will work on any Bluetooth device phone..."
+          "Answer": "As per my understanding It will work on any Bluetooth device phone...",
+          "Upvotes": 1
         }
       ]
     },
@@ -1279,94 +1216,114 @@
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": ""
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": " Go For it....!!"
+          "Heading": " Go For it....!!",
+          "Body": "Almost all software available in the market is optimized to give the best performance with Intel processors and here you got the latest 11 generation intel i5 Hexa core processor."
         },
         {
           "UserName": "Naresh",
           "Rating": 5,
-          "Review": "one of the best thermals out there intels new Alder Lake CPU with Nvidia RTX 3050 for smooth gaming personally using it and liked it so much"
+          "Heading": "Very Nice!",
+          "Body": "one of the best thermals out there intels new Alder Lake CPU with Nvidia RTX 3050 for smooth gaming personally using it and liked it so much"
         },
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Amazing Product"
+          "Heading": "Amazing Product",
+          "Body": "one of the best thermals out there intels new Alder Lake CPU with Nvidia RTX 3050 for smooth personally using it and liked it so much Just add another ssd for even better performance"
         },
         {
           "UserName": "Ravindra",
           "Rating": 5,
-          "Review": "The perfect processor for gaming and multitasking, really competes with 5600h processor, for gaming go for Intel."
+          "Heading": "Amazing",
+          "Body": "The perfect processor for gaming and multitasking, really competes with 5600h processor, for gaming go for Intel."
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": "For gaming and productivity this is hell of a beast in this price range. Aah and yeah battery is not too good but it can easily survive for approx 2:30 hr of normal usage. And at first I got deffective piece but got replaced in 2-3 days which is impressive. "
+          "Heading": " Cool...Value for money",
+          "Body": "For gaming and productivity this is hell of a beast in this price range. Aah and yeah battery is not too good but it can easily survive for approx 2:30 hr of normal usage. And at first I got deffective piece but got replaced in 2-3 days which is impressive. "
         },
         {
           "UserName": "Bhargav",
           "Rating": 5,
-          "Review": " Its an excellent laptop, Worth the price!!"
+          "Heading": "Wowww!",
+          "Body": "Its an excellent laptop, Worth the price!!"
         },
         {
           "UserName": "Ram",
           "Rating": 4,
-          "Review": " Amazing Product but not perfect."
+          "Heading": "OK!",
+          "Body": " Amazing Product but not perfect."
         },
         {
           "UserName": "Yash",
           "Rating": 5,
-          "Review": "I bought this laptop , great experience apart from the speakers you can barely hear anything on full volume & the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
+          "Heading": "Very Nice",
+          "Body": "I bought this laptop , great experience apart from the speakers you can barely hear anything on full volume & the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
         },
         {
           "UserName": "Stalin",
           "Rating": 4,
-          "Review": " Good laptop but poor battery!"
+          "Heading": " Good laptop but poor battery!",
+          "Body": "Except that everything is the best than any laptop at this price."
         }
       ],
       "Faq": [
         {
           "Question": "Can i upgrade windows 11",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 5
         },
         {
           "Question": "If we add 1tb hardisk",
-          "Answer": "It's already come with 1tb hdd"
+          "Answer": "It's already come with 1tb hdd",
+          "Upvotes": 4
         },
         {
           "Question": "Whether it has seperate numeric keypad",
-          "Answer": "Yes it has separate numeric keypad"
+          "Answer": "Yes it has separate numeric keypad",
+          "Upvotes": 5
         },
         {
           "Question": "Is there any button to control cooling fan system like asus tuf??",
-          "Answer": "Yes,It has"
+          "Answer": "Yes,It has",
+          "Upvotes": 8
         },
         {
           "Question": "Does it have an addition ram slot?",
-          "Answer": "yes"
+          "Answer": "yes",
+          "Upvotes": 3
         },
         {
           "Question": "Does it have an international warraty",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 7
         },
         {
           "Question": "Mane electricals seller safe or not it's cheap on this seller will I get fully working product",
-          "Answer": "I also got it from the same seller n it's all good"
+          "Answer": "I also got it from the same seller n it's all good",
+          "Upvotes": 3
         },
         {
           "Question": "Does it have a charger?",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 6
         },
         {
           "Question": "We can extend graphic card?",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 1
         },
         {
           "Question": "in 16gb viariant, is there one ram of 16gb in one slot or 2 8gb rams in two slots? basically (1x16gb) or (2x8gb)? please answer for latest.",
-          "Answer": "Not sure. It should one 16GB variant because the memory can be upgraded even further"
+          "Answer": "Not sure. It should one 16GB variant because the memory can be upgraded even further",
+          "Upvotes": 2
         }
       ]
     },
@@ -1392,94 +1349,114 @@
         {
           "UserName": "Nani",
           "Rating": 5,
-          "Review": "Very nice product"
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
         },
         {
           "UserName": "Naveen",
           "Rating": 5,
-          "Review": " Go For it....!!"
+          "Heading": " Go For it....!!",
+          "Body": "The product was very good ..."
         },
         {
           "UserName": "Naresh",
           "Rating": 5,
-          "Review": " Good camera for beginners, must try it!"
+          "Heading": " Good camera for beginners, must try it!",
+          "Body": "Great experience, makes life easy"
         },
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Amazing Product"
+          "Heading": "Amazing Product",
+          "Body": "Great experience, makes life easy"
         },
         {
           "UserName": "Ravindra",
           "Rating": 5,
-          "Review": "Great camera. Perfect product for young budding photographer."
+          "Heading": "OK!",
+          "Body": "Great camera. Perfect product for young budding photographer."
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": " Best basic level dslr mainly for wireless remote controlling worth for group pics"
+          "Heading": "Great!",
+          "Body": " Best basic level dslr mainly for wireless remote controlling worth for group pics"
         },
         {
           "UserName": "Bhargav",
           "Rating": 4,
-          "Review": " Its an excellent Camera, Worth the price!!"
+          "Heading": "Great!",
+          "Body": " Its an excellent Camera, Worth the price!!"
         },
         {
           "UserName": "Ram",
           "Rating": 4,
-          "Review": " Amazing Product but not perfect."
+          "Heading": "Not Bad!",
+          "Body": " Amazing Product but not perfect."
         },
         {
           "UserName": "Yash",
           "Rating": 5,
-          "Review": "I bought this Camera, great experience apart from that the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
+          "Heading": "Terrific purchase",
+          "Body": "I bought this Camera, great experience apart from that the battery life isnt the best at all , will last maybe 4-5 hrs doing normal tasks but about 2 hrs max on gaming , everything else is good though"
         },
         {
           "UserName": "Stalin",
           "Rating": 4,
-          "Review": " Good Camera but poor battery!"
+          "Heading": "TOO GOOD!",
+          "Body": " Good Camera but poor battery!"
         }
       ],
       "Faq": [
         {
           "Question": "Will this support canon EF 50mm lens?",
-          "Answer": "Yes it support 50 mm lens"
+          "Answer": "Yes it support 50 mm lens",
+          "Upvotes": 1
         },
         {
           "Question": "Is canon 1500d camera a good functional camera",
-          "Answer": "Yes Very Good.."
+          "Answer": "Yes Very Good..",
+          "Upvotes": 2
         },
         {
           "Question": "Where can I buy extra memory card for this camera?",
-          "Answer": "Order separately"
+          "Answer": "Order separately",
+          "Upvotes": 3
         },
         {
           "Question": "It include screen protector for lcd??",
-          "Answer": "No u have to buy it saperately"
+          "Answer": "No u have to buy it saperately",
+          "Upvotes": 5
         },
         {
           "Question": "Can I use boya external microphone",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 2
         },
         {
           "Question": "What will be the price with 55-250mm if i toake it in great indian festival or sale",
-          "Answer": "About 12500.00"
+          "Answer": "About 12500.00",
+          "Upvotes": 1
         },
         {
           "Question": "Does this dslr have an articulating screen?",
-          "Answer": "i need Exchange off ..?? i have buy canon 1500D Apr"
+          "Answer": "i need Exchange off ..?? i have buy canon 1500D Apr",
+          "Upvotes": 4
         },
         {
           "Question": "Is it work in zoom app in live classes",
-          "Answer": "No"
+          "Answer": "No",
+          "Upvotes": 2
         },
         {
           "Question": "What are the items that bag included?",
-          "Answer": "Camera, lense"
+          "Answer": "Camera, lense",
+          "Upvotes": 2
         },
         {
           "Question": "Can i get this camera in Rent?",
-          "Answer": "Yes, We have Buy/Rent option"
+          "Answer": "Yes, We have Buy/Rent option",
+          "Upvotes": 1
         }
       ]
     },
@@ -1510,89 +1487,108 @@
         {
           "UserName": "Naveen",
           "Rating": 4,
-          "Review": " Go For it....!!"
+          "Heading": " Go For it....!!",
+          "Body": "The product was very good ..."
         },
         {
           "UserName": "Naresh",
           "Rating": 5,
-          "Review": "It's quite a big TV with stunning display and excellent sound. Installation was excellent. Nice service as well."
+          "Heading": "Value for money.",
+          "Body": "It's quite a big TV with stunning display and excellent sound. Installation was excellent. Nice service as well."
         },
         {
           "UserName": "Rithwik",
           "Rating": 5,
-          "Review": "Amazing Product"
+          "Heading": "Amazing Product",
+          "Body": "The product was very good ..."
         },
         {
           "UserName": "Ravindra",
           "Rating": 3,
-          "Review": "Overall nice tv. but only 4.4 gb storage??????? and 1.2 gb only usable storage????? Can't install more than 4-5apps, it says delete some data. Forget about games."
+          "Heading": " Overall ok",
+          "Body": "Overall nice tv. but only 4.4 gb storage??????? and 1.2 gb only usable storage????? Can't install more than 4-5apps, it says delete some data. Forget about games."
         },
         {
           "UserName": "Chetan",
           "Rating": 5,
-          "Review": " An excellent television with the latest features!"
+          "Heading": "Amazing Product",
+          "Body": " An excellent television with the latest features!"
         },
         {
           "UserName": "Bhargav",
           "Rating": 5,
-          "Review": " Its an excellent Television, Worth the price!!"
+          "Heading": "Awesome!",
+          "Body": " Its an excellent Television, Worth the price!!"
         },
         {
           "UserName": "Ram",
           "Rating": 4,
-          "Review": " Amazing Product but not perfect."
+          "Heading": " Amazing Product.",
+          "Body": "Too good fully satisfied"
         },
         {
           "UserName": "Yash",
           "Rating": 3,
-          "Review": " No Display, Only Sound after 45 days."
+          "Heading": "Okay!",
+          "Body": " No Display, Only Sound after 45 days."
         },
         {
           "UserName": "Stalin",
           "Rating": 4,
-          "Review": " Good tv but poor Display!"
+          "Heading": " Good tv but poor Display!",
+          "Body": "Yes I do like this product as it is good looking."
         }
       ],
       "Faq": [
         {
           "Question": "This tv have google play store ? This is fully android tv ?",
-          "Answer": "Hi, thank you for the query.KD-65X80J- The first google TV, powered with an all-new Triluminos Pro, X1 4K HDR Processor, X-Balanced Speaker & Dolby Atmos Vision. Users can install from the “Search for Apps” Bar to install the available app."
+          "Answer": "Hi, thank you for the query.KD-65X80J- The first google TV, powered with an all-new Triluminos Pro, X1 4K HDR Processor, X-Balanced Speaker & Dolby Atmos Vision. Users can install from the “Search for Apps” Bar to install the available app.",
+          "Upvotes": 1
         },
         {
           "Question": "Does it have ethernet connection?",
-          "Answer": "Yes"
+          "Answer": "Yes",
+          "Upvotes": 6
         },
         {
           "Question": "What is the minimum distance required for optimum viewing of this TV?",
-          "Answer": "Thanks for your query.Recommended distance for viewing a 4K TV is 1.5 times the TV vertical screen size. Viewed from this distance, individual pixels cannot be differentiated by naked eyes."
+          "Answer": "Thanks for your query.Recommended distance for viewing a 4K TV is 1.5 times the TV vertical screen size. Viewed from this distance, individual pixels cannot be differentiated by naked eyes.",
+          "Upvotes": 9
         },
         {
           "Question": "Whats the panel type of sony x80j 50 inches tv - va or ips ?",
-          "Answer": "Direct led type panel..high quality picture"
+          "Answer": "Direct led type panel..high quality picture",
+          "Upvotes": 4
         },
         {
           "Question": "Post delivery do we need to call someone for installation or Sony will automatically arrange?",
-          "Answer": "In my case Sony Center called and installed the same day. Excellent service and fast installation"
+          "Answer": "In my case Sony Center called and installed the same day. Excellent service and fast installation",
+          "Upvotes": 2
         },
         {
           "Question": "What's the best price offered in offline",
-          "Answer": "Electorent offers best price"
+          "Answer": "Electorent offers best price",
+          "Upvotes": 2
         },
         {
           "Question": "This tv doesnt have USB?",
-          "Answer": "This model has 2 USB ports at the side of the TV."
+          "Answer": "This model has 2 USB ports at the side of the TV.",
+          "Upvotes": 3
         },
         {
           "Question": "Does this tv support installation & running of tata sky app just like it supports airtel xtreme app using which dth can be viewed without stb",
-          "Answer": "Hi,It has the play store to download the available applications. Users can download the available and supported applications from the play store."
+          "Answer": "Hi,It has the play store to download the available applications. Users can download the available and supported applications from the play store.",
+          "Upvotes": 4
         },
         {
           "Question": "Can it be mounted on the wall?",
-          "Answer": "Yes, it can be mounted on wall."
+          "Answer": "Yes, it can be mounted on wall.",
+          "Upvotes": 3
         },
         {
           "Question": "Dts x and dolby atmas support",
-          "Answer": "This model supports Dolby audio and Dolby Atmos."
+          "Answer": "This model supports Dolby audio and Dolby Atmos.",
+          "Upvotes": 2
         }
       ]
     }
@@ -2378,7 +2374,7 @@
     },
     {
       "id": 2,
-      "fullName": " ",
+      "fullName": "Naveen mowa",
       "email": "naveenkumar.k19@iiits.in",
       "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       "mobileNumber": null,

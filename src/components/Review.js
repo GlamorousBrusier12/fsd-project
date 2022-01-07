@@ -2,7 +2,7 @@ import React from "react";
 import StarRatings from "react-star-ratings";
 
 function Review(props) {
-  const { user, heading, body, stars } = props.content;
+  const { UserName, Heading, Body, Rating } = props.content;
   return (
     <div style={{ textAlign: "left", margin: "20px" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
@@ -15,7 +15,7 @@ function Review(props) {
           />
         </div>
         <div style={{ marginLeft: "1%" }}>
-          <h4>{user}</h4>
+          <h4>{UserName}</h4>
         </div>
       </div>
       <div style={{ marginLeft: 10 }}>
@@ -24,11 +24,11 @@ function Review(props) {
           starSpacing="2px"
           starRatedColor="#ffcc01"
           starEmptyColor="#e3e3e3"
-          rating={stars}
+          rating={Rating}
         />
       </div>
-      <h3>{heading}</h3>
-      <p>{body}</p>
+      <h3>{Heading}</h3>
+      <p>{Body}</p>
       <hr />
     </div>
   );

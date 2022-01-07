@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { handleProductSearch } from "../actions";
+import { handleProductSearch, userLogout } from "../actions";
 // import { Switch } from "react-router";
 const styles = {
   cartIconContainer: {
@@ -26,12 +26,24 @@ class Navbar extends Component {
   updateSearchWord = () => {
     console.log("state: ", this.state);
     let searchWord =
-      this.state.searchWord === undefined ? "" : this.state.searchWord;
+      this.state.searchWord === undefined || this.state.searchWord === ""
+        ? " "
+        : this.state.searchWord;
 
     console.log("SEARCH TEXT", searchWord);
     this.props.dispatch(handleProductSearch(searchWord));
+    console.log("this.props ", this.props.history);
   };
+  checkUserLogin() {
+    const { isLoggedIn } = this.props;
+    if (isLoggedIn) {
+      // history.push('/)
+    } else {
+      // history.push('/userProfile)
+    }
+  }
   render() {
+    const { isLoggedIn } = this.props;
     return (
       <div className="navbar-container">
         <div className="links">
@@ -88,7 +100,7 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/userProfile">
+            <Link to={isLoggedIn ? "/userProfile" : "/login"}>
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
@@ -97,11 +109,14 @@ class Navbar extends Component {
             </Link>
           </div>
           <div className="links">
-            <Link to="/login">
+            <Link to="/">
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/login.png`}
                 alt="Login/Logout"
+                onClick={() => {
+                  this.props.dispatch(userLogout());
+                }}
               />
             </Link>
           </div>
@@ -113,6 +128,7 @@ class Navbar extends Component {
 function mapStateToProps(state) {
   return {
     searchResults: state.search,
+    isLoggedIn: state.user.isLoggedIn,
   };
 }
 export default connect(mapStateToProps)(Navbar);

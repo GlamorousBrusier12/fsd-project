@@ -1,0 +1,14 @@
+.item-summary{
+    margin: 2em;
+}
+.item-summary h1{
+    margin: 0.5em;
+}
+.item-details{
+    display: flex;
+    align-items: center;
+}
+
+.item-details-text{
+    margin: 1em;
+}

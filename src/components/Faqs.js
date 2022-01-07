@@ -4,11 +4,9 @@ import "../styles/Faqs.css";
 import ReactPaginate from "react-paginate";
 import Loader from "./Loader";
 
-function Faqs() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [faqsDefault, setFaqsDefault] = useState([]);
-  const [faqs, setFaqs] = useState([]);
+function Faqs(props) {
+  const faqsDefault = props.items;
+  const [faqs, setFaqs] = useState(props.items);
   const [input, setInput] = useState("");
 
   const [pageNumber,setPageNumber] = useState(0);
@@ -19,26 +17,6 @@ function Faqs() {
   const changePage = ({selected})=>{
     setPageNumber(selected);
   }
-
-  useEffect(() => {
-    fetch("http://localhost:3000/faqs")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setFaqs(result);
-          setFaqsDefault(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
-
   const displayFaqs = faqs.slice(pagesVisited,pagesVisited+usersPerPage).map((faq)=>{
     return <Faq content={faq} key={faq.id} />
   })
@@ -53,13 +31,6 @@ function Faqs() {
     setInput(event.target.value);
     setFaqs(filtered);
   };
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <Loader />;
-    // return <div className="loader"></div>;
-  } else {
     return (
       <div className="display-faqs">
         <h1 className="faqs-heading">Frequent Questions and Answers</h1>
@@ -103,6 +74,5 @@ function Faqs() {
       </div>
     );
   }
-}
 
 export default Faqs;
