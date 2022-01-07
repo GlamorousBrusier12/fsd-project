@@ -6,7 +6,9 @@ import "../styles/ProductPage.css";
 import SimilarItems from "./SimilarItems";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
-function ProductPage() {
+import {handleaddtoCart} from '../actions/cartAction';
+import { connect } from "react-redux";
+function ProductPage(props){
   const [resourceType, setResourceType] = useState(<Faqs />);
   const { productId } = useParams();
   const [item, setItem] = useState({});
@@ -77,7 +79,7 @@ function ProductPage() {
             </h3>
             <div style={{ margin: "10px" }}>
               <div className="productpage-buttons">
-                <button>Add to Cart</button>
+                <button onClick={()=>props.dispatch(handleaddtoCart(item.id))}>Add to Cart</button>
                 <button>Rent Now</button>
               </div>
               <button className="buynow-button">Buy Now</button>
@@ -123,4 +125,11 @@ function ProductPage() {
   }
 }
 
-export default ProductPage;
+
+
+const mapStateToProps=(dispatch)=>{
+  return{}
+  }
+
+
+export default connect(mapStateToProps) (ProductPage);

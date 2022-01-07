@@ -10,7 +10,7 @@ function EachProduct(props) {
     <div>
       <div className="each-product">
         <div>
-          <Link to={`/products/${id}`} target="_blank">
+          <Link to={`/products/${id}`} >
             <div className="img-size">
               <img className="productspage-image" src={image[0]} alt={title} />
             </div>

@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import { data } from "../data";
+
 import "../styles/Cart.css";
 import MiniCart from "./MiniCart";
+import { connect } from "react-redux";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      qty: 1,
-    };
+    this.state = {};
     // get cart items from store
   }
 
   render() {
+    const data = this.props.data;
     console.log(data);
     return (
       <div className="Cart">
@@ -24,7 +24,13 @@ class Cart extends Component {
     );
   }
 }
-export default Cart;
+const mapStateToProps = (state) => {
+  return {
+    data: state.cartReducer.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Cart);
 
 // add to cart-> cart items( with duplicate check)
 //  step-1
