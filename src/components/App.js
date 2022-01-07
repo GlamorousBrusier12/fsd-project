@@ -60,7 +60,7 @@ class App extends Component {
               <Route exact path="/userProfileAdress">
                 <AdressList />
               </Route>
-              <Route exact path="/userProfileInformation">
+              <Route path="/userProfileInformation">
                 <UserProfileInformation />
               </Route>
               <Route exact path="/userProfilePanCard">

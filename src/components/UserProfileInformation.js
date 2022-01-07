@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "../styles/UserProfileInformation.css";
@@ -10,19 +9,12 @@ import {
   PhoneAndroid,
   Publish,
 } from "@mui/icons-material";
+import { connect } from "react-redux";
 
-const UserProfileInformation = () => {
+const UserProfileInformation = (props) => {
   //We now need to set the data which originally is a empty object
-  const [info, setInfo] = useState({});
-
-  useEffect(() => {
-    fetch("http://localhost:3000/users/1")
-      .then((res) => res.json())
-      .then((data) => {
-        setInfo({ data });
-        console.log(info.data.fullName);
-      });
-  }, []);
+  const { info } = props;
+  console.log("INFO :", info);
 
   return (
     <div className="container">
@@ -30,9 +22,6 @@ const UserProfileInformation = () => {
       <div className="user">
         <div className="userTitleContainer">
           <h1 className="userTitle">Profile Information</h1>
-          {/* <Link to="/newUser">
-            <button className="userAddButton">Create</button>
-          </Link> */}
         </div>
         <div className="userContainer">
           <div className="userShow">
@@ -43,7 +32,7 @@ const UserProfileInformation = () => {
                 className="userShowImg"
               />
               <div className="userShowTopTitle">
-                <span className="userShowUsername">{info.data.fullName}</span>
+                <span className="userShowUsername">{info.fullName}</span>
                 <span className="userShowUserTitle">Software Engineer</span>
               </div>
             </div>
@@ -51,7 +40,7 @@ const UserProfileInformation = () => {
               <span className="userShowTitle">Account Details</span>
               <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.data.userName}</span>
+                <span className="userShowInfoTitle">Borabanda Bhargav</span>
               </div>
               <div className="userShowInfo">
                 <CalendarToday className="userShowIcon" />
@@ -138,5 +127,10 @@ const UserProfileInformation = () => {
     </div>
   );
 };
-
-export default UserProfileInformation;
+function mapStateToProps(state) {
+  console.log("STATE BRUH: ", state);
+  return {
+    info: state.user.userData,
+  };
+}
+export default connect(mapStateToProps)(UserProfileInformation);
