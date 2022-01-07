@@ -5,6 +5,7 @@ import { handleCategorySearch } from "../actions";
 
 class Categories extends Component {
   handleCategoryClick = (category) => {
+    // console.log("searching for ", category);
     this.props.dispatch(handleCategorySearch(category));
   };
   render() {
@@ -33,7 +34,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/womens.png`}
                     onClick={() => {
-                      this.handleCategoryClick("womens");
+                      this.handleCategoryClick("Womens");
                     }}
                   />
                   <p> Womens</p>
@@ -47,7 +48,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/kids.png`}
                     onClick={() => {
-                      this.handleCategoryClick("kids");
+                      this.handleCategoryClick("Kids");
                     }}
                   />
                   <p> Kids</p>
@@ -61,7 +62,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/mobiles.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Electronics");
+                      this.handleCategoryClick("Mobiles");
                     }}
                   />
                   <p> Mobiles</p>
@@ -89,7 +90,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/home-appliance.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Electronics");
+                      this.handleCategoryClick("Appliances");
                     }}
                   />
                   <p> Appliances</p>
@@ -103,7 +104,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/household.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Accessories");
+                      this.handleCategoryClick("Home");
                     }}
                   />
                 </div>

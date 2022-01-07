@@ -1,12 +1,13 @@
 import "../styles/myprofile.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
 
-const UserProfile = () => {
+const UserProfile = (props) => {
   const [data, setData] = useState([]);
   const history = useHistory();
 
@@ -91,7 +92,10 @@ const UserProfile = () => {
       },
     },
   ];
-
+  const { authorized } = props;
+  if (!authorized) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="container">
       <Sidebar />
@@ -121,5 +125,9 @@ const UserProfile = () => {
     </div>
   );
 };
-
-export default UserProfile;
+function mapStateToProps(state) {
+  return {
+    authorized: state.user.isLoggedIn,
+  };
+}
+export default connect(mapStateToProps)(UserProfile);

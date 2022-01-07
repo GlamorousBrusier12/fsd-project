@@ -232,7 +232,6 @@
       "price": 109.95,
       "discount": 15,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "men's clothing",
       "image": [
         "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
         "links",
@@ -389,7 +388,6 @@
       "price": 119300,
       "discount": 15,
       "description": "Your perfect phone for everyday use.",
-      "category": "Electronics",
       "image": [
         "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
         "links",
@@ -400,7 +398,8 @@
         "count": 209
       },
       "type": "Rent",
-      "Category": "Electronics",
+
+      "Category": "Mobiles",
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -522,7 +521,6 @@
       "price": 6354,
       "discount": 65,
       "description": "Blue faded casual shirt, has a mandarin collar, long sleeves, button placket, and curved hem",
-      "category": "Mens",
       "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
         "links",
@@ -667,7 +665,6 @@
       "price": 3291,
       "discount": 55,
       "description": "Light shade, heavy fade blue jeans Straight fit, mid-rise Clean look Stretchable 5 pocket",
-      "category": "men's clothing",
       "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
         "links",
@@ -800,7 +797,6 @@
       "price": 5600,
       "discount": 25,
       "description": "An absolute perfect sports shoes for you, HURRY UP!",
-      "category": "men's footwear",
       "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
         "links",
@@ -933,7 +929,6 @@
       "price": 153274,
       "discount": 65,
       "description": "The Amazing Premium watch you cant find any where, Gives you Pemium Feeling",
-      "category": "Accessories",
       "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/27/3c5bc598-2093-48df-8e7c-6329adf0c2661577401172457-1.jpg",
         "links",
@@ -1064,7 +1059,6 @@
       "price": 12990,
       "discount": 45,
       "description": "Perfect Bluetoth Earphones in these season just go and buy it!",
-      "category": "Electrnics",
       "image": [
         "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9803279/2019/10/11/08d246d9-80d1-4c61-8826-2074624aa0521570782280949-Apple-White-2nd-Gen-AirPods-with-Charging-Case-MV7N2HNA-1181-4.jpg",
         "links",
@@ -1075,7 +1069,7 @@
         "count": 120
       },
       "type": "Rent",
-      "Category": "Electronics",
+      "Category": "Accessories",
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1197,7 +1191,6 @@
       "price": 109990,
       "discount": 15,
       "description": "If you are often left disappointed by your gaming experience, then you can check out the Acer Predator Helios 300 PH315-53 Gaming Laptop designed for immersive entertainment in every aspect. This device features a 39.6 cm (15.6) FHD IPS Display for rich visuals, Ray Tracing for visually intense games, and DTS X Ultra for clear and immersive sound on your headphones or speakers.",
-      "category": "Electronics",
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
         "links",
@@ -1208,7 +1201,7 @@
         "count": 120
       },
       "type": "Rent",
-      "Category": "Electronics",
+      "Category": "Accessories",
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1330,7 +1323,6 @@
       "price": 100999,
       "discount": 15,
       "description": "Photography is one passion where enough is never enough. If you are looking to upgrade your camera and already have a set of attachments or lenses for your Canon camera, look no further. This camera body features a superb 20.2 megapixel CMOS sensor, ISO 16,000, and is powered by dual DIGIC 6 image processors. All this results in impeccable imaging quality in shooting conditions and lighting situations. The Dual Pixel CMOS AF function featured on this Canon EOS7D Mark II DSLR Camera body provides smooth and accurate focusing when shooting videos so that subjects always remain in focus even in the most dynamic scenes.",
-      "category": "Electronics",
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/camera/s/q/f/canon-eos-7d-mark-ii-body-dslr-original-imae3yryhwq7fgyx.jpeg?q=70",
         "links",
@@ -1341,7 +1333,7 @@
         "count": 120
       },
       "type": "Rent",
-      "Category": "Electronics",
+      "Category": "Accessories",
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1463,7 +1455,6 @@
       "price": 105500,
       "discount": 15,
       "description": "The SONY X80J 4K Ultra HD High Dynamic Range (HDR) Smart TV lets you amplify your TV watching experience with stunning visuals, immersive sound, vibrant colours, and a large screen. With TRILUMINOS PRO technology and 4K1 HDR Processor X1, it delivers lifelike picture quality with amazing colours. This smart TV comes with an Apple AirPlay feature that allows you to stream your favourite content from your iPhone or Mac to your TV. Furthermore, its Dolby Atmos feature provides you with a theatre-like experience at home with an immersive and multi-dimensional sound.",
-      "category": "Electroonics",
       "image": [
         "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
         "links",
@@ -1474,7 +1465,7 @@
         "count": 22970
       },
       "type": "Rent",
-      "Category": "Electronics",
+      "Category": "Accessories",
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1586,6 +1577,948 @@
           "Question": "Dts x and dolby atmas support",
           "Answer": "This model supports Dolby audio and Dolby Atmos.",
           "Upvotes": 2
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "BELL END Cotton, Memory Foam, Microfibre Solid Sleeping Pillow Pack of 2  (White)",
+      "price": 699,
+      "discount": 15,
+      "description": "Filling Material: Cotton, Memory Foam, Microfibre Size is  62 cm x 44 cm Type is Sleeping Pillow Suitable Location: Living Room, Bed Room",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kwi5evk0/pillow/j/o/k/10-bellend-2-p-2-pillow-ss02-bell-end-original-imag95x9hzkfd8zg.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Home",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Home Sizzler 153 cm (5 ft) Polyester Window Curtain (Pack Of 2)  (Floral, Brown)",
+      "price": 799,
+      "discount": 61,
+      "description": "The design of the delivered product may slightly vary from what is shown in the displayed image.",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kpedle80/curtain/t/c/z/panel-garden-dr-brown-214-door-hs2pc000992dr-eyelet-home-sizzler-original-imag3n7yayhahavq.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Home",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "LG 20 L Grill Microwave Oven  (MH2044DB, Black)",
+      "price": 9490,
+      "discount": 10,
+      "description": "The design of the delivered product may slightly vary from what is shown in the displayed image.",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/ja73ki80/microwave-new/7/u/v/mh2044db-lg-original-imaezzenh83hmzhg.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Appliances",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "BOSCH 8 kg INVERTER TOUCH CONTROL Fully Automatic Front Load",
+      "price": 43299,
+      "discount": 24,
+      "description": "The design of the delivered product may slightly vary from what is shown in the displayed image.",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/knknc7k0/washing-machine-new/x/u/g/8-waj2426ain-bosch-original-imag28ftaggavpwm.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Appliances",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "SSTOYS 3D Fast Modern Car  (Multicolor)",
+      "price": 599,
+      "discount": 72,
+      "description": "The design of the delivered product may slightly vary from what is shown in the displayed image.",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kmkxbww0/remote-control-toy/n/u/4/3d-fast-modern-car-sstoys-original-imagfgdgamejgbwp.jpeg?q=70",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Kids",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Women Skater Multicolor Dress",
+      "price": 1199,
+      "discount": 62,
+      "description": "The design of the delivered product may slightly vary from what is shown in the displayed image.",
+      "image": [
+        "https://rukminim1.flixcart.com/image/779/935/klqx30w0/dress/d/z/j/xxl-bp20es49-bhawanaprint-original-imagys87ctfn58by.jpeg?q=50",
+        "links",
+        "links"
+      ],
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      },
+      "type": "Buy",
+
+      "Category": "Womens",
+      "Reviews": [
+        {
+          "UserName": "Rithwik",
+          "Rating": 5,
+          "Heading": "Very nice product",
+          "Body": "Too good fully satisfied"
+        },
+        {
+          "UserName": "Chetan",
+          "Rating": 5,
+          "Heading": "Too good fully satisfied",
+          "Body": "It was trending as the best seller. But after purchasing it I realised that generic material has been used in the making of this item."
+        },
+        {
+          "UserName": "Ravindra",
+          "Rating": 2,
+          "Heading": " Not good",
+          "Body": "this product is very bad in quality. its shoulder strips are not good after two days use the strip break. there is a cover for cover the bag during raining season."
+        },
+        {
+          "UserName": "Sravan",
+          "Rating": 1,
+          "Heading": " Low quality product.",
+          "Body": "I thought it must be more strong.no doubt it is strong but the fear to carry less things is maintained."
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": " Useful multi-purpose",
+          "Body": "Good Product... Light Waight & Nice Looking Bag... Bag Is Too Short..."
+        },
+        {
+          "UserName": "Bhargav",
+          "Rating": 5,
+          "Heading": " Good quality..",
+          "Body": " Can put your laptop and I pads with safety,Very nice style and colour.Not soo big neither too small.Also useful for office."
+        },
+        {
+          "UserName": "Mahesh",
+          "Rating": 3,
+          "Heading": "Not Bad!",
+          "Body": "This bag is good for college and office purposes. It's very attractive and has good looks. The bag comes with a bag cover for covering the bag during rainy season. I don't think big laptop will fit in this bag but it has shelf for laptop."
+        },
+        {
+          "UserName": "Akhanda",
+          "Rating": 5,
+          "Heading": "Good for students",
+          "Body": "The bag is good according to its price. But I find that the chains of the bag are not easily moving."
+        },
+        {
+          "UserName": "Nani",
+          "Rating": 5,
+          "Heading": "5.0 out of 5 stars Best bag at best price",
+          "Body": "Quality is not bad. Bag containing 2 bottle holders which is nice . Space is also ok."
+        },
+        {
+          "UserName": "Naresh",
+          "Rating": 3,
+          "Heading": " Good looking bag but chains are not good",
+          "Body": "Not of good quality - average price is shown originally at high price and offering at a lower rate but it shows of poor in quality"
+        },
+        {
+          "UserName": "Pavan",
+          "Rating": 4,
+          "Heading": "Useful and beneficial",
+          "Body": "Good quality and as per descrption in the item details. Although the raincover is just a piece of polythene. But still it serves the purpose."
+        },
+        {
+          "UserName": "Chaari",
+          "Rating": 3,
+          "Heading": " Not of Good Quality",
+          "Body": "I liked there promises for rain cover in a average price ,but rain cover is too small that it can not protect your belongings to take shower in rain,there is strong possibility that at least your will suffer one time due to pseudo rain protection feeling."
+        },
+        {
+          "UserName": "Ram",
+          "Rating": 3,
+          "Heading": " Overall ok",
+          "Body": "Not in quality"
+        },
+        {
+          "UserName": "Messi",
+          "Rating": 2,
+          "Heading": "Okay!",
+          "Body": "no extra pockets ,no organizer pockets for small valuable things or frequently needed things"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Rain cover?",
+          "Answer": "yes",
+          "Upvotes": 2
+        },
+        {
+          "Question": "Return policy is available or not",
+          "Answer": "Available",
+          "Upvotes": 3
+        },
+        {
+          "Question": "15.6 inch laptop fits in this bag?",
+          "Answer": "Yes, 15.6 inch laptop can easily fit in this bag. Thanks",
+          "Upvotes": 1
+        },
+        {
+          "Question": "In heavy rain does it work without rain cover",
+          "Answer": "No, during heavy rain you should use raincover.",
+          "Upvotes": 7
+        },
+        {
+          "Question": "Is it available gray color",
+          "Answer": "Search Half Moon bags on Amazon to check any color variation if available.",
+          "Upvotes": 3
+        },
+        {
+          "Question": "Does it have Laptop Compartment",
+          "Answer": "Yes, it has a padded laptop compartment",
+          "Upvotes": 6
+        },
+        {
+          "Question": "Custom logo Possible qty 20Pic Order",
+          "Answer": "No",
+          "Upvotes": 4
+        },
+        {
+          "Question": "Does this product has return policy??",
+          "Answer": "Yes",
+          "Upvotes": 5
+        },
+        {
+          "Question": "Can i carry a small size umbrella in it?",
+          "Answer": "Yes",
+          "Upvotes": 1
         }
       ]
     }
