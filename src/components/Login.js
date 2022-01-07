@@ -2,11 +2,15 @@ import axios from "axios";
 import React, { useState, useRef } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { handleUser } from "../actions";
 import "../styles/LoginStyle.css";
 
 function Login(props) {
+  const { authorized } = props;
+  if (authorized) {
+    <Redirect to="/userProfile" />;
+  }
   const [username1, setUsername] = useState(" ");
   const [password1, setPassword] = useState(" ");
   const history = useHistory();
@@ -106,7 +110,9 @@ function Login(props) {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    authorized: state.user.isLoggedIn,
+  };
 }
 
 export default connect(mapStateToProps)(Login);

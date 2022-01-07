@@ -14,7 +14,7 @@ import { connect } from "react-redux";
 const UserProfileInformation = (props) => {
   //We now need to set the data which originally is a empty object
   const { info } = props;
-  console.log("INFO :", info);
+  // console.log("INFO :", info);
 
   return (
     <div className="container">

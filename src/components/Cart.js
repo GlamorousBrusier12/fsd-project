@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "../styles/Cart.css";
 import MiniCart from "./MiniCart";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 class Cart extends Component {
   constructor(props) {
@@ -10,8 +11,11 @@ class Cart extends Component {
     this.state = {};
     // get cart items from store
   }
-
   render() {
+    const { authorized } = this.props;
+    if (!authorized) {
+      return <Redirect to="/login" />;
+    }
     const data = this.props.data;
     console.log(data);
     return (
@@ -27,6 +31,7 @@ class Cart extends Component {
 const mapStateToProps = (state) => {
   return {
     data: state.cartReducer.cart,
+    authorized: state.user.isLoggedIn,
   };
 };
 

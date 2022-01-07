@@ -1,8 +1,8 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./Types";
-//import { useEffect,useState } from 'react';
+import { ADD_TO_CART } from "./Types";
+
 function addtoCart(item) {
   return {
-    type: "ADD_TO_CART",
+    type: ADD_TO_CART,
     payload: {
       item,
     },
