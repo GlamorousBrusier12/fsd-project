@@ -3,14 +3,29 @@ import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { useState } from "react";
-import { cards } from "../dummyData";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const UserProfileDebitCard = () => {
-  const [data, setData] = useState(cards);
+  const [data, setData] = useState([]);
+  const history = useHistory();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/debitCards")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success: data from server", data);
+        setData(data);
+      });
+  }, []);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    console.log(id);
+    fetch("http://localhost:3000/debitCards/" + id, {
+      method: "DELETE",
+    });
+    history.push("/userProfileInformation");
+    //setData(data.filter((item) => item.id !== id));
   };
 
   const columns = [
@@ -72,7 +87,7 @@ const UserProfileDebitCard = () => {
       <div className="adressList">
         <div className="userTitleContainer">
           <h1 className="userTitle">Debit Cards</h1>
-          <Link to="/newUser">
+          <Link to="/newCard">
             <button className="userAddButton">Add Card</button>
           </Link>
         </div>

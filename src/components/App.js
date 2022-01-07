@@ -17,6 +17,9 @@ import UserProfileUPI from "./UserProfileUPI";
 import Footer from "./Footer";
 import AdressList from "./AdressList";
 import Cart from "./Cart";
+import NewAdress from "./NewAdress";
+import NewCard from "./NewCard";
+import NewUPI from "./NewUPI";
 import Payment from "./Payment";
 class App extends Component {
   constructor(props) {
@@ -57,7 +60,7 @@ class App extends Component {
               <Route exact path="/userProfileAdress">
                 <AdressList />
               </Route>
-              <Route exact path="/userProfileInformation">
+              <Route path="/userProfileInformation">
                 <UserProfileInformation />
               </Route>
               <Route exact path="/userProfilePanCard">
@@ -65,6 +68,15 @@ class App extends Component {
               </Route>
               <Route exact path="/userProfileDebitCard">
                 <UserProfileDebitCard />
+              </Route>
+              <Route exact path="/newAdress">
+                <NewAdress />
+              </Route>
+              <Route exact path="/newCard">
+                <NewCard />
+              </Route>
+              <Route exact path="/newUPI">
+                <NewUPI />
               </Route>
               <Route exact path="/userProfileUPI">
                 <UserProfileUPI />

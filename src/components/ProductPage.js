@@ -4,9 +4,11 @@ import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
 import SimilarItems from "./SimilarItems";
-import { useParams,Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Loader from "./Loader";
-function ProductPage() {
+import { handleaddtoCart } from "../actions/cartAction";
+import { connect } from "react-redux";
+function ProductPage(props) {
   const { productId } = useParams();
   const [item, setItem] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
@@ -77,14 +79,21 @@ function ProductPage() {
             </h3>
             <div style={{ margin: "10px" }}>
               <div className="productpage-buttons">
-                <button>Add to Cart</button>
+                <button
+                  onClick={() => props.dispatch(handleaddtoCart(item.id))}
+                >
+                  Add to Cart
+                </button>
                 <button>Rent Now</button>
               </div>
-            <Link to={{
-              pathname: "/payment",
-              state: { product: item },
-            }}
-          ><button className="buynow-button">Buy Now</button></Link>
+              <Link
+                to={{
+                  pathname: "/payment",
+                  state: { product: item },
+                }}
+              >
+                <button className="buynow-button">Buy Now</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,7 +102,7 @@ function ProductPage() {
             <div className="button-area">
               <button
                 onClick={() => {
-                  setResourceType(<Reviews items={item.Reviews}/>);
+                  setResourceType(<Reviews items={item.Reviews} />);
                   toggleAnimation(1);
                 }}
                 className={activeDiv === 1 ? "gelatine" : ""}
@@ -102,7 +111,7 @@ function ProductPage() {
               </button>
               <button
                 onClick={() => {
-                  setResourceType(<Faqs items={item.Faq}/>);
+                  setResourceType(<Faqs items={item.Faq} />);
                   toggleAnimation(2);
                 }}
                 className={activeDiv === 2 ? "gelatine" : ""}
@@ -127,4 +136,8 @@ function ProductPage() {
   }
 }
 
-export default ProductPage;
+const mapStateToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps)(ProductPage);

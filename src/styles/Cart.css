@@ -2,6 +2,9 @@
   width: 800px;
   display: flex;
   flex-direction: column;
+  background-color: orange;
+  border-radius: 8px;
+  margin: 10px 20px 10px;
 }
 .Item1 {
   display: flex;
@@ -10,7 +13,7 @@
   border-radius: 4px;
   border-color: blueviolet;
   background-color: white;
-  box-shadow: 0 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .Item2 {
   display: flex;
@@ -34,11 +37,13 @@
   width: 200px;
   float: left;
   display: flex;
+  border-radius: 4px;
 }
 .image > img {
   width: 200px;
   height: 200px;
   margin: 10px 10px 10px;
+  background-color: orange;
 }
 .column {
   width: 400px;
@@ -69,4 +74,7 @@
 }
 .cart-button button:hover {
   background-color: rgba(90, 224, 224, 0.582);
+}
+.Cart > h1 {
+  text-align: center;
 }
