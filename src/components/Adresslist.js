@@ -4,21 +4,28 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const AdressList = () => {
   const [data, setData] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
-    fetch("http://localhost:3000/users/1")
+    fetch("http://localhost:3000/deliveryAdress")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Success: data from server", data.deliveryAdress);
-        setData(data.deliveryAdress);
+        //console.log("Success: data from server", data);
+        setData(data);
       });
   }, []);
 
   const handleDelete = (id) => {
     console.log("Deleting" + id);
+    fetch("http://localhost:3000/deliveryAdress/" + id, {
+      method: "DELETE",
+    });
+    history.push("/userProfileInformation");
+
     /* setData(data.filter((item) => item.id !== id)); */
   };
 

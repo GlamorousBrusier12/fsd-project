@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "../styles/UserProfileInformation.css";
 import {
@@ -10,6 +12,18 @@ import {
 } from "@mui/icons-material";
 
 const UserProfileInformation = () => {
+  //We now need to set the data which originally is a empty object
+  const [info, setInfo] = useState({});
+
+  useEffect(() => {
+    fetch("http://localhost:3000/users/1")
+      .then((res) => res.json())
+      .then((data) => {
+        setInfo({ data });
+        console.log(info.data.fullName);
+      });
+  }, []);
+
   return (
     <div className="container">
       <Sidebar />
@@ -29,7 +43,7 @@ const UserProfileInformation = () => {
                 className="userShowImg"
               />
               <div className="userShowTopTitle">
-                <span className="userShowUsername">Emma Watson</span>
+                <span className="userShowUsername">{info.data.fullName}</span>
                 <span className="userShowUserTitle">Software Engineer</span>
               </div>
             </div>
