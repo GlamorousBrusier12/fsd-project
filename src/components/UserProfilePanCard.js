@@ -214,7 +214,9 @@ const UserProfilePanCard = (props) => {
                   </label>
                   <input type="file" id="file" style={{ display: "none" }} />
                 </div>
-                <button className="userUpdateButton">Update</button>
+                <button className="userUpdateButton" onClick={handleSubmit}>
+                  Update
+                </button>
               </div>
             </form>
           </div>
