@@ -2527,27 +2527,19 @@
     {
       "id": 1,
       "question": "How is the stiching?",
-      "answers": [
-        "It is just AMAZING..ZING ZING",
-        "The quality is brilliant"
-      ],
+      "answers": ["It is just AMAZING..ZING ZING", "The quality is brilliant"],
       "upvotes": 2
     },
     {
       "id": 2,
       "question": "Is it washable?",
-      "answers": [
-        "Yes, It is."
-      ],
+      "answers": ["Yes, It is."],
       "upvotes": 4
     },
     {
       "id": 3,
       "question": "Is it a laptop bag or just a casual bag?",
-      "answers": [
-        "Both.",
-        "I think it's Both casual and laptop"
-      ],
+      "answers": ["Both.", "I think it's Both casual and laptop"],
       "upvotes": 1
     },
     {
@@ -2561,37 +2553,25 @@
     {
       "id": 5,
       "question": "Is it fully water proof?",
-      "answers": [
-        "no",
-        "No, but there is extra provided rain cover."
-      ],
+      "answers": ["no", "No, but there is extra provided rain cover."],
       "upvotes": 5
     },
     {
       "id": 6,
       "question": "How much weight of bag?",
-      "answers": [
-        "Light weight",
-        " nice bag and light weighted."
-      ],
+      "answers": ["Light weight", " nice bag and light weighted."],
       "upvotes": 3
     },
     {
       "id": 7,
       "question": "Is there any pocket for water bottle?",
-      "answers": [
-        "2 Sides",
-        "ya two side pockets are for water bottle."
-      ],
+      "answers": ["2 Sides", "ya two side pockets are for water bottle."],
       "upvotes": 2
     },
     {
       "id": 8,
       "question": "is it suitable for office work?",
-      "answers": [
-        "Yes, Absolutely.",
-        "Perfect for office and college too."
-      ],
+      "answers": ["Yes, Absolutely.", "Perfect for office and college too."],
       "upvotes": 1
     },
     {
@@ -2606,9 +2586,7 @@
     {
       "id": 10,
       "question": "which type of cloth used?",
-      "answers": [
-        "Polyster One."
-      ],
+      "answers": ["Polyster One."],
       "upvotes": 4
     }
   ],
@@ -3008,7 +2986,13 @@
     {
       "id": 1,
       "fullName": "Ravindra Tholuchuru",
+      "elecFullName": "Ravindra sai Tholuchuru",
+      "elecPanNumber": "HGET52FE4",
+      "elecMobileNumber": "8899657421",
+      "elecFatherName": "Rajendra Tholuchuru",
+      "elecAdress": "221B Baker Street",
       "userName": "Ravi578",
+      "job": "Software Engineer",
       "dob": "10.5.2001",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "email": "ravindra.t19@iiits.in",
