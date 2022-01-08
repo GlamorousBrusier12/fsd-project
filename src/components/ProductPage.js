@@ -8,7 +8,9 @@ import { useParams, Link } from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
+
 function ProductPage(props) {
+  const {isLoggedIn} = props;
   const { productId } = useParams();
   const [item, setItem] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
@@ -86,10 +88,13 @@ function ProductPage(props) {
                 </button>
                 <button>Rent Now</button>
               </div>
+              {/* Checking if the user is logged in redirecting to login page if not */}
               <Link
-                to={{
+                to={isLoggedIn?{
                   pathname: "/payment",
-                  state: { product: item },
+                  state: { product: item, productId:productId },
+                }:{
+                  pathname:"/login"
                 }}
               >
                 <button className="buynow-button">Buy Now</button>
@@ -136,8 +141,10 @@ function ProductPage(props) {
   }
 }
 
-const mapStateToProps = (dispatch) => {
-  return {};
+const mapStateToProps = (state) => {
+  return {
+    isLoggedIn : state.user.isLoggedIn
+  };
 };
 
 export default connect(mapStateToProps)(ProductPage);
