@@ -70,10 +70,11 @@ const UserProfileInformation = (props) => {
         });
 
       event.preventDefault();
-      /* setName("");
-      setlocationName("");
-      setPhoneNo("");
-      setAddress("");*/
+      setfullName("");
+      setuserName("");
+      setEmail("");
+      setmobileNumber("");
+      setAddress("");
       history.push("/userProfile");
     }
   };

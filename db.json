@@ -2986,6 +2986,11 @@
     {
       "id": 1,
       "fullName": "Ravindra Tholuchuru",
+      "elecFullName": "Ravindra sai Tholuchuru",
+      "elecPanNumber": "HGET52FE4",
+      "elecMobileNumber": "8899657421",
+      "elecFatherName": "Rajendra Tholuchuru",
+      "elecAdress": "221B Baker Street",
       "userName": "Ravi578",
       "job": "Software Engineer",
       "dob": "10.5.2001",
