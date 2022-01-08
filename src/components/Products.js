@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import "../styles/ProductsStyles.css";
 import { connect } from "react-redux";
 import ReactPaginate from "react-paginate";
+import NoResult from "./NoResult";
 function Products(props) {
   let { searchResults } = props;
 
@@ -20,6 +21,7 @@ function Products(props) {
     <div>
       <br />
       <Categories />
+      {searchResults.length !== 0 ? 
       <div className=" main-container">
         {/* Filter Container each sub-filter has one div and that div contains the filters */}
         <div className="filters-container">
@@ -48,7 +50,7 @@ function Products(props) {
                 id="department3"
                 value="Home Aplliances"
               />
-              <label htmlFor="department3"> Home Aplliances</label>
+              <label htmlFor="department3"> Home Appliances</label>
               <br />
               <input
                 type="checkbox"
@@ -275,7 +277,7 @@ function Products(props) {
             activeClassName={"paginationActive"}
           />
         </div>
-      </div>
+      </div>: <NoResult/>}
     </div>
   );
 }
