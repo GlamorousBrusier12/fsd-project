@@ -243,7 +243,6 @@
         "count": 120
       },
       "type": "Buy",
-
       "Category": "Mens",
       "Reviews": [
         {
@@ -401,7 +400,6 @@
         "count": 209
       },
       "type": "Rent",
-
       "Category": "Electronics",
       "Reviews": [
         {
@@ -764,7 +762,6 @@
           "Answer": "Yes it is... littke .much.....its very soft.. go for it",
           "Upvotes": 6
         },
-
         {
           "Question": "how to 40inch stecheble",
           "Answer": "It expand 2 inches,I ordered 48 size, perfect size and color",
@@ -2013,6 +2010,7 @@
       "id": 1,
       "fullName": "Ravindra Tholuchuru",
       "userName": "Ravi578",
+      "job": "Software Engineer",
       "dob": "10.5.2001",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "email": "ravindra.t19@iiits.in",
