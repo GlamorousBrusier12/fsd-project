@@ -65,7 +65,7 @@ const addAddress = (e)=>{
           <div className="item-details-text">
             <h2>{product.title}</h2>
             <h3>Price: ₹{product.price}</h3>
-            <h3>Quantity: <input type="number" id="qty-product" value={quantity} onChange={(e)=>{if(e.target.value>0)setQuantity(e.target.value)}}/></h3>
+            <h3>Quantity: <input type="number" id="qty-product" value={quantity} onChange={(e)=>{if(e.target.value>0)setQuantity(e.target.value); else setQuantity(1)}}/></h3>
             <h3>
               Total Amount: ₹{product.price} x {quantity} = ₹{product.price * quantity}
             </h3>
@@ -76,10 +76,10 @@ const addAddress = (e)=>{
         <h1>Shipping Address</h1>
         <div className="address-list">
           <h3>Please select your preffered shippping address:</h3>
-          {address.map((addr)=>{
-            return(<div className="address-pack">
-            <input type="radio" id="address" name="address" />
-            <label for="address">
+          {address.map((addr,index)=>{
+            return(<div className="address-pack" key={index}>
+            <input type="radio" id={"address" + index+1} name="address" />
+            <label for={"address" + index+1}>
             <div>
               {addr.Name}, {addr.address}, {addr.city}, {addr.state}, {addr.zip}
             </div> 
@@ -93,7 +93,7 @@ const addAddress = (e)=>{
         <h1>Want to ship to a different Address?</h1>
         <p> Fill the details in the given form</p>
         <div className="form-parent">
-        <form action="">
+        <form action="/payment">
           <div className="form-content">
             <h2>Billing Address</h2>
             <label for="fname">
@@ -183,16 +183,17 @@ const addAddress = (e)=>{
         </div>
         <h2>Saved UPI</h2>
         <div className="payment-list">
-          {upis.map(upi=>{
+          {upis.map((upi,index)=>{
             return (
-            <div className="address-pack">
-              <input type="radio" id="debit" name="address" />
-              <label for="debit">{upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}</label>
+            <div className="address-pack" key={index}>
+              <input type="radio" id={"debit" + index+1} name="address" />
+              <label for={"debit" + index+1}>{upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}</label>
             </div>
             )
           })}
         </div>
         <div className="form-parent">
+          <form action="/payment">
           <div class="form-content">
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
@@ -229,6 +230,8 @@ const addAddress = (e)=>{
             <label for="cvv">CVV</label>
             <input type="password" id="cvv" name="cvv" placeholder="352" />
           </div>
+          <button className="btn">Add Details</button>
+            </form>
         </div>
       </div>
       <button className="proceed-btn">Proceed <i class="fas fa-arrow-right"></i></button>
