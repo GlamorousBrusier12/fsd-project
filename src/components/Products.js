@@ -4,10 +4,13 @@ import EachProduct from "./EachProduct";
 import Categories from "./Categories";
 import "../styles/ProductsStyles.css";
 import { connect } from "react-redux";
+import { handleCategoryFilter, renderallProducts } from "../actions";
 import ReactPaginate from "react-paginate";
 function Products(props) {
   let { searchResults } = props;
 
+  const [isChecked, setIsChecked] = useState(false);
+  const [isElectronicsChecked, setIsElectronicsChecked] = useState(false);
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 8;
@@ -15,6 +18,14 @@ function Products(props) {
   const pageCount = Math.ceil(searchResults.length / usersPerPage);
   const changePage = ({ selected }) => {
     setPageNumber(selected);
+  };
+  const handleCategoryClick = (category, temp) => {
+    if (!temp) {
+      // console.log("searching for ", category);
+      props.dispatch(handleCategoryFilter(category));
+    } else {
+      props.dispatch(renderallProducts());
+    }
   };
   return (
     <div>
@@ -31,6 +42,14 @@ function Products(props) {
                 name="department1"
                 id="department1"
                 value="Electronics"
+                checked={isElectronicsChecked}
+                onChange={() => {
+                  setIsElectronicsChecked(!isElectronicsChecked);
+                  handleCategoryClick(
+                    "?Category=Mobiles&Category=Appliances&Category=Accessories",
+                    isElectronicsChecked
+                  );
+                }}
               />
               <label htmlFor="department1"> Electronics</label>
               <br />
@@ -39,6 +58,14 @@ function Products(props) {
                 name="department2"
                 id="department2"
                 value="Fashion"
+                checked={isChecked}
+                onChange={() => {
+                  setIsChecked(!isChecked);
+                  handleCategoryClick(
+                    "?Category=Mens&Category=Womens&Category=Kids",
+                    isChecked
+                  );
+                }}
               />
               <label htmlFor="department2"> Fashion</label>
               <br />
@@ -60,7 +87,7 @@ function Products(props) {
               <br />
             </div>
           </div>
-          <div className="filter-department">
+          {/* <div className="filter-department">
             <p className="filter-headings">Brands</p>
             <div className="sub-filters">
               <input type="checkbox" name="brand1" id="brand1" value="Apple" />
@@ -95,11 +122,19 @@ function Products(props) {
               <label htmlFor="brand7"> Passionfruit</label>
               <br />
             </div>
-          </div>
+          </div> */}
           <div className="filter-department">
             <p className="filter-headings">Avg. Customer Review</p>
             <div className="sub-filters">
-              <input type="checkbox" name="rating4" id="rating4" value="4" />
+              <input
+                type="checkbox"
+                name="rating4"
+                id="rating4"
+                value="4"
+                onClick={() => {
+                  handleCategoryClick("?rating.rate_gte=4");
+                }}
+              />
               <label htmlFor="rating4">
                 <StarRatings
                   rating={4}
@@ -146,56 +181,6 @@ function Products(props) {
             </div>
           </div>
           <div className="filter-department">
-            <p className="filter-headings">Item type</p>
-            <div className="sub-filters">
-              <input
-                type="checkbox"
-                name="itemtype1"
-                id="itemtype1"
-                value="Buyonly"
-              />
-              <label htmlFor="itemtype1"> Buy only</label>
-              <br />
-              <input
-                type="checkbox"
-                name="itemtype2"
-                id="itemtype2"
-                value="Rentonly"
-              />
-              <label htmlFor="itemtype2"> Rent only</label>
-              <br />
-              <input
-                type="checkbox"
-                name="itemtype3"
-                id="itemtype3"
-                value="BuyandRent"
-              />
-              <label htmlFor="itemtype3"> Buy and Rent</label>
-              <br />
-            </div>
-          </div>
-          <div className="filter-department">
-            <p className="filter-headings">Price</p>
-            <div className="sub-filters">
-              <input type="range" className="form-range" id="customRange1" />
-              <br />
-            </div>
-          </div>
-          <div className="filter-department">
-            <p className="filter-headings">Deals</p>
-            <div className="sub-filters">
-              <input type="checkbox" name="deal1" id="deal1" value="DOTD" />
-              <label htmlFor="deal1"> Deals of the Day</label>
-              <br />
-              <input type="checkbox" name="deal2" id="deal2" value="EOTS" />
-              <label htmlFor="deal2"> End of the Season</label>
-              <br />
-              <input type="checkbox" name="deal3" id="deal3" value="MS" />
-              <label htmlFor="deal3"> Mega Sale</label>
-              <br />
-            </div>
-          </div>
-          <div className="filter-department">
             <p className="filter-headings">Discount</p>
             <div className="sub-filters">
               <input
@@ -230,25 +215,6 @@ function Products(props) {
               />
               <label htmlFor="discount4"> 10% and more</label>
               <br />
-            </div>
-          </div>
-          <div className="filter-department">
-            <p className="filter-headings">Cash on Delivery</p>
-            <div className="sub-filters">
-              <input type="checkbox" id="COD" name="COD" value="COD" />
-              <label htmlFor="COD"> Cash on Delivery</label>
-            </div>
-          </div>
-          <div className="filter-department">
-            <p className="filter-headings">Availability</p>
-            <div className="sub-filters">
-              <input
-                type="checkbox"
-                id="outOfStock"
-                name="outOfStock"
-                value="outOfStock"
-              />
-              <label htmlFor="outOfStock"> Out of Stock</label>
             </div>
           </div>
         </div>
