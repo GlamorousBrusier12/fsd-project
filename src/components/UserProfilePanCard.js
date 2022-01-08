@@ -2,6 +2,8 @@ import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import "../styles/UserProfilePanCard.css";
+import { handleUser } from "../actions";
+
 import {
   CalendarToday,
   LocationSearching,
@@ -16,6 +18,7 @@ import { connect } from "react-redux";
 
 const UserProfilePanCard = (props) => {
   const { info } = props;
+  let email = info.email;
   //console.log("INFO :", info);
   const history = useHistory();
   const [fullName, setFullName] = useState("");
@@ -70,6 +73,7 @@ const UserProfilePanCard = (props) => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Successfully PATCHED", data);
+          props.dispatch(handleUser(email));
         })
         .catch((error) => {
           console.error("Error:", error);
