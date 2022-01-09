@@ -8,9 +8,9 @@ import { useParams, Link } from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
-
+import { toast } from "react-toastify";
 function ProductPage(props) {
-  const {isLoggedIn} = props;
+  const { isLoggedIn } = props;
   const { productId } = useParams();
   const [item, setItem] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
@@ -82,7 +82,10 @@ function ProductPage(props) {
             <div style={{ margin: "10px" }}>
               <div className="productpage-buttons">
                 <button
-                  onClick={() => props.dispatch(handleaddtoCart(item.id))}
+                  onClick={() => {
+                    props.dispatch(handleaddtoCart(item.id));
+                    toast.success("Your Item Is Added");
+                  }}
                 >
                   Add to Cart
                 </button>
@@ -90,12 +93,16 @@ function ProductPage(props) {
               </div>
               {/* Checking if the user is logged in redirecting to login page if not */}
               <Link
-                to={isLoggedIn?{
-                  pathname: "/payment",
-                  state: { product: item, productId:productId },
-                }:{
-                  pathname:"/login"
-                }}
+                to={
+                  isLoggedIn
+                    ? {
+                        pathname: "/payment",
+                        state: { product: item, productId: productId },
+                      }
+                    : {
+                        pathname: "/login",
+                      }
+                }
               >
                 <button className="buynow-button">Buy Now</button>
               </Link>
@@ -143,7 +150,7 @@ function ProductPage(props) {
 
 const mapStateToProps = (state) => {
   return {
-    isLoggedIn : state.user.isLoggedIn
+    isLoggedIn: state.user.isLoggedIn,
   };
 };
 

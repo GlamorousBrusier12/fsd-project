@@ -21,6 +21,8 @@ import NewAdress from "./NewAdress";
 import NewCard from "./NewCard";
 import NewUPI from "./NewUPI";
 import Payment from "./Payment";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 class App extends Component {
   constructor(props) {
     super();
@@ -33,6 +35,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <ToastContainer autoClose={5000} />
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>
