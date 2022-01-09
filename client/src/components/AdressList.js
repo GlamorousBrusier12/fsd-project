@@ -1,3 +1,5 @@
+/* This page renders all the adresses the user has added.  */
+
 import "../styles/adressList.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
@@ -8,30 +10,32 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AdressList = () => {
+  //Since delivery adresses is an array, we populate the array.
   const [data, setData] = useState([]);
   const history = useHistory();
 
+  //We get the data from the route using fetch.
   useEffect(() => {
     fetch("http://localhost:3000/deliveryAdress")
       .then((res) => res.json())
       .then((data) => {
-        //console.log("Success: data from server", data);
+        //Now set the data as we fetch it.
         setData(data);
       });
   }, []);
 
+  //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
     console.log("Deleting" + id);
+    //We send a delete http request to the server with the id.
     fetch("http://localhost:3000/deliveryAdress/" + id, {
       method: "DELETE",
     });
     toast.warning("Adress Deleted");
-
     history.push("/userProfileInformation");
-
-    /* setData(data.filter((item) => item.id !== id)); */
   };
 
+  //This is the schema for rendering the adresses in the table.
   const columns = [
     {
       field: "id",
@@ -66,6 +70,7 @@ const AdressList = () => {
       headerName: "Location Name",
       width: 200,
     },
+    //We basically render some icons and buttons here.
     {
       field: "action",
       headerName: "Action",
@@ -90,8 +95,10 @@ const AdressList = () => {
     },
   ];
 
+  //this is the component we are gonna return
   return (
     <div className="container">
+      {/* Rendering the side bar having all components */}
       <Sidebar />
       <div className="adressList">
         <div className="userTitleContainer">
@@ -100,6 +107,7 @@ const AdressList = () => {
             <button className="userAddButton">Add Adress</button>
           </Link>
         </div>
+        {/* This is the data we are gonna render using Datagrid from materail ui */}
         <DataGrid
           GridLines="None"
           rowHeight={80}
