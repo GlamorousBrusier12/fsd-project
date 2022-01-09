@@ -3286,10 +3286,10 @@
     },
     {
       "id": 2,
-      "fullName": "Naveen mowa",
+      "fullName": "Naveen Mowa 2.0",
       "email": "naveenkumar.k19@iiits.in",
-      "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "mobileNumber": null,
+      "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
+      "mobileNumber": "9493528334",
       "password": "Test@123",
       "address": "Vizag, Andhra Pradesh",
       "wishlist": [],
@@ -3364,7 +3364,8 @@
       ],
       "cartItems": [],
       "reviews": [],
-      "isLoggedIn": false
+      "isLoggedIn": false,
+      "userName": "navi_18"
     },
     {
       "id": 3,
