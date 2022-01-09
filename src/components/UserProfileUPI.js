@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UserProfileUPI = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,7 @@ const UserProfileUPI = () => {
     fetch("http://localhost:3000/upi/" + id, {
       method: "DELETE",
     });
+    toast.warning("Succesfully Deleted UPI");
     history.push("/userProfileInformation");
     //setData(data.filter((item) => item.id !== id));
   };

@@ -2,6 +2,7 @@ import "../styles/NewUPI.css";
 import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const NewUPI = () => {
   const history = useHistory();
@@ -48,6 +49,7 @@ const NewUPI = () => {
         .catch((error) => {
           console.error("Error:", error);
         });
+      toast.success("Succesfully Added UPI");
 
       event.preventDefault();
       setName("");

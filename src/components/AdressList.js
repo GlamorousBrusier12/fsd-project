@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AdressList = () => {
   const [data, setData] = useState([]);
@@ -24,6 +25,8 @@ const AdressList = () => {
     fetch("http://localhost:3000/deliveryAdress/" + id, {
       method: "DELETE",
     });
+    toast.warning("Adress Deleted");
+
     history.push("/userProfileInformation");
 
     /* setData(data.filter((item) => item.id !== id)); */

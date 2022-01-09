@@ -15,6 +15,7 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { toast } from "react-toastify";
 
 const UserProfilePanCard = (props) => {
   const { info } = props;
@@ -78,6 +79,8 @@ const UserProfilePanCard = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
+
+      toast.success("Succesfully Updated");
 
       event.preventDefault();
       setFullName("");

@@ -2,6 +2,7 @@ import "../styles/NewAdress.css";
 import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const NewAdress = () => {
   const history = useHistory();
@@ -49,6 +50,7 @@ const NewAdress = () => {
         .catch((error) => {
           console.error("Error:", error);
         });
+      toast.success("Succesfully Added Adress. ");
 
       //event.preventDefault();
       setName("");

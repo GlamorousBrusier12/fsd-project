@@ -2,6 +2,7 @@ import "../styles/NewCard.css";
 import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const NewCard = () => {
   const history = useHistory();
@@ -48,6 +49,8 @@ const NewCard = () => {
         .catch((error) => {
           console.error("Error:", error);
         });
+
+      toast.success("Succesfully added Debit Card");
 
       event.preventDefault();
       setName("");

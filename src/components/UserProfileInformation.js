@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { handleUser } from "../actions";
+import { toast } from "react-toastify";
 import "../styles/UserProfileInformation.css";
 import {
   CalendarToday,
@@ -70,6 +71,7 @@ const UserProfileInformation = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
+      toast.success("Succesfully Updated.");
 
       event.preventDefault();
       setfullName("");
