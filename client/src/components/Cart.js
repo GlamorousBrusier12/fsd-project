@@ -36,16 +36,20 @@ function Cart({ data, authorized }) {
         </div>
       ) : (
         <div>
-          <div className="Cart ">
+          <div className="itemHeading">
             <h1>Items</h1>
+          </div>
+          <div className="Cart ">
             {data.map((x) => {
               return <MiniCart content={x} />;
             })}
           </div>
-          <div className="Summary ">
+          <div className="SummaryHeading">
             <h1>Cart Summary</h1>
-            <h2>Items: {Titems}</h2>
-            <h2>Total: ₹{totalprice}</h2>
+          </div>
+          <div className="Summary ">
+            <h2 id="items">Items: {Titems}</h2>
+            <h2 id="totalPrice">Total: ₹{totalprice}</h2>
             <div className="Pbutton">
               <Link to="/Payment">
                 <button>Proceed</button>
