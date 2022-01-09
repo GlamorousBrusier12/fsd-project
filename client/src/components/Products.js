@@ -13,6 +13,8 @@ function Products(props) {
   const [isAppliancesChecked, setIsAppliancesChecked] = useState(false);
   const [isFashionChecked, setIsFashionChecked] = useState(false);
   const [isElectronicsChecked, setIsElectronicsChecked] = useState(false);
+  const [isBuyChecked, setIsBuyChecked] = useState(false);
+  const [isRentChecked, setIsRentChecked] = useState(false);
   const [isFourStarChecked, setIsFourStarChecked] = useState(false);
   const [isThreeStarChecked, setIsThreeStarChecked] = useState(false);
   const [isTwoStarChecked, setIsTwoStarChecked] = useState(false);
@@ -147,6 +149,37 @@ function Products(props) {
               <br />
             </div>
           </div> */}
+            <div className="filter-department">
+              <p className="filter-headings">Availability Type</p>
+              <div className="sub-filters">
+                <input
+                  type="checkbox"
+                  name="buy"
+                  id="buy"
+                  value="Buy"
+                  checked={isBuyChecked}
+                  onChange={() => {
+                    setIsBuyChecked(!isBuyChecked);
+                    handleCategoryClick("?type=Buy", isBuyChecked);
+                  }}
+                />
+                <label htmlFor="buy"> Buy</label>
+                <br />
+                <input
+                  type="checkbox"
+                  name="rent"
+                  id="rent"
+                  value="Rent"
+                  checked={isRentChecked}
+                  onChange={() => {
+                    setIsRentChecked(!isRentChecked);
+                    handleCategoryClick("?type=Rent", isRentChecked);
+                  }}
+                />
+                <label htmlFor="rent"> Rent</label>
+                <br />
+              </div>
+            </div>
             <div className="filter-department">
               <p className="filter-headings">Avg. Customer Review</p>
               <div className="sub-filters">

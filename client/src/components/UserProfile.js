@@ -6,6 +6,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
+import { toast } from "react-toastify";
 
 const UserProfile = (props) => {
   const [data, setData] = useState([]);
@@ -25,6 +26,7 @@ const UserProfile = (props) => {
     fetch("http://localhost:3000/myOrders/" + id, {
       method: "DELETE",
     });
+    toast.warning("Order Deleted");
     history.push("/userProfileInformation");
     /*setData(data.filter((item) => item.id !== id)); */
   };
@@ -102,7 +104,7 @@ const UserProfile = (props) => {
       <div className="myOrders">
         <div className="userTitleContainer">
           <h1 className="userTitle">My Orders</h1>
-          <Link to="/products">
+          <Link to="/">
             <button className="userAddButton">Continue Shopping</button>
           </Link>
         </div>

@@ -28,7 +28,7 @@
   align-content: right;
 }
 .each-product {
-  height: 450px;
+  height: 500px;
   width: 20vw;
   margin: auto;
   display: flex;
@@ -39,6 +39,15 @@
   margin-bottom: 20px;
   margin-left: 15px;
   border-radius: 10px;
+}
+#wishlistaction {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#wishlistaction:hover {
+  cursor: pointer;
 }
 .each-product:hover {
   /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
@@ -64,9 +73,4 @@
 }
 .discount_percentage {
   font-size: medium;
-}
-
-.products-pagination{
-  /* position: relative;
-  bottom: 10px; */
 }

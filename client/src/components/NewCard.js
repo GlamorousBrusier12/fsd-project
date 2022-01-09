@@ -2,6 +2,7 @@ import "../styles/NewCard.css";
 import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const NewCard = () => {
   const history = useHistory();
@@ -49,6 +50,8 @@ const NewCard = () => {
           console.error("Error:", error);
         });
 
+      toast.success("Succesfully added Debit Card");
+
       event.preventDefault();
       setName("");
       setcardNo("");
@@ -86,7 +89,7 @@ const NewCard = () => {
           <div className="newUserItem">
             <label>Expiry Date*</label>
             <input
-              type="text"
+              type="month"
               placeholder="10/2022"
               onChange={getExpiry}
               value={expiry}
@@ -96,7 +99,7 @@ const NewCard = () => {
 
           <div className="newUserItem">
             <label>CVV</label>
-            <input type="text" placeholder="498 " />
+            <input type="number" placeholder="498 " />
           </div>
           <div className="newUserItem">
             <label>Card Number*</label>
