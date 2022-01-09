@@ -6,10 +6,14 @@ import { toast } from "react-toastify";
 
 const NewUPI = () => {
   const history = useHistory();
+  //We have different useStates for different areas.
+
   const [Name, setName] = useState("");
   const [id, setId] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [type, setType] = useState("");
+
+  //Updating the state as he enters the data
 
   const getName = (event) => {
     setName(event.target.value);
@@ -24,6 +28,8 @@ const NewUPI = () => {
     setType(event.target.value);
   };
 
+  //Submit function which will fire only when all fields are entered.
+
   const handleSubmit = (event) => {
     if (Name && id && phoneNo && type) {
       const data = {
@@ -34,6 +40,8 @@ const NewUPI = () => {
         phoneNo: phoneNo,
         cardNo: id,
       };
+
+      //Fetching the data with post method
 
       fetch("http://localhost:3000/upi", {
         method: "POST", // or 'PUT'
@@ -59,6 +67,8 @@ const NewUPI = () => {
       history.push("/userProfileInformation");
     }
   };
+
+  //Returing the actual component
 
   return (
     <div className="container">

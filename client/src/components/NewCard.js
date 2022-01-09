@@ -6,10 +6,14 @@ import { toast } from "react-toastify";
 
 const NewCard = () => {
   const history = useHistory();
+  //We have different useStates for different areas.
+
   const [Name, setName] = useState("");
   const [cardNo, setcardNo] = useState("");
   const [expiry, setExpiry] = useState("");
   const [type, setType] = useState("");
+
+  //Updating the state as he enters the data
 
   const getName = (event) => {
     setName(event.target.value);
@@ -24,6 +28,8 @@ const NewCard = () => {
     setType(event.target.value);
   };
 
+  //Submit function which will fire only when all fields are entered.
+
   const handleSubmit = (event) => {
     if (Name && cardNo && expiry && type) {
       const data = {
@@ -34,6 +40,8 @@ const NewCard = () => {
         expiry: expiry,
         cardNo: cardNo,
       };
+
+      //Fetching the data with post method
 
       fetch("http://localhost:3000/debitCards", {
         method: "POST", // or 'PUT'
@@ -60,6 +68,9 @@ const NewCard = () => {
       history.push("/userProfileInformation");
     }
   };
+
+  //Returing the actual component
+
   return (
     <div className="container">
       <Sidebar />
