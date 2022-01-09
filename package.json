@@ -7,7 +7,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev --prefix client"
+    "start": "npm run dev --prefix client",
+    "admin": "npm start --prefix admin"
   },
   "repository": {
     "type": "git",
