@@ -45,7 +45,6 @@ function Products(props) {
     <div>
       <br />
       <Categories />
-      {searchResults.length !== 0 ? (
         <div className=" main-container">
           {/* Filter Container each sub-filter has one div and that div contains the filters */}
           <div className="filters-container">
@@ -375,11 +374,11 @@ function Products(props) {
             </div>
           </div>
           {/* Rendering EachProduct component using map function and sending data through props. */}
+            {searchResults.length !== 0 ? (
           <div className="products-container">
             {/* {searchResults.map((item, index) => {
               return <EachProduct content={item} key={index} />;
             })} */}
-
             {searchResults
               .slice(pagesVisited, pagesVisited + usersPerPage)
               .map((item, index) => {
@@ -397,10 +396,10 @@ function Products(props) {
               activeClassName={"paginationActive"}
             />
           </div>
-        </div>
       ) : (
         <NoResult />
       )}
+        </div>
     </div>
   );
 }

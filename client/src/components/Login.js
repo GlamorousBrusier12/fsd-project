@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory, Redirect } from "react-router-dom";
 import { handleUser } from "../actions";
+import {toast} from "react-toastify"
 import "../styles/LoginStyle.css";
 
 function Login(props) {
@@ -23,14 +24,14 @@ function Login(props) {
       .then((result) => {
         // console.log("Successfully Logged In\n", result);
         incorrectCredentials.current.innerText = " ";
-        history.push("/");
+        history.goBack();
         // dispatch the user
         props.dispatch(handleUser(username1));
+        toast.success("Login Successfull");
       })
       .catch((err) => {
         console.log(err);
-        incorrectCredentials.current.innerText =
-          "Incorrect Login Credentials.. Please try again";
+        toast.error("Incorrect Login Credentials.. Please try again");
       });
   };
   // Show password feature

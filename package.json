@@ -8,6 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev --prefix client",
+    "startonmac": "npm run devonmac --prefix client",
     "admin": "npm start --prefix admin"
   },
   "repository": {

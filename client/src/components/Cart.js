@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 import "../styles/Cart.css";
 import MiniCart from "./MiniCart";
 import { connect } from "react-redux";
 
-function Cart({ data, authorized }) {
+function Cart({ data,isLoggedIn }) {
   console.log(data);
-
+  const location = useLocation();
   const [totalprice, setTotalprice] = useState(0);
   const [Titems, setTitems] = useState(0);
 
@@ -51,7 +51,7 @@ function Cart({ data, authorized }) {
             <h2 id="items">Items: {Titems}</h2>
             <h2 id="totalPrice">Total: ₹{totalprice}</h2>
             <div className="Pbutton">
-              <Link to="/Payment">
+              <Link to={isLoggedIn?{pathname: '/payment', state: { prevPath: location.pathname }}:"/login"}>
                 <button>Proceed</button>
               </Link>
             </div>
@@ -65,6 +65,7 @@ function Cart({ data, authorized }) {
 const mapStateToProps = (state) => {
   return {
     data: state.cartReducer.cart,
+    isLoggedIn: state.user.isLoggedIn
   };
 };
 
