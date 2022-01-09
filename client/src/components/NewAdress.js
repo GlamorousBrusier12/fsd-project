@@ -5,14 +5,14 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const NewAdress = () => {
+  //We have different useStates for different areas.
   const history = useHistory();
   const [Name, setName] = useState("");
   const [locationName, setlocationName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [address, setAddress] = useState("");
 
-  //const getName = event;
-
+  //Updating the state as he enters the data
   const getName = (event) => {
     setName(event.target.value);
   };
@@ -26,6 +26,7 @@ const NewAdress = () => {
     setAddress(event.target.value);
   };
 
+  //Submit function which will fire only when all fields are entered.
   const handleSubmit = (event) => {
     if (Name && locationName && phoneNo && address) {
       const data = {
@@ -36,6 +37,7 @@ const NewAdress = () => {
         address: address,
       };
 
+      //Fetching the data with post method
       fetch("http://localhost:3000/deliveryAdress", {
         method: "POST", // or 'PUT'
         headers: {
@@ -61,6 +63,7 @@ const NewAdress = () => {
     }
   };
 
+  //Returing the actual component
   return (
     <div className="container">
       <Sidebar />
