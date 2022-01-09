@@ -18,6 +18,8 @@ import Footer from "./Footer";
 import AdressList from "./AdressList";
 import Cart from "./Cart";
 import Payment from "./Payment";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 class App extends Component {
   constructor(props) {
     super();
@@ -30,6 +32,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <ToastContainer autoClose={5000} />
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>

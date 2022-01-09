@@ -1,36 +1,51 @@
 import React from "react";
 import { connect } from "react-redux";
+// eslint-disable-next-line no-unused-vars
+import { handlerfc } from "../actions/cartAction";
+import { handleinc } from "../actions/cartAction";
+import { handledec } from "../actions/cartAction";
 function MiniCart(props) {
-  let newitem = props.content;
-  const add = () => {
-    newitem.qty = newitem.qty + 1;
-  };
-  const remove = () => {
-    if (newitem.qty >= 1) newitem.qty = newitem.qty - 1;
-    else newitem.qty = 0;
-  };
+  const { content } = props.content;
 
   return (
     <div className="Item1">
       <div className="image">
-        <img src={newitem.image[0]} alt={newitem.title} />
+        <img src={props.content.image[0]} alt={props.content.title} />
       </div>
       <div className="column">
-        <h4>{newitem.title}</h4>
-        <h4>₹{newitem.price}</h4>
+        <h4>{props.content.title}</h4>
+        <h4>₹{props.content.price}</h4>
         <h5>
-          Total:{newitem.qty} x {newitem.price}={newitem.qty * newitem.price}
+          Total:{props.content.qty} x {props.content.price}=₹
+          {props.content.qty * props.content.price}
         </h5>
       </div>
 
       <div className="cart-button">
-        <button onClick={add}>+</button>
-        <button onClick={remove}>-</button>
+        <button
+          onClick={() =>
+            props.dispatch(handleinc(props.content, props.content.qty))
+          }
+        >
+          +
+        </button>
+        <button
+          onClick={() =>
+            props.dispatch(handledec(props.content, props.content.qty))
+          }
+        >
+          -
+        </button>
+      </div>
+      <div className="Rbutton">
+        <button onClick={() => props.dispatch(handlerfc(props.content))}>
+          Remove
+        </button>
       </div>
     </div>
   );
 }
-const mapStateToProps = () => {
+const mapStateToProps = (dispatch) => {
   return {};
 };
 

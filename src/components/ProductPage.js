@@ -8,6 +8,7 @@ import { useParams, Link } from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
+import { toast } from "react-toastify";
 function ProductPage(props) {
   const { productId } = useParams();
   const [item, setItem] = useState({});
@@ -80,7 +81,10 @@ function ProductPage(props) {
             <div style={{ margin: "10px" }}>
               <div className="productpage-buttons">
                 <button
-                  onClick={() => props.dispatch(handleaddtoCart(item.id))}
+                  onClick={() => {
+                    props.dispatch(handleaddtoCart(item.id));
+                    toast.success("Your Item Is Added");
+                  }}
                 >
                   Add to Cart
                 </button>

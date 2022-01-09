@@ -43,6 +43,7 @@ class Navbar extends Component {
     }
   }
   render() {
+    const { cart } = this.props;
     const { isLoggedIn } = this.props;
     return (
       <div className="navbar-container">
@@ -86,7 +87,7 @@ class Navbar extends Component {
                 alt="cart icon"
               />
               <span style={styles.cartCount}>
-                <b>18</b>
+                <b>{cart.length}</b>
               </span>
             </Link>
           </div>
@@ -129,6 +130,7 @@ function mapStateToProps(state) {
   return {
     searchResults: state.search,
     isLoggedIn: state.user.isLoggedIn,
+    cart: state.cartReducer.cart,
   };
 }
 export default connect(mapStateToProps)(Navbar);

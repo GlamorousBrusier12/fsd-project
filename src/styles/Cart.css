@@ -1,10 +1,19 @@
+/* .Cartsummary {
+  margin: 0.5rem;
+  padding: 1 rem;
+  border-radius: 0.5rem;
+  background-color: #e0e0e0;
+} */
+
 .Cart {
-  width: 800px;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  background-color: orange;
-  border-radius: 8px;
-  margin: 10px 20px 10px;
+  background-color: #fcde67 #e3e3e3;
+  border-radius: 4px;
+  margin: 20px 20px 20px;
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .Item1 {
   display: flex;
@@ -13,7 +22,8 @@
   border-radius: 4px;
   border-color: blueviolet;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .Item2 {
   display: flex;
@@ -65,16 +75,75 @@
   border-radius: 4px;
   margin-right: 10px;
   margin-top: 10px;
-  width: 70px;
+  width: 40px;
   height: 30px;
-  color: rgb(12, 4, 4);
-  background-color: rgb(242, 248, 248);
+  color: white;
+  background-color: rgb(32, 49, 65);
   font-size: medium;
   font-family: fantasy;
 }
 .cart-button button:hover {
   background-color: rgba(90, 224, 224, 0.582);
 }
+.Pbutton button:hover {
+  background-color: rgba(90, 224, 224, 0.582);
+}
+.Rbutton button:hover {
+  background-color: rgba(90, 224, 224, 0.582);
+}
 .Cart > h1 {
   text-align: center;
+}
+.Summary {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #e3e0cf;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  float: left;
+  margin: 30px 20px 20px;
+  border-radius: 4px;
+  align-items: center;
+  text-align: justify;
+  justify-content: space-between;
+}
+.Summary h2 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  justify-content: space-between;
+}
+.Summary h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.Pbutton {
+  border-radius: 4px;
+  margin: 70px 0px 60px;
+}
+.Pbutton button {
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: rgb(32, 49, 65);
+  font-size: large;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 4px;
+}
+.Rbutton {
+  width: 100px;
+  height: 30px;
+  margin: 110px 30px 100px;
+  float: left;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.Rbutton button {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  color: black;
+  background-color: #fcde67 #e3e3e3;
+  font-size: smaller;
+  font-family: fantasy;
 }
