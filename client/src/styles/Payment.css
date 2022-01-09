@@ -94,7 +94,7 @@
 
 .proceed-btn{
   position: relative;
-  left: 50%;
+  left: 45%;
   padding: 10px;
   background-color: rgb(32, 49, 65);
   color: white;
@@ -106,4 +106,12 @@
 
 .payment-list{
   display: flex;
+}
+
+.shipping-details{
+  padding:1em;
+}
+
+.confirmation-heading{
+  padding: 2em 0 0 2em;
 }

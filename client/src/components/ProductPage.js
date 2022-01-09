@@ -4,7 +4,7 @@ import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
 import SimilarItems from "./SimilarItems";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link ,useLocation} from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
@@ -17,6 +17,7 @@ function ProductPage(props) {
   const [error, setError] = useState(null);
   const [resourceType, setResourceType] = useState();
   const [activeDiv, setActiveDiv] = useState(3);
+  const location = useLocation();
   const toggleAnimation = (index) => {
     setActiveDiv(index);
   };
@@ -89,7 +90,7 @@ function ProductPage(props) {
                 >
                   Add to Cart
                 </button>
-                <button>Rent Now</button>
+                <button disabled={(item.type!=="Rent")}>Rent Now</button>
               </div>
               {/* Checking if the user is logged in redirecting to login page if not */}
               <Link
@@ -97,14 +98,14 @@ function ProductPage(props) {
                   isLoggedIn
                     ? {
                         pathname: "/payment",
-                        state: { product: item, productId: productId },
+                        state: { products: [item], productId: productId,prevPath: location.pathname },
                       }
                     : {
                         pathname: "/login",
                       }
                 }
               >
-                <button className="buynow-button">Buy Now</button>
+                <button className="buynow-button" disabled={(item.type!=="Buy")}>Buy Now</button>
               </Link>
             </div>
           </div>

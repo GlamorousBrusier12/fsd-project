@@ -21,6 +21,7 @@ import NewAdress from "./NewAdress";
 import NewCard from "./NewCard";
 import NewUPI from "./NewUPI";
 import Payment from "./Payment";
+import ConfirmationPage from "./ConfirmationPage"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 class App extends Component {
@@ -39,6 +40,9 @@ class App extends Component {
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>
+              <Route path="/confirmation">
+                <ConfirmationPage />
+              </Route>
               <Route path="/payment">
                 <Payment />
               </Route>

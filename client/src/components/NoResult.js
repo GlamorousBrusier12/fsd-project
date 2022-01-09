@@ -1,9 +1,9 @@
-import React,{useEffect} from "react";
-import SimilarItems from "./SimilarItems";
+import React from "react";
+import "../styles/NoResult.css";
 
 function NoResult() {
     return(
-        <div>
+        <div className="noresult-main">
             <h1>Sorry, we were not able to find results for your search.</h1>
             <p>The reasons could be:</p>
             <ul>
@@ -12,10 +12,6 @@ function NoResult() {
                 <li>Try to use more  generic terms.</li>
                 <li>Connect with us on Mail for further assistance.</li>
             </ul>
-            <h2>
-                Here are some products you may like:
-            </h2>
-            {/* <SimilarItems /> */}
         </div>
     )
 }

@@ -3331,24 +3331,6 @@
           "state": "Telangana",
           "phoneNo": "+446300014049",
           "zip": "500091"
-        },
-        {
-          "Name": "Ravindra",
-          "email": "r@t.com",
-          "address": "Apple Towers",
-          "city": "San Fransisco",
-          "state": "California",
-          "phoneNo": "987654321",
-          "zip": "1000069"
-        },
-        {
-          "Name": "Naveen",
-          "email": "n@k.com",
-          "address": "Google Head Office",
-          "city": "San Fransisco",
-          "state": "California",
-          "phoneNo": "6969696969",
-          "zip": "1000069"
         }
       ],
       "debitCards": [
