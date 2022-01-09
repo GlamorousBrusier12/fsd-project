@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { handleUser } from "../actions";
+import { toast } from "react-toastify";
 import "../styles/UserProfileInformation.css";
 import {
   CalendarToday,
@@ -21,7 +22,7 @@ const UserProfileInformation = (props) => {
   const [fullName, setfullName] = useState("");
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobileNumber, setmobileNumber] = useState("");
+  const [mobileNumber, setmobileNumber] = useState();
   const [address, setAddress] = useState("");
 
   const getfullName = (event) => {
@@ -70,6 +71,7 @@ const UserProfileInformation = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
+      toast.success("Succesfully Updated.");
 
       event.preventDefault();
       setfullName("");
@@ -151,7 +153,7 @@ const UserProfileInformation = (props) => {
                 <div className="userUpdateItem">
                   <label>Email*</label>
                   <input
-                    type="text"
+                    type="email"
                     placeholder={info.email}
                     className="userUpdateInput"
                     onChange={getEmail}
@@ -160,11 +162,12 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone*</label>
+                  <label>Phone* (91-86882-75981)</label>
                   <input
-                    type="text"
+                    type="tel"
                     placeholder={info.mobileNumber}
                     className="userUpdateInput"
+                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
                     onChange={getmobileNumber}
                     value={mobileNumber}
                     required
@@ -185,9 +188,9 @@ const UserProfileInformation = (props) => {
               <div className="userUpdateRight">
                 <div className="userUpdateUpload">
                   <img className="userUpdateImg" src={info.avatar} alt="" />
-                  <label htmlFor="file">
+                  {/* <label htmlFor="file">
                     <Publish className="userUpdateIcon" />
-                  </label>
+                  </label> */}
                   <input type="file" id="file" style={{ display: "none" }} />
                 </div>
                 <button className="userUpdateButton" onClick={handleSubmit}>

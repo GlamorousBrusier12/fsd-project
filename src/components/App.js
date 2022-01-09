@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <ToastContainer autoClose={5000} />
+          <ToastContainer autoClose={4000} />
           <Navbar change={this.onChange} />
           <div className="content-container">
             <Switch>

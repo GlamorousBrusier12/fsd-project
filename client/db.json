@@ -2711,7 +2711,7 @@
       "phoneNo": "+446300014049",
       "zip": "500091",
       "userId": "3",
-      "id": 14
+      "id": 11
     }
   ],
   "debitCards": [
@@ -2786,6 +2786,14 @@
       "cardNo": "23148***5",
       "name": "Ross",
       "expiry": "4/2022"
+    },
+    {
+      "avatar": "https://banksifsccode.com/blog/media/2020-03/how-to-login-to-union-bank-s-net-banking-account-step-4.jpg",
+      "name": "fdds",
+      "type": "dfsd",
+      "expiry": "2022-07",
+      "cardNo": "2dsagadsas",
+      "id": 10
     }
   ],
   "upi": [
@@ -2966,14 +2974,14 @@
     {
       "id": 1,
       "fullName": "Ravindra Tholuchuru",
-      "elecFullName": "dfdd",
-      "elecPanNumber": "dfsgsdfg",
-      "elecMobileNumber": "sfgsdf",
-      "elecFatherName": "sdfgsd",
-      "elecAdress": "sdfgs",
+      "elecFullName": "fdgsd",
+      "elecPanNumber": "dfds",
+      "elecMobileNumber": "91-86882-75981",
+      "elecFatherName": "dfz",
+      "elecAdress": "dfdf",
       "userName": "Ravi578",
       "job": "Software Engineer",
-      "dob": "dfgsdf",
+      "dob": "2022-01-19",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "email": "ravindra.t19@iiits.in",
       "mobileNumber": "8688358501",
