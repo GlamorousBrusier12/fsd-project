@@ -23,6 +23,8 @@ function Products(props) {
   const [isFiftyChecked, setIsFiftyChecked] = useState(false);
   const [isTwentyFiveChecked, setIsTwentyFiveChecked] = useState(false);
   const [isTenChecked, setIsTenChecked] = useState(false);
+  const [isLTHChecked, setIsLTHChecked] = useState(false);
+  const [isHTLChecked, setIsHTLChecked] = useState(false);
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 8;
@@ -46,7 +48,42 @@ function Products(props) {
       {searchResults.length !== 0 ? (
         <div className=" main-container">
           {/* Filter Container each sub-filter has one div and that div contains the filters */}
+
           <div className="filters-container">
+            <div className="filter-department">
+              <p className="filter-headings">Availability Type</p>
+              <div className="sub-filters">
+                <input
+                  type="checkbox"
+                  name="LTH"
+                  id="LTH"
+                  value="LTH"
+                  checked={isLTHChecked}
+                  onChange={() => {
+                    setIsLTHChecked(!isLTHChecked);
+                    handleCategoryClick("?_sort=price", isLTHChecked);
+                  }}
+                />
+                <label htmlFor="LTH">Price: Low to High</label>
+                <br />
+                <input
+                  type="checkbox"
+                  name="HTL"
+                  id="HTL"
+                  value="HTL"
+                  checked={isHTLChecked}
+                  onChange={() => {
+                    setIsHTLChecked(!isHTLChecked);
+                    handleCategoryClick(
+                      "?_sort=price&_order=desc",
+                      isHTLChecked
+                    );
+                  }}
+                />
+                <label htmlFor="HTL">Price: High to Low</label>
+                <br />
+              </div>
+            </div>
             <div className="filter-department">
               <p className="filter-headings">Department</p>
               <div className="sub-filters">
