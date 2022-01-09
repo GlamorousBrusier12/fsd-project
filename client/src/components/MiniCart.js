@@ -5,8 +5,6 @@ import { handlerfc } from "../actions/cartAction";
 import { handleinc } from "../actions/cartAction";
 import { handledec } from "../actions/cartAction";
 function MiniCart(props) {
-  const { content } = props.content;
-
   return (
     <div className="Item1">
       <div className="image">
