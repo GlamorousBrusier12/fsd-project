@@ -3293,6 +3293,13 @@
     {
       "id": 2,
       "fullName": "Naveen Mowa 2.0",
+      "elecFullName": "Naveen Kumar Kalagarla",
+      "elecPanNumber": "ABH6453D",
+      "elecMobileNumber": "91-86882-75981",
+      "elecFatherName": "shiva kalagarla",
+      "elecAdress": "222B Baker Street",
+      "job": "Software Engineer",
+      "dob": "2022-01-01",
       "email": "naveenkumar.k19@iiits.in",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "mobileNumber": "9493528334",
@@ -3331,6 +3338,24 @@
           "state": "Telangana",
           "phoneNo": "+446300014049",
           "zip": "500091"
+        },
+        {
+          "Name": "Ravindra",
+          "email": "r@t.com",
+          "address": "Apple Towers",
+          "city": "San Fransisco",
+          "state": "California",
+          "phoneNo": "987654321",
+          "zip": "1000069"
+        },
+        {
+          "Name": "Naveen",
+          "email": "n@k.com",
+          "address": "Google Head Office",
+          "city": "San Fransisco",
+          "state": "California",
+          "phoneNo": "6969696969",
+          "zip": "1000069"
         }
       ],
       "debitCards": [

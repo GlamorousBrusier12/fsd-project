@@ -5,11 +5,13 @@ import {
   TextField,
   EditButton,
   DeleteButton,
+  NumberField,
 } from "react-admin";
 const Products = (props) => {
   return (
     <List {...props}>
       <Datagrid>
+        <NumberField source="id" />
         <TextField source="title" />
         <TextField source="price" />
         <TextField source="stockAvailable" />
