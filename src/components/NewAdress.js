@@ -94,10 +94,11 @@ const NewAdress = () => {
             />
           </div>
           <div className="newUserItem">
-            <label>Phone*</label>
+            <label>Phone* </label>
             <input
-              type="text"
-              placeholder="+1 123 456 78"
+              type="tel"
+              pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+              placeholder="91-86882-75981"
               onChange={getphoneNo}
               value={phoneNo}
               required

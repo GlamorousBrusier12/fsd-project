@@ -87,7 +87,7 @@ const NewUPI = () => {
           <div className="newUserItem">
             <label>UPI ID*</label>
             <input
-              type="text"
+              type="email"
               placeholder="georgey75@paytm"
               onChange={getId}
               value={id}
@@ -100,10 +100,11 @@ const NewUPI = () => {
             <input type="text" placeholder="HDFC" />
           </div>
           <div className="newUserItem">
-            <label>Phone Number*</label>
+            <label>Phone Number* </label>
             <input
-              type="text"
-              placeholder="12344789"
+              type="tel"
+              pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+              placeholder="91-86882-75981"
               onChange={getphoneNo}
               value={phoneNo}
               required

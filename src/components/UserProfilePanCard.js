@@ -168,7 +168,7 @@ const UserProfilePanCard = (props) => {
                 <div className="userUpdateItem">
                   <label>DOB as per card*</label>
                   <input
-                    type="text"
+                    type="date"
                     placeholder={info.dob}
                     className="userUpdateInput"
                     onChange={getDob}
@@ -177,9 +177,10 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone*</label>
+                  <label>Phone* (91-86882-75981)</label>
                   <input
-                    type="text"
+                    type="tel"
+                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
                     placeholder={info.elecMobileNumber}
                     className="userUpdateInput"
                     onChange={getmobileNumber}
@@ -213,9 +214,9 @@ const UserProfilePanCard = (props) => {
               <div className="userUpdateRight">
                 <div className="userUpdateUpload">
                   <img className="userUpdateImg" src={info.avatar} alt="" />
-                  <label htmlFor="file">
+                  {/* <label htmlFor="file">
                     <Publish className="userUpdateIcon" />
-                  </label>
+                  </label> */}
                   <input type="file" id="file" style={{ display: "none" }} />
                 </div>
                 <button className="userUpdateButton" onClick={handleSubmit}>

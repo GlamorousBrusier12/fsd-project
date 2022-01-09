@@ -69,9 +69,13 @@ const UserProfileUPI = () => {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/user/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
-            </Link>
+            <button
+              className="userListEdit"
+              style={{ backgroundColor: "rgb(235, 83, 83)" }}
+              onClick={() => handleDelete(params.row.id)}
+            >
+              Delete
+            </button>
             <DeleteOutlineIcon
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
