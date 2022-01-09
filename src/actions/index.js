@@ -49,6 +49,33 @@ export function handleCategorySearch(searchWord) {
   };
 }
 
+export function handleCategoryFilter(searchWord) {
+  const url = `http://localhost:3000/products${searchWord}`;
+  console.log("URL: ", url);
+  return function (dispatch) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((products) => {
+        console.log(products);
+
+        // dispatch the products
+        dispatch(addProducts(products));
+      });
+  };
+}
+export function renderallProducts() {
+  const url = `http://localhost:3000/products`;
+  return function (dispatch) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((products) => {
+        console.log(products);
+
+        // dispatch the products
+        dispatch(addProducts(products));
+      });
+  };
+}
 export function handleProductSearch(searchWord) {
   const url = `http://localhost:3000/products?q=${searchWord}`;
   return function (dispatch) {

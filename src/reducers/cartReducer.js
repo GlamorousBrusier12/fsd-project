@@ -51,7 +51,7 @@ const cartReducer = (state = initialState, action) => {
                 ...item,
                 qty:
                   action.payload.item.qty !== 1
-                    ? action.paylaod.item.qty - 1
+                    ? action.payload.item.qty - 1
                     : 1,
               }
             : item

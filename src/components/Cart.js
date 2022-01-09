@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../styles/Cart.css";
 import MiniCart from "./MiniCart";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 function Cart({ data }) {
   console.log(data);
@@ -61,6 +62,7 @@ function Cart({ data }) {
 const mapStateToProps = (state) => {
   return {
     data: state.cartReducer.cart,
+    authorized: state.user.isLoggedIn,
   };
 };
 

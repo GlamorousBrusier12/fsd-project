@@ -1,16 +1,32 @@
 import "../styles/myprofile.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { useState } from "react";
-import { myOrders } from "../dummyData";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { connect } from "react-redux";
 
-const UserProfile = () => {
-  const [data, setData] = useState(myOrders);
+const UserProfile = (props) => {
+  const [data, setData] = useState([]);
+  const history = useHistory();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/myOrders")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Success: data from server", data);
+        setData(data);
+      });
+  }, []);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    console.log("Deleting" + id);
+    fetch("http://localhost:3000/myOrders/" + id, {
+      method: "DELETE",
+    });
+    history.push("/userProfileInformation");
+    /*setData(data.filter((item) => item.id !== id)); */
   };
 
   const columns = [
@@ -76,7 +92,10 @@ const UserProfile = () => {
       },
     },
   ];
-
+  const { authorized } = props;
+  if (!authorized) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="container">
       <Sidebar />
@@ -106,5 +125,9 @@ const UserProfile = () => {
     </div>
   );
 };
-
-export default UserProfile;
+function mapStateToProps(state) {
+  return {
+    authorized: state.user.isLoggedIn,
+  };
+}
+export default connect(mapStateToProps)(UserProfile);

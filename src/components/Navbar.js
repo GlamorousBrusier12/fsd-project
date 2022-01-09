@@ -91,17 +91,17 @@ class Navbar extends Component {
               </span>
             </Link>
           </div>
+          {/* <div className="links">
+              <Link to="/wishlist">
+                <img
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/heart.png`}
+                  alt="wishlist"
+                />
+              </Link>
+            </div> */}
           <div className="links">
-            <Link to="/wishlist">
-              <img
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/heart.png`}
-                alt="wishlist"
-              />
-            </Link>
-          </div>
-          <div className="links">
-            <Link to={isLoggedIn ? "/userProfile" : "/login"}>
+            <Link to="/userProfile">
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/user.png`}
