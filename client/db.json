@@ -229,8 +229,8 @@
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": 109.95,
-      "discount": 15,
+      "price": 1599,
+      "discount": 20,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "image": [
         "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
@@ -243,6 +243,7 @@
       },
       "type": "Buy",
       "Category": "Mens",
+      "stockAvailable": 53,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -399,6 +400,7 @@
       },
       "type": "Rent",
       "Category": "Mobiles",
+      "stockAvailable": 5,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -531,6 +533,7 @@
       },
       "type": "Buy",
       "Category": "Mens",
+      "stockAvailable": 3,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -675,6 +678,7 @@
       },
       "type": "Buy",
       "Category": "Mens",
+      "stockAvailable": 101,
       "Reviews": [
         {
           "UserName": "Nani",
@@ -807,6 +811,7 @@
       },
       "type": "Buy",
       "Category": "Mens",
+      "stockAvailable": 2000,
       "Reviews": [
         {
           "UserName": "Naveen",
@@ -939,6 +944,7 @@
       },
       "type": "Buy",
       "Category": "Accessories",
+      "stockAvailable": 0,
       "Reviews": [
         {
           "UserName": "Naveen",
@@ -1069,6 +1075,7 @@
       },
       "type": "Rent",
       "Category": "Accessories",
+      "stockAvailable": 99,
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1201,6 +1208,7 @@
       },
       "type": "Rent",
       "Category": "Accessories",
+      "stockAvailable": 79,
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1333,6 +1341,7 @@
       },
       "type": "Rent",
       "Category": "Accessories",
+      "stockAvailable": 24,
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1465,6 +1474,7 @@
       },
       "type": "Rent",
       "Category": "Accessories",
+      "stockAvailable": 3,
       "Reviews": [
         {
           "UserName": "Nani",
@@ -1582,7 +1592,7 @@
     {
       "id": 11,
       "title": "BELL END Cotton, Memory Foam, Microfibre Solid Sleeping Pillow Pack of 2  (White)",
-      "price": 699,
+      "price": "699",
       "discount": 15,
       "description": "Filling Material: Cotton, Memory Foam, Microfibre Size is  62 cm x 44 cm Type is Sleeping Pillow Suitable Location: Living Room, Bed Room",
       "image": [
@@ -1596,6 +1606,7 @@
       },
       "type": "Buy",
       "Category": "Home",
+      "stockAvailable": 1002,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -1752,6 +1763,7 @@
       },
       "type": "Buy",
       "Category": "Home",
+      "stockAvailable": 9,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -1908,6 +1920,7 @@
       },
       "type": "Buy",
       "Category": "Appliances",
+      "stockAvailable": 69,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -2064,6 +2077,7 @@
       },
       "type": "Buy",
       "Category": "Appliances",
+      "stockAvailable": 74,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -2220,6 +2234,7 @@
       },
       "type": "Buy",
       "Category": "Kids",
+      "stockAvailable": 31,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -2376,6 +2391,7 @@
       },
       "type": "Buy",
       "Category": "Womens",
+      "stockAvailable": 333,
       "Reviews": [
         {
           "UserName": "Rithwik",
@@ -2856,16 +2872,6 @@
   ],
   "myOrders": [
     {
-      "id": 1,
-      "avatar": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-gold-select?wid=470&hei=556&fmt=png-alpha&.v=1631652956000",
-      "name": "Iphone 13 Pro Max",
-      "quantity": 1,
-      "seller": "Apple",
-      "adress": "ABC Street",
-      "price": 1000,
-      "status": "Delivered on 19th November"
-    },
-    {
       "id": 2,
       "avatar": "https://rukminim1.flixcart.com/image/312/312/kqqykcw0/television/1/f/n/kd-65x80j-sony-original-imag4p2wxahgfgmf.jpeg?q=70",
       "name": "SONY X80J 164 cm (65 inch) Ultra HD (4K) LED Smart TV  (KD-65X80J)",
@@ -3283,7 +3289,7 @@
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "mobileNumber": "9493528334",
       "password": "Test@123",
-      "address": "Vizag, Andhra Pradesh",
+      "address": "C 609 Kendriya Vihar Phase 3",
       "wishlist": [],
       "purchases": [],
       "deliveryAdress": [
@@ -3308,6 +3314,33 @@
           "address": "Children's Park",
           "zip": "500067",
           "email": "hcaproni@home.pl"
+        },
+        {
+          "Name": "Guduru Chetan",
+          "email": "a@b",
+          "address": "C 609 Kendriya Vihar Phase 3",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "phoneNo": "+446300014049",
+          "zip": "500091"
+        },
+        {
+          "Name": "Ravindra",
+          "email": "r@t.com",
+          "address": "Apple Towers",
+          "city": "San Fransisco",
+          "state": "California",
+          "phoneNo": "987654321",
+          "zip": "1000069"
+        },
+        {
+          "Name": "Naveen",
+          "email": "n@k.com",
+          "address": "Google Head Office",
+          "city": "San Fransisco",
+          "state": "California",
+          "phoneNo": "6969696969",
+          "zip": "1000069"
         }
       ],
       "debitCards": [
@@ -3352,6 +3385,16 @@
           "cardNo": "Chandler62@gmail.com",
           "name": "Chandler",
           "phoneNo": 1239876540
+        },
+        {
+          "name": "Chetan",
+          "cardNo": "chetan@sbi.com",
+          "phoneNo": "987654321"
+        },
+        {
+          "name": "Chetan",
+          "cardNo": "9999",
+          "phoneNo": "987654321"
         }
       ],
       "cartItems": [],
