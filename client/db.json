@@ -2982,14 +2982,14 @@
     {
       "id": 1,
       "fullName": "Ravindra Toluchuru",
-      "elecFullName": "fdgsd",
-      "elecPanNumber": "dfds",
-      "elecMobileNumber": "91-86882-75981",
-      "elecFatherName": "dfz",
-      "elecAdress": "dfdf",
+      "elecFullName": "sssd",
+      "elecPanNumber": "dss",
+      "elecMobileNumber": "dsfds",
+      "elecFatherName": "dfsd",
+      "elecAdress": "sdfsd",
       "userName": "Ravi132",
       "job": "Software Engineer",
-      "dob": "2022-01-19",
+      "dob": "2022-01-26",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "email": "ravindra.t19@iiits.in",
       "mobileNumber": "8597456321",
@@ -3002,54 +3002,48 @@
           "Name": "Ravindra",
           "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
           "phoneNo": "123456",
-          "city": "Ananthauram",
-          "state": "Andhra Pradesh",
-          "address": "ABC Street",
-          "zip": "500099",
-          "email": "abaswalld@fema.gov"
+          "address": "Ananthauram",
+          "locationName": "ABC Street"
         },
         {
           "id": 2,
           "Name": "Chetan",
           "avatar": "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
           "phoneNo": "34681999929",
-          "city": "Hyderabad",
-          "state": "Telangana",
-          "address": "Jublee Hills",
-          "zip": "500089",
-          "email": "amcgiffk@hud.gov"
+          "address": "Hyderabad",
+          "locationName": "Jublee Hills"
         },
         {
-          "id": 7,
-          "Name": "Joey Tribbianni",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/9803279/2019/10/11/08d246d9-80d1-4c61-8826-2074624aa0521570782280949-Apple-White-2nd-Gen-AirPods-with-Charging-Case-MV7N2HNA-1181-4.jpg",
-          "phoneNo": "79262154972",
-          "address": "California",
-          "locationName": "Dollars Street"
+          "id": 3,
+          "Name": "Bhargav",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1353004/2018/9/18/a8acac3a-077a-400f-a1c7-519215a5265e1537251707732-Roadster-Men-Blue-Denim-Washed-Casual-Shirt-5281537251705552-1.jpg",
+          "phoneNo": "34681568929",
+          "address": "Vizag",
+          "locationName": "oppsite Jagadhamba Theatre"
         },
         {
-          "id": 8,
-          "Name": "Ross Geller",
-          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6518755/2021/2/10/7249229f-5eb1-43dd-9c31-547d43f799c41612945435520-Philips-Men-Corded--Cordless-Rechargeable-Beard-Trimmer-BT32-1.jpg",
-          "phoneNo": "79262149162",
-          "address": "Boston",
-          "locationName": "Fci Colony"
+          "id": 4,
+          "Name": "Sravan",
+          "avatar": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+          "phoneNo": "972552992025",
+          "address": "Guntur",
+          "locationName": "Children's Park"
         },
         {
-          "id": 9,
-          "Name": "Thomas Shelby",
-          "avatar": "https://rukminim1.flixcart.com/image/312/312/kuvkcy80/computer/x/s/4/na-gaming-laptop-acer-original-imag7whp2f8fgpaz.jpeg?q=70",
-          "phoneNo": "16465106465",
-          "address": "Birmingham",
-          "locationName": "Shelby's Bar"
+          "id": 62,
+          "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "Name": "sdfsdf",
+          "locationName": "sdfsd",
+          "phoneNo": "91-12345-12345",
+          "address": "sfsds"
         },
         {
-          "id": 10,
-          "Name": "Walter White",
-          "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
-          "phoneNo": "447944649472",
-          "address": "Albequerky",
-          "locationName": "Los Pollos"
+          "id": 28,
+          "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "Name": "dfgdf",
+          "locationName": "dfgdfg",
+          "phoneNo": "91-12345-12345",
+          "address": "dsfdff"
         }
       ],
       "debitCards": [
@@ -3092,46 +3086,6 @@
           "cardNo": "31468***9",
           "name": "Rithwik",
           "expiry": "12/2023"
-        },
-        {
-          "id": 6,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx0AwMt5cZmTTZiqjzn_TN1mc5rsdVi6t6wg&usqp=CAU",
-          "type": "ICICI",
-          "cardNo": "45862***0",
-          "name": "Alex",
-          "expiry": "12/2021"
-        },
-        {
-          "id": 7,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tpvYMx8tLtvA4TFJR3eqfCDrfFrm8CCqMg&usqp=CAU",
-          "type": "KOTAK MAHINDRA",
-          "cardNo": "01234***2",
-          "name": "Joey",
-          "expiry": "1/2023"
-        },
-        {
-          "id": 8,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM0qI4WO2zaMc-DNmZoP3q8AYM9mItszx_Rg&usqp=CAU",
-          "type": "KARUR VYSYA",
-          "cardNo": "36974***5",
-          "name": "Chandler",
-          "expiry": "8/2022"
-        },
-        {
-          "id": 9,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIcAW3e5uT8W-1-y-GhQiBcBdrWlIKINUdXg&usqp=CAU",
-          "type": "ANDHRA BANK",
-          "cardNo": "23148***5",
-          "name": "Ross",
-          "expiry": "4/2022"
-        },
-        {
-          "id": 10,
-          "avatar": "https://bfsi.eletsonline.com/wp-content/uploads/2020/09/Bajaj-Finserv-inks-Kwik.ID-as-their-Exclusive-Video-KYC-Partner.jpg",
-          "type": "Bajaj Finance",
-          "cardNo": "35974***9",
-          "name": "Mahesh",
-          "expiry": "9/2022"
         }
       ],
       "upi": [
@@ -3144,52 +3098,28 @@
           "phoneNo": 123456789
         },
         {
-          "id": 2,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhDTdW326JcXKYweltkqa8teThw8vAzpInA&usqp=CAU",
-          "type": "Phonepay",
-          "cardNo": "ravindra23@gmail.com",
-          "name": "Ravindra",
-          "phoneNo": 6486728852
-        },
-        {
-          "id": 3,
+          "id": 36,
           "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
-          "type": "PayTm",
-          "cardNo": "Chetan25@gmail.com",
-          "name": "Chetan",
-          "phoneNo": 9999900158
+          "name": "sdfsd",
+          "type": "dfs",
+          "phoneNo": "91-12345-12345",
+          "cardNo": "sds@g.g"
         },
         {
-          "id": 4,
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhDTdW326JcXKYweltkqa8teThw8vAzpInA&usqp=CAU",
-          "type": "Phonepay",
-          "cardNo": "bhargav258@gmail.com",
-          "name": "Bhargav",
-          "phoneNo": 9912052483
-        },
-        {
-          "id": 5,
-          "avatar": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePay_Lockup.max-1200x1200.png",
-          "type": "GooglePay",
-          "cardNo": "sravan54@gmail.com",
-          "name": "Sravan",
-          "phoneNo": 3312588961
-        },
-        {
-          "id": 6,
+          "id": 44,
           "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
-          "type": "PayTm",
-          "cardNo": "rithwik238@gmail.com",
-          "name": "Rithwik",
-          "phoneNo": 7674038678
+          "name": "fs",
+          "type": "dsfs",
+          "phoneNo": "91-12345-12345",
+          "cardNo": "s@e.e"
         },
         {
-          "id": 7,
-          "avatar": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePay_Lockup.max-1200x1200.png",
-          "type": "GooglePay",
-          "cardNo": "mahesh028@gmail.com",
-          "name": "Mahesh",
-          "phoneNo": 6456385852
+          "id": 100,
+          "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
+          "name": "dfsdfs",
+          "type": "dsfsds",
+          "phoneNo": "91-12345-12345",
+          "cardNo": "a@b.c"
         }
       ],
       "myOrders": [

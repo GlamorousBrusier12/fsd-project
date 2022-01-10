@@ -3,23 +3,28 @@ import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { connect } from "react-redux";
+import { handleUser } from "../actions";
 
-const NewUPI = () => {
-  const history = useHistory();
+const NewUPI = (props) => {
   //We have different useStates for different areas.
 
   const [Name, setName] = useState("");
-  const [id, setId] = useState("");
+  const [cardNo, setCardNo] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [type, setType] = useState("");
+  const history = useHistory();
+
+  let newUser = { ...props.user };
+  console.log("user is outside", newUser);
 
   //Updating the state as he enters the data
 
   const getName = (event) => {
     setName(event.target.value);
   };
-  const getId = (event) => {
-    setId(event.target.value);
+  const getCardNo = (event) => {
+    setCardNo(event.target.value);
   };
   const getphoneNo = (event) => {
     setPhoneNo(event.target.value);
@@ -30,41 +35,53 @@ const NewUPI = () => {
 
   //Submit function which will fire only when all fields are entered.
 
-  const handleSubmit = (event) => {
-    if (Name && id && phoneNo && type) {
+  const reactOnSubmit = (e) => {
+    let newId = Math.ceil(Math.random() * 100);
+    /*     console.log("submit button clicked");
+     */
+    if (Name && cardNo && phoneNo && type) {
       const data = {
+        id: newId,
         avatar:
           "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
         name: Name,
         type: type,
         phoneNo: phoneNo,
-        cardNo: id,
+        cardNo: cardNo,
       };
+      /*       console.log("newUser before", newUser);
+       */
+      let newArray = [...props.user.upi, data];
 
+      newUser.upi = newArray;
+      /*       console.log("user after submitting", newUser);
+       */
+      let url = "http://localhost:3000/users/" + props.user.id;
       //Fetching the data with post method
 
-      fetch("http://localhost:3000/upi", {
-        method: "POST", // or 'PUT'
+      fetch(url, {
+        method: "PATCH", // or 'PUT'
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(newUser),
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
+          console.log("Successfully PATCHED", data);
+          props.dispatch(handleUser(props.user.email));
+          toast.success("Succesfully Added UPI ");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
-      toast.success("Succesfully Added UPI");
 
-      event.preventDefault();
       setName("");
-      setId("");
+      setCardNo("");
       setPhoneNo("");
       setType("");
-      history.push("/userProfileInformation");
+      history.push("/userProfile");
     }
   };
 
@@ -101,8 +118,8 @@ const NewUPI = () => {
             <input
               type="email"
               placeholder="georgey75@paytm"
-              onChange={getId}
-              value={id}
+              onChange={getCardNo}
+              value={cardNo}
               required
             />
           </div>
@@ -130,7 +147,13 @@ const NewUPI = () => {
             </select>
           </div>
 
-          <button className="newUserButton" onClick={handleSubmit}>
+          <button
+            className="newUserButton"
+            onClick={(e) => {
+              e.preventDefault();
+              reactOnSubmit(e);
+            }}
+          >
             Create
           </button>
         </form>
@@ -139,4 +162,9 @@ const NewUPI = () => {
   );
 };
 
-export default NewUPI;
+function mapStateToProps(state) {
+  return {
+    user: state.user.userData,
+  };
+}
+export default connect(mapStateToProps)(NewUPI);

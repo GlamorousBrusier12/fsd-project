@@ -52,7 +52,7 @@ const UserProfileInformation = (props) => {
         address: address,
         email: email,
       };
-      console.log("data entred " + data.fullName);
+      //console.log("data entred " + data.fullName);
       let url = "http://localhost:3000/users/" + info.id;
 
       fetch(url, {
@@ -204,7 +204,7 @@ const UserProfileInformation = (props) => {
   );
 };
 function mapStateToProps(state) {
-  console.log("STATE BRUH: ", state);
+  //console.log("STATE BRUH: ", state);
   return {
     info: state.user.userData,
   };

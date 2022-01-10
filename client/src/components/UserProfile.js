@@ -11,7 +11,7 @@ import { handleUser } from "../actions";
 const UserProfile = (props) => {
   const [data, setData] = useState([]);
   let newUser = props.user;
-  console.log("data from the store", data);
+  //console.log("data from the store", data);
   useEffect(() => {
     setData(props.user.myOrders);
   }, []);
