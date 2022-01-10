@@ -12,23 +12,25 @@ const UserProfile = (props) => {
   const [data, setData] = useState([]);
   const history = useHistory();
 
+  //We bascially get all the existing orders.
   useEffect(() => {
     fetch("http://localhost:3000/myOrders")
       .then((res) => res.json())
       .then((data) => {
         console.log("Success: data from server", data);
+        //Set the data for future use.
         setData(data);
       });
   }, []);
 
   const handleDelete = (id) => {
+    //We delete this particular id.
     console.log("Deleting" + id);
     fetch("http://localhost:3000/myOrders/" + id, {
       method: "DELETE",
     });
     toast.warning("Order Deleted");
     history.push("/userProfileInformation");
-    /*setData(data.filter((item) => item.id !== id)); */
   };
 
   const columns = [
