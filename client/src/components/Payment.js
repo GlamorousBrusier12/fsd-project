@@ -197,7 +197,7 @@ const paymentChange = (e)=>{
               ${addr.Name}, ${addr.address}, ${addr.city}, ${addr.state}, ${addr.zip}
               Phone: ${addr.phoneNo}, email: ${addr.email}
             `} onClick={addressChange}/>
-            <label for={"address" + index+1}>
+            <label htmlFor={"address" + index+1}>
             <div>
               {addr.Name}, {addr.address}, {addr.city}, {addr.state}, {addr.zip}
             </div> 
@@ -238,7 +238,7 @@ const paymentChange = (e)=>{
               value={newAddress.email}
               required
             />
-            <label for="adr">
+            <label htmlFor="adr">
               <i className="fa fa-address-card-o"></i> Address
             </label>
             <input
@@ -250,12 +250,12 @@ const paymentChange = (e)=>{
               value={newAddress.address}
               required
             />
-            <label for="city">
+            <label htmlFor="city">
               <i className="fa fa-institution"></i> City
             </label>
             <input type="text" id="city" name="city" placeholder="Hyderabad" onChange={handleChange} value={newAddress.city} required/>
 
-            <label for="state">State</label>
+            <label htmlFor="state">State</label>
             <input
               type="text"
               id="state"
@@ -266,10 +266,10 @@ const paymentChange = (e)=>{
               required
             />
 
-            <label for="zip">Pincode</label>
+            <label htmlFor="zip">Pincode</label>
             <input type="text" id="zip" name="zip" placeholder="500007" onChange={handleChange} value={newAddress.zip} required/>
 
-            <label for="phoneNo">Phone Number</label>
+            <label htmlFor="phoneNo">Phone Number</label>
             <input type="text" id="phoneNo" name="phoneNo" placeholder="9989486489" onChange={handleChange} value={newAddress.phoneNo} required/>
           </div>
 
@@ -285,15 +285,15 @@ const paymentChange = (e)=>{
           <p>Please select your preffered payment method:</p>
           <div className="address-pack">
             <input type="radio" id="debit" name="address" value="debit"  onClick={paymentChange} defaultValue={true}/>
-            <label for="debit">Debit Card</label>
+            <label htmlFor="debit">Debit Card</label>
           </div>
           <div className="address-pack">
             <input type="radio" id="credit" name="address" value="credit"  onClick={paymentChange}/>
-            <label for="credit">Credit Card</label>
+            <label htmlFor="credit">Credit Card</label>
           </div>
           <div className="address-pack">
             <input type="radio" id="upi" name="address" value="upi"  onClick={paymentChange}/>
-            <label for="upi">UPI</label>
+            <label htmlFor="upi">UPI</label>
           </div>
         </div>
         </form>
@@ -305,7 +305,7 @@ const paymentChange = (e)=>{
               <input type="radio" id={"debit" + index+1} name="address" onClick={paymentDetailsChange} value={`
               ${card.name}, ${card.cardNo}, ${card.expiry}
             `}/>
-              <label for={"debit" + index+1}>{card.name}, {card.cardNo}, {card.type}, {card.expiry}</label>
+              <label htmlFor={"debit" + index+1}>{card.name}, {card.cardNo}, {card.type}, {card.expiry}</label>
             </div>
             )
           })
@@ -316,7 +316,7 @@ const paymentChange = (e)=>{
               <input type="radio" id={"debit" + index+1} name="address" onClick={paymentDetailsChange} value={`
               ${upi.name}, ${upi.cardNo}, ${upi.expiry}
             `}/>
-              <label for={"debit" + index+1}>{upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}</label>
+              <label htmlFor={"debit" + index+1}>{upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}</label>
             </div>
             )
           })}
@@ -324,15 +324,15 @@ const paymentChange = (e)=>{
         {(paymentStatus==="debit"||paymentStatus==="credit") && 
         <div className="form-parent">
           <form action="/payment">
-          <div class="form-content">
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style={{ color: "navy" }}></i>
-              <i class="fa fa-cc-amex" style={{ color: "blue" }}></i>
-              <i class="fa fa-cc-mastercard" style={{ color: "red" }}></i>
-              <i class="fa fa-cc-discover" style={{ color: "orange" }}></i>
+          <div className="form-content">
+            <label htmlFor="fname">Accepted Cards</label>
+            <div className="icon-container">
+              <i className="fa fa-cc-visa" style={{ color: "navy" }}></i>
+              <i className="fa fa-cc-amex" style={{ color: "blue" }}></i>
+              <i className="fa fa-cc-mastercard" style={{ color: "red" }}></i>
+              <i className="fa fa-cc-discover" style={{ color: "orange" }}></i>
             </div>
-            <label for="cname">Name on Card</label>
+            <label htmlFor="cname">Name on Card</label>
             <input
               type="text"
               id="cname"
@@ -340,7 +340,7 @@ const paymentChange = (e)=>{
               placeholder="John More Doe"
               onChange={handleCardChange}
             />
-            <label for="ccnum">Card number</label>
+            <label htmlFor="ccnum">Card number</label>
             <input
               type="text"
               id="ccnum"
@@ -348,7 +348,7 @@ const paymentChange = (e)=>{
               placeholder="1111-2222-3333-4444"
               onChange={handleCardChange}
             />
-            <label for="expdate">Exp Date</label>
+            <label htmlFor="expdate">Exp Date</label>
             <input type="text" id="expdate" name="expiry" placeholder="01/12" onChange={handleCardChange}/>
           </div>
           <button className="btn" onClick={patchCardsToServer}>Add Details</button>
@@ -357,15 +357,15 @@ const paymentChange = (e)=>{
         {(paymentStatus==="upi") && 
         <div className="form-parent">
           <form action="/payment">
-          <div class="form-content">
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa fa-cc-visa" style={{ color: "navy" }}></i>
-              <i class="fa fa-cc-amex" style={{ color: "blue" }}></i>
-              <i class="fa fa-cc-mastercard" style={{ color: "red" }}></i>
-              <i class="fa fa-cc-discover" style={{ color: "orange" }}></i>
+          <div className="form-content">
+            <label htmlFor="fname">Accepted Cards</label>
+            <div className="icon-container">
+              <i className="fa fa-cc-visa" style={{ color: "navy" }}></i>
+              <i className="fa fa-cc-amex" style={{ color: "blue" }}></i>
+              <i className="fa fa-cc-mastercard" style={{ color: "red" }}></i>
+              <i className="fa fa-cc-discover" style={{ color: "orange" }}></i>
             </div>
-            <label for="cname">Name</label>
+            <label htmlFor="cname">Name</label>
             <input
               type="text"
               id="cname"
@@ -373,7 +373,7 @@ const paymentChange = (e)=>{
               placeholder="John More Doe"
               onChange={handleUpiChange}
             />
-            <label for="upiid">Upi ID</label>
+            <label htmlFor="upiid">Upi ID</label>
             <input
               type="text"
               id="upiid"
@@ -381,7 +381,7 @@ const paymentChange = (e)=>{
               placeholder="john@sbi.com"
               onChange={handleUpiChange}
             />
-            <label for="phoneno">Phone Number</label>
+            <label htmlFor="phoneno">Phone Number</label>
             <input type="text" id="phoneno" name="phoneNo" placeholder="897654321" onChange={handleUpiChange}/>
           </div>
           <button className="btn" onClick={patchUpiToServer}>Add Details</button>
@@ -419,7 +419,7 @@ const paymentChange = (e)=>{
                   pathname: "/confirmation",
                   state: { products: products, selectedAddress:selectedAddress, selectedPayment:selectedPayment, paymentStatus:paymentStatus },
                 }}>
-      <button className="proceed-btn" disabled={paymentStatus==="Payment Method"||selectedAddress==="Shipping Address"||selectedPayment==="Payment Details"}>Proceed <i class="fas fa-arrow-right"></i></button>
+      <button className="proceed-btn" disabled={paymentStatus==="Payment Method"||selectedAddress==="Shipping Address"||selectedPayment==="Payment Details"}>Proceed <i className="fas fa-arrow-right"></i></button>
       </Link>
     </div>
   );}
