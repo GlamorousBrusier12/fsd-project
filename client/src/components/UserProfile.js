@@ -14,7 +14,7 @@ const UserProfile = (props) => {
   //console.log("data from the store", data);
   useEffect(() => {
     setData(props.user.myOrders);
-  }, []);
+  }, [props.user.myOrders]);
 
   const handleDelete = (id) => {
     //We delete this particular id.
