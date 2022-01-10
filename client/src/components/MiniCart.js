@@ -4,9 +4,18 @@ import { connect } from "react-redux";
 import { handlerfc } from "../actions/cartAction";
 import { handleinc } from "../actions/cartAction";
 import { handledec } from "../actions/cartAction";
+import { toast } from "react-toastify";
 function MiniCart(props) {
-  const { content } = props.content;
+  // const { content } = props.content;
 
+  const increaseQuantity = () => {
+    const { stockAvailable, qty } = props.content;
+    if (qty > stockAvailable) {
+      toast.error("You quantity has exceeded the available stock");
+    } else {
+      props.dispatch(handleinc(props.content, props.content.qty));
+    }
+  };
   return (
     <div className="Item1">
       <div className="image">
@@ -23,12 +32,7 @@ function MiniCart(props) {
 
       <div className="cart-button">
         <div className="plusAndMinus">
-          <button
-            id="increment"
-            onClick={() =>
-              props.dispatch(handleinc(props.content, props.content.qty))
-            }
-          >
+          <button id="increment" onClick={() => increaseQuantity()}>
             +
           </button>
           <button

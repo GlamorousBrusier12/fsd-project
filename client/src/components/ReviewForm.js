@@ -1,28 +1,30 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import StarRatings from "react-star-ratings";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
-import Loader from "./Loader"
+import { toast } from "react-toastify";
+import Loader from "./Loader";
 function ReviewForm(props) {
-  const [item,setItem] = useState()
-  const [isLoaded,setIsLoaded] = useState()
-  const [error,setError] = useState()
-  const productId=1
-  useEffect(()=>{
+  const [item, setItem] = useState();
+  const [isLoaded, setIsLoaded] = useState();
+  const [error, setError] = useState();
+  const productId = 1;
+  console.log(props.productId);
+  useEffect(() => {
     fetch(`http://localhost:3000/products/${productId}`)
-        .then((res) => res.json())
-        .then(
-          (i) => {
-            setItem(i);
-            setIsLoaded(true);
-          },
-          (error) => {
-            setIsLoaded(true);
-            setError(error);
-          }
-        );
-      window.scrollTo(0, 0);
-  },[productId])
+      .then((res) => res.json())
+      .then(
+        (i) => {
+          setItem(i);
+          setIsLoaded(true);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+    window.scrollTo(0, 0);
+  }, [productId]);
   const history = useHistory();
   const [body, setBody] = useState("");
   const [heading, setHeading] = useState("");
@@ -62,6 +64,7 @@ function ReviewForm(props) {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          toast.success();
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -83,46 +86,46 @@ function ReviewForm(props) {
       </div>
     );
   } else {
-  return (
-    <div style={{ display: "flex" }}>
-      <img
-        style={{ width: "40%", height: "91vh" }}
-        src="https://www.episervice.org/webres/Image/Blog%20Graphics%20(2).png"
-        alt="review-matters"
-        width="50%"
-        height="650px"
-      />
-      <div style={{ width: "60%" }} className="review-form">
-        <h2>Submit your Review</h2>
-        <StarRatings
-          rating={star}
-          changeRating={changeStar}
-          starHoverColor="#ffcc01"
-          starRatedColor="#ffcc01"
-          starDimension="40px"
+    return (
+      <div style={{ display: "flex" }}>
+        <img
+          style={{ width: "40%", height: "91vh" }}
+          src="https://www.episervice.org/webres/Image/Blog%20Graphics%20(2).png"
+          alt="review-matters"
+          width="50%"
+          height="650px"
         />
-        <input
-          id="review-textarea"
-          placeholder="Write your heading"
-          onChange={getHeading}
-          value={heading}
-          required
-        />
-        <textarea
-          style={{ resize: "none" }}
-          id="review-textarea"
-          placeholder="Write the body"
-          onChange={getBody}
-          value={body}
-          rows={5}
-          required
-        />
-        <button id="review-submit-button" onClick={addReview}>
-          Submit
-        </button>
+        <div style={{ width: "60%" }} className="review-form">
+          <h2>Submit your Review</h2>
+          <StarRatings
+            rating={star}
+            changeRating={changeStar}
+            starHoverColor="#ffcc01"
+            starRatedColor="#ffcc01"
+            starDimension="40px"
+          />
+          <input
+            id="review-textarea"
+            placeholder="Write your heading"
+            onChange={getHeading}
+            value={heading}
+            required
+          />
+          <textarea
+            style={{ resize: "none" }}
+            id="review-textarea"
+            placeholder="Write the body"
+            onChange={getBody}
+            value={body}
+            rows={5}
+            required
+          />
+          <button id="review-submit-button" onClick={addReview}>
+            Submit
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
   }
 }
 function mapStateToProps(state) {

@@ -97,7 +97,12 @@ const UserProfile = (props) => {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/reviewform"}>
+            <Link
+              to={{
+                pathname: "/reviewform",
+                state: { productId: params.row.id },
+              }}
+            >
               <button className="userListEdit">Post Review</button>
             </Link>
             <DeleteOutlineIcon

@@ -81,6 +81,8 @@ function Payment(props) {
   };
 
   const patchAddressToServer = (e) => {
+    const id = Math.ceil(Math.random() * 100);
+    newAddress.id = id;
     user.deliveryAdress.push(newAddress);
     let url = "http://localhost:3000/users/" + user.id;
 
@@ -113,6 +115,8 @@ function Payment(props) {
   };
 
   const patchCardsToServer = (e) => {
+    const id = Math.ceil(Math.random() * 100);
+    newCard.id = id;
     user.debitCards.push(newCard);
     let url = "http://localhost:3000/users/" + user.id;
 
@@ -141,6 +145,8 @@ function Payment(props) {
   };
 
   const patchUpiToServer = (e) => {
+    const id = Math.ceil(Math.random() * 100);
+    newUpi.id = id;
     user.upi.push(newUpi);
     let url = "http://localhost:3000/users/" + user.id;
 
@@ -174,6 +180,59 @@ function Payment(props) {
 
   const paymentChange = (e) => {
     setPaymentStaus(e.target.value);
+  };
+
+  const addToOrders = () => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const d = new Date();
+    const day = d.getDate();
+    const month = months[d.getMonth()];
+    products.forEach((product) => {
+      const id = Math.ceil(Math.random() * 100);
+      const data = {
+        id: id,
+        image: product.image,
+        title: product.title,
+        price: product.price,
+        discount: product.discount,
+        type: product.type,
+        Category: product.Category,
+        status: `Ordered on ${day} ${month}`,
+      };
+      user.myOrders.push(data);
+    });
+    let url = "http://localhost:3000/users/" + user.id;
+    console.log("User mowa", user);
+    fetch(url, {
+      method: "PATCH", // or 'PUT'
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Successfully PATCHED", data);
+        toast.success("Information added");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -515,9 +574,8 @@ function Payment(props) {
         <button
           className="proceed-btn"
           onClick={() => {
-            if (props.isLoggedIn) {
-              props.dispatch(emptyCart());
-            }
+            addToOrders();
+            props.dispatch(emptyCart());
           }}
           disabled={
             paymentStatus === "Payment Method" ||
