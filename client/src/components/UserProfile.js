@@ -22,7 +22,7 @@ const UserProfile = (props) => {
   }, []);
 
   const handleDelete = (id) => {
-    console.log("Deleting" + id);
+    // console.log("Deleting" + id);
     fetch("http://localhost:3000/myOrders/" + id, {
       method: "DELETE",
     });

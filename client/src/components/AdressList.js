@@ -21,7 +21,7 @@ const AdressList = () => {
   }, []);
 
   const handleDelete = (id) => {
-    console.log("Deleting" + id);
+    // console.log("Deleting" + id);
     fetch("http://localhost:3000/deliveryAdress/" + id, {
       method: "DELETE",
     });

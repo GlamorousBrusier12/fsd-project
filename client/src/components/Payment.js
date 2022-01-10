@@ -11,22 +11,26 @@ function Payment(props) {
   let {products,prevPath} = location.state;
   console.log(prevPath);
   if(prevPath==="/cart") products = props.cartItems;
-  console.log(products)
+  // console.log(products)
 
   const [paymentStatus,setPaymentStaus] = useState("Payment Method");
+  //State for tracking change of Address
   const addressChange = (e)=>{
     const {value} = e.target;
     setSelectedAddress(value);
   }
 
+  //State for tracking change of Payment Details
   const paymentDetailsChange = (e)=>{
     const {value} = e.target;
     setSelectedPayment(value);
   }
 
+  //Tracking selected Address and Payment options
   const [selectedAddress,setSelectedAddress] = useState("Shipping Address");
   const [selectedPayment,setSelectedPayment] = useState("Payment Details");
 
+  //State for New Address Entered through form
   const [newAddress,setNewAddress] = useState({
     Name:"",
     email:"",
@@ -37,18 +41,22 @@ function Payment(props) {
     zip:""
 })
 
+//State for New Card Info Entered through form
 const [newCard,setNewCard] = useState({
   name:"",
   cardNo:"",
   expiry:""
 })
 
+//State for New Upi Info Entered through form
 const [newUpi,setNewUpi] = useState({
   name:"",
   cardNo:"",
   phoneNo:""
 })
 
+
+//Handling Change in Forms 
 const handleChange = (e)=>{
     const {name,value} = e.target;
     setNewAddress(prevValues=>{
@@ -79,6 +87,7 @@ const handleUpiChange = (e)=>{
   })
 }
 
+//Adding details to json-server
 const patchAddressToServer = (e)=>{
   user.deliveryAdress.push(newAddress);
   let url = "http://localhost:3000/users/" + user.id;
@@ -182,6 +191,7 @@ const paymentChange = (e)=>{
         <div className="address-list">
           <h3>Please select your preffered shippping address:</h3>
           {deliveryAdress.map((addr,index)=>{
+            //All addresses are displayed here
             return(<div className="address-pack" key={index}>
             <input type="radio" id={"address" + index+1} name="address" value={`
               ${addr.Name}, ${addr.address}, ${addr.city}, ${addr.state}, ${addr.zip}

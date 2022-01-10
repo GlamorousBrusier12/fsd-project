@@ -230,7 +230,7 @@
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
       "price": 1599,
-      "discount": 20,
+      "discount": 50,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "image": [
         "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
@@ -245,6 +245,12 @@
       "Category": "Mens",
       "stockAvailable": 53,
       "Reviews": [
+        {
+          "UserName": "Naveen Mowa 2.0",
+          "Heading": "Could be better",
+          "Body": "The durability can be better",
+          "Rating": 4
+        },
         {
           "UserName": "Rithwik",
           "Rating": 5,
@@ -2623,14 +2629,6 @@
   ],
   "deliveryAdress": [
     {
-      "id": 1,
-      "Name": "Ravindra",
-      "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "phoneNo": "123456",
-      "address": "Ananthauram",
-      "locationName": "ABC Street"
-    },
-    {
       "id": 2,
       "Name": "Chetan",
       "avatar": "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/3/e/o/iphone-13-pro-max-mll63hn-a-apple-original-imag6vpgwfgxdsj6.jpeg?q=70",
@@ -2797,14 +2795,6 @@
     }
   ],
   "upi": [
-    {
-      "id": 1,
-      "avatar": "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
-      "type": "PayTm",
-      "cardNo": "georgey75@paytm",
-      "name": "George",
-      "phoneNo": 123456789
-    },
     {
       "id": 2,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNhDTdW326JcXKYweltkqa8teThw8vAzpInA&usqp=CAU",

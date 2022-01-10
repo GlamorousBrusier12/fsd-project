@@ -7,7 +7,7 @@ import {
   TextField,
 } from "react-admin";
 const ProductEdit = (props) => {
-  console.log("hello1");
+  // console.log("hello1");
   return (
     <Edit title={"Edit a product"} {...props}>
       <SimpleForm>

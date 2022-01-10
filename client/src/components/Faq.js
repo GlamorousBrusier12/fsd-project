@@ -6,7 +6,7 @@ function Faq(props) {
   const { Question, Answer } = props.content;
   let upvotes = props.content.Upvotes;
 
-  console.log("Faqs ",props.content);
+  // console.log("Faqs ",props.content);
   return (
     <div className="single-faq">
       <Votes upvotes={upvotes} />

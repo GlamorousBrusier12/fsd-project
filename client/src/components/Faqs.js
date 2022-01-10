@@ -8,6 +8,7 @@ function Faqs(props) {
   const faqsDefault = props.items;
   const [faqs, setFaqs] = useState(props.items);
   const [input, setInput] = useState("");
+  // console.log(faqsDefault);
 
   const [pageNumber,setPageNumber] = useState(0);
 
@@ -23,11 +24,11 @@ function Faqs(props) {
 
   const updateFaqs = (event) => {
     const filtered = faqsDefault.filter((faq) => {
-      return faq.question
+      return faq.Question
         .toLowerCase()
         .includes(event.target.value.toLowerCase());
     });
-    console.log(input);
+    // console.log(input);
     setInput(event.target.value);
     setFaqs(filtered);
   };

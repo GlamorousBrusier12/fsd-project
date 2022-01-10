@@ -21,7 +21,7 @@ const UserProfileDebitCard = () => {
   }, []);
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     fetch("http://localhost:3000/debitCards/" + id, {
       method: "DELETE",
     });
