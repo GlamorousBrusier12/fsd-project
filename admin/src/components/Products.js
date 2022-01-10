@@ -9,6 +9,7 @@ import {
 } from "react-admin";
 const Products = (props) => {
   return (
+    // renders the list received from the props
     <List {...props}>
       <Datagrid>
         <NumberField source="id" />

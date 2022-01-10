@@ -4,8 +4,8 @@ import "../styles/miniProduct.css";
 import { Link } from "react-router-dom";
 class MiniProduct extends Component {
   render() {
+    // getting the data from props
     const { image, price, rating, id } = this.props.data;
-    // console.log
     return (
       <div className="mini-product-container">
         <div className="mini-product-image-container">

@@ -5,8 +5,9 @@ import { handleCategorySearch } from "../actions";
 
 class Categories extends Component {
   handleCategoryClick = (category) => {
-    // console.log("searching for ", category);
+    // search based on category
     this.props.dispatch(handleCategorySearch(category));
+    // console.log("searching for ", category);
   };
   render() {
     return (
@@ -117,6 +118,7 @@ class Categories extends Component {
     );
   }
 }
+// maps the state of the store to the props of the component
 function mapStateToProps(state) {
   return {};
 }

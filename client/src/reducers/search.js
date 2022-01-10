@@ -6,7 +6,6 @@ export default function search(state = [], action) {
     case SEARCH_PRODUCTS:
       return action.products;
     default:
-      break;
+      return state;
   }
-  return state;
 }
