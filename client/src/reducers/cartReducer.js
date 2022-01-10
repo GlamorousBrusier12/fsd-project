@@ -1,11 +1,9 @@
-// eslint-disable-next-line no-unused-vars
-import { cartAction } from "../actions/cartAction";
-// eslint-disable-next-line no-unused-vars
 import {
-  ADD_T0_CART,
+  ADD_TO_CART,
   REMOVE_FROM_CART,
   INCREMENT,
   DECREMENT,
+  EMPTY_CART,
 } from "../actions/Types";
 
 const initialState = {
@@ -26,14 +24,14 @@ function findItemAndSetState(state, item) {
 }
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_TO_CART":
+    case ADD_TO_CART:
       return findItemAndSetState(state, action.payload.item);
-    case "REMOVE_FROM_CART":
+    case REMOVE_FROM_CART:
       return {
         ...state,
         cart: state.cart.filter((item) => item !== action.payload.item),
       };
-    case "INCREMENT":
+    case INCREMENT:
       return {
         ...state,
         cart: state.cart.map((item) =>
@@ -42,7 +40,7 @@ const cartReducer = (state = initialState, action) => {
             : item
         ),
       };
-    case "DECREMENT":
+    case DECREMENT:
       return {
         ...state,
         cart: state.cart.map((item) =>
@@ -57,7 +55,8 @@ const cartReducer = (state = initialState, action) => {
             : item
         ),
       };
-
+    case EMPTY_CART:
+      return initialState;
     default:
   }
   return state;
