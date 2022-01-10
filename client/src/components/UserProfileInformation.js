@@ -79,7 +79,6 @@ const UserProfileInformation = (props) => {
       setEmail("");
       setmobileNumber("");
       setAddress("");
-      history.push("/userProfile");
     }
   };
 

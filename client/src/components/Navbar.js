@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { handleProductSearch, userLogout } from "../actions";
 // import { Switch } from "react-router";
 const styles = {
@@ -44,7 +45,6 @@ class Navbar extends Component {
   }
   render() {
     const { cart } = this.props;
-    const { isLoggedIn } = this.props;
     return (
       <div className="navbar-container">
         <div className="links">
@@ -91,15 +91,6 @@ class Navbar extends Component {
               </span>
             </Link>
           </div>
-          {/* <div className="links">
-              <Link to="/wishlist">
-                <img
-                  style={{ height: 30, width: 30 }}
-                  src={process.env.PUBLIC_URL + `/images/heart.png`}
-                  alt="wishlist"
-                />
-              </Link>
-            </div> */}
           <div className="links">
             <Link to="/userProfile">
               <img
@@ -117,6 +108,7 @@ class Navbar extends Component {
                 alt="Login/Logout"
                 onClick={() => {
                   this.props.dispatch(userLogout());
+                  toast.success("Logged out successfully!");
                 }}
               />
             </Link>

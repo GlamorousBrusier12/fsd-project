@@ -4,31 +4,44 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Link, Redirect } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import { handleUser } from "../actions";
 
 const UserProfile = (props) => {
   const [data, setData] = useState([]);
-  const history = useHistory();
-
+  let newUser = props.user;
+  console.log("data from the store", data);
   useEffect(() => {
-    fetch("http://localhost:3000/myOrders")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Success: data from server", data);
-        setData(data);
-      });
+    setData(props.user.myOrders);
   }, []);
 
   const handleDelete = (id) => {
-    // console.log("Deleting" + id);
-    fetch("http://localhost:3000/myOrders/" + id, {
-      method: "DELETE",
-    });
+    //We delete this particular id.
+    let afterDelete = data.filter((item) => item.id !== id);
+
+    setData(afterDelete);
+
+    newUser.myOrders = afterDelete;
+    let url = "http://localhost:3000/users/" + props.user.id;
+
+    fetch(url, {
+      method: "PATCH", // or 'PUT'
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Successfully PATCHED", data);
+        props.dispatch(handleUser(props.user.email));
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
     toast.warning("Order Deleted");
-    history.push("/userProfileInformation");
-    /*setData(data.filter((item) => item.id !== id)); */
   };
 
   const columns = [
@@ -40,29 +53,30 @@ const UserProfile = (props) => {
     {
       field: "user",
       headerName: "Name of Product",
-      width: 180,
+      width: 250,
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.avatar} alt="" />
-            {params.row.name}
+            <img className="userListImg" src={params.row.image[0]} alt="" />
+            {params.row.title}
           </div>
         );
       },
     },
+
     {
-      field: "quantity",
-      headerName: "Quantity",
+      field: "type",
+      headerName: "Type",
       width: 80,
     },
     {
-      field: "adress",
-      headerName: "Address",
-      width: 180,
+      field: "Category",
+      headerName: "Category",
+      width: 150,
     },
     {
-      field: "seller",
-      headerName: "Seller",
+      field: "discount",
+      headerName: "Discount",
       width: 100,
     },
     {
@@ -75,6 +89,7 @@ const UserProfile = (props) => {
       headerName: "Status",
       width: 200,
     },
+
     {
       field: "action",
       headerName: "Action",
@@ -129,6 +144,7 @@ const UserProfile = (props) => {
 };
 function mapStateToProps(state) {
   return {
+    user: state.user.userData,
     authorized: state.user.isLoggedIn,
   };
 }
