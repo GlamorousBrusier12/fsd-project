@@ -66,19 +66,18 @@ const NewCard = (props) => {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Successfully PATCHED", data);
+          // console.log("Successfully PATCHED", data);
           props.dispatch(handleUser(props.user.email));
           toast.success("Succesfully added Debit Card");
+          setName("");
+          setcardNo("");
+          setExpiry("");
+          setType("");
+          history.push("/userProfileDebitCard");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
-
-      setName("");
-      setcardNo("");
-      setExpiry("");
-      setType("");
-      history.push("/userProfile");
     }
   };
 

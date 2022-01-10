@@ -1,7 +1,10 @@
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { userLogout } from "../actions";
 import "../styles/sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -90,10 +93,16 @@ const Sidebar = () => {
             </Link>
           </ul>
         </div>
-        <div className="sidebarMenu">
+        {/* <div className="sidebarMenu">
           <h3 className="sidebarTitle">Logout</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
+            <li
+              className="sidebarListItem"
+              onClick={() => {
+                props.dispatch(userLogout());
+                toast.success("Logged out successfully!");
+              }}
+            >
               <img
                 alt="sidebar-categories"
                 className="sidebarIcon"
@@ -103,10 +112,12 @@ const Sidebar = () => {
               Logout
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
-
-export default Sidebar;
+function mapStateToProps(state) {
+  return {};
+}
+export default connect(mapStateToProps)(Sidebar);

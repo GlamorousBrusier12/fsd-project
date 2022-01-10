@@ -14,7 +14,7 @@ const UserProfileDebitCard = (props) => {
   let newUser = props.user;
   useEffect(() => {
     setData(props.user.debitCards);
-  }, []);
+  }, [props.user.debitCards]);
 
   const handleDelete = (id) => {
     let afterDelete = data.filter((item) => item.id !== id);

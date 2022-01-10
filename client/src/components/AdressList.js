@@ -14,12 +14,12 @@ import { handleUser } from "../actions";
 const AdressList = (props) => {
   //Since delivery adresses is an array, we populate the array.
   const [data, setData] = useState([]);
-  const history = useHistory();
+  // const history = useHistory();
 
   let newUser = props.user;
   useEffect(() => {
     setData(props.user.deliveryAdress);
-  }, []);
+  }, [props.user.deliveryAdress]);
 
   /*   console.log("delivery adresses are", props.user);
    */ //This function handles delete on clicking taking the id as param.

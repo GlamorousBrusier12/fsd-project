@@ -16,7 +16,7 @@ const UserProfileUPI = (props) => {
   let newUser = props.user;
   useEffect(() => {
     setData(props.user.upi);
-  }, []);
+  }, [props.user.upi]);
 
   const handleDelete = (id) => {
     let afterDelete = data.filter((item) => item.id !== id);

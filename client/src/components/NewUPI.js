@@ -37,8 +37,7 @@ const NewUPI = (props) => {
 
   const reactOnSubmit = (e) => {
     let newId = Math.ceil(Math.random() * 100);
-    /*     console.log("submit button clicked");
-     */
+    //      console.log("submit button clicked");
     if (Name && cardNo && phoneNo && type) {
       const data = {
         id: newId,
@@ -49,8 +48,8 @@ const NewUPI = (props) => {
         phoneNo: phoneNo,
         cardNo: cardNo,
       };
-      /*       console.log("newUser before", newUser);
-       */
+      //  console.log("newUser before", newUser);
+
       let newArray = [...props.user.upi, data];
 
       newUser.upi = newArray;
@@ -72,16 +71,15 @@ const NewUPI = (props) => {
           console.log("Successfully PATCHED", data);
           props.dispatch(handleUser(props.user.email));
           toast.success("Succesfully Added UPI ");
+          setName("");
+          setCardNo("");
+          setPhoneNo("");
+          setType("");
+          history.push("/userProfileUPI");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
-
-      setName("");
-      setCardNo("");
-      setPhoneNo("");
-      setType("");
-      history.push("/userProfile");
     }
   };
 
@@ -131,8 +129,8 @@ const NewUPI = (props) => {
           <div className="newUserItem">
             <label>Phone Number* </label>
             <input
-              type="tel"
-              pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+              type="text"
+              // pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
               placeholder="91-86882-75981"
               onChange={getphoneNo}
               value={phoneNo}
