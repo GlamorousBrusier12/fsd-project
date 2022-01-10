@@ -915,6 +915,12 @@
       "stockAvailable": 5,
       "Reviews": [
         {
+          "UserName": "Naveen Mowa 2.0",
+          "Heading": "Best iphone ever",
+          "Body": "Best iphone ever",
+          "Rating": 4
+        },
+        {
           "UserName": "Rithwik",
           "Rating": 5,
           "Heading": "Very nice product",

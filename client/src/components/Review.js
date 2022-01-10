@@ -2,8 +2,10 @@ import React from "react";
 import StarRatings from "react-star-ratings";
 
 function Review(props) {
+  //Getting required info from props
   const { UserName, Heading, Body, Rating } = props.content;
   return (
+    //Displaying the info sent from Reviews component
     <div style={{ textAlign: "left", margin: "20px" }}>
       <div style={{ display: "flex", alignItems: "center" }}>
         <div style={{ marginLeft: 10 }}>

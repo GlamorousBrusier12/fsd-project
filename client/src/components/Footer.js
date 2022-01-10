@@ -3,6 +3,7 @@ import "../styles/Footer.css";
 
 function Footer() {
   return (
+    //Footer displayed at the bottom of each page
     <div className="footer-container">
       <h2>Connect with Us</h2>
       <div className="footer-row-2">

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import StarRatings from "react-star-ratings";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import Loader from "./Loader";
 function ReviewForm(props) {
   const [item, setItem] = useState();
   const [isLoaded, setIsLoaded] = useState();
   const [error, setError] = useState();
-  const productId = 1;
-  console.log(props.productId);
+  //Getting data from previous Route
+  const location = useLocation();
+  const productId = location.state.productId;
+
+  //Fetching the required product for which we want to post the review
   useEffect(() => {
     fetch(`http://localhost:3000/products/${productId}`)
       .then((res) => res.json())
@@ -23,15 +26,16 @@ function ReviewForm(props) {
           setError(error);
         }
       );
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); //Page going to top
   }, [productId]);
   const history = useHistory();
   const [body, setBody] = useState("");
   const [heading, setHeading] = useState("");
   const { user } = props;
-  // console.log("user ", user);
-  // const [reviews,setReviews] = useState([]);
+
   const [star, setStar] = useState(0);
+
+  // Tracking changes in Star,Body,Heading
 
   function changeStar(newStar) {
     setStar(newStar);
@@ -46,6 +50,7 @@ function ReviewForm(props) {
   };
 
   const addReview = (event) => {
+    //Add review only if body and heading are not empty
     if (body && heading) {
       const data = {
         UserName: user.fullName,
@@ -53,8 +58,10 @@ function ReviewForm(props) {
         Body: body,
         Rating: star,
       };
-      item.Reviews.unshift(data);
-      fetch("http://localhost:3000/products/1", {
+      item.Reviews.unshift(data); //Adding the review in the 1st position of array
+
+      //PATCH request for the product(Updating the review)
+      fetch(`http://localhost:3000/products/${productId}`, {
         method: "PATCH", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +80,7 @@ function ReviewForm(props) {
       setBody("");
       setHeading("");
       setStar(0);
-      history.push("/");
+      history.push("/"); //Redirect to home after the review has been posted
     }
   };
   if (error) {
