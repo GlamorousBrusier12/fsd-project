@@ -1,7 +1,5 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
-import { userLogout } from "../actions";
 import "../styles/sidebar.css";
 
 const Sidebar = (props) => {
