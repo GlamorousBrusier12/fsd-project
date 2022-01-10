@@ -4,7 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import "../styles/Cart.css";
 import MiniCart from "./MiniCart";
 import { connect } from "react-redux";
-import { emptyCart } from "../actions/cartAction";
 
 function Cart({ data, isLoggedIn, dispatch }) {
   const location = useLocation();
