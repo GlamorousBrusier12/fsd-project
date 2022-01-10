@@ -37,6 +37,7 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
+  padding-bottom: 10px;
 }
 
 .sidebarListItem.active,
@@ -51,5 +52,6 @@
 .sidebarTitleHello {
   font-size: 20px;
   padding-left: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }

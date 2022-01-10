@@ -4,12 +4,13 @@ import Faqs from "./Faqs";
 import StarRatings from "react-star-ratings";
 import "../styles/ProductPage.css";
 import SimilarItems from "./SimilarItems";
-import { useParams, Link ,useLocation} from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 function ProductPage(props) {
+  const [disabled, setDisabled] = useState(false);
   const { isLoggedIn } = props;
   const { productId } = useParams();
   const [item, setItem] = useState({});
@@ -84,13 +85,17 @@ function ProductPage(props) {
               <div className="productpage-buttons">
                 <button
                   onClick={() => {
+                    props.cartItems.forEach((cartItem) => {
+                      if (item.id === cartItem.id) setDisabled(true);
+                    });
                     props.dispatch(handleaddtoCart(item.id));
                     toast.success("Your Item Is Added");
                   }}
+                  disabled={disabled}
                 >
-                  Add to Cart
+                  {disabled ? "Already in Cart" : "Add to Cart"}
                 </button>
-                <button disabled={(item.type!=="Rent")}>Rent Now</button>
+                <button disabled={item.type !== "Rent"}>Rent Now</button>
               </div>
               {/* Checking if the user is logged in redirecting to login page if not */}
               <Link
@@ -98,14 +103,23 @@ function ProductPage(props) {
                   isLoggedIn
                     ? {
                         pathname: "/payment",
-                        state: { products: [item], productId: productId,prevPath: location.pathname },
+                        state: {
+                          products: [item],
+                          productId: productId,
+                          prevPath: location.pathname,
+                        },
                       }
                     : {
                         pathname: "/login",
                       }
                 }
               >
-                <button className="buynow-button" disabled={(item.type!=="Buy")}>Buy Now</button>
+                <button
+                  className="buynow-button"
+                  disabled={item.type !== "Buy"}
+                >
+                  Buy Now
+                </button>
               </Link>
             </div>
           </div>
@@ -152,6 +166,7 @@ function ProductPage(props) {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    cartItems: state.cartReducer.cart,
   };
 };
 

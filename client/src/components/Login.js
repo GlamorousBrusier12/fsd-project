@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disa
 import { useHistory, Redirect } from "react-router-dom";
 import { handleUser } from "../actions";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import "../styles/LoginStyle.css";
 
 function Login(props) {
@@ -27,11 +28,14 @@ function Login(props) {
         history.goBack();
         // dispatch the user
         props.dispatch(handleUser(username1));
-        toast.success("Login Successfull");
+        toast.success("Login Successfull", toastStyler);
       })
       .catch((err) => {
         console.log(err);
-        toast.error("Incorrect Login Credentials.. Please try again");
+        toast.error(
+          "Incorrect Login Credentials.. Please try again",
+          toastStyler
+        );
       });
   };
   // Show password feature

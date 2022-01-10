@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Faq from "./Faq";
 import "../styles/Faqs.css";
 import ReactPaginate from "react-paginate";
-import Loader from "./Loader";
 
 function Faqs(props) {
   const faqsDefault = props.items;
   const [faqs, setFaqs] = useState(props.items);
   const [input, setInput] = useState("");
+  // console.log(faqsDefault);
 
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -29,7 +29,7 @@ function Faqs(props) {
         event.target.value.toLowerCase()
       );
     });
-    console.log(input);
+    // console.log(input);
     setInput(event.target.value);
     setFaqs(filtered);
   };

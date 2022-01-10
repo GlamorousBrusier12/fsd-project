@@ -23,7 +23,7 @@ function AddressForm(props) {
   };
 
   const addAddress = (e) => {
-    console.log(newAddress);
+    // console.log(newAddress);
     fetch(`http://localhost:3000/users/${productId}/deliveryAdress`, {
       method: "POST", // or 'PUT'
       headers: {
