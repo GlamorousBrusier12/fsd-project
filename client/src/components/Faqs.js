@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Faq from "./Faq";
 import "../styles/Faqs.css";
 import ReactPaginate from "react-paginate";
-import Loader from "./Loader";
 
 function Faqs(props) {
   const faqsDefault = props.items;
