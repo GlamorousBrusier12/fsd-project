@@ -45,7 +45,6 @@ class Navbar extends Component {
   }
   render() {
     const { cart } = this.props;
-    const { isLoggedIn } = this.props;
     return (
       <div className="navbar-container">
         <div className="links">

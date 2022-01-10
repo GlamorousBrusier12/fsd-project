@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory, Redirect } from "react-router-dom";
 import { handleUser } from "../actions";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 import "../styles/LoginStyle.css";
 
 function Login(props) {
@@ -46,6 +46,7 @@ function Login(props) {
       <br />
       <br />
       <p
+        // Using Refs to show the incorrect credentials msg
         ref={incorrectCredentials}
         style={{ textAlign: "center", color: "red" }}
       ></p>
@@ -53,9 +54,10 @@ function Login(props) {
         <br />
         <h1>Sign In</h1>
         <label className="Label" htmlFor="useremail">
-          <b>Email or Mobile Phone Number</b>
+          <b>Enter Your Email</b>
         </label>
         <br />
+        {/* Taking email as input */}
         <input
           className={["credentials", "login-input"].join(" ")}
           id="useremail"
@@ -70,6 +72,7 @@ function Login(props) {
           <b>Password</b>
         </label>
         <br />
+        {/* Taking Password as input */}
         <input
           // this is used to give multiple classnames to a component
           className={["credentials", "login-input"].join(" ")}
@@ -81,6 +84,7 @@ function Login(props) {
           required
         />
         <br />
+        {/* Show PASSWORD FUNCTIONALITY */}
         <div id="show-password">
           <input
             id="checkbox"
