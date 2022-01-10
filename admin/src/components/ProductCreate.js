@@ -1,7 +1,6 @@
 import React from "react";
 import { Create, SimpleForm, TextInput, NumberInput } from "react-admin";
 const ProductCreate = (props) => {
-  console.log("hello1");
   return (
     <Create title={"add a product"} {...props}>
       <SimpleForm>

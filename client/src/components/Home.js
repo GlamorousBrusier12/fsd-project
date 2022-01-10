@@ -6,15 +6,18 @@ import Categories from "./Categories";
 class Home extends Component {
   constructor() {
     super();
+    // initial state{ deals:[] }
     this.state = {
       deals: [],
     };
   }
   componentDidMount() {
+    // fetch products form the api
     fetch(`http://localhost:3000/products`)
       .then((res) => res.json())
       .then(
         (result) => {
+          // set products as deals
           this.setState({ deals: result });
         },
         (error) => {

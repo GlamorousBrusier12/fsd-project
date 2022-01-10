@@ -22,12 +22,13 @@ export function userLogout() {
   };
 }
 export function handleUser(email) {
+  // fetch req to get the user details
   const url = `http://localhost:3000/users?email=${email}`;
   return function (dispatch) {
     fetch(url)
       .then((result) => result.json())
       .then((user) => {
-        console.log("user : ", user[0]);
+        // console.log("user : ", user[0]);
 
         // dispatch the user method
         dispatch(userLogin(user[0]));
@@ -35,13 +36,14 @@ export function handleUser(email) {
   };
 }
 export function handleCategorySearch(searchWord) {
+  // fetch req using the search word
   const url = `http://localhost:3000/products?Category=${searchWord}`;
-  console.log("URL: ", url);
+  // console.log("URL: ", url);
   return function (dispatch) {
     fetch(url)
       .then((response) => response.json())
       .then((products) => {
-        console.log(products);
+        // console.log(products);
 
         // dispatch the products
         dispatch(addProducts(products));

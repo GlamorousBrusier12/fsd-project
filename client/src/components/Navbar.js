@@ -3,11 +3,10 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { handleProductSearch, userLogout } from "../actions";
-// import { Switch } from "react-router";
+// styles for the cart icon in the navbar
 const styles = {
   cartIconContainer: {
     position: "relative",
-    // marginRight: 30,
   },
   cartCount: {
     borderRadius: "50%",
@@ -20,29 +19,24 @@ const styles = {
 class Navbar extends Component {
   constructor() {
     super();
+    // state of the component { searchWord : "" }
     this.state = {
       searchWord: "",
     };
   }
   updateSearchWord = () => {
     console.log("state: ", this.state);
+    // search word from the state
     let searchWord =
       this.state.searchWord === undefined || this.state.searchWord === ""
         ? " "
         : this.state.searchWord;
 
-    console.log("SEARCH TEXT", searchWord);
+    // console.log("SEARCH TEXT", searchWord);
+
+    // search the products based on the searchWord in the reducer(redux)
     this.props.dispatch(handleProductSearch(searchWord));
-    console.log("this.props ", this.props.history);
   };
-  checkUserLogin() {
-    const { isLoggedIn } = this.props;
-    if (isLoggedIn) {
-      // history.push('/)
-    } else {
-      // history.push('/userProfile)
-    }
-  }
   render() {
     const { cart } = this.props;
     return (
@@ -80,7 +74,6 @@ class Navbar extends Component {
         <div className="navbar-routes">
           <div className="links" style={styles.cartIconContainer}>
             <Link to="/cart">
-              {/* <i className="fas fa-shopping-cart fa-2x"></i> */}
               <img
                 style={{ height: 30, width: 30 }}
                 src={process.env.PUBLIC_URL + `/images/cart.png`}
@@ -100,24 +93,30 @@ class Navbar extends Component {
               />
             </Link>
           </div>
-          <div className="links">
-            <Link to="/">
-              <img
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/login.png`}
-                alt="Login/Logout"
-                onClick={() => {
-                  this.props.dispatch(userLogout());
-                  toast.success("Logged out successfully!");
-                }}
-              />
-            </Link>
-          </div>
+          {/* renders the logout button only if the user is logged in */}
+          {this.props.isLoggedIn && (
+            <div className="links">
+              <Link to="/">
+                <img
+                  style={{ height: 30, width: 30 }}
+                  src={process.env.PUBLIC_URL + `/images/login.png`}
+                  alt="Login/Logout"
+                  onClick={() => {
+                    // logging the user out from the website if the user is loggedIn
+                    this.props.dispatch(userLogout());
+                    toast.success("Logged out successfully!");
+                  }}
+                />
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     );
   }
 }
+
+// maps the state of the store to the props of the component
 function mapStateToProps(state) {
   return {
     searchResults: state.search,

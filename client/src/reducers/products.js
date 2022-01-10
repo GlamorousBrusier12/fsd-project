@@ -6,7 +6,6 @@ export default function products(state = [], action) {
     case ADD_PRODUCTS:
       return [...state, action.products];
     default:
-      break;
+      return state;
   }
-  return state;
 }
