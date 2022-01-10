@@ -3,8 +3,10 @@ import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { connect } from "react-redux";
+import { handleUser } from "../actions";
 
-const NewAdress = () => {
+const NewAdress = (props) => {
   //We have different useStates for different areas.
   const history = useHistory();
   const [Name, setName] = useState("");
@@ -12,6 +14,7 @@ const NewAdress = () => {
   const [phoneNo, setPhoneNo] = useState("");
   const [address, setAddress] = useState("");
 
+  let newUser = { ...props.user };
   //Updating the state as he enters the data
   const getName = (event) => {
     setName(event.target.value);
@@ -27,9 +30,11 @@ const NewAdress = () => {
   };
 
   //Submit function which will fire only when all fields are entered.
-  const handleSubmit = (event) => {
+  const handleSubmit = (e) => {
+    let newId = Math.ceil(Math.random() * 100);
     if (Name && locationName && phoneNo && address) {
       const data = {
+        id: newId,
         avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
         Name: Name,
         locationName: locationName,
@@ -37,29 +42,39 @@ const NewAdress = () => {
         address: address,
       };
 
-      //Fetching the data with post method
-      fetch("http://localhost:3000/deliveryAdress", {
-        method: "POST", // or 'PUT'
+      /*       console.log("data entred", data);
+       */
+      //newUser.deliveryAdress.push(data);
+      let newArray = [...props.user.deliveryAdress, data];
+
+      newUser.deliveryAdress = newArray;
+
+      /*       console.log(newUser);
+       */ let url = "http://localhost:3000/users/" + props.user.id;
+
+      fetch(url, {
+        method: "PATCH", // or 'PUT'
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(newUser),
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
+          console.log("Successfully PATCHED", data);
+          props.dispatch(handleUser(props.user.email));
+          toast.success("Address Added");
+
+          setName("");
+          setlocationName("");
+          setPhoneNo("");
+          setAddress("");
+          history.push("/userProfileAdress");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
-      toast.success("Succesfully Added Adress. ");
-
-      //event.preventDefault();
-      setName("");
-      setlocationName("");
-      setPhoneNo("");
-      setAddress("");
-      history.push("/userProfileInformation");
     }
   };
 
@@ -120,7 +135,13 @@ const NewAdress = () => {
             />
           </div>
 
-          <button className="newUserButton" onClick={handleSubmit}>
+          <button
+            className="newUserButton"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
             Add Adress
           </button>
         </form>
@@ -129,4 +150,9 @@ const NewAdress = () => {
   );
 };
 
-export default NewAdress;
+function mapStateToProps(state) {
+  return {
+    user: state.user.userData,
+  };
+}
+export default connect(mapStateToProps)(NewAdress);

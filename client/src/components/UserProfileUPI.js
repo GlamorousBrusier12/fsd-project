@@ -6,28 +6,43 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { handleUser } from "../actions";
+import { connect } from "react-redux";
 
-const UserProfileUPI = () => {
+const UserProfileUPI = (props) => {
   const [data, setData] = useState([]);
   const history = useHistory();
 
+  let newUser = props.user;
   useEffect(() => {
-    fetch("http://localhost:3000/upi")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Success: data from server", data);
-        setData(data);
-      });
-  }, []);
+    setData(props.user.upi);
+  }, [props.user.upi]);
 
   const handleDelete = (id) => {
-    // console.log(id);
-    fetch("http://localhost:3000/upi/" + id, {
-      method: "DELETE",
-    });
-    toast.warning("Succesfully Deleted UPI");
-    history.push("/userProfileInformation");
-    //setData(data.filter((item) => item.id !== id));
+    let afterDelete = data.filter((item) => item.id !== id);
+
+    setData(afterDelete);
+
+    newUser.upi = afterDelete;
+    let url = "http://localhost:3000/users/" + props.user.id;
+
+    fetch(url, {
+      method: "PATCH", // or 'PUT'
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Successfully PATCHED", data);
+        props.dispatch(handleUser(props.user.email));
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    toast.warning("UPI Deleted");
   };
 
   const columns = [
@@ -117,4 +132,9 @@ const UserProfileUPI = () => {
   );
 };
 
-export default UserProfileUPI;
+function mapStateToProps(state) {
+  return {
+    user: state.user.userData,
+  };
+}
+export default connect(mapStateToProps)(UserProfileUPI);

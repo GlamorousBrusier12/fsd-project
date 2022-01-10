@@ -60,7 +60,7 @@ const UserProfilePanCard = (props) => {
         elecAdress: address,
         elecPanNumber: panNumber,
       };
-      // console.log("data entred " + data.fullName);
+      //console.log("data entred " + data.fullName);
       let url = "http://localhost:3000/users/" + info.id;
 
       fetch(url, {
@@ -89,7 +89,6 @@ const UserProfilePanCard = (props) => {
       setFatherName("");
       setmobileNumber("");
       setAddress("");
-      history.push("/userProfile");
     }
   };
   return (
@@ -235,7 +234,7 @@ const UserProfilePanCard = (props) => {
 };
 
 function mapStateToProps(state) {
-  // console.log("STATE BRUH: ", state);
+  //console.log("STATE BRUH: ", state);
   return {
     info: state.user.userData,
   };
