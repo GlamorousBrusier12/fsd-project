@@ -25,15 +25,9 @@ function Faqs(props) {
 
   const updateFaqs = (event) => {
     const filtered = faqsDefault.filter((faq) => {
-<<<<<<< HEAD
-      return faq.Question
-        .toLowerCase()
-        .includes(event.target.value.toLowerCase());
-=======
       return faq.Question.toLowerCase().includes(
         event.target.value.toLowerCase()
       );
->>>>>>> 6b954006f55a3165a0ab9516f0f4be63f26bc5ed
     });
     // console.log(input);
     setInput(event.target.value);
