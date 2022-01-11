@@ -34,6 +34,8 @@ class Navbar extends Component {
 
     // console.log("SEARCH TEXT", searchWord);
 
+    // validation
+
     // search the products based on the searchWord in the reducer(redux)
     this.props.dispatch(handleProductSearch(searchWord));
   };

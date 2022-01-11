@@ -221,6 +221,19 @@
           "type": "Buy",
           "Category": "Mens",
           "status": "Ordered on 11 January"
+        },
+        {
+          "id": 300,
+          "image": [
+            "https://rukminim1.flixcart.com/image/416/416/kg9qbgw0/diaper/z/p/f/pant-style-diapers-lotion-with-aloe-vera-l-64-pampers-original-imafwjmhabrjj9yh.jpeg?q=70",
+            null
+          ],
+          "title": "pampers",
+          "price": 400,
+          "discount": 12,
+          "type": "Buy",
+          "Category": "Kids",
+          "status": "Ordered on 11 January"
         }
       ],
       "deliveryAdress": [
@@ -3087,6 +3100,45 @@
       "type": "Buy",
       "Category": "Mens",
       "Reviews": [
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": "This is good",
+          "Body": "The product is too good worth buying it"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 0
+        }
+      ]
+    },
+    {
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "id": 300,
+      "title": "pampers",
+      "price": 400,
+      "discount": 12,
+      "stockAvailable": 15,
+      "description": "used for kids",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kg9qbgw0/diaper/z/p/f/pant-style-diapers-lotion-with-aloe-vera-l-64-pampers-original-imafwjmhabrjj9yh.jpeg?q=70",
+        null
+      ],
+      "type": "Buy",
+      "Category": "Kids",
+      "Reviews": [
+        {
+          "UserName": "Naveen Mowa 2.0",
+          "Heading": "leaking problem",
+          "Body": "not suitable for adults",
+          "Rating": 3
+        },
         {
           "UserName": "Naveen",
           "Rating": 5,
