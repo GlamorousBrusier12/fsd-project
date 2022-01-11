@@ -212,9 +212,8 @@ function Payment(props) {
     const month = months[d.getMonth()];
     //Each given product is pushed into the myOrders of the user
     products.forEach((product) => {
-      const id = Math.ceil(Math.random() * 100);
       const data = {
-        id: id,
+        id: product.id,
         image: product.image,
         title: product.title,
         price: product.price,
