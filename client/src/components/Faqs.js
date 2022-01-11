@@ -1,14 +1,15 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Faq from "./Faq";
 import "../styles/Faqs.css";
 import ReactPaginate from "react-paginate";
 
 function Faqs(props) {
+  //faqs are retrieved from the user whose information is the store
   const faqsDefault = props.items;
   const [faqs, setFaqs] = useState(props.items);
   const [input, setInput] = useState("");
-  // console.log(faqsDefault);
 
+  //Pagination requirements
   const [pageNumber, setPageNumber] = useState(0);
 
   const usersPerPage = 5;
@@ -23,13 +24,13 @@ function Faqs(props) {
       return <Faq content={faq} key={faq.id} />;
     });
 
+  //Updating Faqs based on search
   const updateFaqs = (event) => {
     const filtered = faqsDefault.filter((faq) => {
       return faq.Question.toLowerCase().includes(
         event.target.value.toLowerCase()
       );
     });
-    // console.log(input);
     setInput(event.target.value);
     setFaqs(filtered);
   };
@@ -49,11 +50,7 @@ function Faqs(props) {
           <i className="fa fa-search"></i>
         </button>
       </div>
-      {/* <input className="faqs-search"/> */}
       <div className="faqs">
-        {/* {faqs.map((item) => (
-            <Faq content={item} key={item.id} />
-          ))} */}
         {displayFaqs}
         <ReactPaginate
           previousLabel={"Previous"}

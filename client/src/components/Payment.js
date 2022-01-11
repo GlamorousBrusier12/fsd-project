@@ -6,28 +6,32 @@ import { toast } from "react-toastify";
 import { emptyCart } from "../actions/cartAction";
 
 function Payment(props) {
+  //Taking user data from store(redux)
   const user = props.user;
   const { deliveryAdress, upi, debitCards } = user;
+  //Products and previous route info taken using useLocation() in react-router-dom
   const location = useLocation();
   let { products, prevPath } = location.state;
-  console.log(prevPath);
+  //If previous path is cart, then the products should be the items present in the cart
   if (prevPath === "/cart") products = props.cartItems;
-  console.log(products);
-
+  // console.log(products);
   const [paymentStatus, setPaymentStaus] = useState("Payment Method");
+  //Updating the selected address for shipping
   const addressChange = (e) => {
     const { value } = e.target;
     setSelectedAddress(value);
   };
-
+  //Updating the selected payment details for shipping
   const paymentDetailsChange = (e) => {
     const { value } = e.target;
     setSelectedPayment(value);
   };
 
+  //Storing the selected address and selected payment info in state
   const [selectedAddress, setSelectedAddress] = useState("Shipping Address");
   const [selectedPayment, setSelectedPayment] = useState("Payment Details");
 
+  //Setting state for storing newly entered information
   const [newAddress, setNewAddress] = useState({
     Name: "",
     email: "",
@@ -50,6 +54,7 @@ function Payment(props) {
     phoneNo: "",
   });
 
+  //Handling change in the respective forms
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewAddress((prevValues) => {
@@ -80,10 +85,13 @@ function Payment(props) {
     });
   };
 
+  //Add the addresses entered into the form to the json-server
   const patchAddressToServer = (e) => {
-    const id = Math.ceil(Math.random() * 100);
+    const id = Math.ceil(Math.random() * 100); //A random number to use as an id
     newAddress.id = id;
-    user.deliveryAdress.push(newAddress);
+    user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
+
+    //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
     let url = "http://localhost:3000/users/" + user.id;
 
     fetch(url, {
@@ -98,6 +106,7 @@ function Payment(props) {
       .then((data) => {
         console.log("Successfully PATCHED", data);
         toast.success("Address Added");
+        //Clearing the form after success
         setNewAddress({
           Name: "",
           email: "",
@@ -114,6 +123,7 @@ function Payment(props) {
     e.preventDefault();
   };
 
+  //Add the card info entered into the form to the json-server
   const patchCardsToServer = (e) => {
     const id = Math.ceil(Math.random() * 100);
     newCard.id = id;
@@ -144,6 +154,7 @@ function Payment(props) {
     e.preventDefault();
   };
 
+  //Add the upi info entered into the form to the json-server
   const patchUpiToServer = (e) => {
     const id = Math.ceil(Math.random() * 100);
     newUpi.id = id;
@@ -161,14 +172,10 @@ function Payment(props) {
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
-        setNewAddress({
-          Name: "",
-          email: "",
-          address: "",
-          city: "",
-          state: "",
+        setNewUpi({
+          name: "",
+          cardNo: "",
           phoneNo: "",
-          zip: "",
         });
         toast.success("Upi information added");
       })
@@ -178,10 +185,12 @@ function Payment(props) {
     e.preventDefault();
   };
 
+  //Select the payment method (debit/credit/upi)
   const paymentChange = (e) => {
     setPaymentStaus(e.target.value);
   };
 
+  //After the order has been placed, update the user's myOrders
   const addToOrders = () => {
     const months = [
       "January",
@@ -201,10 +210,10 @@ function Payment(props) {
     const d = new Date();
     const day = d.getDate();
     const month = months[d.getMonth()];
+    //Each given product is pushed into the myOrders of the user
     products.forEach((product) => {
-      const id = Math.ceil(Math.random() * 100);
       const data = {
-        id: id,
+        id: product.id,
         image: product.image,
         title: product.title,
         price: product.price,
@@ -215,6 +224,7 @@ function Payment(props) {
       };
       user.myOrders.push(data);
     });
+    //PATCH request for modification the json-server
     let url = "http://localhost:3000/users/" + user.id;
     console.log("User mowa", user);
     fetch(url, {
@@ -241,6 +251,7 @@ function Payment(props) {
         <h1>Shipping Address</h1>
         <div className="address-list">
           <h3>Please select your preffered shippping address:</h3>
+          {/* Displaying the existing addresses */}
           {deliveryAdress.map((addr, index) => {
             return (
               <div className="address-pack" key={index}>
@@ -270,6 +281,7 @@ function Payment(props) {
         <h1>Want to ship to a different Address?</h1>
         <p> Fill the details in the given form</p>
         <div className="form-parent">
+          {/* Form for entering new address if the shipping is required for another address*/}
           <form action="/payment">
             <div className="form-content">
               <h2>Billing Address</h2>
@@ -365,6 +377,7 @@ function Payment(props) {
 
       <div className="payment-method">
         <h1>Payment: </h1>
+        {/* Form for selecting the Payment Method(debit,credit,upi) */}
         <form>
           <div className="address-list">
             <p>Please select your preffered payment method:</p>
@@ -403,6 +416,7 @@ function Payment(props) {
         </form>
         <div className="payment-list">
           <h2>Saved {paymentStatus === "upi" ? "Upi" : "Cards"}</h2>
+          {/* Displaying the existing cards for selecting */}
           {(paymentStatus === "debit" || paymentStatus === "credit") &&
             debitCards.map((card, index) => {
               return (
@@ -422,6 +436,7 @@ function Payment(props) {
                 </div>
               );
             })}
+          {/* Displaying the existing upi info for selecting */}
           {paymentStatus === "upi" &&
             upi.map((upi, index) => {
               return (
@@ -442,6 +457,7 @@ function Payment(props) {
               );
             })}
         </div>
+        {/* Form for new Cards info */}
         {(paymentStatus === "debit" || paymentStatus === "credit") && (
           <div className="form-parent">
             <form action="/payment">
@@ -484,6 +500,7 @@ function Payment(props) {
             </form>
           </div>
         )}
+        {/* Form for new Upi info */}
         {paymentStatus === "upi" && (
           <div className="form-parent">
             <form action="/payment">
@@ -527,7 +544,7 @@ function Payment(props) {
           </div>
         )}
       </div>
-
+      {/* Showing the item summary of the products the user is going to buy*/}
       <div className="item-summary">
         <h1>Item Summary</h1>
         {products.map((product, index) => {
@@ -544,6 +561,7 @@ function Payment(props) {
                 <p>Quantity: {product.qty} </p>
                 <p>
                   Total Amount: ₹{product.price} x{" "}
+                  {/* If the item is coming directly from Buy Now, qty should be 1 if it comes from cart, the code should just be product.qty*/}
                   {prevPath === "/cart" ? product.qty : 1} = ₹
                   {product.price * (prevPath === "/cart" ? product.qty : 1)}
                 </p>
@@ -552,6 +570,7 @@ function Payment(props) {
           );
         })}
       </div>
+      {/* Showing the address and payment details */}
       <div className="shipping-details">
         <h3>Shipping Address:</h3>
         <p>{selectedAddress}</p>
@@ -560,9 +579,11 @@ function Payment(props) {
           {paymentStatus} : {selectedPayment}
         </p>
       </div>
+
       <Link
         to={{
           pathname: "/confirmation",
+          //Sending the info required in the confirmation page on clicking
           state: {
             products: products,
             selectedAddress: selectedAddress,
@@ -575,7 +596,7 @@ function Payment(props) {
           className="proceed-btn"
           onClick={() => {
             addToOrders();
-            props.dispatch(emptyCart());
+            props.dispatch(emptyCart()); //Emptying cart after order is placed
           }}
           disabled={
             paymentStatus === "Payment Method" ||
@@ -590,6 +611,7 @@ function Payment(props) {
   );
 }
 
+//For passing state as props
 function mapStateToProps(state) {
   return {
     user: state.user.userData,
