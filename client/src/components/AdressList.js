@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 import { handleUser } from "../actions";
 
 const AdressList = (props) => {
-  //Since delivery adresses is an array, we populate the array.
+  //Since delivery adresses is an array, we initiate the array.
   const [data, setData] = useState([]);
   // const history = useHistory();
 
@@ -27,8 +27,10 @@ const AdressList = (props) => {
     //console.log(id);
     let afterDelete = data.filter((item) => item.id !== id);
 
+    //Set the array after deelte.
     setData(afterDelete);
 
+    //Set this as the new delivery adress
     newUser.deliveryAdress = afterDelete;
     let url = "http://localhost:3000/users/" + props.user.id;
 
@@ -144,6 +146,7 @@ const AdressList = (props) => {
   );
 };
 
+//getting user as props from store.
 function mapStateToProps(state) {
   return {
     user: state.user.userData,

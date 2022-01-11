@@ -26,6 +26,7 @@ const UserProfileInformation = (props) => {
   const [address, setAddress] = useState("");
   let error = [];
 
+  //get methods for all fields.
   const getfullName = (event) => {
     setfullName(event.target.value);
   };
@@ -35,6 +36,8 @@ const UserProfileInformation = (props) => {
   const getEmail = (event) => {
     setEmail(event.target.value);
   };
+
+  //here we see if only numbers are being entred.
   const getmobileNumber = (event) => {
     setmobileNumber(event.target.value);
     !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
@@ -45,6 +48,7 @@ const UserProfileInformation = (props) => {
     setAddress(event.target.value);
   };
 
+  //Functon to check validation of the data.
   const checkValidation = () => {
     if (fullName.length <= 6) {
       toast.warning("FullName should be more than 6 characters.");
@@ -62,6 +66,7 @@ const UserProfileInformation = (props) => {
       toast.warning("Adress cannot be empty");
       error.push("Adress error");
     }
+    //Regex expression to validate any kind of email.
     if (
       !new RegExp(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -72,9 +77,11 @@ const UserProfileInformation = (props) => {
     }
   };
 
+  //Submit button which basically checks the validaton first.
   const handleSubmit = (event) => {
     checkValidation();
     console.log("errors are", error);
+    //If no errors, we then go on and patch the user.
     if (error.length === 0) {
       const data = {
         avatar:
@@ -86,6 +93,7 @@ const UserProfileInformation = (props) => {
         email: email,
       };
       //console.log("data entred " + data.fullName);
+      //Get the id of the user.
       let url = "http://localhost:3000/users/" + info.id;
 
       fetch(url, {
@@ -108,6 +116,7 @@ const UserProfileInformation = (props) => {
     } else {
       toast.error("Form submission failed");
     }
+    //on submit, set states to empty again.
     event.preventDefault();
     setfullName("");
     setuserName("");
@@ -117,6 +126,7 @@ const UserProfileInformation = (props) => {
     error = [];
   };
 
+  //Rendering the component
   return (
     <div className="container">
       <Sidebar />
@@ -237,6 +247,8 @@ const UserProfileInformation = (props) => {
     </div>
   );
 };
+
+//Getting user from store as props.
 function mapStateToProps(state) {
   //console.log("STATE BRUH: ", state);
   return {

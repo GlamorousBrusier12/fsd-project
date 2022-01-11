@@ -30,6 +30,9 @@ const UserProfilePanCard = (props) => {
   const [panNumber, setPanNumber] = useState("");
   let error = [];
 
+  //We now need to set the data which originally is a empty object
+  //get methods for all fields.
+
   const getFullName = (event) => {
     setFullName(event.target.value);
   };
@@ -43,6 +46,8 @@ const UserProfilePanCard = (props) => {
     setFatherName(event.target.value);
   };
   const getmobileNumber = (event) => {
+    //here we see if only numbers are being entred.
+
     setmobileNumber(event.target.value);
     !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
       ? console.log("Correct number")
@@ -51,6 +56,8 @@ const UserProfilePanCard = (props) => {
   const getAddress = (event) => {
     setAddress(event.target.value);
   };
+
+  //Functon to check validation of the data.
 
   const checkValidation = () => {
     if (fullName.length <= 6) {
@@ -75,9 +82,13 @@ const UserProfilePanCard = (props) => {
     }
   };
 
+  //Submit button which basically checks the validaton first.
+
   const handleSubmit = (event) => {
     checkValidation();
     if (error.length === 0) {
+      //If no errors, we then go on and patch the user.
+
       const data = {
         avatar:
           "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
@@ -113,6 +124,8 @@ const UserProfilePanCard = (props) => {
       toast.error("Form submission failed");
     }
 
+    //on submit, set states to empty again.
+
     event.preventDefault();
     setFullName("");
     setDob("");
@@ -121,6 +134,8 @@ const UserProfilePanCard = (props) => {
     setmobileNumber("");
     setAddress("");
   };
+  //Rendering the component
+
   return (
     <div className="container">
       <Sidebar />
@@ -263,6 +278,8 @@ const UserProfilePanCard = (props) => {
 };
 
 function mapStateToProps(state) {
+  //Getting user from store as props.
+
   //console.log("STATE BRUH: ", state);
   return {
     info: state.user.userData,
