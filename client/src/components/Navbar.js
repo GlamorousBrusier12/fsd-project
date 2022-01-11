@@ -18,7 +18,7 @@ const styles = {
 };
 
 const validation = (searchWord) => {
-  if (searchWord.length <= 3) {
+  if (1 <= searchWord.length && searchWord.length <= 3) {
     return false;
   } else {
     return true;
