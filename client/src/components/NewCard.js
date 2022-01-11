@@ -128,7 +128,7 @@ const NewCard = (props) => {
         <h1 className="newUserTitle">New Card</h1>
         <form className="newUserForm">
           <div className="newUserItem">
-            <label>Card Type*</label>
+            <label>Card Type* (Not empty)</label>
             <input
               type="text"
               placeholder="Axis Bank"
@@ -138,7 +138,7 @@ const NewCard = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Name on the Card*</label>
+            <label>Name on the Card* (More than 6 characters)</label>
             <input
               type="text"
               placeholder="John Smith"
@@ -159,7 +159,7 @@ const NewCard = (props) => {
           </div>
 
           <div className="newUserItem">
-            <label>CVV</label>
+            <label>CVV (Must be 3 numbers)</label>
             <input
               type="number"
               placeholder="498 "
@@ -169,7 +169,7 @@ const NewCard = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Card Number*</label>
+            <label>Card Number* (10 Numbers)</label>
             <input
               type="text"
               placeholder="1234****789"

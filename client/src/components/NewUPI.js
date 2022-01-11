@@ -138,7 +138,7 @@ const NewUPI = (props) => {
         <h1 className="newUserTitle">New UPI</h1>
         <form className="newUserForm">
           <div className="newUserItem">
-            <label>UPI Type*</label>
+            <label>UPI Type* (Not empty)</label>
             <input
               type="text"
               placeholder="PayTm"
@@ -148,7 +148,7 @@ const NewUPI = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Name on the UPI*</label>
+            <label>Name on the UPI* (More than 6 characters)</label>
             <input
               type="text"
               placeholder="John Smith"
@@ -158,7 +158,7 @@ const NewUPI = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>UPI ID*</label>
+            <label>UPI ID* (Valid email)</label>
             <input
               type="email"
               placeholder="georgey75@paytm"
@@ -169,7 +169,7 @@ const NewUPI = (props) => {
           </div>
 
           <div className="newUserItem">
-            <label>Bank linked</label>
+            <label>Bank linked (Not empty)</label>
             <input
               type="text"
               placeholder="HDFC"
@@ -179,7 +179,7 @@ const NewUPI = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Phone Number* </label>
+            <label>Phone Number* (10 digits without country code)</label>
             <input
               type="text"
               // pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"

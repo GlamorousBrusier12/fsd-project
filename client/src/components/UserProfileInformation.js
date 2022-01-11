@@ -163,7 +163,7 @@ const UserProfileInformation = (props) => {
             <form className="userUpdateForm" name="_method" value="patch">
               <div className="userUpdateLeft">
                 <div className="userUpdateItem">
-                  <label>Username*</label>
+                  <label>Username* (More than 4 characters)</label>
                   <input
                     type="text"
                     placeholder={info.userName}
@@ -174,7 +174,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Full Name*</label>
+                  <label>Full Name* (More than 6 characters)</label>
                   <input
                     type="text"
                     placeholder={info.fullName}
@@ -185,7 +185,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Email*</label>
+                  <label>Email* (Any valid email)</label>
                   <input
                     type="email"
                     placeholder={info.email}
@@ -196,7 +196,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone* </label>
+                  <label>Phone* (10 digits without country code)</label>
                   <input
                     type="text"
                     placeholder={info.mobileNumber}
@@ -207,7 +207,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Address*</label>
+                  <label>Address* (Should not be empty)</label>
                   <input
                     type="text"
                     placeholder={info.address}

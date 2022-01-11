@@ -46,6 +46,10 @@ const NewAdress = (props) => {
       toast.warning("FullName should be more than 6 characters.");
       error.push("Fullname error");
     }
+    if (userName.length <= 4) {
+      toast.warning("UserName should be more than 4 characters.");
+      error.push("Username error");
+    }
     if (locationName.length === 0) {
       toast.warning("FullName should be more than 4 characters.");
       error.push("Username error");
@@ -138,7 +142,7 @@ const NewAdress = (props) => {
         <h1 className="newUserTitle">New Adress</h1>
         <form className="newUserForm">
           <div className="newUserItem">
-            <label>Username</label>
+            <label>Username (More than 4 characters)</label>
             <input
               type="text"
               placeholder="john"
@@ -148,7 +152,7 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Full Name*</label>
+            <label>Full Name* (More than 6 characters)</label>
             <input
               type="text"
               placeholder="John Smith"
@@ -158,7 +162,7 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Email</label>
+            <label>Email (Any valid email)</label>
             <input
               type="email"
               placeholder="john@gmail.com"
@@ -168,7 +172,7 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Title of Adress*</label>
+            <label>Title of Adress* (Should not be empty)</label>
             <input
               type="text"
               placeholder="My Home"
@@ -178,7 +182,7 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Phone* </label>
+            <label>Phone* (10 numbers without country code)</label>
             <input
               type="text"
               placeholder="91-86882-75981"
@@ -188,7 +192,7 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Address*</label>
+            <label>Address* (Should not be null)</label>
             <input
               type="text"
               placeholder="New York | USA"

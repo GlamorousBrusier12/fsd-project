@@ -176,7 +176,7 @@ const UserProfilePanCard = (props) => {
             <form className="userUpdateForm">
               <div className="userUpdateLeft">
                 <div className="userUpdateItem">
-                  <label>Full Name on the card*</label>
+                  <label>Full Name on the card* (More than 6 characters)</label>
                   <input
                     type="text"
                     placeholder={info.elecFullName}
@@ -187,7 +187,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>PAN Number*</label>
+                  <label>PAN Number* (Valid 10 digits)</label>
                   <input
                     type="text"
                     placeholder={info.elecPanNumber}
@@ -209,7 +209,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone* (91-86882-75981)</label>
+                  <label>Phone* (10 digits without country code)</label>
                   <input
                     type="text"
                     placeholder={info.elecMobileNumber}
@@ -220,7 +220,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Father Name*</label>
+                  <label>Father Name* (More than 3 characters)</label>
                   <input
                     type="text"
                     placeholder={info.elecFatherName}
@@ -231,7 +231,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Address*</label>
+                  <label>Address* (Should not be empty)</label>
                   <input
                     type="text"
                     placeholder={info.elecAdress}
