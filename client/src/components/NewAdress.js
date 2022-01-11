@@ -185,7 +185,7 @@ const NewAdress = (props) => {
             <label>Phone* (10 numbers without country code)</label>
             <input
               type="text"
-              placeholder="91-86882-75981"
+              placeholder="8688275981"
               onChange={getphoneNo}
               value={phoneNo}
               required

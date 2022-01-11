@@ -172,7 +172,7 @@ const NewCard = (props) => {
             <label>Card Number* (10 Numbers)</label>
             <input
               type="text"
-              placeholder="1234****789"
+              placeholder="1234567890"
               onChange={getcardNo}
               value={cardNo}
               required

@@ -183,7 +183,7 @@ const NewUPI = (props) => {
             <input
               type="text"
               // pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
-              placeholder="91-86882-75981"
+              placeholder="8688275981"
               onChange={getphoneNo}
               value={phoneNo}
               required
