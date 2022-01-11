@@ -36,12 +36,19 @@ const UserProfileInformation = (props) => {
   };
   const getmobileNumber = (event) => {
     setmobileNumber(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setmobileNumber("");
   };
   const getAddress = (event) => {
     setAddress(event.target.value);
   };
 
   const handleSubmit = (event) => {
+    if (fullName.length <= 6) {
+      toast.error("FullName should be more than 6 characters.");
+      setfullName("");
+    }
     if (fullName && userName && mobileNumber && address && email) {
       const data = {
         avatar:
@@ -161,12 +168,11 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone* (91-86882-75981)</label>
+                  <label>Phone* </label>
                   <input
-                    type="tel"
+                    type="text"
                     placeholder={info.mobileNumber}
                     className="userUpdateInput"
-                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
                     onChange={getmobileNumber}
                     value={mobileNumber}
                     required
