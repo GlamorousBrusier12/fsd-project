@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 function ProductPage(props) {
   const [disabled, setDisabled] = useState(false);
   const { isLoggedIn } = props;
-  const { productId } = useParams();
+  const { productId } = useParams(); //Taking the productId from the url parameters
   const [item, setItem] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
@@ -22,6 +22,7 @@ function ProductPage(props) {
   const toggleAnimation = (index) => {
     setActiveDiv(index);
   };
+  //GET request for the product using the productId
   useEffect(() => {
     fetch(`http://localhost:3000/products/${productId}`)
       .then((res) => res.json())
@@ -38,6 +39,7 @@ function ProductPage(props) {
       );
     window.scrollTo(0, 0);
   }, [productId]);
+  //Showing error msg if an error occurs
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
@@ -49,6 +51,7 @@ function ProductPage(props) {
     );
   } else {
     return (
+      // Once the data is loaded without any error we get to see this part
       <div>
         <div className="product">
           <div className="product-image">
@@ -59,6 +62,7 @@ function ProductPage(props) {
             <p>{item.description}</p>
             <p>
               <b>
+                {/* Setting the discount */}
                 {"₹" + Math.ceil(((100 - item.discount) / 100) * item.price)}
               </b>
               <strike> {"₹" + item.price}</strike>
@@ -85,14 +89,17 @@ function ProductPage(props) {
               <div className="productpage-buttons">
                 <button
                   onClick={() => {
+                    // Checking if the product is in the cart
                     props.cartItems.forEach((cartItem) => {
                       if (item.id === cartItem.id) setDisabled(true);
                     });
+                    //Adding item to store
                     props.dispatch(handleaddtoCart(item.id));
-                    toast.success("Your Item Is Added");
+                    toast.success("Your Item Is Added"); //Success msg
                   }}
                   disabled={disabled}
                 >
+                  {/* If the product is already in the cart it cannot be added again. We can simply go the cart page to view the product and increase the quantity there */}
                   {disabled ? "Already in Cart" : "Add to Cart"}
                 </button>
                 <button disabled={item.type !== "Rent"}>Rent Now</button>
@@ -100,11 +107,12 @@ function ProductPage(props) {
               {/* Checking if the user is logged in redirecting to login page if not */}
               <Link
                 to={
-                  isLoggedIn
+                  isLoggedIn //cant buy the product without logging in
                     ? {
                         pathname: "/payment",
+                        // Sending the required information to the payment page
                         state: {
-                          products: [item],
+                          products: [item], //Sent as an array as the cartItems products will be present as an array
                           productId: productId,
                           prevPath: location.pathname,
                         },
@@ -129,7 +137,7 @@ function ProductPage(props) {
             <div className="button-area">
               <button
                 onClick={() => {
-                  setResourceType(<Reviews items={item.Reviews} />);
+                  setResourceType(<Reviews items={item.Reviews} />); //Show reviews component on clicking the reviews button
                   toggleAnimation(1);
                 }}
                 className={activeDiv === 1 ? "gelatine" : ""}
@@ -138,7 +146,7 @@ function ProductPage(props) {
               </button>
               <button
                 onClick={() => {
-                  setResourceType(<Faqs items={item.Faq} />);
+                  setResourceType(<Faqs items={item.Faq} />); //Show faqs component on clicking the faqs button
                   toggleAnimation(2);
                 }}
                 className={activeDiv === 2 ? "gelatine" : ""}
@@ -148,7 +156,7 @@ function ProductPage(props) {
               <button
                 onClick={() => {
                   toggleAnimation(3);
-                  setResourceType(<SimilarItems type={item.type} />);
+                  setResourceType(<SimilarItems type={item.type} />); //Show similar items component on clicking the similar items button
                 }}
                 className={activeDiv === 3 ? "gelatine" : ""}
               >
@@ -156,6 +164,7 @@ function ProductPage(props) {
               </button>
             </div>
           </div>
+          {/* The resourceType  (Review/Faq/SimilarItems) is shown here */}
           <div className="resource-display">{resourceType}</div>
         </div>
       </div>

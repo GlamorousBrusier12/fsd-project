@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import "../styles/RegisterStyle.css";
 function Register() {
   const history = useHistory();
@@ -20,45 +21,56 @@ function Register() {
   // Function declared to post the users details to the JSON-Server.
   const registerUser = (event) => {
     //Fetching the JSON-Server
-    fetch(`http://localhost:3000/users?q=${useremail}`)
-      .then((res) => res.json())
-      .then((json) => json[0].email)
-      .then((email) => {
-        //Checking whether User Already Exists
-        isUser.current.innerText =
-          "Email already in use. Please try again using another email id";
-      })
-      .catch((err) => {
-        isUser.current.innerText = " ";
-        const data = {
-          fulllName: firstname + " " + lastname,
-          email: useremail,
-          mobileNumber: mobile_number,
-          password: userPassword,
-          address: " ",
-          wishlist: [],
-          purchases: [],
-          cartItems: [],
-          reviews: [],
-          isLoggedIn: true,
-        };
-        fetch("http://localhost:3000/users", {
-          method: "POST", // or 'PUT'
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
+
+    // Validating Mobile Number
+    if (mobile_number.length !== 10) {
+      toast.error("Enter valid Mobile Number");
+    } else {
+      if (useremail.indexOf("@") < 0) {
+        console.log(useremail.indexOf('@'))
+        toast.error("Enter Valid Email id");
+      } else {
+        fetch(`http://localhost:3000/users?q=${useremail}`)
+          .then((res) => res.json())
+          .then((json) => json[0].email)
+          .then((email) => {
+            //Checking whether User Already Exists
+            isUser.current.innerText =
+              "Email already in use. Please try again using another email id";
           })
-          .catch((error) => {
-            console.error("Error:", error);
+          .catch((err) => {
+            isUser.current.innerText = " ";
+            const data = {
+              fulllName: firstname + " " + lastname,
+              email: useremail,
+              mobileNumber: mobile_number,
+              password: userPassword,
+              address: " ",
+              wishlist: [],
+              purchases: [],
+              cartItems: [],
+              reviews: [],
+              isLoggedIn: true,
+            };
+            fetch("http://localhost:3000/users", {
+              method: "POST", // or 'PUT'
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+            event.preventDefault();
+            history.push("/");
           });
-        event.preventDefault();
-        history.push("/");
-      });
+      }
+    }
   };
   return (
     <React.Fragment>
@@ -98,7 +110,7 @@ function Register() {
             {/* <br /> */}
             <input
               className="input-field width-90"
-              type="text"
+              type="email"
               name="email_id"
               id="email_id"
               placeholder="example@gmail.com"
@@ -113,11 +125,13 @@ function Register() {
             {/* <br /> */}
             <input
               className="input-field width-90"
-              type="text"
+              type="number"
               name="mobile_number"
               id="mobile_number"
               placeholder="8688358501"
-              onChange={(e) => setMobilenumber(e.target.value)}
+              onChange={(e) => {
+                setMobilenumber(e.target.value);
+              }}
               required
             />
           </div>
