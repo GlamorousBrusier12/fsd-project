@@ -109,21 +109,9 @@ const UserProfilePanCard = (props) => {
           console.error("Error:", error);
         });
 
-<<<<<<< HEAD
       toast.success("Succesfully Updated", toastStyler);
-
-      event.preventDefault();
-      setFullName("");
-      setDob("");
-      setPanNumber("");
-      setFatherName("");
-      setmobileNumber("");
-      setAddress("");
-=======
-      toast.success("Succesfully Updated");
     } else {
-      toast.error("Form submission failed");
->>>>>>> 42041d3d7011a37de474be9ed87e7fa13778d16b
+      toast.error("Form submission failed", toastStyler);
     }
 
     event.preventDefault();

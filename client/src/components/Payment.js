@@ -279,7 +279,8 @@ function Payment(props) {
         Category: product.Category,
         status: `Ordered on ${day} ${month}`,
       };
-      user.myOrders.push(data);
+      let newArray = [data, ...user.myOrders];
+      user.myOrders = newArray;
     });
     //PATCH request for modification the json-server
     let url = "http://localhost:3000/users/" + user.id;
