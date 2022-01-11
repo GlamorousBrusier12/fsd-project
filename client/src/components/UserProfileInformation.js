@@ -25,6 +25,7 @@ const UserProfileInformation = (props) => {
   const [email, setEmail] = useState("");
   const [mobileNumber, setmobileNumber] = useState();
   const [address, setAddress] = useState("");
+  let error = [];
 
   const getfullName = (event) => {
     setfullName(event.target.value);
@@ -37,13 +38,45 @@ const UserProfileInformation = (props) => {
   };
   const getmobileNumber = (event) => {
     setmobileNumber(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setmobileNumber("");
   };
   const getAddress = (event) => {
     setAddress(event.target.value);
   };
 
+  const checkValidation = () => {
+    if (fullName.length <= 6) {
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
+    }
+    if (userName.length <= 4) {
+      toast.warning("FullName should be more than 4 characters.");
+      error.push("Username error");
+    }
+    if (mobileNumber.length !== 10) {
+      toast.warning("Mobile number should be of length 10");
+      error.push("MobileNumber error");
+    }
+    if (address.length === 0) {
+      toast.warning("Adress cannot be empty");
+      error.push("Adress error");
+    }
+    if (
+      !new RegExp(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      ).test(email)
+    ) {
+      toast.warning("Enter valid email");
+      error.push("Email error");
+    }
+  };
+
   const handleSubmit = (event) => {
-    if (fullName && userName && mobileNumber && address && email) {
+    checkValidation();
+    console.log("errors are", error);
+    if (error.length === 0) {
       const data = {
         avatar:
           "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
@@ -72,6 +105,7 @@ const UserProfileInformation = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
+<<<<<<< HEAD
       toast.success("Succesfully Updated.", toastStyler);
 
       event.preventDefault();
@@ -80,7 +114,19 @@ const UserProfileInformation = (props) => {
       setEmail("");
       setmobileNumber("");
       setAddress("");
+=======
+      toast.success("Succesfully Updated.");
+    } else {
+      toast.error("Form submission failed");
+>>>>>>> 42041d3d7011a37de474be9ed87e7fa13778d16b
     }
+    event.preventDefault();
+    setfullName("");
+    setuserName("");
+    setEmail("");
+    setmobileNumber("");
+    setAddress("");
+    error = [];
   };
 
   return (
@@ -129,7 +175,7 @@ const UserProfileInformation = (props) => {
             <form className="userUpdateForm" name="_method" value="patch">
               <div className="userUpdateLeft">
                 <div className="userUpdateItem">
-                  <label>Username*</label>
+                  <label>Username* (More than 4 characters)</label>
                   <input
                     type="text"
                     placeholder={info.userName}
@@ -140,7 +186,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Full Name*</label>
+                  <label>Full Name* (More than 6 characters)</label>
                   <input
                     type="text"
                     placeholder={info.fullName}
@@ -151,7 +197,7 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Email*</label>
+                  <label>Email* (Any valid email)</label>
                   <input
                     type="email"
                     placeholder={info.email}
@@ -162,19 +208,18 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone* (91-86882-75981)</label>
+                  <label>Phone* (10 digits without country code)</label>
                   <input
-                    type="tel"
+                    type="text"
                     placeholder={info.mobileNumber}
                     className="userUpdateInput"
-                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
                     onChange={getmobileNumber}
                     value={mobileNumber}
                     required
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Address*</label>
+                  <label>Address* (Should not be empty)</label>
                   <input
                     type="text"
                     placeholder={info.address}

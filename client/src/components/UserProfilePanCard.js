@@ -29,6 +29,7 @@ const UserProfilePanCard = (props) => {
   const [mobileNumber, setmobileNumber] = useState("");
   const [address, setAddress] = useState("");
   const [panNumber, setPanNumber] = useState("");
+  let error = [];
 
   const getFullName = (event) => {
     setFullName(event.target.value);
@@ -44,13 +45,40 @@ const UserProfilePanCard = (props) => {
   };
   const getmobileNumber = (event) => {
     setmobileNumber(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setmobileNumber("");
   };
   const getAddress = (event) => {
     setAddress(event.target.value);
   };
 
+  const checkValidation = () => {
+    if (fullName.length <= 6) {
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
+    }
+    if (fatherName.length <= 3) {
+      toast.warning("FatherName should be more than 3 characters.");
+      error.push("Fathername error");
+    }
+    if (mobileNumber.length !== 10) {
+      toast.warning("Mobile number should be of length 10");
+      error.push("MobileNumber error");
+    }
+    if (address.length === 0) {
+      toast.warning("Adress cannot be empty");
+      error.push("Adress error");
+    }
+    if (panNumber.length !== 10) {
+      toast.warning("Enter valid PAN number");
+      error.push("Pan error");
+    }
+  };
+
   const handleSubmit = (event) => {
-    if (fullName && dob && mobileNumber && address && fatherName && panNumber) {
+    checkValidation();
+    if (error.length === 0) {
       const data = {
         avatar:
           "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
@@ -81,6 +109,7 @@ const UserProfilePanCard = (props) => {
           console.error("Error:", error);
         });
 
+<<<<<<< HEAD
       toast.success("Succesfully Updated", toastStyler);
 
       event.preventDefault();
@@ -90,7 +119,20 @@ const UserProfilePanCard = (props) => {
       setFatherName("");
       setmobileNumber("");
       setAddress("");
+=======
+      toast.success("Succesfully Updated");
+    } else {
+      toast.error("Form submission failed");
+>>>>>>> 42041d3d7011a37de474be9ed87e7fa13778d16b
     }
+
+    event.preventDefault();
+    setFullName("");
+    setDob("");
+    setPanNumber("");
+    setFatherName("");
+    setmobileNumber("");
+    setAddress("");
   };
   return (
     <div className="container">
@@ -147,7 +189,7 @@ const UserProfilePanCard = (props) => {
             <form className="userUpdateForm">
               <div className="userUpdateLeft">
                 <div className="userUpdateItem">
-                  <label>Full Name on the card*</label>
+                  <label>Full Name on the card* (More than 6 characters)</label>
                   <input
                     type="text"
                     placeholder={info.elecFullName}
@@ -158,7 +200,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>PAN Number*</label>
+                  <label>PAN Number* (Valid 10 digits)</label>
                   <input
                     type="text"
                     placeholder={info.elecPanNumber}
@@ -180,10 +222,9 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Phone* (91-86882-75981)</label>
+                  <label>Phone* (10 digits without country code)</label>
                   <input
-                    type="tel"
-                    pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+                    type="text"
                     placeholder={info.elecMobileNumber}
                     className="userUpdateInput"
                     onChange={getmobileNumber}
@@ -192,7 +233,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Father Name*</label>
+                  <label>Father Name* (More than 3 characters)</label>
                   <input
                     type="text"
                     placeholder={info.elecFatherName}
@@ -203,7 +244,7 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Address*</label>
+                  <label>Address* (Should not be empty)</label>
                   <input
                     type="text"
                     placeholder={info.elecAdress}

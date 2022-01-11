@@ -23,6 +23,7 @@ function Register() {
   const registerUser = (event) => {
     //Fetching the JSON-Server
 
+<<<<<<< HEAD
     if (mobile_number.length !== 10) {
       toast.error("Enter valid Mobile Number", toastStyler);
     }
@@ -58,13 +59,57 @@ function Register() {
           .then((response) => response.json())
           .then((data) => {
             console.log("Success:", data);
+=======
+    // Validating Mobile Number
+    if (mobile_number.length !== 10) {
+      toast.error("Enter valid Mobile Number");
+    } else {
+      if (useremail.indexOf("@") < 0) {
+        console.log(useremail.indexOf('@'))
+        toast.error("Enter Valid Email id");
+      } else {
+        fetch(`http://localhost:3000/users?q=${useremail}`)
+          .then((res) => res.json())
+          .then((json) => json[0].email)
+          .then((email) => {
+            //Checking whether User Already Exists
+            isUser.current.innerText =
+              "Email already in use. Please try again using another email id";
+>>>>>>> 42041d3d7011a37de474be9ed87e7fa13778d16b
           })
-          .catch((error) => {
-            console.error("Error:", error);
+          .catch((err) => {
+            isUser.current.innerText = " ";
+            const data = {
+              fulllName: firstname + " " + lastname,
+              email: useremail,
+              mobileNumber: mobile_number,
+              password: userPassword,
+              address: " ",
+              wishlist: [],
+              purchases: [],
+              cartItems: [],
+              reviews: [],
+              isLoggedIn: true,
+            };
+            fetch("http://localhost:3000/users", {
+              method: "POST", // or 'PUT'
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+            event.preventDefault();
+            history.push("/");
           });
-        event.preventDefault();
-        history.push("/");
-      });
+      }
+    }
   };
   return (
     <React.Fragment>
@@ -104,7 +149,7 @@ function Register() {
             {/* <br /> */}
             <input
               className="input-field width-90"
-              type="text"
+              type="email"
               name="email_id"
               id="email_id"
               placeholder="example@gmail.com"

@@ -17,6 +17,14 @@ const styles = {
     top: 12,
   },
 };
+
+const validation = (searchWord) => {
+  if (1 <= searchWord.length && searchWord.length <= 3) {
+    return false;
+  } else {
+    return true;
+  }
+};
 class Navbar extends Component {
   constructor() {
     super();
@@ -25,7 +33,7 @@ class Navbar extends Component {
       searchWord: "",
     };
   }
-  updateSearchWord = () => {
+  updateSearchWord = (e) => {
     console.log("state: ", this.state);
     // search word from the state
     let searchWord =
@@ -35,8 +43,15 @@ class Navbar extends Component {
 
     // console.log("SEARCH TEXT", searchWord);
 
-    // search the products based on the searchWord in the reducer(redux)
-    this.props.dispatch(handleProductSearch(searchWord));
+    let result = validation(this.state.searchWord);
+    console.log("Search wrod is", result);
+    if (result) {
+      // search the products based on the searchWord in the reducer(redux)
+      this.props.dispatch(handleProductSearch(searchWord));
+    } else {
+      toast.warning("please make a search greater than 3");
+      e.preventDefault();
+    }
   };
   render() {
     const { cart } = this.props;
@@ -63,7 +78,12 @@ class Navbar extends Component {
               }}
             />
             <Link to="/products" style={{ marginLeft: "-1%" }}>
-              <button className="search-button" onClick={this.updateSearchWord}>
+              <button
+                className="search-button"
+                onClick={(e) => {
+                  this.updateSearchWord(e);
+                }}
+              >
                 <i
                   style={{ color: "black" }}
                   className="fas fa-search fa-2x"

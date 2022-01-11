@@ -3,14 +3,14 @@
     {
       "id": 1,
       "fullName": "Ravindra Toluchuru",
-      "elecFullName": "sssd",
-      "elecPanNumber": "dss",
-      "elecMobileNumber": "dsfds",
-      "elecFatherName": "dfsd",
-      "elecAdress": "sdfsd",
+      "elecFullName": "Ravindra Sai Tholuchuru",
+      "elecPanNumber": "1234567890",
+      "elecMobileNumber": "1234567890",
+      "elecFatherName": "rajendra",
+      "elecAdress": "22b Baker Street",
       "userName": "Ravi132",
       "job": "Software Engineer",
-      "dob": "2022-01-26",
+      "dob": "2022-01-21",
       "avatar": "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
       "email": "ravindra.t19@iiits.in",
       "mobileNumber": "8597456321",
@@ -248,20 +248,6 @@
           "discount": 15,
           "type": "Rent",
           "Category": "Mobiles",
-          "status": "Ordered on 11 January"
-        },
-        {
-          "id": 5,
-          "image": [
-            "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12247308/2021/6/4/f210363f-8c55-42bc-a6f0-238077c18bc41622789741703-UNDER-ARMOUR-Men-Sports-Shoes-8471622789741281-5.jpg",
-            "links",
-            "links"
-          ],
-          "title": "Men Black & Charcoal Grey HOVR Apex 2 Woven Design & Striped Training Shoes",
-          "price": 5600,
-          "discount": 25,
-          "type": "Buy",
-          "Category": "Mens",
           "status": "Ordered on 11 January"
         }
       ],
@@ -3143,6 +3129,78 @@
           "Question": "Can i carry a small size umbrella in it?",
           "Answer": "Yes",
           "Upvotes": 1
+        }
+      ]
+    },
+    {
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "id": 209,
+      "title": "T shirt Black XL only",
+      "price": 2090,
+      "discount": 20,
+      "stockAvailable": 5,
+      "description": "asdfadsfasdfsda",
+      "image": [
+        "https://rukminim1.flixcart.com/image/779/935/kj4m0sw0-0/t-shirt/5/c/4/s-tsrt-303-reya-original-imafyrjprxpfbhqr.jpeg?q=50",
+        "https://rukminim1.flixcart.com/image/779/935/kjswia80/t-shirt/a/j/4/l-tsrt-303-reya-original-imafzaeaggzkhcsy.jpeg?q=50"
+      ],
+      "type": "Buy",
+      "Category": "Mens",
+      "Reviews": [
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": "This is good",
+          "Body": "The product is too good worth buying it"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 0
+        }
+      ]
+    },
+    {
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "id": 300,
+      "title": "pampers",
+      "price": 400,
+      "discount": 12,
+      "stockAvailable": 15,
+      "description": "used for kids",
+      "image": [
+        "https://rukminim1.flixcart.com/image/416/416/kg9qbgw0/diaper/z/p/f/pant-style-diapers-lotion-with-aloe-vera-l-64-pampers-original-imafwjmhabrjj9yh.jpeg?q=70",
+        null
+      ],
+      "type": "Buy",
+      "Category": "Kids",
+      "Reviews": [
+        {
+          "UserName": "Naveen Mowa 2.0",
+          "Heading": "leaking problem",
+          "Body": "not suitable for adults",
+          "Rating": 3
+        },
+        {
+          "UserName": "Naveen",
+          "Rating": 5,
+          "Heading": "This is good",
+          "Body": "The product is too good worth buying it"
+        }
+      ],
+      "Faq": [
+        {
+          "Question": "Is there any warranty",
+          "Answer": "I don't know. But this is super product ...",
+          "Upvotes": 0
         }
       ]
     }
