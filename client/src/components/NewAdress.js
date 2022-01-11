@@ -13,26 +13,66 @@ const NewAdress = (props) => {
   const [locationName, setlocationName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [address, setAddress] = useState("");
+  const [email, setEmail] = useState("");
+  const [userName, setuserName] = useState("");
 
   let newUser = { ...props.user };
+  let error = [];
   //Updating the state as he enters the data
   const getName = (event) => {
     setName(event.target.value);
   };
+  const getUserName = (event) => {
+    setuserName(event.target.value);
+  };
   const getlocationName = (event) => {
     setlocationName(event.target.value);
   };
+  const getEmail = (event) => {
+    setEmail(event.target.value);
+  };
   const getphoneNo = (event) => {
     setPhoneNo(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setPhoneNo("");
   };
   const getAdress = (event) => {
     setAddress(event.target.value);
   };
 
+  const checkValidation = () => {
+    if (Name.length <= 6) {
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
+    }
+    if (locationName.length === 0) {
+      toast.warning("FullName should be more than 4 characters.");
+      error.push("Username error");
+    }
+    if (phoneNo.length !== 10) {
+      toast.warning("Mobile number should be of length 10");
+      error.push("MobileNumber error");
+    }
+    if (address.length === 0) {
+      toast.warning("Adress cannot be empty");
+      error.push("Adress error");
+    }
+    if (
+      !new RegExp(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      ).test(email)
+    ) {
+      toast.warning("Enter valid email");
+      error.push("Email error");
+    }
+  };
+
   //Submit function which will fire only when all fields are entered.
   const handleSubmit = (e) => {
+    checkValidation();
     let newId = Math.ceil(Math.random() * 100);
-    if (Name && locationName && phoneNo && address) {
+    if (error.length === 0) {
       const data = {
         id: newId,
         avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
@@ -70,12 +110,24 @@ const NewAdress = (props) => {
           setlocationName("");
           setPhoneNo("");
           setAddress("");
+          setEmail("");
+          setuserName("");
           history.push("/userProfileAdress");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
+    } else {
+      toast.error("Form submission failed");
+      setName("");
+      setlocationName("");
+      setPhoneNo("");
+      setAddress("");
+      setEmail("");
+      setuserName("");
     }
+
+    error = [];
   };
 
   //Returing the actual component
@@ -87,7 +139,13 @@ const NewAdress = (props) => {
         <form className="newUserForm">
           <div className="newUserItem">
             <label>Username</label>
-            <input type="text" placeholder="john" />
+            <input
+              type="text"
+              placeholder="john"
+              onChange={getUserName}
+              value={userName}
+              required
+            />
           </div>
           <div className="newUserItem">
             <label>Full Name*</label>
@@ -101,7 +159,13 @@ const NewAdress = (props) => {
           </div>
           <div className="newUserItem">
             <label>Email</label>
-            <input type="email" placeholder="john@gmail.com" />
+            <input
+              type="email"
+              placeholder="john@gmail.com"
+              onChange={getEmail}
+              value={email}
+              required
+            />
           </div>
           <div className="newUserItem">
             <label>Title of Adress*</label>
@@ -116,8 +180,7 @@ const NewAdress = (props) => {
           <div className="newUserItem">
             <label>Phone* </label>
             <input
-              type="tel"
-              pattern="[0-9]{2}-[0-9]{5}-[0-9]{5}"
+              type="text"
               placeholder="91-86882-75981"
               onChange={getphoneNo}
               value={phoneNo}

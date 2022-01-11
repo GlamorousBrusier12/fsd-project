@@ -24,6 +24,7 @@ const UserProfileInformation = (props) => {
   const [email, setEmail] = useState("");
   const [mobileNumber, setmobileNumber] = useState();
   const [address, setAddress] = useState("");
+  let error = [];
 
   const getfullName = (event) => {
     setfullName(event.target.value);
@@ -44,12 +45,37 @@ const UserProfileInformation = (props) => {
     setAddress(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const checkValidation = () => {
     if (fullName.length <= 6) {
-      toast.error("FullName should be more than 6 characters.");
-      setfullName("");
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
     }
-    if (fullName && userName && mobileNumber && address && email) {
+    if (userName.length <= 4) {
+      toast.warning("FullName should be more than 4 characters.");
+      error.push("Username error");
+    }
+    if (mobileNumber.length !== 10) {
+      toast.warning("Mobile number should be of length 10");
+      error.push("MobileNumber error");
+    }
+    if (address.length === 0) {
+      toast.warning("Adress cannot be empty");
+      error.push("Adress error");
+    }
+    if (
+      !new RegExp(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      ).test(email)
+    ) {
+      toast.warning("Enter valid email");
+      error.push("Email error");
+    }
+  };
+
+  const handleSubmit = (event) => {
+    checkValidation();
+    console.log("errors are", error);
+    if (error.length === 0) {
       const data = {
         avatar:
           "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
@@ -79,14 +105,16 @@ const UserProfileInformation = (props) => {
           console.error("Error:", error);
         });
       toast.success("Succesfully Updated.");
-
-      event.preventDefault();
-      setfullName("");
-      setuserName("");
-      setEmail("");
-      setmobileNumber("");
-      setAddress("");
+    } else {
+      toast.error("Form submission failed");
     }
+    event.preventDefault();
+    setfullName("");
+    setuserName("");
+    setEmail("");
+    setmobileNumber("");
+    setAddress("");
+    error = [];
   };
 
   return (

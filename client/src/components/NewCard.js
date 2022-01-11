@@ -14,8 +14,10 @@ const NewCard = (props) => {
   const [cardNo, setcardNo] = useState("");
   const [expiry, setExpiry] = useState("");
   const [type, setType] = useState("");
+  const [cvv, setCvv] = useState("");
 
   let newUser = { ...props.user };
+  let error = [];
 
   //Updating the state as he enters the data
 
@@ -24,20 +26,46 @@ const NewCard = (props) => {
   };
   const getcardNo = (event) => {
     setcardNo(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setcardNo("");
   };
   const getExpiry = (event) => {
     setExpiry(event.target.value);
   };
+  const getCvv = (event) => {
+    setCvv(event.target.value);
+  };
   const getType = (event) => {
     setType(event.target.value);
+  };
+
+  const checkValidation = () => {
+    if (Name.length <= 6) {
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
+    }
+    if (type.length === 0) {
+      toast.warning("Type should not be null");
+      error.push("bank type error");
+    }
+    if (cardNo.length !== 10) {
+      toast.warning("Card number should be of length 10");
+      error.push("Card Number error");
+    }
+    if (cvv.length !== 3) {
+      toast.warning("Cvv should be 3 numbers");
+      error.push("Cvv error");
+    }
   };
 
   //Submit function which will fire only when all fields are entered.
 
   const handleSubmit = (e) => {
     let newId = Math.ceil(Math.random() * 100);
+    checkValidation();
 
-    if (Name && cardNo && expiry && type) {
+    if (error.length === 0) {
       const data = {
         id: newId,
         avatar:
@@ -73,12 +101,22 @@ const NewCard = (props) => {
           setcardNo("");
           setExpiry("");
           setType("");
+          setCvv("");
           history.push("/userProfileDebitCard");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
+    } else {
+      toast.error("Form submission failed");
+      setName("");
+      setcardNo("");
+      setExpiry("");
+      setType("");
+      setCvv("");
     }
+
+    error = [];
   };
 
   //Returing the actual component
@@ -122,7 +160,13 @@ const NewCard = (props) => {
 
           <div className="newUserItem">
             <label>CVV</label>
-            <input type="number" placeholder="498 " />
+            <input
+              type="number"
+              placeholder="498 "
+              onChange={getCvv}
+              value={cvv}
+              required
+            />
           </div>
           <div className="newUserItem">
             <label>Card Number*</label>

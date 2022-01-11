@@ -13,7 +13,9 @@ const NewUPI = (props) => {
   const [cardNo, setCardNo] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [type, setType] = useState("");
+  const [bank, setBank] = useState("");
   const history = useHistory();
+  let error = [];
 
   let newUser = { ...props.user };
   console.log("user is outside", newUser);
@@ -28,17 +30,51 @@ const NewUPI = (props) => {
   };
   const getphoneNo = (event) => {
     setPhoneNo(event.target.value);
+    !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
+      ? console.log("Correct number")
+      : toast.error("Please enter only numbers") && setPhoneNo("");
   };
   const getType = (event) => {
     setType(event.target.value);
+  };
+  const getBank = (event) => {
+    setBank(event.target.value);
+  };
+
+  const checkValidation = () => {
+    if (Name.length <= 6) {
+      toast.warning("FullName should be more than 6 characters.");
+      error.push("Fullname error");
+    }
+    if (type.length === 0) {
+      toast.warning("Type should not be null");
+      error.push("bank type error");
+    }
+    if (phoneNo.length !== 10) {
+      toast.warning("Mobile number should be of length 10");
+      error.push("MobileNumber error");
+    }
+    if (bank.length === 0) {
+      toast.warning("Bank cannot be null");
+      error.push("bank error");
+    }
+    if (
+      !new RegExp(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      ).test(cardNo)
+    ) {
+      toast.warning("Enter valid UPI Id");
+      error.push("UPI Id error");
+    }
   };
 
   //Submit function which will fire only when all fields are entered.
 
   const reactOnSubmit = (e) => {
     let newId = Math.ceil(Math.random() * 100);
+    checkValidation();
     //      console.log("submit button clicked");
-    if (Name && cardNo && phoneNo && type) {
+    if (error.length === 0) {
       const data = {
         id: newId,
         avatar:
@@ -75,12 +111,22 @@ const NewUPI = (props) => {
           setCardNo("");
           setPhoneNo("");
           setType("");
+          setBank("");
           history.push("/userProfileUPI");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
+    } else {
+      toast.error("Form submission failed");
+      setName("");
+      setCardNo("");
+      setPhoneNo("");
+      setType("");
+      setBank("");
     }
+
+    error = [];
   };
 
   //Returing the actual component
@@ -124,7 +170,13 @@ const NewUPI = (props) => {
 
           <div className="newUserItem">
             <label>Bank linked</label>
-            <input type="text" placeholder="HDFC" />
+            <input
+              type="text"
+              placeholder="HDFC"
+              onChange={getBank}
+              value={bank}
+              required
+            />
           </div>
           <div className="newUserItem">
             <label>Phone Number* </label>
