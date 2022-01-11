@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import "../styles/RegisterStyle.css";
 function Register() {
   const history = useHistory();
@@ -27,7 +28,7 @@ function Register() {
       toast.error("Enter valid Mobile Number");
     } else {
       if (useremail.indexOf("@") < 0) {
-        console.log(useremail.indexOf('@'))
+        console.log(useremail.indexOf("@"));
         toast.error("Enter Valid Email id");
       } else {
         fetch(`http://localhost:3000/users?q=${useremail}`)

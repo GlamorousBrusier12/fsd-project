@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { handleUser } from "../actions";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import "../styles/UserProfileInformation.css";
 import {
   CalendarToday,
@@ -112,9 +113,9 @@ const UserProfileInformation = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
-      toast.success("Succesfully Updated.");
+      toast.success("Succesfully Updated.", toastStyler);
     } else {
-      toast.error("Form submission failed");
+      toast.error("Form submission failed", toastStyler);
     }
     //on submit, set states to empty again.
     event.preventDefault();

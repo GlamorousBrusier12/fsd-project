@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { connect } from "react-redux";
 import { handleUser } from "../actions";
 
@@ -113,7 +114,7 @@ const NewAdress = (props) => {
         .then((data) => {
           console.log("Successfully PATCHED", data);
           props.dispatch(handleUser(props.user.email));
-          toast.success("Address Added");
+          toast.success("Address Added", toastStyler);
 
           setName("");
           setlocationName("");

@@ -91,26 +91,6 @@ const Sidebar = (props) => {
             </Link>
           </ul>
         </div>
-        {/* <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Logout</h3>
-          <ul className="sidebarList">
-            <li
-              className="sidebarListItem"
-              onClick={() => {
-                props.dispatch(userLogout());
-                toast.success("Logged out successfully!");
-              }}
-            >
-              <img
-                alt="sidebar-categories"
-                className="sidebarIcon"
-                style={{ height: 30, width: 30 }}
-                src={process.env.PUBLIC_URL + `/images/logout.png`}
-              />
-              Logout
-            </li>
-          </ul>
-        </div> */}
       </div>
     </div>
   );

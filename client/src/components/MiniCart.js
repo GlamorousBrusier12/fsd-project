@@ -5,13 +5,15 @@ import { handlerfc } from "../actions/cartAction";
 import { handleinc } from "../actions/cartAction";
 import { handledec } from "../actions/cartAction";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
+
 function MiniCart(props) {
   // const { content } = props.content;
 
   const increaseQuantity = () => {
     const { stockAvailable, qty } = props.content;
     if (qty > stockAvailable) {
-      toast.error("You quantity has exceeded the available stock");
+      toast.error("You quantity has exceeded the available stock", toastStyler);
     } else {
       props.dispatch(handleinc(props.content, props.content.qty));
     }

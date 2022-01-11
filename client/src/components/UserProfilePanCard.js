@@ -16,6 +16,7 @@ import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 
 const UserProfilePanCard = (props) => {
   const { info } = props;
@@ -119,9 +120,9 @@ const UserProfilePanCard = (props) => {
           console.error("Error:", error);
         });
 
-      toast.success("Succesfully Updated");
+      toast.success("Succesfully Updated", toastStyler);
     } else {
-      toast.error("Form submission failed");
+      toast.error("Form submission failed", toastStyler);
     }
 
     //on submit, set states to empty again.

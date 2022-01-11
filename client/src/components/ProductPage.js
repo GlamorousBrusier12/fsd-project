@@ -9,6 +9,7 @@ import Loader from "./Loader";
 import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 function ProductPage(props) {
   const [disabled, setDisabled] = useState(false);
   const { isLoggedIn } = props;
@@ -95,7 +96,7 @@ function ProductPage(props) {
                     });
                     //Adding item to store
                     props.dispatch(handleaddtoCart(item.id));
-                    toast.success("Your Item Is Added"); //Success msg
+                    toast.success("Your Item Is Added", toastStyler); //Success msg
                   }}
                   disabled={disabled}
                 >

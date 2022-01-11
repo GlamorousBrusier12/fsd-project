@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
 
@@ -49,7 +50,8 @@ const UserProfileDebitCard = (props) => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    toast.warning("Debit Card Deleted");
+
+    toast.warning("Debit Card Deleted", toastStyler);
   };
 
   //This is the schema for rendering the adresses in the table.

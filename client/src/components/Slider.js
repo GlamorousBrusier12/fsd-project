@@ -8,6 +8,7 @@ class Slider extends Component {
     this.state = { slideIndex: 1 };
   }
   nextSlide = () => {
+    // sets the next image to the display
     const currState = this.state.slideIndex;
     this.setState({
       ...this.state,
@@ -15,6 +16,7 @@ class Slider extends Component {
     });
   };
   prevSlide = () => {
+    // sets the prev image to the display
     const currState = this.state.slideIndex;
     this.setState({
       ...this.state,
@@ -22,6 +24,7 @@ class Slider extends Component {
     });
   };
   moveDot = (index) => {
+    // state has slide index
     this.setState({
       ...this.state,
       slideIndex: index,
@@ -37,18 +40,9 @@ class Slider extends Component {
               key={obj.id}
               className={slideIndex === index + 1 ? "active-anim" : "slide"}
             >
-              {/* <img
-                src={
-                  process.env.PUBLIC_URL + `/images/slidebar${index + 1}.webp`
-                }
-              /> */}
-              {/* <br /> */}
               <img
                 style={{ height: 600 }}
-                src={
-                  process.env.PUBLIC_URL +
-                  `/images/slider${(index % 7) + 1}.png`
-                }
+                src={process.env.PUBLIC_URL + `/images/slider${index + 1}.png`}
                 alt={index}
               />
             </div>
