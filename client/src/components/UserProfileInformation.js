@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { handleUser } from "../actions";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import "../styles/UserProfileInformation.css";
 import {
   CalendarToday,
@@ -71,7 +72,7 @@ const UserProfileInformation = (props) => {
         .catch((error) => {
           console.error("Error:", error);
         });
-      toast.success("Succesfully Updated.");
+      toast.success("Succesfully Updated.", toastStyler);
 
       event.preventDefault();
       setfullName("");

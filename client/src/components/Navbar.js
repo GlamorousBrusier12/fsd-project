@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { handleProductSearch, userLogout } from "../actions";
 // styles for the cart icon in the navbar
 const styles = {
@@ -104,7 +105,7 @@ class Navbar extends Component {
                   onClick={() => {
                     // logging the user out from the website if the user is loggedIn
                     this.props.dispatch(userLogout());
-                    toast.success("Logged out successfully!");
+                    toast.success("Logged out successfully!", toastStyler);
                   }}
                 />
               </Link>

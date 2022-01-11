@@ -6,6 +6,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 
 const UserProfile = (props) => {
@@ -41,7 +42,7 @@ const UserProfile = (props) => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    toast.warning("Order Deleted");
+    toast.warning("Order Deleted", toastStyler);
   };
 
   const columns = [

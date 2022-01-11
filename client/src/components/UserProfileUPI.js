@@ -6,6 +6,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
 
@@ -42,7 +43,7 @@ const UserProfileUPI = (props) => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    toast.warning("UPI Deleted");
+    toast.warning("UPI Deleted", toastStyler);
   };
 
   const columns = [

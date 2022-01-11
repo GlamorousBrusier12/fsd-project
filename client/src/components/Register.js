@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import "../styles/RegisterStyle.css";
 function Register() {
   const history = useHistory();
@@ -22,8 +23,8 @@ function Register() {
   const registerUser = (event) => {
     //Fetching the JSON-Server
 
-    if (mobile_number.length != 10) {
-      toast.error("Enter valid Mobile Number");
+    if (mobile_number.length !== 10) {
+      toast.error("Enter valid Mobile Number", toastStyler);
     }
     fetch(`http://localhost:3000/users?q=${useremail}`)
       .then((res) => res.json())

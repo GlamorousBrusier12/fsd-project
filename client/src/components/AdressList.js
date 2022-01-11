@@ -9,6 +9,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { handleUser } from "../actions";
+import { toastStyler } from "../commonEquipment";
 
 const AdressList = (props) => {
   //Since delivery adresses is an array, we populate the array.
@@ -48,7 +49,7 @@ const AdressList = (props) => {
       .catch((error) => {
         console.error("Error:", error);
       });
-    toast.warning("Adress Deleted");
+    toast.warning("Adress Deleted", toastStyler);
   };
 
   //This is the schema for rendering the adresses in the table.

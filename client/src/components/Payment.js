@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../styles/Payment.css";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import { emptyCart } from "../actions/cartAction";
 
 function Payment(props) {
@@ -46,12 +47,14 @@ function Payment(props) {
     name: "",
     cardNo: "",
     expiry: "",
+    type: "",
   });
 
   const [newUpi, setNewUpi] = useState({
     name: "",
     cardNo: "",
     phoneNo: "",
+    type: "",
   });
 
   //Handling change in the respective forms
@@ -87,101 +90,155 @@ function Payment(props) {
 
   //Add the addresses entered into the form to the json-server
   const patchAddressToServer = (e) => {
-    const id = Math.ceil(Math.random() * 100); //A random number to use as an id
-    newAddress.id = id;
-    user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
+    if (
+      newAddress.Name.length === 0 ||
+      newAddress.email.length === 0 ||
+      newAddress.address.length === 0 ||
+      newAddress.city.length === 0 ||
+      newAddress.state.length === 0 ||
+      newAddress.zip.length === 0 ||
+      newAddress.phoneNo.length === 0
+    ) {
+      toast.warning(
+        "No field can remain empty in the Address Form",
+        toastStyler
+      );
+    } else if (!newAddress.email.includes("@")) {
+      toast.warning("Not a valid email address", toastStyler);
+    } else if (newAddress.phoneNo.length !== 10) {
+      toast.warning(
+        "Not a valid Phone Number. Should contain 10 digits",
+        toastStyler
+      );
+    } else if (newAddress.zip.length !== 6) {
+      toast.warning(
+        "Not a valid Pincode/Zip. Should contain 6 digits",
+        toastStyler
+      );
+    } else {
+      const id = Math.ceil(Math.random() * 100); //A random number to use as an id
+      newAddress.id = id;
+      user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
 
-    //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
-    let url = "http://localhost:3000/users/" + user.id;
+      //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
+      let url = "http://localhost:3000/users/" + user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Successfully PATCHED", data);
-        toast.success("Address Added");
-        //Clearing the form after success
-        setNewAddress({
-          Name: "",
-          email: "",
-          address: "",
-          city: "",
-          state: "",
-          phoneNo: "",
-          zip: "",
-        });
+      fetch(url, {
+        method: "PATCH", // or 'PUT'
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Successfully PATCHED", data);
+          toast.success("Address Added", toastStyler);
+          //Clearing the form after success
+          setNewAddress({
+            Name: "",
+            email: "",
+            address: "",
+            city: "",
+            state: "",
+            phoneNo: "",
+            zip: "",
+          });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
     e.preventDefault();
   };
 
   //Add the card info entered into the form to the json-server
   const patchCardsToServer = (e) => {
-    const id = Math.ceil(Math.random() * 100);
-    newCard.id = id;
-    user.debitCards.push(newCard);
-    let url = "http://localhost:3000/users/" + user.id;
+    if (newCard.name.length === 0) {
+      toast.warning("Name field in Card info cant be empty", toastStyler);
+    } else if (newCard.type.length === 0) {
+      toast.warning("Type field in Card info cant be empty", toastStyler);
+    } else if (
+      newCard.expiry.length !== 5 ||
+      newCard.expiry.indexOf("/") !== 2
+    ) {
+      toast.warning("Incorrect expiry", toastStyler);
+    } else if (newCard.cardNo.length !== 12) {
+      toast.warning(
+        "Incorrect cardNo cardNo should be 12 digits long",
+        toastStyler
+      );
+    } else {
+      const id = Math.ceil(Math.random() * 100);
+      newCard.id = id;
+      user.debitCards.push(newCard);
+      let url = "http://localhost:3000/users/" + user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Successfully PATCHED", data);
-        setNewAddress({
-          cardName: "",
-          cardsNum: "",
-          expdate: "",
-        });
-        toast.success("Card Added");
+      fetch(url, {
+        method: "PATCH", // or 'PUT'
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Successfully PATCHED", data);
+          setNewAddress({
+            cardName: "",
+            cardsNum: "",
+            expdate: "",
+          });
+          toast.success("Card Added", toastStyler);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
     e.preventDefault();
   };
 
   //Add the upi info entered into the form to the json-server
   const patchUpiToServer = (e) => {
-    const id = Math.ceil(Math.random() * 100);
-    newUpi.id = id;
-    user.upi.push(newUpi);
-    let url = "http://localhost:3000/users/" + user.id;
+    if (newUpi.name.length === 0) {
+      toast.warning("Name field in Card info cant be empty", toastStyler);
+    } else if (newUpi.type.length === 0) {
+      toast.warning("Type field in Card info cant be empty", toastStyler);
+    } else if (!newUpi.cardNo.includes("@")) {
+      toast.warning("Incorrect upi id", toastStyler);
+    } else if (newUpi.phoneNo.length !== 10) {
+      toast.warning("Phone Number should be 10 digits long", toastStyler);
+    } else {
+      const id = Math.ceil(Math.random() * 100);
+      newUpi.id = id;
+      user.upi.push(newUpi);
+      let url = "http://localhost:3000/users/" + user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Successfully PATCHED", data);
-        setNewUpi({
-          name: "",
-          cardNo: "",
-          phoneNo: "",
-        });
-        toast.success("Upi information added");
+      fetch(url, {
+        method: "PATCH", // or 'PUT'
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Successfully PATCHED", data);
+          setNewUpi({
+            name: "",
+            cardNo: "",
+            phoneNo: "",
+            type: "",
+          });
+          toast.success("Upi information added", toastStyler);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
     e.preventDefault();
   };
 
@@ -238,7 +295,7 @@ function Payment(props) {
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
-        toast.success("Information added");
+        toast.success("Information added", toastStyler);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -476,14 +533,16 @@ function Payment(props) {
                   name="name"
                   placeholder="John More Doe"
                   onChange={handleCardChange}
+                  value={newCard.name}
                 />
                 <label for="ccnum">Card number</label>
                 <input
                   type="text"
                   id="ccnum"
                   name="cardNo"
-                  placeholder="1111-2222-3333-4444"
+                  placeholder="1111222233334444"
                   onChange={handleCardChange}
+                  value={newCard.cardNo}
                 />
                 <label for="expdate">Exp Date</label>
                 <input
@@ -492,6 +551,16 @@ function Payment(props) {
                   name="expiry"
                   placeholder="01/12"
                   onChange={handleCardChange}
+                  value={newCard.expiry}
+                />
+                <label for="pname">Card Provider</label>
+                <input
+                  type="text"
+                  id="pname"
+                  name="type"
+                  placeholder="Bajaj Finance"
+                  onChange={handleCardChange}
+                  value={newCard.type}
                 />
               </div>
               <button className="btn" onClick={patchCardsToServer}>
@@ -519,6 +588,7 @@ function Payment(props) {
                   name="name"
                   placeholder="John More Doe"
                   onChange={handleUpiChange}
+                  value={newUpi.name}
                 />
                 <label for="upiid">Upi ID</label>
                 <input
@@ -527,6 +597,7 @@ function Payment(props) {
                   name="cardNo"
                   placeholder="john@sbi.com"
                   onChange={handleUpiChange}
+                  value={newUpi.cardNo}
                 />
                 <label for="phoneno">Phone Number</label>
                 <input
@@ -535,6 +606,16 @@ function Payment(props) {
                   name="phoneNo"
                   placeholder="897654321"
                   onChange={handleUpiChange}
+                  value={newUpi.phoneNo}
+                />
+                <label for="pname">UPI Partner</label>
+                <input
+                  type="text"
+                  id="pname"
+                  name="type"
+                  placeholder="Phone Pe"
+                  onChange={handleUpiChange}
+                  value={newUpi.type}
                 />
               </div>
               <button className="btn" onClick={patchUpiToServer}>

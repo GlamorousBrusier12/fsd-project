@@ -3,6 +3,7 @@ import StarRatings from "react-star-ratings";
 import { connect } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
+import { toastStyler } from "../commonEquipment";
 import Loader from "./Loader";
 function ReviewForm(props) {
   const [item, setItem] = useState();
@@ -51,7 +52,14 @@ function ReviewForm(props) {
 
   const addReview = (event) => {
     //Add review only if body and heading are not empty
-    if (body && heading) {
+    if (body.length < 4 || heading.length < 4) {
+      toast.warning(
+        "Enter atleast 4 characters in Body and heading",
+        toastStyler
+      );
+    } else if (!star) {
+      toast.warning("Atleast 1 star should be given", toastStyler);
+    } else {
       const data = {
         UserName: user.fullName,
         Heading: heading,
@@ -71,7 +79,7 @@ function ReviewForm(props) {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
-          toast.success();
+          toast.success("Review Posted successfully", toastStyler);
         })
         .catch((error) => {
           console.error("Error:", error);
