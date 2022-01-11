@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom"; // eslint-disable-line
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import "../styles/RegisterStyle.css";
 function Register() {
   const history = useHistory();
@@ -20,6 +21,10 @@ function Register() {
   // Function declared to post the users details to the JSON-Server.
   const registerUser = (event) => {
     //Fetching the JSON-Server
+
+    if (mobile_number.length != 10) {
+      toast.error("Enter valid Mobile Number");
+    }
     fetch(`http://localhost:3000/users?q=${useremail}`)
       .then((res) => res.json())
       .then((json) => json[0].email)
@@ -113,11 +118,13 @@ function Register() {
             {/* <br /> */}
             <input
               className="input-field width-90"
-              type="text"
+              type="number"
               name="mobile_number"
               id="mobile_number"
               placeholder="8688358501"
-              onChange={(e) => setMobilenumber(e.target.value)}
+              onChange={(e) => {
+                setMobilenumber(e.target.value);
+              }}
               required
             />
           </div>
