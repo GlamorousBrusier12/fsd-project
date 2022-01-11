@@ -9,10 +9,13 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 
+//This page renders all Myorders
 const UserProfile = (props) => {
   const [data, setData] = useState([]);
+  //We get the user from the store.
   let newUser = props.user;
   //console.log("data from the store", data);
+  //We set the existing data.
   useEffect(() => {
     setData(props.user.myOrders);
   }, [props.user.myOrders]);
@@ -21,8 +24,10 @@ const UserProfile = (props) => {
     //We delete this particular id.
     let afterDelete = data.filter((item) => item.id !== id);
 
+    //Set the new array
     setData(afterDelete);
 
+    //We patch the entire user.
     newUser.myOrders = afterDelete;
     let url = "http://localhost:3000/users/" + props.user.id;
 
@@ -45,6 +50,7 @@ const UserProfile = (props) => {
     toast.warning("Order Deleted", toastStyler);
   };
 
+  //Column headings
   const columns = [
     {
       field: "id",
@@ -115,10 +121,14 @@ const UserProfile = (props) => {
       },
     },
   ];
+
+  //We see if the user is authorised.
   const { authorized } = props;
   if (!authorized) {
     return <Redirect to="/login" />;
   }
+
+  //rendering the data grid.
   return (
     <div className="container">
       <Sidebar />
@@ -148,6 +158,8 @@ const UserProfile = (props) => {
     </div>
   );
 };
+
+//Getting the user from store as props.
 function mapStateToProps(state) {
   return {
     user: state.user.userData,

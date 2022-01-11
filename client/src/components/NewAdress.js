@@ -33,6 +33,7 @@ const NewAdress = (props) => {
     setEmail(event.target.value);
   };
   const getphoneNo = (event) => {
+    //Dont let user enter numbers.
     setPhoneNo(event.target.value);
     !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
       ? console.log("Correct number")
@@ -42,6 +43,7 @@ const NewAdress = (props) => {
     setAddress(event.target.value);
   };
 
+  //Checking validation for different fields.
   const checkValidation = () => {
     if (Name.length <= 6) {
       toast.warning("FullName should be more than 6 characters.");
@@ -64,6 +66,7 @@ const NewAdress = (props) => {
       error.push("Adress error");
     }
     if (
+      //For valid email
       !new RegExp(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       ).test(email)
@@ -90,6 +93,7 @@ const NewAdress = (props) => {
       /*       console.log("data entred", data);
        */
       //newUser.deliveryAdress.push(data);
+      //Add the new adress into the array.
       let newArray = [...props.user.deliveryAdress, data];
 
       newUser.deliveryAdress = newArray;
@@ -97,6 +101,7 @@ const NewAdress = (props) => {
       /*       console.log(newUser);
        */ let url = "http://localhost:3000/users/" + props.user.id;
 
+      //now patch the new user object.
       fetch(url, {
         method: "PATCH", // or 'PUT'
         headers: {
@@ -132,6 +137,7 @@ const NewAdress = (props) => {
       setuserName("");
     }
 
+    //make all errors empty again.
     error = [];
   };
 

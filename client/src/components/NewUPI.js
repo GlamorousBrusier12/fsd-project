@@ -42,6 +42,8 @@ const NewUPI = (props) => {
     setBank(event.target.value);
   };
 
+  //Checking validation for different fields.
+
   const checkValidation = () => {
     if (Name.length <= 6) {
       toast.warning("FullName should be more than 6 characters.");
@@ -89,11 +91,14 @@ const NewUPI = (props) => {
 
       let newArray = [...props.user.upi, data];
 
+      //Add the new adress into the array.
+
       newUser.upi = newArray;
       /*       console.log("user after submitting", newUser);
        */
       let url = "http://localhost:3000/users/" + props.user.id;
-      //Fetching the data with post method
+
+      //now patch the new user object.
 
       fetch(url, {
         method: "PATCH", // or 'PUT'
@@ -126,6 +131,8 @@ const NewUPI = (props) => {
       setType("");
       setBank("");
     }
+
+    //make all errors empty again.
 
     error = [];
   };

@@ -1,3 +1,5 @@
+/* This page renders all the  upis the user has added.  */
+
 import "../styles/UserProfileUPI.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
@@ -11,6 +13,8 @@ import { handleUser } from "../actions";
 import { connect } from "react-redux";
 
 const UserProfileUPI = (props) => {
+  //Since  upi  is an array, we initiate the array.
+
   const [data, setData] = useState([]);
   const history = useHistory();
 
@@ -19,9 +23,14 @@ const UserProfileUPI = (props) => {
     setData(props.user.upi);
   }, [props.user.upi]);
 
+  //This function handles delete on clicking taking the id as param.
+
   const handleDelete = (id) => {
+    //We delete this particular id.
+
     let afterDelete = data.filter((item) => item.id !== id);
 
+    //Set this as the new upi
     setData(afterDelete);
 
     newUser.upi = afterDelete;
@@ -45,6 +54,8 @@ const UserProfileUPI = (props) => {
       });
     toast.warning("UPI Deleted", toastStyler);
   };
+
+  //This is the schema for rendering the adresses in the table.
 
   const columns = [
     {
@@ -104,6 +115,8 @@ const UserProfileUPI = (props) => {
     },
   ];
 
+  //this is the component we are gonna return
+
   return (
     <div className="container">
       <Sidebar />
@@ -132,6 +145,8 @@ const UserProfileUPI = (props) => {
     </div>
   );
 };
+
+//getting user as props from store.
 
 function mapStateToProps(state) {
   return {

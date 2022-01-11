@@ -1,3 +1,5 @@
+/* This page renders all the debit cards the user has added.  */
+
 import "../styles/UserProfileDebitCard.css";
 import Sidebar from "./Sidebar";
 import { DataGrid } from "@mui/x-data-grid";
@@ -10,6 +12,8 @@ import { handleUser } from "../actions";
 import { connect } from "react-redux";
 
 const UserProfileDebitCard = (props) => {
+  //Since  debit cards is an array, we initiate the array.
+
   const [data, setData] = useState([]);
 
   let newUser = props.user;
@@ -17,10 +21,15 @@ const UserProfileDebitCard = (props) => {
     setData(props.user.debitCards);
   }, [props.user.debitCards]);
 
+  //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
+    //We delete this particular id.
+
     let afterDelete = data.filter((item) => item.id !== id);
 
     setData(afterDelete);
+
+    //Set this as the new delivery adress
 
     newUser.debitCards = afterDelete;
     let url = "http://localhost:3000/users/" + props.user.id;
@@ -44,6 +53,8 @@ const UserProfileDebitCard = (props) => {
 
     toast.warning("Debit Card Deleted", toastStyler);
   };
+
+  //This is the schema for rendering the adresses in the table.
 
   const columns = [
     {
@@ -102,6 +113,8 @@ const UserProfileDebitCard = (props) => {
       },
     },
   ];
+  //this is the component we are gonna return
+
   return (
     <div className="container">
       <Sidebar />
@@ -130,6 +143,8 @@ const UserProfileDebitCard = (props) => {
     </div>
   );
 };
+
+//getting user as props from store.
 
 function mapStateToProps(state) {
   return {
