@@ -189,7 +189,7 @@ function Payment(props) {
           setNewCard({
             cardName: "",
             cardsNum: "",
-            expdate: "",
+            expiry: "",
             type: "",
           });
           toast.success("Card Added", toastStyler);
@@ -506,7 +506,7 @@ function Payment(props) {
                     name="address"
                     onClick={paymentDetailsChange}
                     value={`
-              ${upi.name}, ${upi.cardNo}, ${upi.expiry}
+              ${upi.name}, ${upi.cardNo}, ${upi.phoneNo}
             `}
                   />
                   <label for={"debit" + index + 1}>
