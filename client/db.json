@@ -265,16 +265,6 @@
           "locationName": "sbt street",
           "phoneNo": "9493528334",
           "address": "Madhavadhara"
-        },
-        {
-          "Name": "Naveen Kumar",
-          "email": "pandurebelsachin10@gmail.com",
-          "address": "Madhavadhara",
-          "city": "Visakhapatnam",
-          "state": "Andhra Pradesh",
-          "phoneNo": "9493528334",
-          "zip": "530018",
-          "id": 44
         }
       ],
       "debitCards": [
@@ -786,6 +776,19 @@
       "reviews": [],
       "isLoggedIn": true,
       "id": 29
+    },
+    {
+      "fulllName": "Naveen Kumar",
+      "email": "pandurebelsachin11@gmail.com",
+      "mobileNumber": "1234567890",
+      "password": "Test@123",
+      "address": " ",
+      "wishlist": [],
+      "purchases": [],
+      "cartItems": [],
+      "reviews": [],
+      "isLoggedIn": true,
+      "id": 30
     }
   ],
   "products": [
@@ -3245,6 +3248,7 @@
           "Upvotes": 0
         },
         {
+          "Upvotes": 0,
           "Question": "how is the sole?",
           "Answer": "strong"
         }

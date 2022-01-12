@@ -29,7 +29,12 @@ const ProductEdit = (props) => {
           <SimpleFormIterator>
             <TextInput source="Question" label="Question" />
             <TextInput source="Answer" label="Answer" />
-            <NumberInput label="Upvotes" disabled source="Upvotes" />
+            <NumberInput
+              label="Upvotes"
+              disabled
+              source="Upvotes"
+              defaultValue={0}
+            />
           </SimpleFormIterator>
         </ArrayInput>
       </SimpleForm>
