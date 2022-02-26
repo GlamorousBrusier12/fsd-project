@@ -41,6 +41,7 @@ const NewCard = (props) => {
     setType(event.target.value);
   };
 
+  //Chekhing validation
   const checkValidation = () => {
     if (Name.length <= 6) {
       toast.warning("FullName should be more than 6 characters.");
@@ -60,7 +61,7 @@ const NewCard = (props) => {
     }
   };
 
-  //Submit function which will fire only when all fields are entered.
+  //Submit function which will fire only when errors are empty.
 
   const handleSubmit = (e) => {
     let newId = Math.ceil(Math.random() * 100);
@@ -78,6 +79,7 @@ const NewCard = (props) => {
       };
 
       //newUser.debitCards.push(data);
+      //adding the new debit card.
       let newArray = [...props.user.debitCards, data];
 
       newUser.debitCards = newArray;
@@ -202,6 +204,7 @@ const NewCard = (props) => {
   );
 };
 
+//gettin user as props from the store.
 function mapStateToProps(state) {
   return {
     user: state.user.userData,

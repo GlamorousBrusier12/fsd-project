@@ -186,10 +186,11 @@ function Payment(props) {
         .then((response) => response.json())
         .then((data) => {
           console.log("Successfully PATCHED", data);
-          setNewAddress({
+          setNewCard({
             cardName: "",
             cardsNum: "",
             expdate: "",
+            type: "",
           });
           toast.success("Card Added", toastStyler);
         })
