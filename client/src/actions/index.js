@@ -78,16 +78,17 @@ export function renderallProducts() {
       });
   };
 }
-export function handleProductSearch(searchWord) {
-  const url = `http://localhost:3000/products?q=${searchWord}`;
-  return function (dispatch) {
-    fetch(url)
-      .then((response) => response.json())
-      .then((products) => {
-        console.log(products);
+export function handleProductSearch(products) {
+  // const url = `http://localhost:3000/products?q=${searchWord}`;
+  // return function (dispatch) {
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((products) => {
+  //       console.log(products);
 
-        // dispatch the products
-        dispatch(addProducts(products));
-      });
-  };
+  //       // dispatch the products
+  //       dispatch(addProducts(products));
+  //     });
+  // };
+  return addProducts(products);
 }
