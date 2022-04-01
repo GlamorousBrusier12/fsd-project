@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -27,7 +27,7 @@ const validation = (searchWord) => {
 };
 const Navbar = (props) => {
   const [searchWord, setSearchWord] = useState("");
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]); // eslint-disable-line
   const [allProducts, setAllProducts] = useState([]);
   const fetchProducts = async () => {
     fetch(`http://localhost:3000/products`)

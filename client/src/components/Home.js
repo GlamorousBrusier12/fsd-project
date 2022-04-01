@@ -3,6 +3,7 @@ import MiniProduct from "./MiniProduct";
 import Slider from "./Slider";
 import "../styles/home.css";
 import Categories from "./Categories";
+import { getAllProducts } from "../utils/api";
 class Home extends Component {
   constructor() {
     super();
@@ -12,13 +13,13 @@ class Home extends Component {
     };
   }
   componentDidMount() {
-    // fetch products form the api
-    fetch(`http://localhost:3000/products`)
-      .then((res) => res.json())
-      .then(
+    Promise.resolve(
+      getAllProducts().then(
         (result) => {
           // set products as deals
           this.setState({ deals: result });
+          console.log(this.state);
+          console.log(result);
         },
         (error) => {
           console.log(
@@ -26,7 +27,8 @@ class Home extends Component {
             error
           );
         }
-      );
+      )
+    );
   }
   render() {
     let { deals } = this.state;

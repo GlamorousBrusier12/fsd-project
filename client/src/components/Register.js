@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import "../styles/RegisterStyle.css";
+import { createUser } from "../utils/api";
 function Register() {
   const history = useHistory();
   //Declaring React Hooks to store the user data and post it to the JSON-Server.
@@ -57,13 +58,14 @@ function Register() {
               reviews: [],
               isLoggedIn: true,
             };
-            fetch("http://localhost:3000/users", {
-              method: "POST", // or 'PUT'
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
+            // fetch("http://localhost:3000/users", {
+            //   method: "POST", // or 'PUT'
+            //   headers: {
+            //     "Content-Type": "application/json",
+            //   },
+            //   body: JSON.stringify(data),
+            // })
+            createUser(data)
               .then((response) => response.json())
               .then((data) => {
                 console.log("Success:", data);
