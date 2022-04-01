@@ -413,42 +413,6 @@ function Products(props) {
               <br />
             </div>
           </div>
-          {/* <div className="filter-department">
-            <p className="filter-headings">Brands</p>
-            <div className="sub-filters">
-              <input type="checkbox" name="brand1" id="brand1" value="Apple" />
-              <label htmlFor="brand1"> Apple</label>
-              <br />
-              <input type="checkbox" name="brand2" id="brand2" value="Relame" />
-              <label htmlFor="brand2"> Relame</label>
-              <br />
-              <input
-                type="checkbox"
-                name="brand3"
-                id="brand3"
-                value="Samsung"
-              />
-              <label htmlFor="brand3"> Samsung</label>
-              <br />
-              <input type="checkbox" name="brand4" id="brand4" value="Redmi" />
-              <label htmlFor="brand4"> Redmi</label>
-              <br />
-              <input type="checkbox" name="brand5" id="brand5" value="Oppo" />
-              <label htmlFor="brand5"> Oppo</label>
-              <br />
-              <input type="checkbox" name="brand6" id="brand6" value="Vivo" />
-              <label htmlFor="brand6"> Vivo</label>
-              <br />
-              <input
-                type="checkbox"
-                name="brand7"
-                id="brand7"
-                value="Passionfruit"
-              />
-              <label htmlFor="brand7"> Passionfruit</label>
-              <br />
-            </div>
-          </div> */}
           <div className="filter-department">
             <p className="filter-headings">Availability Type</p>
             <div className="sub-filters">
@@ -640,9 +604,6 @@ function Products(props) {
         {/* Rendering EachProduct component using map function and sending data through props. */}
         {searchResults.length !== 0 ? (
           <div className="products-container">
-            {/* {searchResults.map((item, index) => {
-              return <EachProduct content={item} key={index} />;
-            })} */}
             {searchResults
               .slice(pagesVisited, pagesVisited + ProductsPerPage)
               .map((item, index) => {

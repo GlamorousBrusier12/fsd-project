@@ -308,7 +308,9 @@
           "state": "Andhra Pradesh",
           "phoneNo": "9493528334",
           "zip": "530018",
-          "id": 44
+          "id": 44,
+          "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "locationName": "sbt street"
         }
       ],
       "debitCards": [
@@ -827,6 +829,19 @@
       "reviews": [],
       "isLoggedIn": true,
       "id": 29
+    },
+    {
+      "fulllName": "Naveen Kumar",
+      "email": "pandurebelsachin11@gmail.com",
+      "mobileNumber": "1234567890",
+      "password": "Test@123",
+      "address": " ",
+      "wishlist": [],
+      "purchases": [],
+      "cartItems": [],
+      "reviews": [],
+      "isLoggedIn": true,
+      "id": 30
     }
   ],
   "products": [
@@ -3286,6 +3301,7 @@
           "Upvotes": 0
         },
         {
+          "Upvotes": 0,
           "Question": "how is the sole?",
           "Answer": "strong"
         }

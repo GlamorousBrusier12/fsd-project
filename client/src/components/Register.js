@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import "../styles/RegisterStyle.css";
+import { createUser } from "../utils/api";
 function Register() {
   const history = useHistory();
   //Declaring React Hooks to store the user data and post it to the JSON-Server.
@@ -25,19 +26,23 @@ function Register() {
 
     // Validating Mobile Number
     if (mobile_number.length !== 10) {
-      toast.error("Enter valid Mobile Number");
+      toast.error("Enter valid Mobile Number", toastStyler);
     } else {
       if (useremail.indexOf("@") < 0) {
         console.log(useremail.indexOf("@"));
-        toast.error("Enter Valid Email id");
+        toast.error("Enter Valid Email id", toastStyler);
       } else {
         fetch(`http://localhost:3000/users?q=${useremail}`)
           .then((res) => res.json())
           .then((json) => json[0].email)
           .then((email) => {
             //Checking whether User Already Exists
-            isUser.current.innerText =
-              "Email already in use. Please try again using another email id";
+            // isUser.current.innerText =
+            //   "Email already in use. Please try again using another email id";
+            toast.error(
+              "Email already in use. Please try again using another email id",
+              toastStyler
+            );
           })
           .catch((err) => {
             isUser.current.innerText = " ";
@@ -53,13 +58,14 @@ function Register() {
               reviews: [],
               isLoggedIn: true,
             };
-            fetch("http://localhost:3000/users", {
-              method: "POST", // or 'PUT'
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
+            // fetch("http://localhost:3000/users", {
+            //   method: "POST", // or 'PUT'
+            //   headers: {
+            //     "Content-Type": "application/json",
+            //   },
+            //   body: JSON.stringify(data),
+            // })
+            createUser(data)
               .then((response) => response.json())
               .then((data) => {
                 console.log("Success:", data);
