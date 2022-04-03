@@ -6,8 +6,8 @@ import { handleCategorySearch } from "../actions";
 class Categories extends Component {
   handleCategoryClick = (category) => {
     // search based on category
+    console.log("searching for ", category);
     this.props.dispatch(handleCategorySearch(category));
-    // console.log("searching for ", category);
   };
   render() {
     return (
@@ -21,7 +21,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/mens.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Mens");
+                      this.handleCategoryClick("mens");
                     }}
                   />
                   <p> Mens</p>
@@ -35,7 +35,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/womens.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Womens");
+                      this.handleCategoryClick("womens");
                     }}
                   />
                   <p> Womens</p>
@@ -49,7 +49,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/kids.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Kids");
+                      this.handleCategoryClick("kids");
                     }}
                   />
                   <p> Kids</p>
@@ -63,7 +63,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/mobiles.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Mobiles");
+                      this.handleCategoryClick("mobiles");
                     }}
                   />
                   <p> Mobiles</p>
@@ -77,7 +77,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/laptop.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Accessories");
+                      this.handleCategoryClick("accessories");
                     }}
                   />
                   <p> accessories</p>
@@ -91,7 +91,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/home-appliance.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Appliances");
+                      this.handleCategoryClick("appliances");
                     }}
                   />
                   <p> Appliances</p>
@@ -105,7 +105,7 @@ class Categories extends Component {
                     alt="category-img"
                     src={process.env.PUBLIC_URL + `/images/household.png`}
                     onClick={() => {
-                      this.handleCategoryClick("Home");
+                      this.handleCategoryClick("home");
                     }}
                   />
                 </div>

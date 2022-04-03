@@ -20,8 +20,9 @@ const Home = () => {
       getAllProducts().then(
         (result) => {
           // set products as deals
-          setDeals(result.data);
-          console.log(deals);
+          setDeals(result.data.products);
+          // console.log("deals");
+          // console.log(result.data.products);
           setLoading(false);
         },
         (error) => {
@@ -40,7 +41,7 @@ const Home = () => {
   // render() {
   // let { deals } = this.state;
   // deals = deals.slice(0, 8);
-
+  console.log(deals);
   return loading === true ? (
     <p>loading...</p>
   ) : (
@@ -76,7 +77,6 @@ const Home = () => {
       </div>
     </div>
   );
-  // }
 };
 
 export default Home;

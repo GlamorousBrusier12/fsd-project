@@ -21,9 +21,9 @@ function Login(props) {
   const LoginUser = () => {
     //Hitting the Login api using axios by sending the useremail and password to authenticate
     axios
-      .post("/login", { username: username1, password: password1 })
+      .post("/login", { useremail: username1, password: password1 })
       .then((result) => {
-        // console.log("Successfully Logged In\n", result);
+        console.log("Successfully Logged In\n", result);
         incorrectCredentials.current.innerText = " ";
         history.goBack();
         // dispatch the user

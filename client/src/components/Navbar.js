@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleProductSearch, userLogout } from "../actions";
+import { getAllProducts } from "../utils/api";
 // styles for the cart icon in the navbar
 const styles = {
   cartIconContainer: {
@@ -29,23 +30,19 @@ const Navbar = (props) => {
   const [searchWord, setSearchWord] = useState("");
   const [products, setProducts] = useState([]); // eslint-disable-line
   const [allProducts, setAllProducts] = useState([]);
-  const fetchProducts = async () => {
-    fetch(`http://localhost:3000/products`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setAllProducts(data);
-      });
-  };
   useEffect(() => {
-    fetchProducts();
+    getAllProducts().then((res) => {
+      // console.log("all products ");
+      // console.log(res.data);
+      setAllProducts(res.data);
+    });
   }, []);
 
   const updateSearchWord = () => {
     // search word from the state
     // search the products based on the searchWord in the reducer(redux)
     let searchResults = allProducts.filter((product) => {
-      let productTitle = product.title.toLowerCase();
+      let productTitle = product.productName.toLowerCase();
       let searWord = searchWord.toLowerCase();
       return productTitle.includes(searWord);
     });
