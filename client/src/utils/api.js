@@ -10,3 +10,7 @@ export function getOneProduct(productId) {
 export function createUser(userDetails) {
   return axios.post("/user", userDetails);
 }
+
+export function getReviews(productId) {
+  return axios.post(`/review/${productId}`);
+}

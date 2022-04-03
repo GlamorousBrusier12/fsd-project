@@ -10,6 +10,7 @@ import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
+import { getOneProduct } from "../utils/api";
 function ProductPage(props) {
   const [disabled, setDisabled] = useState(false);
   const { isLoggedIn } = props;
@@ -25,19 +26,34 @@ function ProductPage(props) {
   };
   //GET request for the product using the productId
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${productId}`)
-      .then((res) => res.json())
-      .then(
-        (i) => {
-          setItem(i);
-          setIsLoaded(true);
-          setResourceType(<SimilarItems type={i.type} />);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
+    // fetch(`http://localhost:3000/products/${productId}`)
+    //   .then((res) => res.json())
+    //   .then(
+    //     (i) => {
+    //       setItem(i);
+    //       setIsLoaded(true);
+    //       setResourceType(<SimilarItems type={i.type} />);
+    //     },
+    //     (error) => {
+    //       setIsLoaded(true);
+    //       setError(error);
+    //     }
+    //   );
+    Promise.resolve(
+      getOneProduct(productId)
+        .then((res) => res.json())
+        .then(
+          (i) => {
+            setItem(i);
+            setIsLoaded(true);
+            setResourceType(<SimilarItems type={i.type} />);
+          },
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        )
+    );
     window.scrollTo(0, 0);
   }, [productId]);
   //Showing error msg if an error occurs
