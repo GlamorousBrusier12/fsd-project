@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 class MiniProduct extends Component {
   render() {
     // getting the data from props
-    const { image, price, rating, id } = this.props.data;
+    const { image, price, rating, _id } = this.props.data;
     return (
       <div className="mini-product-container">
         <div className="mini-product-image-container">
-          <Link to={`/products/${id}`}>
+          <Link to={`/products/${_id}`}>
             <img
               src={image[0]}
               style={{

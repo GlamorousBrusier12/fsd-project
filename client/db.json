@@ -192,6 +192,34 @@
           "discount": 55,
           "type": "Buy",
           "Category": "Mens",
+          "status": "Ordered on 12 January"
+        },
+        {
+          "id": 15,
+          "image": [
+            "https://rukminim1.flixcart.com/image/416/416/kmkxbww0/remote-control-toy/n/u/4/3d-fast-modern-car-sstoys-original-imagfgdgamejgbwp.jpeg?q=70",
+            "links",
+            "links"
+          ],
+          "title": "SSTOYS 3D Fast Modern Car  (Multicolor)",
+          "price": 599,
+          "discount": 72,
+          "type": "Buy",
+          "Category": "Kids",
+          "status": "Ordered on 12 January"
+        },
+        {
+          "id": 4,
+          "image": [
+            "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15248534/2021/10/20/d658aaa9-dd2e-424c-98a6-8df71abaf0be1634729694763-Nautica-Men-Jeans-4551634729693996-5.jpg",
+            "links",
+            "links"
+          ],
+          "title": "Men Blue Straight Fit Mid Rise Heavy Fade Stretchable Jeans",
+          "price": 3291,
+          "discount": 55,
+          "type": "Buy",
+          "Category": "Mens",
           "status": "Ordered on 11 January"
         },
         {
@@ -273,12 +301,16 @@
           "email": "hcaproni@home.pl"
         },
         {
-          "id": 18,
-          "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
           "Name": "Naveen Kumar",
-          "locationName": "sbt street",
+          "email": "pandurebelsachin10@gmail.com",
+          "address": "Madhavadhara",
+          "city": "Visakhapatnam",
+          "state": "Andhra Pradesh",
           "phoneNo": "9493528334",
-          "address": "Madhavadhara"
+          "zip": "530018",
+          "id": 44,
+          "avatar": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "locationName": "sbt street"
         }
       ],
       "debitCards": [
@@ -362,6 +394,13 @@
           "type": "paytm",
           "phoneNo": "9493528334",
           "cardNo": "pandurebelsachin10@gmail.com"
+        },
+        {
+          "name": "Chetan",
+          "cardNo": "chetan@sbi.com",
+          "phoneNo": "9876543210",
+          "type": "PHONE PE",
+          "id": 14
         }
       ],
       "cartItems": [],

@@ -5,6 +5,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import Loader from "./Loader";
+import { getOneProduct } from "../utils/api";
 function ReviewForm(props) {
   const [item, setItem] = useState();
   const [isLoaded, setIsLoaded] = useState();
@@ -15,18 +16,20 @@ function ReviewForm(props) {
 
   //Fetching the required product for which we want to post the review
   useEffect(() => {
-    fetch(`http://localhost:3000/products/${productId}`)
-      .then((res) => res.json())
-      .then(
-        (i) => {
-          setItem(i);
-          setIsLoaded(true);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
+    Promise.resolve(
+      getOneProduct(productId)
+        .then((res) => res.json())
+        .then(
+          (i) => {
+            setItem(i);
+            setIsLoaded(true);
+          },
+          (error) => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        )
+    );
     window.scrollTo(0, 0); //Page going to top
   }, [productId]);
   const history = useHistory();
@@ -61,10 +64,11 @@ function ReviewForm(props) {
       toast.warning("Atleast 1 star should be given", toastStyler);
     } else {
       const data = {
-        UserName: user.fullName,
-        Heading: heading,
-        Body: body,
-        Rating: star,
+        productId: productId,
+        userId: user.id,
+        heading: heading,
+        body: body,
+        rating: star,
       };
       item.Reviews.unshift(data); //Adding the review in the 1st position of array
 

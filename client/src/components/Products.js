@@ -8,7 +8,7 @@ import { handleCategoryFilter, renderallProducts } from "../actions";
 import ReactPaginate from "react-paginate";
 import NoResult from "./NoResult";
 function Products(props) {
-  let { searchResults } = props;
+  let searchResults = props.searchResults || [];
   // Hooks to check which filters are selected
   const [isFurnitureChecked, setIsFurnitureChecked] = useState(false);
   const [isAppliancesChecked, setIsAppliancesChecked] = useState(false);

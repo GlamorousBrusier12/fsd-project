@@ -1,3 +1,6 @@
+import axios from "axios";
+import { getUserById } from "../utils/api";
+
 export const ADD_PRODUCTS = "ADD_PRODUCTS";
 export const SEARCH_PRODUCTS = "SEARCH_PRODUCTS";
 export const SET_USER = "SET_USER";
@@ -21,33 +24,26 @@ export function userLogout() {
     type: LOGOUT,
   };
 }
-export function handleUser(email) {
+export function handleUser(userId) {
   // fetch req to get the user details
-  const url = `http://localhost:3000/users?email=${email}`;
+  // const url = `http://localhost:3000/users?email=${email}`;
   return function (dispatch) {
-    fetch(url)
-      .then((result) => result.json())
-      .then((user) => {
-        // console.log("user : ", user[0]);
-
-        // dispatch the user method
-        dispatch(userLogin(user[0]));
-      });
+    // fetch(url)
+    getUserById(userId).then((result) => {
+      console.log(result.data.data);
+      // dispatch the user method
+      dispatch(userLogin(result.data.data));
+    });
   };
 }
 export function handleCategorySearch(searchWord) {
   // fetch req using the search word
-  const url = `http://localhost:3000/products?Category=${searchWord}`;
-  // console.log("URL: ", url);
   return function (dispatch) {
-    fetch(url)
-      .then((response) => response.json())
-      .then((products) => {
-        // console.log(products);
-
-        // dispatch the products
-        dispatch(addProducts(products));
-      });
+    // fetch(url)
+    axios(`/product/category/${searchWord}`).then((result) => {
+      // dispatch the products
+      dispatch(addProducts(result.data.products));
+    });
   };
 }
 

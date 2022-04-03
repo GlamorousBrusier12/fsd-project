@@ -9,7 +9,7 @@ import { toastStyler } from "../commonEquipment";
 function EachProduct(props) {
   // console.log("each product:", props.content);
   // Getting the data from Products.js as Props
-  const { title, image, price, rating, discount, id } = props.content;
+  const { productName, image, price, rating, discount, id } = props.content;
   const WishlistIconChange = useRef(null);
   const CartIconChange = useRef(null);
   //  Using Refs to change image while hovering just like DOM
@@ -38,6 +38,7 @@ function EachProduct(props) {
             onMouseOut={() => {
               WonRemove();
             }}
+            alt="wishlist"
           />
           <img
             ref={CartIconChange}
@@ -47,20 +48,25 @@ function EachProduct(props) {
               props.dispatch(handleaddtoCart(id));
               toast.success("Your Item Added to Cart", toastStyler);
             }}
+            alt="cart"
           />
         </p>
         <div>
           {/* Product Image */}
           <Link to={`/products/${id}`}>
             <div className="img-size">
-              <img className="productspage-image" src={image[0]} alt={title} />
+              <img
+                className="productspage-image"
+                src={image[0]}
+                alt={productName}
+              />
             </div>
           </Link>
         </div>
         {/* Product Details are Here */}
         <div className="product-details-mini">
-          {/* <h3>{title}</h3> */}
-          <p>{title}</p>
+          {/* <h3>{productName}</h3> */}
+          <p>{productName}</p>
           {/* <p> */}
           <StarRatings
             rating={rating.rate}
