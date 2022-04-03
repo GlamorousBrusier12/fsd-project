@@ -13,8 +13,9 @@ const Home = () => {
       getAllProducts().then(
         (result) => {
           // set products as deals
-          setDeals(result.data);
-          console.log(deals);
+          setDeals(result.data.products);
+          // console.log("deals");
+          // console.log(result.data.products);
           setLoading(false);
         },
         (error) => {
@@ -62,7 +63,6 @@ const Home = () => {
       </div>
     </div>
   );
-  // }
 };
 
 export default Home;
