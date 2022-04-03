@@ -19,7 +19,7 @@ function Reviews(props) {
   const displayReviews = reviews
     .slice(pagesVisited, pagesVisited + usersPerPage)
     .map((review) => {
-      return <Review content={review} key={review.id} />;
+      return <Review content={review} key={review._id} />;
     });
 
   return (

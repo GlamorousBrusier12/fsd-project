@@ -1,17 +1,10 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import MiniProduct from "./MiniProduct";
 import Slider from "./Slider";
 import "../styles/home.css";
 import Categories from "./Categories";
 import { getAllProducts } from "../utils/api";
 const Home = () => {
-  // constructor() {
-  //   super();
-  //   // initial state{ deals:[] }
-  //   this.state = {
-  //     deals: [],
-  //   };
-  // }
   const [deals, setDeals] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -21,8 +14,6 @@ const Home = () => {
         (result) => {
           // set products as deals
           setDeals(result.data.products);
-          // console.log("deals");
-          // console.log(result.data.products);
           setLoading(false);
         },
         (error) => {
@@ -35,13 +26,6 @@ const Home = () => {
     );
   }, []);
 
-  // componentDidMount() {
-
-  // }
-  // render() {
-  // let { deals } = this.state;
-  // deals = deals.slice(0, 8);
-  console.log(deals);
   return loading === true ? (
     <p>loading...</p>
   ) : (
@@ -51,8 +35,8 @@ const Home = () => {
       <div className="deals-container">
         <h3>Deals of the day!!!</h3>
         <div className="mini-products">
-          {deals.map((product, index) => (
-            <MiniProduct data={product} key={index} />
+          {deals.map((product) => (
+            <MiniProduct data={product} key={product._id} />
           ))}
         </div>
       </div>
@@ -60,7 +44,7 @@ const Home = () => {
         <h3>Rents of the day!!!</h3>
         <div className="mini-products">
           {deals.map((product) => (
-            <MiniProduct data={product} key={product.id} pid={product.id} />
+            <MiniProduct data={product} key={product._id} pid={product._id} />
           ))}
         </div>
       </div>
@@ -71,7 +55,7 @@ const Home = () => {
         </h3>
         <div className="mini-products">
           {deals.map((product, index) => (
-            <MiniProduct data={product} key={product.id} />
+            <MiniProduct data={product} key={product._id} />
           ))}
         </div>
       </div>
