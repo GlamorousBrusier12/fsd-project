@@ -27,7 +27,7 @@ function Login(props) {
         incorrectCredentials.current.innerText = " ";
         history.goBack();
         // dispatch the user
-        props.dispatch(handleUser(username1));
+        props.dispatch(handleUser(result.data.userId));
         toast.success("Login Successfull", toastStyler);
       })
       .catch((err) => {
