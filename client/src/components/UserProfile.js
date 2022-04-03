@@ -31,10 +31,13 @@ const UserProfile = (props) => {
     newUser.myOrders = afterDelete;
     let url = "http://localhost:3000/users/" + props.user.id;
 
+    const token = localStorage.getItem("JWTToken");
     fetch(url, {
       method: "PATCH", // or 'PUT'
       headers: {
         Accept: "application/json",
+        Authorization: "Bearer ",
+        // Authorization: Bearer ${},
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newUser),

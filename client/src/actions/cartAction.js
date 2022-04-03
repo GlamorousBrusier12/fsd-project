@@ -1,3 +1,4 @@
+import { getOneProduct } from "../utils/api";
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
@@ -48,18 +49,15 @@ export function emptyCart() {
 export const handleaddtoCart = (itemId) => {
   let item = {};
   return function (dispatch) {
-    fetch(`http://localhost:3000/products/${itemId}`)
-      .then((res) => res.json())
-      .then(
-        (i) => {
-          item = i;
-          console.log(item);
-          dispatch(addtoCart(item));
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+    getOneProduct(itemId).then(
+      (res) => {
+        console.log(res.data);
+        dispatch(addtoCart(res.data));
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   };
 };
 export const handlerfc = (item) => {
