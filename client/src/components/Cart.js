@@ -39,8 +39,8 @@ function Cart({ data, isLoggedIn, dispatch }) {
             <h1>Items</h1>
           </div>
           <div className="Cart ">
-            {data.map((x) => {
-              return <MiniCart content={x} />;
+            {data.map((item, index) => {
+              return <MiniCart content={item} key={index} />;
             })}
           </div>
           <div className="SummaryHeading">
