@@ -51,8 +51,8 @@ const Home = () => {
       <div className="deals-container">
         <h3>Deals of the day!!!</h3>
         <div className="mini-products">
-          {deals.map((product) => (
-            <MiniProduct data={product} key={product.id} />
+          {deals.map((product, index) => (
+            <MiniProduct data={product} key={index} />
           ))}
         </div>
       </div>

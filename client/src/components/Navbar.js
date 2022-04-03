@@ -33,8 +33,8 @@ const Navbar = (props) => {
   useEffect(() => {
     getAllProducts().then((res) => {
       // console.log("all products ");
-      // console.log(res.data);
-      setAllProducts(res.data);
+      // console.log(res.data.products);
+      setAllProducts(res.data.products);
     });
   }, []);
 
@@ -74,7 +74,6 @@ const Navbar = (props) => {
               if (result) {
                 updateSearchWord();
               } else {
-                // toast.warning("please make a search greater than 3");
                 e.preventDefault();
               }
             }}
