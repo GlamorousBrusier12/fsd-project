@@ -3,8 +3,8 @@ import Votes from "./Votes";
 import "../styles/Faq.css";
 
 function Faq(props) {
-  const { Question, Answer } = props.content;
-  let upvotes = props.content.Upvotes;
+  const { question, answer } = props.content;
+  let upvotes = props.content.upvotes;
 
   return (
     //Displays the information related to single faq using props which were sent in the previous component
@@ -13,9 +13,9 @@ function Faq(props) {
       <Votes upvotes={upvotes} />
       <div className="qna">
         <div>
-          <h3>{Question}</h3>
+          <h3>{question}</h3>
         </div>
-        <div>{Answer}</div>
+        <div>{answer}</div>
       </div>
     </div>
   );
