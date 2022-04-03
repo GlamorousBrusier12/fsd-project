@@ -59,8 +59,8 @@ function MiniCart(props) {
     </div>
   );
 }
-const mapStateToProps = (dispatch) => {
-  return {};
+const mapStateToProps = (state) => {
+  return state;
 };
 
 export default connect(mapStateToProps)(MiniCart);
