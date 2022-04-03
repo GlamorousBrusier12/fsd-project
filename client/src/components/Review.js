@@ -3,7 +3,8 @@ import StarRatings from "react-star-ratings";
 
 function Review(props) {
   //Getting required info from props
-  const { UserName, heading, body, rating } = props.content;
+  console.log(props);
+  const { userId, heading, body, rating } = props.content;
   return (
     //Displaying the info sent from Reviews component
     <div style={{ textAlign: "left", margin: "20px" }}>
@@ -17,7 +18,7 @@ function Review(props) {
           />
         </div>
         <div style={{ marginLeft: "1%" }}>
-          <h4>{UserName}</h4>
+          <h4>{userId.userName}</h4>
         </div>
       </div>
       <div style={{ marginLeft: 10 }}>
