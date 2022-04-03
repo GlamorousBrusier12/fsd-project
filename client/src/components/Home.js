@@ -3,7 +3,8 @@ import MiniProduct from "./MiniProduct";
 import Slider from "./Slider";
 import "../styles/home.css";
 import Categories from "./Categories";
-import { getAllProducts } from "../utils/api";
+import { getAllProducts, getUserById } from "../utils/api";
+import { handleUser } from "../actions";
 const Home = () => {
   const [deals, setDeals] = useState([]);
   const [loading, setLoading] = useState(false);
