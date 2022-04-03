@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import MiniProduct from "./MiniProduct";
 import Slider from "./Slider";
 import "../styles/home.css";
@@ -14,8 +14,6 @@ const Home = () => {
         (result) => {
           // set products as deals
           setDeals(result.data.products);
-          // console.log("deals");
-          // console.log(result.data.products);
           setLoading(false);
         },
         (error) => {
