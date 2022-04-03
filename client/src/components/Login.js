@@ -13,21 +13,27 @@ function Login(props) {
   if (authorized) {
     <Redirect to="/userProfile" />;
   }
-  const [username1, setUsername] = useState(" ");
+  const [useremail, setUserEmail] = useState(" ");
   const [password1, setPassword] = useState(" ");
+  const [JWTToken, setJWTToken] = useState(" ");
   const history = useHistory();
   const incorrectCredentials = useRef(null);
 
   const LoginUser = () => {
     //Hitting the Login api using axios by sending the useremail and password to authenticate
     axios
-      .post("/login", { username: username1, password: password1 })
+      .post("/login", { useremail: useremail, password: password1 })
       .then((result) => {
-        // console.log("Successfully Logged In\n", result);
+        const token = result.data.token;
+        console.log(token);
+        localStorage.setItem("JWTToken", token);
+
+        // console.log("JWTTOKEN IS :", JWTToken);
         incorrectCredentials.current.innerText = " ";
         history.goBack();
         // dispatch the user
-        props.dispatch(handleUser(username1));
+        props.dispatch(handleUser(useremail));
+        // toast.success(localStorage.g)
         toast.success("Login Successfull", toastStyler);
       })
       .catch((err) => {
@@ -68,7 +74,7 @@ function Login(props) {
           name="useremail"
           type="text"
           placeholder="abcd@gmail.com"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUserEmail(e.target.value)}
           required
         />
         <br />
