@@ -10,12 +10,14 @@ import { handleaddtoCart } from "../actions/cartAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
-import { getOneProduct } from "../utils/api";
+import { getOneProduct, getReviews, getFaqs } from "../utils/api";
 function ProductPage(props) {
   const [disabled, setDisabled] = useState(false);
   const { isLoggedIn } = props;
   const { productId } = useParams(); //Taking the productId from the url parameters
   const [item, setItem] = useState({});
+  const [reviews, setReviews] = useState([]);
+  const [faqs, setFaqs] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const [resourceType, setResourceType] = useState();
@@ -26,22 +28,9 @@ function ProductPage(props) {
   };
   //GET request for the product using the productId
   useEffect(() => {
-    // fetch(`http://localhost:3000/products/${productId}`)
-    //   .then((res) => res.json())
-    //   .then(
-    //     (i) => {
-    //       setItem(i);
-    //       setIsLoaded(true);
-    //       setResourceType(<SimilarItems type={i.type} />);
-    //     },
-    //     (error) => {
-    //       setIsLoaded(true);
-    //       setError(error);
-    //     }
-    //   );
     Promise.resolve(
       getOneProduct(productId)
-        .then((res) => res.json())
+        .then((res) => res.data)
         .then(
           (i) => {
             setItem(i);
@@ -50,6 +39,31 @@ function ProductPage(props) {
           },
           (error) => {
             setIsLoaded(true);
+            setError(error);
+          }
+        )
+    );
+    Promise.resolve(
+      getReviews(productId)
+        .then((res) => res.data)
+        .then(
+          (result) => {
+            setReviews(result);
+          },
+          (error) => {
+            setError(error);
+          }
+        )
+    );
+
+    Promise.resolve(
+      getFaqs(productId)
+        .then((res) => res.data)
+        .then(
+          (result) => {
+            setFaqs(result);
+          },
+          (error) => {
             setError(error);
           }
         )
@@ -75,7 +89,7 @@ function ProductPage(props) {
             <img src={item.image[0]} alt="Product" />
           </div>
           <div className="product-info-productpage">
-            <h1>{item.title}</h1>
+            <h1>{item.productName}</h1>
             <p>{item.description}</p>
             <p>
               <b>
@@ -108,10 +122,10 @@ function ProductPage(props) {
                   onClick={() => {
                     // Checking if the product is in the cart
                     props.cartItems.forEach((cartItem) => {
-                      if (item.id === cartItem.id) setDisabled(true);
+                      if (item._id === cartItem.id) setDisabled(true);
                     });
                     //Adding item to store
-                    props.dispatch(handleaddtoCart(item.id));
+                    props.dispatch(handleaddtoCart(item._id));
                     toast.success("Your Item Is Added", toastStyler); //Success msg
                   }}
                   disabled={disabled}
@@ -154,7 +168,7 @@ function ProductPage(props) {
             <div className="button-area">
               <button
                 onClick={() => {
-                  setResourceType(<Reviews items={item.Reviews} />); //Show reviews component on clicking the reviews button
+                  setResourceType(<Reviews items={reviews} />); //Show reviews component on clicking the reviews button
                   toggleAnimation(1);
                 }}
                 className={activeDiv === 1 ? "gelatine" : ""}
@@ -163,7 +177,7 @@ function ProductPage(props) {
               </button>
               <button
                 onClick={() => {
-                  setResourceType(<Faqs items={item.Faq} />); //Show faqs component on clicking the faqs button
+                  setResourceType(<Faqs items={faqs} />); //Show faqs component on clicking the faqs button
                   toggleAnimation(2);
                 }}
                 className={activeDiv === 2 ? "gelatine" : ""}

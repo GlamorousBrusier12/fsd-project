@@ -3,7 +3,7 @@ import StarRatings from "react-star-ratings";
 
 function Review(props) {
   //Getting required info from props
-  const { UserName, Heading, Body, Rating } = props.content;
+  const { UserName, heading, body, rating } = props.content;
   return (
     //Displaying the info sent from Reviews component
     <div style={{ textAlign: "left", margin: "20px" }}>
@@ -26,11 +26,11 @@ function Review(props) {
           starSpacing="2px"
           starRatedColor="#ffcc01"
           starEmptyColor="#e3e3e3"
-          rating={Rating}
+          rating={rating}
         />
       </div>
-      <h3>{Heading}</h3>
-      <p>{Body}</p>
+      <h3>{heading}</h3>
+      <p>{body}</p>
       <hr />
     </div>
   );
