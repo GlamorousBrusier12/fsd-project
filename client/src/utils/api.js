@@ -12,7 +12,13 @@ export function getOneProduct(productId) {
 
 // create a user
 export function createUser(userDetails) {
-  return axios.post("/user", userDetails);
+  return axios.post("/user", userDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 // get one user
@@ -22,7 +28,13 @@ export function getUserById(userId) {
 
 // post a review
 export function updateUser(userId, userDetails) {
-  return axios.patch(`/user/${userId}`, userDetails);
+  return axios.patch(`/user/${userId}`, userDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 export function getReviews(productId) {
   return axios.get(`/review/${productId}`);
@@ -39,7 +51,13 @@ export function getAddresses(userId) {
 }
 
 export function postReview(reviewDetails) {
-  return axios.post("/review", reviewDetails);
+  return axios.post("/review", reviewDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 // get all orders
@@ -52,15 +70,33 @@ export function getDeliveryAddress(userId) {
 }
 
 export function postDeliveryAddress(addressDetails) {
-  return axios.post("/address", addressDetails);
+  return axios.post("/address", addressDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function updateDeliveryAddress(addressId) {
-  return axios.patch(`/address/${addressId}`);
+  return axios.patch(`/address/${addressId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function deleteDeliveryAddress(addressId) {
-  return axios.delete(`/address/${addressId}`);
+  return axios.delete(`/address/${addressId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function getCards(userId) {
@@ -68,26 +104,62 @@ export function getCards(userId) {
 }
 
 export function postCard(cardDetails) {
-  return axios.post("/debitcard", cardDetails);
+  return axios.post("/debitcard", cardDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function updateCard(cardId) {
-  return axios.patch(`/debitcard/${cardId}`);
+  return axios.patch(`/debitcard/${cardId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function deleteCard(cardId) {
-  return axios.delete(`/debitcard/${cardId}`);
+  return axios.delete(`/debitcard/${cardId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 
 export function getUpi(userId) {
   return axios.get(`/upi/user/${userId}`);
 }
 export function postUpi(upiDetails) {
-  return axios.post("/upi", upiDetails);
+  return axios.post("/upi", upiDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 export function updateUpi(upiId) {
-  return axios.patch(`/upi/${upiId}`);
+  return axios.patch(`/upi/${upiId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
 export function deleteUpi(upiId) {
-  return axios.delete(`/upi/${upiId}`);
+  return axios.delete(`/upi/${upiId}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }
