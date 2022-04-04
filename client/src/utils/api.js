@@ -30,3 +30,12 @@ export function getAddresses(userId) {
 export function getMyOrders(userId) {
   return axios.get(`/orders/${userId}`);
 }
+export function getDeliveryAddress(userId) {
+  return axios.get(`/address/${userId}`);
+}
+export function postDeliveryAddress() {
+  return axios.post("/address");
+}
+export function updateDeliveryAddress(addressId) {
+  return axios.patch(`/address/${addressId}`);
+}
