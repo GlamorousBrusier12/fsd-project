@@ -79,27 +79,28 @@ const NewAdress = (props) => {
   //Submit function which will fire only when all fields are entered.
   const handleSubmit = (e) => {
     checkValidation();
-    let newId = Math.ceil(Math.random() * 100);
+    /*
+   // let newId = Math.ceil(Math.random() * 100);
     if (error.length === 0) {
       const data = {
-        id: newId,
+        //id: newId,
         avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-        Name: Name,
+        userName: Name,
         locationName: locationName,
-        phoneNo: phoneNo,
+        mobileNumber: phoneNo,
         address: address,
       };
 
-      /*       console.log("data entred", data);
-       */
+            console.log("data entred", data);
+      
       //newUser.deliveryAdress.push(data);
       //Add the new adress into the array.
       let newArray = [...props.user.deliveryAdress, data];
 
       newUser.deliveryAdress = newArray;
 
-      /*       console.log(newUser);
-       */ let url = "http://localhost:3000/users/" + props.user.id;
+            console.log(newUser);
+       let url = "http://localhost:3000/users/" + props.user.id;
 
       //now patch the new user object.
       fetch(url, {
@@ -138,7 +139,7 @@ const NewAdress = (props) => {
     }
 
     //make all errors empty again.
-    error = [];
+    error = [];*/
   };
 
   //Returing the actual component
