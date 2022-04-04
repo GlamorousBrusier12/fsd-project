@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { connect } from "react-redux";
 import { handleUser } from "../actions";
+import { postUpi } from "../utils/api";
 
 const NewUPI = (props) => {
   //We have different useStates for different areas.
@@ -82,33 +83,26 @@ const NewUPI = (props) => {
         id: newId,
         avatar:
           "https://play-lh.googleusercontent.com/k7yz57K2OxhNrPNKF2U18Zcv9rodOu7CfWh47U15FFUN8-_B0hQfXsM-BaLG0gOtvw=s180-rw",
-        name: Name,
-        type: type,
-        phoneNo: phoneNo,
+        userId: props.user._id,
+        userName: Name,
+        upiType: type,
+        mobileNumber: phoneNo,
         cardNo: cardNo,
       };
-      //  console.log("newUser before", newUser);
+        console.log(data);
 
-      let newArray = [...props.user.upi, data];
+      // let newArray = [...props.user.upi, data];
 
       //Add the new adress into the array.
 
-      newUser.upi = newArray;
+      // newUser.upi = newArray;
       /*       console.log("user after submitting", newUser);
        */
-      let url = "http://localhost:3000/users/" + props.user.id;
+      // let url = "http://localhost:3000/users/" + props.user.id;
 
       //now patch the new user object.
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      })
-        .then((response) => response.json())
+      postUpi(data)
         .then((data) => {
           console.log("Successfully PATCHED", data);
           props.dispatch(handleUser(props.user._id));

@@ -83,9 +83,9 @@ const NewCard = (props) => {
 
       //newUser.debitCards.push(data);
       //adding the new debit card.
-      let newArray = [...props.user.debitCards, data];
+      // let newArray = [...props.user.debitCards, data];
 
-      newUser.debitCards = newArray;
+      // newUser.debitCards = newArray;
 
       // let url = "http://localhost:8000/api/users" + props.user._id;
       //Fetching the data with post method
