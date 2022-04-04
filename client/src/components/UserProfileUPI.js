@@ -31,7 +31,7 @@ const UserProfileUPI = (props) => {
       });
       setData(newArray);
     });
-    setData(props.user.upi);
+    // setData(props.user.upi);
   }, []);
 
   //This function handles delete on clicking taking the id as param.
