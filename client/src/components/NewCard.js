@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { connect } from "react-redux";
 import { handleUser } from "../actions";
+import { postCard } from "../utils/api";
 
 const NewCard = (props) => {
   const history = useHistory();
@@ -72,10 +73,12 @@ const NewCard = (props) => {
         id: newId,
         avatar:
           "https://banksifsccode.com/blog/media/2020-03/how-to-login-to-union-bank-s-net-banking-account-step-4.jpg",
-        name: Name,
-        type: type,
-        expiry: expiry,
+        userId: props.user._id,
+        cardType: type,
         cardNo: cardNo,
+        cvv: cvv,
+        expiry: expiry,
+        nameOnCard: Name,
       };
 
       //newUser.debitCards.push(data);
@@ -84,20 +87,12 @@ const NewCard = (props) => {
 
       newUser.debitCards = newArray;
 
-      let url = "http://localhost:3000/users/" + props.user.id;
+      // let url = "http://localhost:8000/api/users" + props.user._id;
       //Fetching the data with post method
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      })
-        .then((response) => response.json())
+      postCard(data)
         .then((data) => {
-          // console.log("Successfully PATCHED", data);
+          console.log("Successfully PATCHED", data);
           props.dispatch(handleUser(props.user._id));
           toast.success("Succesfully added Debit Card", toastStyler);
           setName("");
@@ -109,6 +104,7 @@ const NewCard = (props) => {
         })
         .catch((error) => {
           console.error("Error:", error);
+          toast.error("Form submission failed");
         });
     } else {
       toast.error("Form submission failed");
