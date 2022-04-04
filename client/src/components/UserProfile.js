@@ -28,8 +28,8 @@ const UserProfile = (props) => {
     });
   }, [props.user.myOrders]);
 
-  getOneProduct(props.user.productId).then();
-  console.log("product is", product);
+  /* getOneProduct(props.user.productId).then();
+  console.log("product is", product); */
   /* const handleDelete = (id) => {
     //We delete this particular id.
     let afterDelete = data.filter((item) => item.id !== id);
@@ -77,31 +77,35 @@ const UserProfile = (props) => {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            {/*             <img className="userListImg" src={params.row.image[0]} alt="" />
-             */}{" "}
-            {getOneProduct(props.user.productId)}
+            <img
+              className="userListImg"
+              src={params.row.productId.image[0]}
+              alt=""
+            />
+
+            {params.row.productId.productName}
           </div>
         );
       },
     },
 
     {
-      field: "type",
+      field: "productId.type",
       headerName: "Type",
       width: 80,
     },
     {
-      field: "Category",
+      field: "productId.category",
       headerName: "Category",
       width: 150,
     },
     {
-      field: "discount",
+      field: "productId.discount",
       headerName: "Discount",
       width: 100,
     },
     {
-      field: "price",
+      field: "productId.price",
       headerName: "Price",
       width: 100,
     },
@@ -121,7 +125,7 @@ const UserProfile = (props) => {
             <Link
               to={{
                 pathname: "/reviewform",
-                state: { productId: params.row.id },
+                state: { productId: params.row.productId._id },
               }}
             >
               <button className="userListEdit">Post Review</button>
