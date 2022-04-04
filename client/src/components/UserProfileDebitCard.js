@@ -20,7 +20,6 @@ const UserProfileDebitCard = (props) => {
   // console.log("Hi");
   let newUser = props.user;
   useEffect(() => {
-    setData(props.user.debitCards);
     Promise.resolve(
       getCards(props.user._id).then((res) => {
         console.log("res");
@@ -39,23 +38,19 @@ const UserProfileDebitCard = (props) => {
   const handleDelete = (id) => {
     //We delete this particular id.
 
-    // let afterDelete = data.filter((item) => item.id !== id);
+    //Set this as the new delivery adress
 
-    // setData(afterDelete);
+    deleteCard(id).then((response) => {
+      console.log(response);
 
-    // //Set this as the new delivery adress
-
-    // newUser.debitCards = afterDelete;
-
-    deleteCard(id)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Successfully Deleted", data);
-        props.dispatch(handleUser(props.user._id));
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+      props.dispatch(handleUser(props.user._id));
+    });
+    // .then((data) => {
+    //   console.log("Successfully Deleted", data);
+    // })
+    // .catch((error) => {
+    //   console.error("Error:", error);
+    // });
 
     toast.warning("Debit Card Deleted", toastStyler);
   };
