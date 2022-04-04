@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
 import MiniProduct from "./MiniProduct";
 import "./../styles/SimilarItems.css";
+import { getAllProducts } from "../utils/api";
 
 function SimilarItems(props) {
   const [error, setError] = useState(null);
@@ -9,21 +10,11 @@ function SimilarItems(props) {
   const [items, setItems] = useState([]);
   //Same type of products are obtained
   useEffect(() => {
-    fetch(`http://localhost:3000/products/?q=${props.type}`)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
+    getAllProducts().then((result) => {
+      // set products as deals
+      setIsLoaded(true);
+      setItems(result.data.products);
+    });
   }, [props.type]);
 
   const scrollTop = () => {
