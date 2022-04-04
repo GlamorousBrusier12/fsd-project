@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import { handleUser } from "../actions";
 import { toastStyler } from "../commonEquipment";
 import { deleteDeliveryAddress } from "../utils/api";
+import { getDeliveryAddress } from "../utils/api";
 
 const AdressList = (props) => {
   //Since delivery adresses is an array, we initiate the array.
@@ -19,8 +20,15 @@ const AdressList = (props) => {
 
   let newUser = props.user;
   useEffect(() => {
-    setData(props.user.deliveryAdress);
-  }, [props.user.deliveryAdress]);
+    getDeliveryAddress(props.user._id).then((res) => {
+      console.log(res.data);
+      let newArray = res.data;
+      newArray.forEach((address) => {
+        address.id = address._id.toString();
+      });
+      setData(newArray);
+    });
+  }, []);
 
   /*   console.log("delivery adresses are", props.user);
    */ //This function handles delete on clicking taking the id as param.
@@ -69,14 +77,14 @@ const AdressList = (props) => {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.avatar} alt="" />
-            {params.row.Name}
+            {/* <img className="userListImg" src={params.row.avatar} alt="" /> */}
+            {params.row.pincode}
           </div>
         );
       },
     },
     {
-      field: "phoneNo",
+      field: "mobileNumber",
       headerName: "Phone Number",
       width: 180,
     },
