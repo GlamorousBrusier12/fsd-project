@@ -25,14 +25,14 @@ function Login(props) {
       .post("/login", { useremail: useremail, password: password1 })
       .then((result) => {
         const token = result.data.token;
-        console.log(token);
+        console.log(result);
         localStorage.setItem("JWTToken", token);
 
         // console.log("JWTTOKEN IS :", JWTToken);
         incorrectCredentials.current.innerText = " ";
         history.goBack();
         // dispatch the user
-        props.dispatch(handleUser(useremail));
+        props.dispatch(handleUser(result.data.userId));
         // toast.success(localStorage.g)
         toast.success("Login Successfull", toastStyler);
       })

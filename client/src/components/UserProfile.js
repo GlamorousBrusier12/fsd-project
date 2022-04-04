@@ -45,7 +45,7 @@ const UserProfile = (props) => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
-        props.dispatch(handleUser(props.user.email));
+        props.dispatch(handleUser(props.user._id));
       })
       .catch((error) => {
         console.error("Error:", error);

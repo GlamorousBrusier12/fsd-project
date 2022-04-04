@@ -111,7 +111,7 @@ const NewUPI = (props) => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Successfully PATCHED", data);
-          props.dispatch(handleUser(props.user.email));
+          props.dispatch(handleUser(props.user._id));
           toast.success("Succesfully Added UPI ", toastStyler);
           setName("");
           setCardNo("");
