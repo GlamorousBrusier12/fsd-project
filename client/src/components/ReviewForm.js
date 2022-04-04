@@ -12,7 +12,6 @@ function ReviewForm(props) {
   const [error, setError] = useState();
   //Getting data from previous Route
   const location = useLocation();
-  console.log(location);
   const productId = location.state.productId;
 
   //Fetching the required product for which we want to post the review

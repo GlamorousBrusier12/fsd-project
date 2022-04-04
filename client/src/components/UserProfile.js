@@ -110,7 +110,7 @@ const UserProfile = (props) => {
             <Link
               to={{
                 pathname: "/reviewform",
-                state: { productId: params.row.id },
+                state: { productId: params.row._id },
               }}
             >
               <button className="userListEdit">Post Review</button>
