@@ -13,6 +13,9 @@ export function createUser(userDetails) {
 export function getUserById(userId) {
   return axios.get(`/user/${userId}`);
 }
+export function updateUser(userId, userDetails) {
+  return axios.patch(`/user/${userId}`, userDetails);
+}
 export function getReviews(productId) {
   return axios.get(`/review/${productId}`);
 }

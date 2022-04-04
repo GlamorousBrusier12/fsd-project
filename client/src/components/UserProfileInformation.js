@@ -5,6 +5,7 @@ import { handleUser } from "../actions";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import "../styles/UserProfileInformation.css";
+import { updateUser } from "../utils/api";
 import {
   CalendarToday,
   LocationSearching,
@@ -18,13 +19,12 @@ import { connect } from "react-redux";
 const UserProfileInformation = (props) => {
   //We now need to set the data which originally is a empty object
   const { info } = props;
-  //console.log("INFO :", info);
+  console.log("INFO :", info);
   const history = useHistory();
   const [fullName, setfullName] = useState("");
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setmobileNumber] = useState();
-  const [address, setAddress] = useState("");
   let error = [];
 
   //get methods for all fields.
@@ -45,10 +45,6 @@ const UserProfileInformation = (props) => {
       ? console.log("Correct number")
       : toast.error("Please enter only numbers") && setmobileNumber("");
   };
-  const getAddress = (event) => {
-    setAddress(event.target.value);
-  };
-
   //Functon to check validation of the data.
   const checkValidation = () => {
     if (fullName.length <= 6) {
@@ -63,10 +59,7 @@ const UserProfileInformation = (props) => {
       toast.warning("Mobile number should be of length 10");
       error.push("MobileNumber error");
     }
-    if (address.length === 0) {
-      toast.warning("Adress cannot be empty");
-      error.push("Adress error");
-    }
+
     //Regex expression to validate any kind of email.
     if (
       !new RegExp(
@@ -90,30 +83,18 @@ const UserProfileInformation = (props) => {
         fullName: fullName,
         userName: userName,
         mobileNumber: mobileNumber,
-        address: address,
         email: email,
       };
-      //console.log("data entred " + data.fullName);
       //Get the id of the user.
-      let url = "http://localhost:3000/users/" + info.id;
-
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Successfully PATCHED", data);
-          props.dispatch(handleUser(email));
+      updateUser(info._id, data)
+        .then((res) => {
+          props.dispatch(handleUser(res.data.user._id));
+          toast.success("Succesfully Updated.", toastStyler);
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch((err) => {
+          console.log(err);
+          toast.error("Form submission failed", toastStyler);
         });
-      toast.success("Succesfully Updated.", toastStyler);
     } else {
       toast.error("Form submission failed", toastStyler);
     }
@@ -123,7 +104,6 @@ const UserProfileInformation = (props) => {
     setuserName("");
     setEmail("");
     setmobileNumber("");
-    setAddress("");
     error = [];
   };
 
@@ -141,7 +121,6 @@ const UserProfileInformation = (props) => {
               <img src={info.avatar} alt="" className="userShowImg" />
               <div className="userShowTopTitle">
                 <span className="userShowUsername">{info.fullName}</span>
-                <span className="userShowUserTitle">{info.job}</span>
               </div>
             </div>
             <div className="userShowBottom">
@@ -165,7 +144,7 @@ const UserProfileInformation = (props) => {
               </div>
               <div className="userShowInfo">
                 <LocationSearching className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.address}</span>
+                <span className="userShowInfoTitle">{info.panNumber}</span>
               </div>
             </div>
           </div>
@@ -214,17 +193,6 @@ const UserProfileInformation = (props) => {
                     className="userUpdateInput"
                     onChange={getmobileNumber}
                     value={mobileNumber}
-                    required
-                  />
-                </div>
-                <div className="userUpdateItem">
-                  <label>Address* (Should not be empty)</label>
-                  <input
-                    type="text"
-                    placeholder={info.address}
-                    className="userUpdateInput"
-                    onChange={getAddress}
-                    value={address}
                     required
                   />
                 </div>
