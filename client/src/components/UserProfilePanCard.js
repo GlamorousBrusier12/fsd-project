@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import "../styles/UserProfilePanCard.css";
 import { handleUser } from "../actions";
@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
+import { getUserById, updateUser } from "../utils/api";
 
 const UserProfilePanCard = (props) => {
   const { info } = props;
@@ -25,14 +26,23 @@ const UserProfilePanCard = (props) => {
   const history = useHistory();
   const [fullName, setFullName] = useState("");
   const [dob, setDob] = useState("");
-  const [fatherName, setFatherName] = useState("");
   const [mobileNumber, setmobileNumber] = useState("");
-  const [address, setAddress] = useState("");
+  // const [fatherName, setFatherName] = useState("");
+  // const [address, setAddress] = useState("");
   const [panNumber, setPanNumber] = useState("");
   let error = [];
 
   //We now need to set the data which originally is a empty object
   //get methods for all fields.
+  useEffect(() => {
+    getUserById(props.info._id).then((res) => {
+      const newUser = res.data.data;
+      setFullName(newUser.fullName);
+      setDob(newUser.dob);
+      setmobileNumber(newUser.mobileNumber);
+      setPanNumber("IXFPK2334K");
+    });
+  }, []);
 
   const getFullName = (event) => {
     setFullName(event.target.value);
@@ -43,9 +53,6 @@ const UserProfilePanCard = (props) => {
   const getPanNumber = (event) => {
     setPanNumber(event.target.value);
   };
-  const getFatherName = (event) => {
-    setFatherName(event.target.value);
-  };
   const getmobileNumber = (event) => {
     //here we see if only numbers are being entred.
 
@@ -53,9 +60,6 @@ const UserProfilePanCard = (props) => {
     !isNaN(event.target.value) && !isNaN(parseFloat(event.target.value))
       ? console.log("Correct number")
       : toast.error("Please enter only numbers") && setmobileNumber("");
-  };
-  const getAddress = (event) => {
-    setAddress(event.target.value);
   };
 
   //Functon to check validation of the data.
@@ -65,21 +69,9 @@ const UserProfilePanCard = (props) => {
       toast.warning("FullName should be more than 6 characters.");
       error.push("Fullname error");
     }
-    if (fatherName.length <= 3) {
-      toast.warning("FatherName should be more than 3 characters.");
-      error.push("Fathername error");
-    }
     if (mobileNumber.length !== 10) {
       toast.warning("Mobile number should be of length 10");
       error.push("MobileNumber error");
-    }
-    if (address.length === 0) {
-      toast.warning("Adress cannot be empty");
-      error.push("Adress error");
-    }
-    if (panNumber.length !== 10) {
-      toast.warning("Enter valid PAN number");
-      error.push("Pan error");
     }
   };
 
@@ -91,35 +83,22 @@ const UserProfilePanCard = (props) => {
       //If no errors, we then go on and patch the user.
 
       const data = {
-        avatar:
-          "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
-        elecFullName: fullName,
+        fullName: fullName,
         dob: dob,
-        elecFatherName: fatherName,
-        elecMobileNumber: mobileNumber,
-        elecAdress: address,
-        elecPanNumber: panNumber,
+        mobileNumber: mobileNumber,
       };
-      //console.log("data entred " + data.fullName);
-      let url = "http://localhost:3000/users/" + info.id;
+      // //console.log("data entred " + data.fullName);
+      // let url = "http://localhost:3000/users/" + info.id;
+      updateUser(info._id, data).then((res) => {
+        console.log(res.data.user);
+        const newUser = res.data.user;
+        setFullName(newUser.fullName);
+        setDob(newUser.dob);
+        setmobileNumber(newUser.mobileNumber);
+        setPanNumber("IXFPK2334K");
+      });
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Successfully PATCHED", data);
-          props.dispatch(handleUser(email));
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-
+      props.dispatch(handleUser(props.info._id));
       toast.success("Succesfully Updated", toastStyler);
     } else {
       toast.error("Form submission failed", toastStyler);
@@ -131,9 +110,7 @@ const UserProfilePanCard = (props) => {
     setFullName("");
     setDob("");
     setPanNumber("");
-    setFatherName("");
     setmobileNumber("");
-    setAddress("");
   };
   //Rendering the component
 
@@ -153,18 +130,14 @@ const UserProfilePanCard = (props) => {
               <img src={info.avatar} alt="" className="userShowImg" />
               <div className="userShowTopTitle">
                 <span className="userShowUsername">{info.fullName}</span>
-                <span className="userShowUserTitle">{info.job}</span>
+                <span className="userShowUserTitle">{"Developer"}</span>
               </div>
             </div>
             <div className="userShowBottom">
               <span className="userShowTitle">PAN Account Details</span>
               <div className="userShowInfo">
-                <BadgeIcon className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.elecFullName}</span>
-              </div>
-              <div className="userShowInfo">
                 <CreditCardIcon className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.elecPanNumber}</span>
+                <span className="userShowInfoTitle">{"IXFPK2334K"}</span>
               </div>
               <div className="userShowInfo">
                 <CalendarToday className="userShowIcon" />
@@ -173,17 +146,7 @@ const UserProfilePanCard = (props) => {
               <span className="userShowTitle">Contact Details</span>
               <div className="userShowInfo">
                 <PhoneAndroid className="userShowIcon" />
-                <span className="userShowInfoTitle">
-                  {info.elecMobileNumber}
-                </span>
-              </div>
-              <div className="userShowInfo">
-                <FamilyRestroomIcon className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.elecFatherName}</span>
-              </div>
-              <div className="userShowInfo">
-                <LocationSearching className="userShowIcon" />
-                <span className="userShowInfoTitle">{info.elecAdress}</span>
+                <span className="userShowInfoTitle">{info.mobileNumber}</span>
               </div>
             </div>
           </div>
@@ -195,7 +158,6 @@ const UserProfilePanCard = (props) => {
                   <label>Full Name on the card* (More than 6 characters)</label>
                   <input
                     type="text"
-                    placeholder={info.elecFullName}
                     className="userUpdateInput"
                     onChange={getFullName}
                     value={fullName}
@@ -203,13 +165,12 @@ const UserProfilePanCard = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>PAN Number* (Valid 10 digits)</label>
+                  <label>PAN Number*</label>
                   <input
                     type="text"
-                    placeholder={info.elecPanNumber}
                     className="userUpdateInput"
                     onChange={getPanNumber}
-                    value={panNumber}
+                    value={"IXFPK2334K"}
                     required
                   />
                 </div>
@@ -217,7 +178,6 @@ const UserProfilePanCard = (props) => {
                   <label>DOB as per card*</label>
                   <input
                     type="date"
-                    placeholder={info.dob}
                     className="userUpdateInput"
                     onChange={getDob}
                     value={dob}
@@ -228,32 +188,9 @@ const UserProfilePanCard = (props) => {
                   <label>Phone* (10 digits without country code)</label>
                   <input
                     type="text"
-                    placeholder={info.elecMobileNumber}
                     className="userUpdateInput"
                     onChange={getmobileNumber}
                     value={mobileNumber}
-                    required
-                  />
-                </div>
-                <div className="userUpdateItem">
-                  <label>Father Name* (More than 3 characters)</label>
-                  <input
-                    type="text"
-                    placeholder={info.elecFatherName}
-                    className="userUpdateInput"
-                    onChange={getFatherName}
-                    value={fatherName}
-                    required
-                  />
-                </div>
-                <div className="userUpdateItem">
-                  <label>Address* (Should not be empty)</label>
-                  <input
-                    type="text"
-                    placeholder={info.elecAdress}
-                    className="userUpdateInput"
-                    onChange={getAddress}
-                    value={address}
                     required
                   />
                 </div>
