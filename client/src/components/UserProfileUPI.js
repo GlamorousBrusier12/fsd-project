@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
+import { getUpi } from "../utils/api";
 
 const UserProfileUPI = (props) => {
   //Since  upi  is an array, we initiate the array.
@@ -20,6 +21,15 @@ const UserProfileUPI = (props) => {
 
   let newUser = props.user;
   useEffect(() => {
+    getUpi(props.user._id).then((res) => {
+      console.log("res");
+      console.log(res.data.userUpi);
+      let newArray = res.data.userUpi;
+      newArray.forEach((upi) => {
+        upi.id = upi._id.toString();
+      });
+      setData(newArray);
+    });
     setData(props.user.upi);
   }, [props.user.upi]);
 
@@ -82,12 +92,12 @@ const UserProfileUPI = (props) => {
       width: 220,
     },
     {
-      field: "name",
+      field: "userName",
       headerName: "Name on UPI",
       width: 220,
     },
     {
-      field: "phoneNo",
+      field: "mobileNumber",
       headerName: "Phone number",
       width: 200,
     },
