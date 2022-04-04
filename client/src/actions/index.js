@@ -30,7 +30,7 @@ export function handleUser(userId) {
   return function (dispatch) {
     // fetch(url)
     getUserById(userId).then((result) => {
-      console.log(result.data.data);
+      // console.log(result.data.data);
       // dispatch the user method
       dispatch(userLogin(result.data.data));
     });
