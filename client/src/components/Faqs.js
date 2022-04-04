@@ -27,9 +27,9 @@ function Faqs(props) {
   //Updating Faqs based on search
   const updateFaqs = (event) => {
     const filtered = faqsDefault.filter((faq) => {
-      return faq.Question.toLowerCase().includes(
-        event.target.value.toLowerCase()
-      );
+      return faq.question
+        .toLowerCase()
+        .includes(event.target.value.toLowerCase());
     });
     setInput(event.target.value);
     setFaqs(filtered);

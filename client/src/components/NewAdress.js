@@ -1,11 +1,12 @@
 import "../styles/NewAdress.css";
 import Sidebar from "./Sidebar";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { connect } from "react-redux";
 import { handleUser } from "../actions";
+import { postDeliveryAddress } from "../utils/api";
 
 const NewAdress = (props) => {
   //We have different useStates for different areas.
@@ -14,10 +15,9 @@ const NewAdress = (props) => {
   const [locationName, setlocationName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
+  const [pincode, setPincode] = useState("");
   const [userName, setuserName] = useState("");
 
-  let newUser = { ...props.user };
   let error = [];
   //Updating the state as he enters the data
   const getName = (event) => {
@@ -29,8 +29,8 @@ const NewAdress = (props) => {
   const getlocationName = (event) => {
     setlocationName(event.target.value);
   };
-  const getEmail = (event) => {
-    setEmail(event.target.value);
+  const getPinCode = (event) => {
+    setPincode(event.target.value);
   };
   const getphoneNo = (event) => {
     //Dont let user enter numbers.
@@ -65,67 +65,39 @@ const NewAdress = (props) => {
       toast.warning("Adress cannot be empty");
       error.push("Adress error");
     }
-    if (
-      //For valid email
-      !new RegExp(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      ).test(email)
-    ) {
-      toast.warning("Enter valid email");
-      error.push("Email error");
-    }
   };
 
   //Submit function which will fire only when all fields are entered.
   const handleSubmit = (e) => {
     checkValidation();
-    let newId = Math.ceil(Math.random() * 100);
     if (error.length === 0) {
       const data = {
-        id: newId,
+        userId: props.user._id,
         avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-        Name: Name,
+        userName: Name,
         locationName: locationName,
-        phoneNo: phoneNo,
+        mobileNumber: phoneNo,
         address: address,
+        pincode: pincode,
       };
+      console.log(data);
 
-      /*       console.log("data entred", data);
-       */
-      //newUser.deliveryAdress.push(data);
-      //Add the new adress into the array.
-      let newArray = [...props.user.deliveryAdress, data];
-
-      newUser.deliveryAdress = newArray;
-
-      /*       console.log(newUser);
-       */ let url = "http://localhost:3000/users/" + props.user.id;
-
-      //now patch the new user object.
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      })
-        .then((response) => response.json())
+      postDeliveryAddress(data)
         .then((data) => {
-          console.log("Successfully PATCHED", data);
+          console.log("Successfully ADDED", data);
           props.dispatch(handleUser(props.user._id));
           toast.success("Address Added", toastStyler);
-
           setName("");
           setlocationName("");
           setPhoneNo("");
           setAddress("");
-          setEmail("");
+          setPincode("");
           setuserName("");
           history.push("/userProfileAdress");
         })
         .catch((error) => {
           console.error("Error:", error);
+          toast.error("Form submission failed");
         });
     } else {
       toast.error("Form submission failed");
@@ -133,11 +105,9 @@ const NewAdress = (props) => {
       setlocationName("");
       setPhoneNo("");
       setAddress("");
-      setEmail("");
+      setPincode("");
       setuserName("");
     }
-
-    //make all errors empty again.
     error = [];
   };
 
@@ -169,12 +139,12 @@ const NewAdress = (props) => {
             />
           </div>
           <div className="newUserItem">
-            <label>Email (Any valid email)</label>
+            <label>PinCode (Any valid PinCode)</label>
             <input
-              type="email"
-              placeholder="john@gmail.com"
-              onChange={getEmail}
-              value={email}
+              type="text"
+              placeholder="533003"
+              onChange={getPinCode}
+              value={pincode}
               required
             />
           </div>
