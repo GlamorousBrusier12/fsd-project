@@ -5,7 +5,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import Loader from "./Loader";
-import { getOneProduct } from "../utils/api";
+import { getOneProduct, postReview } from "../utils/api";
 function ReviewForm(props) {
   const [item, setItem] = useState();
   const [isLoaded, setIsLoaded] = useState();
@@ -13,12 +13,11 @@ function ReviewForm(props) {
   //Getting data from previous Route
   const location = useLocation();
   const productId = location.state.productId;
-
   //Fetching the required product for which we want to post the review
   useEffect(() => {
     Promise.resolve(
       getOneProduct(productId)
-        .then((res) => res.json())
+        .then((res) => res.data)
         .then(
           (i) => {
             setItem(i);
@@ -65,22 +64,23 @@ function ReviewForm(props) {
     } else {
       const data = {
         productId: productId,
-        userId: user.id,
+        userId: user._id,
         heading: heading,
         body: body,
         rating: star,
       };
-      item.Reviews.unshift(data); //Adding the review in the 1st position of array
+      // item.Reviews.unshift(data); //Adding the review in the 1st position of array
 
       //PATCH request for the product(Updating the review)
-      fetch(`http://localhost:3000/products/${productId}`, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(item),
-      })
-        .then((response) => response.json())
+      // fetch(`http://localhost:3000/products/${productId}`, {
+      //   method: "PATCH", // or 'PUT'
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(item),
+      // })
+      postReview(data)
+        .then((response) => console.log(response.json()))
         .then((data) => {
           console.log("Success:", data);
           toast.success("Review Posted successfully", toastStyler);
@@ -96,7 +96,7 @@ function ReviewForm(props) {
     }
   };
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Error in Review form: {error.message}</div>;
   } else if (!isLoaded) {
     return (
       //Rendering the Loader animation while loading the data

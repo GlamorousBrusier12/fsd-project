@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Payment.css";
 import { connect } from "react-redux";
@@ -17,6 +17,23 @@ function Payment(props) {
   if (prevPath === "/cart") products = props.cartItems;
   // console.log(products);
   const [paymentStatus, setPaymentStaus] = useState("Payment Method");
+  // useEffect(() => {
+  //   Promise.resolve(
+  //     getOneProduct(productId)
+  //       .then((res) => res.data)
+  //       .then(
+  //         (i) => {
+  //           setItem(i);
+  //           setIsLoaded(true);
+  //         },
+  //         (error) => {
+  //           setIsLoaded(true);
+  //           setError(error);
+  //         }
+  //       )
+  //   );
+  //   window.scrollTo(0, 0); //Page going to top
+  // }, [productId]);
   //Updating the selected address for shipping
   const addressChange = (e) => {
     const { value } = e.target;
@@ -278,7 +295,7 @@ function Payment(props) {
         discount: product.discount,
         type: product.type,
         Category: product.Category,
-        status: `Ordered on ${day} ${month}`,
+        status: `Ordered on ${day} / ${month}`,
       };
       let newArray = [data, ...user.myOrders];
       user.myOrders = newArray;
