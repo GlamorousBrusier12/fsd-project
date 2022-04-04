@@ -21,6 +21,15 @@ const UserProfileUPI = (props) => {
 
   let newUser = props.user;
   useEffect(() => {
+    getUpi(props.user._id).then((res) => {
+      console.log("res");
+      console.log(res.data.userUpi);
+      let newArray = res.data.userUpi;
+      newArray.forEach((upi) => {
+        upi.id = upi._id.toString();
+      });
+      setData(newArray);
+    });
     setData(props.user.upi);
   }, [props.user.upi]);
 
@@ -45,7 +54,7 @@ const UserProfileUPI = (props) => {
     //   },
     //   body: JSON.stringify(newUser),
     // })
-    getUpi(id)
+    deleteUpi(id)
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
@@ -84,12 +93,12 @@ const UserProfileUPI = (props) => {
       width: 220,
     },
     {
-      field: "name",
+      field: "userName",
       headerName: "Name on UPI",
       width: 220,
     },
     {
-      field: "phoneNo",
+      field: "mobileNumber",
       headerName: "Phone number",
       width: 200,
     },

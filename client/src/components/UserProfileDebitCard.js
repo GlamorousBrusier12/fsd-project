@@ -11,38 +11,42 @@ import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
 import { deleteCard } from "../utils/api";
+import { getCards } from "../utils/api";
 
 const UserProfileDebitCard = (props) => {
   //Since  debit cards is an array, we initiate the array.
 
   const [data, setData] = useState([]);
-
+  // console.log("Hi");
   let newUser = props.user;
   useEffect(() => {
     setData(props.user.debitCards);
-  }, [props.user.debitCards]);
+    Promise.resolve(
+      getCards(props.user._id).then((res) => {
+        console.log("res");
+        console.log(res.data.userDebitCards);
+        // setData(res.data.userDebitCards);
+        let newArray = res.data.userDebitCards;
+        newArray.forEach((card) => {
+          card.id = card._id.toString();
+        });
+        setData(newArray);
+      })
+    );
+  }, []);
 
   //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
     //We delete this particular id.
 
-    let afterDelete = data.filter((item) => item.id !== id);
+    // let afterDelete = data.filter((item) => item.id !== id);
 
-    setData(afterDelete);
+    // setData(afterDelete);
 
-    //Set this as the new delivery adress
+    // //Set this as the new delivery adress
 
-    newUser.debitCards = afterDelete;
-    // let url = "http://localhost:3000/users/" + props.user.id;
+    // newUser.debitCards = afterDelete;
 
-    // fetch(url, {
-    //   method: "PATCH", // or 'PUT'
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(newUser),
-    // })
     deleteCard(id)
       .then((response) => response.json())
       .then((data) => {
@@ -83,7 +87,7 @@ const UserProfileDebitCard = (props) => {
       width: 220,
     },
     {
-      field: "name",
+      field: "nameOnCard",
       headerName: "Name on card",
       width: 220,
     },
