@@ -8,19 +8,29 @@ import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
+import { getMyOrders, getOneProduct } from "../utils/api";
 
 //This page renders all Myorders
 const UserProfile = (props) => {
   const [data, setData] = useState([]);
   //We get the user from the store.
-  let newUser = props.user;
-  //console.log("data from the store", data);
+
   //We set the existing data.
   useEffect(() => {
-    setData(props.user.myOrders);
+    getMyOrders(props.user._id).then((res) => {
+      console.log(res.data.userOrders);
+      let newArray = res.data.userOrders;
+      newArray.forEach((address) => {
+        address.id = address._id.toString();
+      });
+      console.log(newArray);
+      setData(newArray);
+    });
   }, [props.user.myOrders]);
 
-  const handleDelete = (id) => {
+  /* getOneProduct(props.user.productId).then();
+  console.log("product is", product); */
+  /* const handleDelete = (id) => {
     //We delete this particular id.
     let afterDelete = data.filter((item) => item.id !== id);
 
@@ -52,7 +62,7 @@ const UserProfile = (props) => {
       });
     toast.warning("Order Deleted", toastStyler);
   };
-
+ */
   //Column headings
   const columns = [
     {
@@ -67,30 +77,35 @@ const UserProfile = (props) => {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.image[0]} alt="" />
-            {params.row.title}
+            <img
+              className="userListImg"
+              src={params.row.productId.image[0]}
+              alt=""
+            />
+
+            {params.row.productId.productName}
           </div>
         );
       },
     },
 
     {
-      field: "type",
+      field: "productId.type",
       headerName: "Type",
       width: 80,
     },
     {
-      field: "Category",
+      field: "productId.category",
       headerName: "Category",
       width: 150,
     },
     {
-      field: "discount",
+      field: "productId.discount",
       headerName: "Discount",
       width: 100,
     },
     {
-      field: "price",
+      field: "productId.price",
       headerName: "Price",
       width: 100,
     },
@@ -110,15 +125,15 @@ const UserProfile = (props) => {
             <Link
               to={{
                 pathname: "/reviewform",
-                state: { productId: params.row._id },
+                state: { productId: params.row.productId._id },
               }}
             >
               <button className="userListEdit">Post Review</button>
             </Link>
-            <DeleteOutlineIcon
+            {/* <DeleteOutlineIcon
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
-            />
+            /> */}
           </>
         );
       },

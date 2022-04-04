@@ -24,3 +24,6 @@ export function getFaqs(productId) {
 export function getAddresses(userId) {
   return axios.get(`/address/${userId}`);
 }
+export function getMyOrders(userId) {
+  return axios.get(`/orders/${userId}`);
+}
