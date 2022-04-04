@@ -13,6 +13,9 @@ export function createUser(userDetails) {
 export function getUserById(userId) {
   return axios.get(`/user/${userId}`);
 }
+export function updateUser(userId, userDetails) {
+  return axios.patch(`/user/${userId}`, userDetails);
+}
 export function getReviews(productId) {
   return axios.get(`/review/${productId}`);
 }
@@ -30,4 +33,13 @@ export function getAddresses(userId) {
 }
 export function getMyOrders(userId) {
   return axios.get(`/orders/${userId}`);
+}
+export function getDeliveryAddress(userId) {
+  return axios.get(`/address/${userId}`);
+}
+export function postDeliveryAddress() {
+  return axios.post("/address");
+}
+export function updateDeliveryAddress(addressId) {
+  return axios.patch(`/address/${addressId}`);
 }
