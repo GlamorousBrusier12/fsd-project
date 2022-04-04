@@ -1,39 +1,80 @@
 import React, { useState, useEffect } from "react";
+import Loader from "./Loader";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Payment.css";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { emptyCart } from "../actions/cartAction";
+import { getDeliveryAddress, getCards, getUpi } from "../utils/api";
 
 function Payment(props) {
   //Taking user data from store(redux)
   const user = props.user;
-  const { deliveryAdress, upi, debitCards } = user;
+  const userId = user._id;
+  console.log(userId);
+  // const { deliveryAdress, upi, debitCards } = user;
   //Products and previous route info taken using useLocation() in react-router-dom
   const location = useLocation();
   let { products, prevPath } = location.state;
   //If previous path is cart, then the products should be the items present in the cart
   if (prevPath === "/cart") products = props.cartItems;
   // console.log(products);
+
+  const [address, setAddress] = useState([]);
+  const [debitCards, setDebitCards] = useState([]);
+  const [upi, setUpi] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const [paymentStatus, setPaymentStaus] = useState("Payment Method");
-  // useEffect(() => {
-  //   Promise.resolve(
-  //     getOneProduct(productId)
-  //       .then((res) => res.data)
-  //       .then(
-  //         (i) => {
-  //           setItem(i);
-  //           setIsLoaded(true);
-  //         },
-  //         (error) => {
-  //           setIsLoaded(true);
-  //           setError(error);
-  //         }
-  //       )
-  //   );
-  //   window.scrollTo(0, 0); //Page going to top
-  // }, [productId]);
+  useEffect(() => {
+    setLoading(true);
+    Promise.resolve(
+      getDeliveryAddress(userId)
+        .then((res) => res.data)
+        .then(
+          (i) => {
+            setAddress(i);
+            setLoading(false);
+          },
+          (error) => {
+            setError(error);
+            setLoading(false);
+          }
+        )
+    );
+    Promise.resolve(
+      getCards(userId)
+        .then((res) => res.data)
+        .then(
+          (i) => {
+            console.log("Card", i);
+            setDebitCards(i);
+            setLoading(false);
+          },
+          (error) => {
+            setError(error);
+            setLoading(false);
+          }
+        )
+    );
+    Promise.resolve(
+      getUpi(userId)
+        .then((res) => res.data)
+        .then(
+          (i) => {
+            setUpi(i);
+            setLoading(false);
+          },
+          (error) => {
+            setError(error);
+            setLoading(false);
+          }
+        )
+    );
+    window.scrollTo(0, 0); //Page going to top
+  }, [userId]);
   //Updating the selected address for shipping
   const addressChange = (e) => {
     const { value } = e.target;
@@ -321,14 +362,16 @@ function Payment(props) {
       });
   };
 
-  return (
+  return loading === true ? (
+    <p>loading...</p>
+  ) : (
     <div>
       <div className="shipping-address">
         <h1>Shipping Address</h1>
         <div className="address-list">
           <h3>Please select your preffered shippping address:</h3>
           {/* Displaying the existing addresses */}
-          {deliveryAdress.map((addr, index) => {
+          {address.map((addr, index) => {
             return (
               <div className="address-pack" key={index}>
                 <input
@@ -503,11 +546,12 @@ function Payment(props) {
                     name="address"
                     onClick={paymentDetailsChange}
                     value={`
-              ${card.name}, ${card.cardNo}, ${card.expiry}
+              ${card.nameOnCard}, ${card.cardNo}, ${card.expiry}
             `}
                   />
                   <label for={"debit" + index + 1}>
-                    {card.name}, {card.cardNo}, {card.type}, {card.expiry}
+                    {card.nameOnCard}, {card.cardNo}, {card.cardType},{" "}
+                    {card.expiry}
                   </label>
                 </div>
               );
@@ -527,7 +571,8 @@ function Payment(props) {
             `}
                   />
                   <label for={"debit" + index + 1}>
-                    {upi.name}, {upi.cardNo}, {upi.phoneNo}, {upi.type}
+                    {upi.userName}, {upi.cardNo}, {upi.mobileNumber},{" "}
+                    {upi.upiType}
                   </label>
                 </div>
               );

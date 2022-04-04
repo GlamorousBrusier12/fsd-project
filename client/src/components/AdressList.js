@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { handleUser } from "../actions";
 import { toastStyler } from "../commonEquipment";
+import { deleteDeliveryAddress } from "../utils/api";
 
 const AdressList = (props) => {
   //Since delivery adresses is an array, we initiate the array.
@@ -25,7 +26,7 @@ const AdressList = (props) => {
    */ //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
     //We delete this particular id.
-    //console.log(id);
+    console.log(id);
     let afterDelete = data.filter((item) => item.id !== id);
 
     //Set the array after deelte.
@@ -33,19 +34,19 @@ const AdressList = (props) => {
 
     //Set this as the new delivery adress
     newUser.deliveryAdress = afterDelete;
-    let url = "http://localhost:3000/users/" + props.user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
+    // fetch(url, {
+    //   method: "PATCH", // or 'PUT'
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newUser),
+    // })
+    deleteDeliveryAddress(id)
       .then((response) => response.json())
       .then((data) => {
-        console.log("Successfully PATCHED", data);
+        console.log("Successfully Deleted!", data);
         props.dispatch(handleUser(props.user._id));
       })
       .catch((error) => {
