@@ -41,10 +41,13 @@ const UserProfile = (props) => {
     newUser.myOrders = afterDelete;
     let url = "http://localhost:3000/users/" + props.user.id;
 
+    const token = localStorage.getItem("JWTToken");
     fetch(url, {
       method: "PATCH", // or 'PUT'
       headers: {
         Accept: "application/json",
+        Authorization: "Bearer ",
+        // Authorization: Bearer ${},
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newUser),
@@ -52,7 +55,7 @@ const UserProfile = (props) => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
-        props.dispatch(handleUser(props.user.email));
+        props.dispatch(handleUser(props.user._id));
       })
       .catch((error) => {
         console.error("Error:", error);

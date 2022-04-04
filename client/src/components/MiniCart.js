@@ -21,10 +21,10 @@ function MiniCart(props) {
   return (
     <div className="Item1">
       <div className="image">
-        <img src={props.content.image[0]} alt={props.content.title} />
+        <img src={props.content.image[0]} alt={props.content.productName} />
       </div>
       <div className="column">
-        <h4 id="title">{props.content.title}</h4>
+        <h4 id="title">{props.content.productName}</h4>
         <h4 id="price">₹{props.content.price}</h4>
         <h5 id="total">
           Total:{props.content.qty} x {props.content.price}=₹
@@ -59,8 +59,8 @@ function MiniCart(props) {
     </div>
   );
 }
-const mapStateToProps = (dispatch) => {
-  return {};
+const mapStateToProps = (state) => {
+  return state;
 };
 
 export default connect(mapStateToProps)(MiniCart);

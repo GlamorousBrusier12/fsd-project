@@ -122,7 +122,7 @@ function ProductPage(props) {
                   onClick={() => {
                     // Checking if the product is in the cart
                     props.cartItems.forEach((cartItem) => {
-                      if (item._id === cartItem.id) setDisabled(true);
+                      if (item._id === cartItem._id) setDisabled(true);
                     });
                     //Adding item to store
                     props.dispatch(handleaddtoCart(item._id));

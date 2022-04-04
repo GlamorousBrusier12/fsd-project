@@ -16,7 +16,7 @@ function findItemAndSetState(state, item) {
   // if not found then add the product with  qty=1
   let itemFound = false;
   for (let i of state.cart) {
-    if (i.id === item.id) {
+    if (i._id.toString() === item._id.toString()) {
       itemFound = true;
       i.qty += 1;
     }
