@@ -22,7 +22,6 @@ const UserProfile = (props) => {
         address.discount = address.productId.discount;
         address.price = address.productId.price;
       });
-      console.log(newArray);
       setData(newArray);
     });
   }, [props.user.myOrders]);
