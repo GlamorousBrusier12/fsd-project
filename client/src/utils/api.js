@@ -17,6 +17,10 @@ export function getReviews(productId) {
   return axios.get(`/review/${productId}`);
 }
 
+export function postReview(reviewDetails) {
+  return axios.post("/review", reviewDetails);
+}
+
 export function getFaqs(productId) {
   return axios.get(`/faq/${productId}`);
 }
