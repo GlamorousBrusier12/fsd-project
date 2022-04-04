@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
+import { deleteCard } from "../utils/api";
 
 const UserProfileDebitCard = (props) => {
   //Since  debit cards is an array, we initiate the array.
@@ -32,19 +33,20 @@ const UserProfileDebitCard = (props) => {
     //Set this as the new delivery adress
 
     newUser.debitCards = afterDelete;
-    let url = "http://localhost:3000/users/" + props.user.id;
+    // let url = "http://localhost:3000/users/" + props.user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
+    // fetch(url, {
+    //   method: "PATCH", // or 'PUT'
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newUser),
+    // })
+    deleteCard(id)
       .then((response) => response.json())
       .then((data) => {
-        console.log("Successfully PATCHED", data);
+        console.log("Successfully Deleted", data);
         props.dispatch(handleUser(props.user._id));
       })
       .catch((error) => {

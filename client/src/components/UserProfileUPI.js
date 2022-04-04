@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
+import { deleteUpi, getUpi } from "../utils/api";
 
 const UserProfileUPI = (props) => {
   //Since  upi  is an array, we initiate the array.
@@ -34,16 +35,17 @@ const UserProfileUPI = (props) => {
     setData(afterDelete);
 
     newUser.upi = afterDelete;
-    let url = "http://localhost:3000/users/" + props.user.id;
+    // let url = "http://localhost:3000/users/" + props.user.id;
 
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newUser),
-    })
+    // fetch(url, {
+    //   method: "PATCH", // or 'PUT'
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(newUser),
+    // })
+    getUpi(id)
       .then((response) => response.json())
       .then((data) => {
         console.log("Successfully PATCHED", data);
