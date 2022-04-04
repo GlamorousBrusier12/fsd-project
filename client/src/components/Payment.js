@@ -6,7 +6,14 @@ import { connect } from "react-redux";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { emptyCart } from "../actions/cartAction";
-import { getDeliveryAddress, getCards, getUpi } from "../utils/api";
+import {
+  getDeliveryAddress,
+  getCards,
+  getUpi,
+  postCard,
+  postUpi,
+  postDeliveryAddress,
+} from "../utils/api";
 
 function Payment(props) {
   //Taking user data from store(redux)
@@ -49,8 +56,7 @@ function Payment(props) {
         .then((res) => res.data)
         .then(
           (i) => {
-            console.log("Card", i);
-            setDebitCards(i);
+            setDebitCards(i.userDebitCards);
             setLoading(false);
           },
           (error) => {
@@ -64,7 +70,7 @@ function Payment(props) {
         .then((res) => res.data)
         .then(
           (i) => {
-            setUpi(i);
+            setUpi(i.userUpi);
             setLoading(false);
           },
           (error) => {
@@ -92,27 +98,30 @@ function Payment(props) {
 
   //Setting state for storing newly entered information
   const [newAddress, setNewAddress] = useState({
-    Name: "",
+    userName: "",
     email: "",
     address: "",
-    city: "",
-    state: "",
-    phoneNo: "",
-    zip: "",
+    mobileNumber: "",
+    pincode: "",
+    userId: "",
   });
 
   const [newCard, setNewCard] = useState({
-    name: "",
+    nameOnCard: "",
     cardNo: "",
     expiry: "",
-    type: "",
+    cardType: "",
+    cvv: "",
+    avatar: "",
   });
 
   const [newUpi, setNewUpi] = useState({
-    name: "",
+    userName: "",
     cardNo: "",
-    phoneNo: "",
-    type: "",
+    mobileNumber: "",
+    upiType: "",
+    userId: "",
+    avatar: "",
   });
 
   //Handling change in the respective forms
@@ -176,22 +185,23 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100); //A random number to use as an id
       newAddress.id = id;
-      user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
+      // user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
 
-      //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
-      let url = "http://localhost:3000/users/" + user.id;
+      // //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
+      // let url = "http://localhost:3000/users/" + user.id;
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
+      // fetch(url, {
+      //   method: "PATCH", // or 'PUT'
+      //   headers: {
+      //     Accept: "application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(user),
+      // })
+      postDeliveryAddress(newAddress)
         .then((response) => response.json())
         .then((data) => {
-          console.log("Successfully PATCHED", data);
+          console.log("Successfully Added", data);
           toast.success("Address Added", toastStyler);
           //Clearing the form after success
           setNewAddress({
@@ -230,17 +240,18 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newCard.id = id;
-      user.debitCards.push(newCard);
-      let url = "http://localhost:3000/users/" + user.id;
+      // user.debitCards.push(newCard);
+      // let url = "http://localhost:3000/users/" + user.id;
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
+      // fetch(url, {
+      //   method: "PATCH", // or 'PUT'
+      //   headers: {
+      //     Accept: "application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(user),
+      // })
+      postCard(newCard)
         .then((response) => response.json())
         .then((data) => {
           console.log("Successfully PATCHED", data);
@@ -272,17 +283,19 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newUpi.id = id;
-      user.upi.push(newUpi);
-      let url = "http://localhost:3000/users/" + user.id;
+      console.log(newUpi);
+      // user.upi.push(newUpi);
+      // let url = "http://localhost:3000/users/" + user.id;
 
-      fetch(url, {
-        method: "PATCH", // or 'PUT'
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
+      // fetch(url, {
+      //   method: "PATCH", // or 'PUT'
+      //   headers: {
+      //     Accept: "application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(user),
+      // })
+      postUpi(newUpi)
         .then((response) => response.json())
         .then((data) => {
           console.log("Successfully PATCHED", data);
@@ -379,19 +392,17 @@ function Payment(props) {
                   id={"address" + index + 1}
                   name="address"
                   value={`
-              ${addr.Name}, ${addr.address}, ${addr.city}, ${addr.state}, ${addr.zip}
-              Phone: ${addr.phoneNo}, email: ${addr.email}
+              ${addr.userName}, ${addr.address}, ${addr.locationName}, ${addr.pincode}
+              Phone: ${addr.mobileNumber}
             `}
                   onClick={addressChange}
                 />
                 <label for={"address" + index + 1}>
                   <div>
-                    {addr.Name}, {addr.address}, {addr.city}, {addr.state},{" "}
-                    {addr.zip}
+                    {addr.userName}, {addr.address}, {addr.locationName},
+                    {addr.pincode}
                   </div>
-                  <div>
-                    Phone: {addr.phoneNo}, email: {addr.email}
-                  </div>
+                  <div>Phone: {addr.mobileNumber}</div>
                 </label>
               </div>
             );
