@@ -37,7 +37,10 @@ const UserProfileDebitCard = (props) => {
   //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
     //We delete this particular id.
+    let afterDelete = data.filter((item) => item.id !== id);
 
+    //Set the array after deelte.
+    setData(afterDelete);
     //Set this as the new delivery adress
 
     deleteCard(id).then((response) => {

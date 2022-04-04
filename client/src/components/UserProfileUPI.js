@@ -18,6 +18,7 @@ const UserProfileUPI = (props) => {
 
   const [data, setData] = useState([]);
   const history = useHistory();
+  const [rerender, setRerender] = useState(true);
 
   let newUser = props.user;
   useEffect(() => {
@@ -31,38 +32,22 @@ const UserProfileUPI = (props) => {
       setData(newArray);
     });
     setData(props.user.upi);
-  }, [props.user.upi]);
+  }, []);
 
   //This function handles delete on clicking taking the id as param.
 
   const handleDelete = (id) => {
     //We delete this particular id.
-
     let afterDelete = data.filter((item) => item.id !== id);
 
-    //Set this as the new upi
+    //Set the array after deelte.
     setData(afterDelete);
 
-    newUser.upi = afterDelete;
-    // let url = "http://localhost:3000/users/" + props.user.id;
+    deleteUpi(id).then((response) => {
+      console.log(response);
+      setRerender(!rerender);
+    });
 
-    // fetch(url, {
-    //   method: "PATCH", // or 'PUT'
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(newUser),
-    // })
-    deleteUpi(id)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Successfully PATCHED", data);
-        props.dispatch(handleUser(props.user._id));
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
     toast.warning("UPI Deleted", toastStyler);
   };
 
