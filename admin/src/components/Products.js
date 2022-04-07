@@ -12,12 +12,12 @@ const Products = (props) => {
     // renders the list received from the props
     <List {...props}>
       <Datagrid>
-        <NumberField source="id" />
-        <TextField source="title" />
+        <TextField source="_id" />
+        <TextField source="productName" />
         <TextField source="price" />
-        <TextField source="stockAvailable" />
-        <EditButton basePath="/products" />
-        <DeleteButton basePath="/products" />
+        <TextField source="quantity" />
+        <EditButton basePath="/product" />
+        <DeleteButton basePath="/product" />
       </Datagrid>
     </List>
   );
