@@ -22,15 +22,8 @@ function Register() {
     setPasswordShown(passwordShown ? false : true);
   };
 
-  function emailExists(emailId) {
-    const result = queryEmail(emailId);
-    console.log(result);
-    // if (!result.data.user) {
-    // return false;
-    // } else return true;
-  }
   // Function declared to post the users details to the JSON-Server.
-  const registerUser = (event) => {
+  const registerUser = async (event) => {
     //Fetching the JSON-Server
 
     // Validating Mobile Number
@@ -49,8 +42,12 @@ function Register() {
           mobileNumber: mobile_number,
         };
         console.log(userData);
-        let value = emailExists(useremail);
-        console.log(value, "Value");
+        // let value = emailExists(useremail);
+
+        const res = await queryEmail(useremail);
+        console.log(res.data.user);
+        // console.log(value, "Value");
+        const value = res.data.user;
         if (value) {
           toast.error("A user already exists with the given emailID");
         } else {
