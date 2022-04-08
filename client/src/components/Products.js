@@ -34,13 +34,13 @@ function Products(props) {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-  const handleCategoryClick = (category, isChecked) => {
-    if (!isChecked) {
-      props.dispatch(handleCategoryFilter(category));
-    } else {
-      props.dispatch(renderallProducts());
-    }
-  };
+  // const handleCategoryClick = (category, isChecked) => {
+  //   if (!isChecked) {
+  //     props.dispatch(handleCategoryFilter(category));
+  //   } else {
+  //     props.dispatch(renderallProducts());
+  //   }
+  // };
   // Function for HTL Button to make it Radio
   const ChangeHTL = () => {
     if (isHTLChecked === true) {
@@ -323,7 +323,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsLTHChecked(!isLTHChecked);
                   ChangeLTH();
-                  handleCategoryClick("?_sort=price", isLTHChecked);
+                  // handleCategoryClick("?_sort=price", isLTHChecked);
                 }}
               />
               <label htmlFor="LTH">Price: Low to High</label>
@@ -336,7 +336,7 @@ function Products(props) {
                 checked={isHTLChecked}
                 onChange={() => {
                   // setIsHTLChecked(!isHTLChecked);
-                  handleCategoryClick("?_sort=price&_order=desc", isHTLChecked);
+                  // handleCategoryClick("?_sort=price&_order=desc", isHTLChecked);
                   ChangeHTL();
                 }}
               />
@@ -355,10 +355,10 @@ function Products(props) {
                 onChange={() => {
                   // setIsElectronicsChecked(!isElectronicsChecked);
                   ChangeElectronics();
-                  handleCategoryClick(
-                    "?Category=Mobiles&Category=Appliances&Category=Accessories",
-                    isElectronicsChecked
-                  );
+                  // handleCategoryClick(
+                  //   "?Category=Mobiles&Category=Appliances&Category=Accessories",
+                  //   isElectronicsChecked
+                  // );
                 }}
               />
               <label htmlFor="department1"> Electronics</label>
@@ -372,10 +372,10 @@ function Products(props) {
                 onChange={() => {
                   // setIsFashionChecked(!isFashionChecked);
                   ChangeFashion();
-                  handleCategoryClick(
-                    "?Category=Mens&Category=Womens&Category=Kids",
-                    isFashionChecked
-                  );
+                  // handleCategoryClick(z
+                  //   "?Category=Mens&Category=Womens&Category=Kids",
+                  //   isFashionChecked
+                  // );
                 }}
               />
               <label htmlFor="department2"> Fashion</label>
@@ -389,10 +389,10 @@ function Products(props) {
                 onChange={() => {
                   // setIsAppliancesChecked(!isAppliancesChecked);
                   ChangeAppliances();
-                  handleCategoryClick(
-                    "?Category=Appliances",
-                    isAppliancesChecked
-                  );
+                  // handleCategoryClick(
+                  //   "?Category=Appliances",
+                  //   isAppliancesChecked
+                  // );
                 }}
               />
               <label htmlFor="department3"> Home Appliances</label>
@@ -406,7 +406,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsFurnitureChecked(!isFurnitureChecked);
                   ChangeFurniture();
-                  handleCategoryClick("?Category=Home", isFurnitureChecked);
+                  // handleCategoryClick("?Category=Home", isFurnitureChecked);
                 }}
               />
               <label htmlFor="department4"> Furniture</label>
@@ -425,7 +425,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsBuyChecked(!isBuyChecked);
                   ChangeBuy();
-                  handleCategoryClick("?type=Buy", isBuyChecked);
+                  // handleCategoryClick("?type=Buy", isBuyChecked);
                 }}
               />
               <label htmlFor="buy"> Buy</label>
@@ -439,7 +439,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsRentChecked(!isRentChecked);
                   ChangeRent();
-                  handleCategoryClick("?type=Rent", isRentChecked);
+                  // handleCategoryClick("?type=Rent", isRentChecked);
                 }}
               />
               <label htmlFor="rent"> Rent</label>
@@ -458,7 +458,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsFourStarChecked(!isFourStarChecked);
                   ChangeFourStar();
-                  handleCategoryClick("?rating.rate_gte=4", isFourStarChecked);
+                  // handleCategoryClick("?rating.rate_gte=4", isFourStarChecked);
                 }}
               />
               <label htmlFor="rating4">
@@ -480,7 +480,7 @@ function Products(props) {
                 onChange={() => {
                   ChangeThreeStar();
                   // setIsThreeStarChecked(!isThreeStarChecked);
-                  handleCategoryClick("?rating.rate_gte=3", isThreeStarChecked);
+                  // handleCategoryClick("?rating.rate_gte=3", isThreeStarChecked);
                 }}
               />
               <label htmlFor="rating3">
@@ -502,7 +502,7 @@ function Products(props) {
                 onChange={() => {
                   ChangeTwoStar();
                   // setIsTwoStarChecked(!isTwoStarChecked);
-                  handleCategoryClick("?rating.rate_gte=2", isTwoStarChecked);
+                  // handleCategoryClick("?rating.rate_gte=2", isTwoStarChecked);
                 }}
               />
               <label htmlFor="rating2">
@@ -524,7 +524,7 @@ function Products(props) {
                 onChange={() => {
                   ChangeOneStar();
                   // setIsOneStarChecked(!isOneStarChecked);
-                  handleCategoryClick("?rating.rate_gte=1", isOneStarChecked);
+                  // handleCategoryClick("?rating.rate_gte=1", isOneStarChecked);
                 }}
               />
               <label htmlFor="rating1">
@@ -551,7 +551,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsSeventyFiveChecked(!isSeventyFiveChecked);
                   ChangeSeventyFive();
-                  handleCategoryClick("?discount_gte=75", isSeventyFiveChecked);
+                  // handleCategoryClick("?discount_gte=75", isSeventyFiveChecked);
                 }}
               />
               <label htmlFor="discount1"> 75% and more</label>
@@ -565,7 +565,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsFiftyChecked(!isFiftyChecked);
                   ChangeFifty();
-                  handleCategoryClick("?discount_gte=50", isFiftyChecked);
+                  // handleCategoryClick("?discount_gte=50", isFiftyChecked);
                 }}
               />
               <label htmlFor="discount2"> 50% and more</label>
@@ -579,7 +579,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsTwentyFiveChecked(!isTwentyFiveChecked);
                   ChangeTwentyFive();
-                  handleCategoryClick("?discount_gte=25", isTwentyFiveChecked);
+                  // handleCategoryClick("?discount_gte=25", isTwentyFiveChecked);
                 }}
               />
               <label htmlFor="discount3"> 25% and more</label>
@@ -593,7 +593,7 @@ function Products(props) {
                 onChange={() => {
                   // setIsTenChecked(!isTenChecked);
                   ChangeTen();
-                  handleCategoryClick("?discount_gte=10", isTenChecked);
+                  // handleCategoryClick("?discount_gte=10", isTenChecked);
                 }}
               />
               <label htmlFor="discount4"> 10% and more</label>

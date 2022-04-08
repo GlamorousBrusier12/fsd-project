@@ -4,13 +4,14 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import "../styles/RegisterStyle.css";
-import { createUser } from "../utils/api";
+import { createUser, queryEmail } from "../utils/api";
 function Register() {
   const history = useHistory();
   //Declaring React Hooks to store the user data and post it to the JSON-Server.
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [useremail, setUseremail] = useState("");
+  const [userName, setUserName] = useState("Naveen_topper");
   const [mobile_number, setMobilenumber] = useState("");
   const [userPassword, setPassword] = useState("");
   // Hooks created for Show Password feature.
@@ -20,6 +21,14 @@ function Register() {
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
+  function emailExists(emailId) {
+    const result = queryEmail(emailId);
+    console.log(result);
+    // if (!result.data.user) {
+    // return false;
+    // } else return true;
+  }
   // Function declared to post the users details to the JSON-Server.
   const registerUser = (event) => {
     //Fetching the JSON-Server
@@ -32,50 +41,29 @@ function Register() {
         console.log(useremail.indexOf("@"));
         toast.error("Enter Valid Email id", toastStyler);
       } else {
-        fetch(`http://localhost:3000/users?q=${useremail}`)
-          .then((res) => res.json())
-          .then((json) => json[0].email)
-          .then((email) => {
-            //Checking whether User Already Exists
-            // isUser.current.innerText =
-            //   "Email already in use. Please try again using another email id";
-            toast.error(
-              "Email already in use. Please try again using another email id",
-              toastStyler
-            );
-          })
-          .catch((err) => {
-            isUser.current.innerText = " ";
-            const data = {
-              fulllName: firstname + " " + lastname,
-              email: useremail,
-              mobileNumber: mobile_number,
-              password: userPassword,
-              address: " ",
-              wishlist: [],
-              purchases: [],
-              cartItems: [],
-              reviews: [],
-              isLoggedIn: true,
-            };
-            // fetch("http://localhost:3000/users", {
-            //   method: "POST", // or 'PUT'
-            //   headers: {
-            //     "Content-Type": "application/json",
-            //   },
-            //   body: JSON.stringify(data),
-            // })
-            createUser(data)
-              .then((response) => response.json())
-              .then((data) => {
-                console.log("Success:", data);
-              })
-              .catch((error) => {
-                console.error("Error:", error);
-              });
-            event.preventDefault();
-            history.push("/");
-          });
+        const userData = {
+          fullName: firstname + " " + lastname,
+          userName,
+          password: userPassword,
+          email: useremail,
+          mobileNumber: mobile_number,
+        };
+        console.log(userData);
+        let value = emailExists(useremail);
+        console.log(value, "Value");
+        if (value) {
+          toast.error("A user already exists with the given emailID");
+        } else {
+          createUser(userData)
+            .then((data) => {
+              console.log("Success:", data);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
+          event.preventDefault();
+          history.push("/");
+        }
       }
     }
   };

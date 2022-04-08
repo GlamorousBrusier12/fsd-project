@@ -26,6 +26,10 @@ export function getUserById(userId) {
   return axios.get(`/user/${userId}`);
 }
 
+export function queryEmail(emailId) {
+  return axios.get(`/user?email=${emailId}`);
+}
+
 // post a review
 export function updateUser(userId, userDetails) {
   return axios.patch(`/user/${userId}`, userDetails, {
@@ -162,4 +166,8 @@ export function deleteUpi(upiId) {
       Authorization: "Bearer " + localStorage.getItem("JWTToken"),
     },
   });
+}
+
+export function postOrder(orderDetails) {
+  return axios.post("/orders", orderDetails);
 }
