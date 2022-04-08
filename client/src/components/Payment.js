@@ -186,19 +186,6 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100); //A random number to use as an id
       newAddress.id = id;
-      // user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
-
-      // //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
-      // let url = "http://localhost:3000/users/" + user.id;
-
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postDeliveryAddress(newAddress)
         .then((response) => response.json())
         .then((data) => {
@@ -241,17 +228,6 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newCard.id = id;
-      // user.debitCards.push(newCard);
-      // let url = "http://localhost:3000/users/" + user.id;
-
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postCard(newCard)
         .then((response) => response.json())
         .then((data) => {
@@ -285,17 +261,6 @@ function Payment(props) {
       const id = Math.ceil(Math.random() * 100);
       newUpi.id = id;
       console.log(newUpi);
-      // user.upi.push(newUpi);
-      // let url = "http://localhost:3000/users/" + user.id;
-
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postUpi(newUpi)
         .then((response) => response.json())
         .then((data) => {
@@ -341,17 +306,6 @@ function Payment(props) {
       orderedOn: date,
     };
     console.log(data, "The information to be posted");
-    //PATCH request for modification the json-server
-    // let url = "http://localhost:8000/orders";
-    // console.log("User mowa", user);
-    // fetch(url, {
-    //   method: "PATCH", // or 'PUT'
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    // })
     postOrder(data)
       .then((data) => {
         console.log("Successfully PATCHED", data);
@@ -565,7 +519,7 @@ function Payment(props) {
                     name="address"
                     onClick={paymentDetailsChange}
                     value={`
-              ${upi.name}, ${upi.cardNo}, ${upi.phoneNo}
+              ${upi.userName}, ${upi.cardNo}, ${upi.mobileNumber}
             `}
                   />
                   <label for={"debit" + index + 1}>
@@ -723,7 +677,7 @@ function Payment(props) {
         </p>
       </div>
 
-      {/* <Link
+      <Link
         to={{
           pathname: "/confirmation",
           //Sending the info required in the confirmation page on clicking
@@ -734,22 +688,22 @@ function Payment(props) {
             paymentStatus: paymentStatus,
           },
         }}
-      > */}
-      <button
-        className="proceed-btn"
-        onClick={() => {
-          addToOrders();
-          props.dispatch(emptyCart()); //Emptying cart after order is placed
-        }}
-        disabled={
-          paymentStatus === "Payment Method" ||
-          selectedAddress === "Shipping Address" ||
-          selectedPayment === "Payment Details"
-        }
       >
-        Proceed <i class="fas fa-arrow-right"></i>
-      </button>
-      {/* </Link> */}
+        <button
+          className="proceed-btn"
+          onClick={() => {
+            addToOrders();
+            props.dispatch(emptyCart()); //Emptying cart after order is placed
+          }}
+          disabled={
+            paymentStatus === "Payment Method" ||
+            selectedAddress === "Shipping Address" ||
+            selectedPayment === "Payment Details"
+          }
+        >
+          Proceed <i class="fas fa-arrow-right"></i>
+        </button>
+      </Link>
     </div>
   );
 }

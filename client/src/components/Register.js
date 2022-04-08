@@ -41,12 +41,10 @@ function Register() {
           email: useremail,
           mobileNumber: mobile_number,
         };
-        console.log(userData);
-        // let value = emailExists(useremail);
 
         const res = await queryEmail(useremail);
         console.log(res.data.user);
-        // console.log(value, "Value");
+
         const value = res.data.user;
         if (value) {
           toast.error("A user already exists with the given emailID");
@@ -94,12 +92,24 @@ function Register() {
               onChange={(e) => setLastname(e.target.value)}
               required
             />
+            <label className="Label" htmlFor="username">
+              <h3>User Name</h3>
+            </label>
+            <br />
+            <input
+              className="input-field width-90"
+              type="text"
+              name="lname"
+              id="username"
+              placeholder="User Name"
+              onChange={(e) => setUserName(e.target.value)}
+              required
+            />
           </div>
           <div>
             <label className="Label" htmlFor="email_id">
               <h3>Email id</h3>
             </label>
-            {/* <br /> */}
             <input
               className="input-field width-90"
               type="email"
@@ -114,7 +124,6 @@ function Register() {
             <label className="Label" htmlFor="mobile_number">
               <h3>Mobile Number</h3>
             </label>
-            {/* <br /> */}
             <input
               className="input-field width-90"
               type="number"

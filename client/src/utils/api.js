@@ -169,5 +169,11 @@ export function deleteUpi(upiId) {
 }
 
 export function postOrder(orderDetails) {
-  return axios.post("/orders", orderDetails);
+  return axios.post("/orders", orderDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }

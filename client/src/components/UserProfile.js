@@ -13,17 +13,19 @@ const UserProfile = (props) => {
 
   //We set the existing data.
   useEffect(() => {
-    getMyOrders(props.user._id).then((res) => {
-      let newArray = res.data.userOrders;
-      newArray.forEach((address) => {
-        address.id = address._id.toString();
-        address.type = address.productId.type;
-        address.category = address.productId.category;
-        address.discount = address.productId.discount;
-        address.price = address.productId.price;
+    if (props.user._id) {
+      getMyOrders(props.user._id).then((res) => {
+        let newArray = res.data.userOrders;
+        newArray.forEach((address) => {
+          address.id = address._id.toString();
+          address.type = address.productId.type;
+          address.category = address.productId.category;
+          address.discount = address.productId.discount;
+          address.price = address.productId.price;
+        });
+        setData(newArray);
       });
-      setData(newArray);
-    });
+    }
   }, [props.user.myOrders]);
 
   //Column headings
