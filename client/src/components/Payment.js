@@ -13,6 +13,7 @@ import {
   postCard,
   postUpi,
   postDeliveryAddress,
+  postOrder,
 } from "../utils/api";
 
 function Payment(props) {
@@ -321,51 +322,37 @@ function Payment(props) {
 
   //After the order has been placed, update the user's myOrders
   const addToOrders = () => {
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
     const d = new Date();
-    const day = d.getDate();
-    const month = months[d.getMonth()];
+    let date = d.toISOString();
+    date = date.slice(0, 10);
+    const orders = [];
     //Each given product is pushed into the myOrders of the user
     products.forEach((product) => {
-      const data = {
-        id: product.id,
-        image: product.image,
-        title: product.title,
-        price: product.price,
-        discount: product.discount,
-        type: product.type,
-        Category: product.Category,
-        status: `Ordered on ${day} / ${month}`,
+      const order = {
+        productId: product._id,
+        qty: product.qty,
       };
-      let newArray = [data, ...user.myOrders];
-      user.myOrders = newArray;
+      orders.push(order);
     });
+    console.log(orders, "Orders");
+    const data = {
+      userId: userId,
+      orders: orders,
+      orderedOn: date,
+    };
+    console.log(data, "The information to be posted");
     //PATCH request for modification the json-server
-    let url = "http://localhost:3000/users/" + user.id;
-    console.log("User mowa", user);
-    fetch(url, {
-      method: "PATCH", // or 'PUT'
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
-      .then((response) => response.json())
+    // let url = "http://localhost:8000/orders";
+    // console.log("User mowa", user);
+    // fetch(url, {
+    //   method: "PATCH", // or 'PUT'
+    //   headers: {
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(user),
+    // })
+    postOrder(data)
       .then((data) => {
         console.log("Successfully PATCHED", data);
         toast.success("Information added", toastStyler);
@@ -736,7 +723,7 @@ function Payment(props) {
         </p>
       </div>
 
-      <Link
+      {/* <Link
         to={{
           pathname: "/confirmation",
           //Sending the info required in the confirmation page on clicking
@@ -747,22 +734,22 @@ function Payment(props) {
             paymentStatus: paymentStatus,
           },
         }}
+      > */}
+      <button
+        className="proceed-btn"
+        onClick={() => {
+          addToOrders();
+          props.dispatch(emptyCart()); //Emptying cart after order is placed
+        }}
+        disabled={
+          paymentStatus === "Payment Method" ||
+          selectedAddress === "Shipping Address" ||
+          selectedPayment === "Payment Details"
+        }
       >
-        <button
-          className="proceed-btn"
-          onClick={() => {
-            addToOrders();
-            props.dispatch(emptyCart()); //Emptying cart after order is placed
-          }}
-          disabled={
-            paymentStatus === "Payment Method" ||
-            selectedAddress === "Shipping Address" ||
-            selectedPayment === "Payment Details"
-          }
-        >
-          Proceed <i class="fas fa-arrow-right"></i>
-        </button>
-      </Link>
+        Proceed <i class="fas fa-arrow-right"></i>
+      </button>
+      {/* </Link> */}
     </div>
   );
 }
