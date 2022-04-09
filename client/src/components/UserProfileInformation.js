@@ -24,7 +24,7 @@ const UserProfileInformation = (props) => {
   const [fullName, setfullName] = useState("");
   const [userName, setuserName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobileNumber, setmobileNumber] = useState();
+  const [mobileNumber, setmobileNumber] = useState("");
   let error = [];
 
   //get methods for all fields.
@@ -200,9 +200,9 @@ const UserProfileInformation = (props) => {
               <div className="userUpdateRight">
                 <div className="userUpdateUpload">
                   <img className="userUpdateImg" src={info.avatar} alt="" />
-                  {/* <label htmlFor="file">
+                  <label htmlFor="file">
                     <Publish className="userUpdateIcon" />
-                  </label> */}
+                  </label>
                   <input type="file" id="file" style={{ display: "none" }} />
                 </div>
                 <button className="userUpdateButton" onClick={handleSubmit}>
