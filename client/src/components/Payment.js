@@ -38,6 +38,9 @@ function Payment(props) {
   const [paymentStatus, setPaymentStaus] = useState("Payment Method");
   useEffect(() => {
     setLoading(true);
+    products.forEach((product) => {
+      product.qty = prevPath === "/cart" ? product.qty : 1;
+    });
     Promise.resolve(
       getDeliveryAddress(userId)
         .then((res) => res.data)
@@ -186,19 +189,7 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100); //A random number to use as an id
       newAddress.id = id;
-      // user.deliveryAdress.push(newAddress); //pushing the new Address(entered in the form) into deliveryAdress of the user
 
-      // //PATCH request sent to update the user and add the newAddress to deliveryAdress of user
-      // let url = "http://localhost:3000/users/" + user.id;
-
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postDeliveryAddress(newAddress)
         .then((response) => response.json())
         .then((data) => {
@@ -241,17 +232,7 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newCard.id = id;
-      // user.debitCards.push(newCard);
-      // let url = "http://localhost:3000/users/" + user.id;
 
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postCard(newCard)
         .then((response) => response.json())
         .then((data) => {
@@ -284,18 +265,7 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newUpi.id = id;
-      console.log(newUpi);
-      // user.upi.push(newUpi);
-      // let url = "http://localhost:3000/users/" + user.id;
 
-      // fetch(url, {
-      //   method: "PATCH", // or 'PUT'
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(user),
-      // })
       postUpi(newUpi)
         .then((response) => response.json())
         .then((data) => {
@@ -340,18 +310,7 @@ function Payment(props) {
       orders: orders,
       orderedOn: date,
     };
-    console.log(data, "The information to be posted");
-    //PATCH request for modification the json-server
-    // let url = "http://localhost:8000/orders";
-    // console.log("User mowa", user);
-    // fetch(url, {
-    //   method: "PATCH", // or 'PUT'
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    // })
+
     postOrder(data)
       .then((data) => {
         console.log("Successfully PATCHED", data);
@@ -363,7 +322,7 @@ function Payment(props) {
   };
 
   return loading === true ? (
-    <p>loading...</p>
+    <Loader />
   ) : (
     <div>
       <div className="shipping-address">
@@ -705,8 +664,7 @@ function Payment(props) {
                 <p>
                   Total Amount: ₹{product.price} x{" "}
                   {/* If the item is coming directly from Buy Now, qty should be 1 if it comes from cart, the code should just be product.qty*/}
-                  {prevPath === "/cart" ? product.qty : 1} = ₹
-                  {product.price * (prevPath === "/cart" ? product.qty : 1)}
+                  {product.qty} = ₹{product.price * product.qty}
                 </p>
               </div>
             </div>
@@ -741,11 +699,11 @@ function Payment(props) {
           addToOrders();
           props.dispatch(emptyCart()); //Emptying cart after order is placed
         }}
-        disabled={
-          paymentStatus === "Payment Method" ||
-          selectedAddress === "Shipping Address" ||
-          selectedPayment === "Payment Details"
-        }
+        // disabled={
+        //   paymentStatus === "Payment Method" ||
+        //   selectedAddress === "Shipping Address" ||
+        //   selectedPayment === "Payment Details"
+        // }
       >
         Proceed <i class="fas fa-arrow-right"></i>
       </button>

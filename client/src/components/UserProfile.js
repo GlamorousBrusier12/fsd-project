@@ -14,7 +14,8 @@ const UserProfile = (props) => {
   //We set the existing data.
   useEffect(() => {
     getMyOrders(props.user._id).then((res) => {
-      let newArray = res.data.userOrders;
+      let newArray = res.data.userOrders || [];
+      console.log(newArray);
       newArray.forEach((address) => {
         address.id = address._id.toString();
         address.type = address.productId.type;
