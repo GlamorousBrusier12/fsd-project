@@ -11,11 +11,10 @@ const ProductCreate = (props) => {
   return (
     <Create title={"add a product"} {...props}>
       <SimpleForm>
-        <NumberInput label="Id" source="id" />
-        <TextInput label="Title" source="title" />
+        <TextInput label="Title" source="productName" />
         <NumberInput label="Price" source="price" />
         <NumberInput label="Discount" source="discount" />
-        <NumberInput label="Stock Availability" source="stockAvailable" />
+        <NumberInput label="Stock Availability" source="quantity" />
         <TextInput label="description" source="description" />
         <TextInput label="Image Link" source="image[0]" />
         <NumberInput
@@ -31,30 +30,8 @@ const ProductCreate = (props) => {
           defaultValue={0}
         />
         <TextInput label="Type" source="type" />
-        <TextInput label="Category" source="Category" />
-        {/* <ArrayInput source="Reviews" value={[]} />
-        <ArrayInput source="Faq" value={[]} /> */}
-        <ArrayInput label="Reviews" source="Reviews">
-          <SimpleFormIterator>
-            <TextInput
-              source="UserName"
-              label="username"
-              defaultValue="Naveen"
-            />
-            <NumberInput label="Rating" source="Rating" defaultValue={5} />
-            <TextInput
-              source="Heading"
-              label="Heading"
-              defaultValue="This is good"
-            />
-            <TextInput
-              source="Body"
-              label="Body"
-              defaultValue="The product is too good worth buying it"
-            />
-          </SimpleFormIterator>
-        </ArrayInput>
-        <ArrayInput label="Faq" source="Faq">
+        <TextInput label="Category" source="category" />
+        {/* <ArrayInput label="Faq" source="Faq">
           <SimpleFormIterator>
             <TextInput
               source="Question"
@@ -68,7 +45,7 @@ const ProductCreate = (props) => {
             />
             <NumberInput label="Upvotes" source="Upvotes" defaultValue={0} />
           </SimpleFormIterator>
-        </ArrayInput>
+        </ArrayInput> */}
       </SimpleForm>
     </Create>
   );

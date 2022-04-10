@@ -32,10 +32,11 @@ export function queryEmail(emailId) {
 
 // post a review
 export function updateUser(userId, userDetails) {
+  console.log(userDetails);
   return axios.patch(`/user/${userId}`, userDetails, {
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: "multipart/form-data",
+      "content-type": "multipart/form-data",
       Authorization: "Bearer " + localStorage.getItem("JWTToken"),
     },
   });
@@ -169,5 +170,11 @@ export function deleteUpi(upiId) {
 }
 
 export function postOrder(orderDetails) {
-  return axios.post("/orders", orderDetails);
+  return axios.post("/orders", orderDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
 }

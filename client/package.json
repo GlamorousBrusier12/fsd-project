@@ -31,12 +31,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "set PORT=3001 && react-scripts start",
+    "start": "react-scripts start",
     "server": "json-server --watch db.json --middlewares ./range.js",
-    "login_api": "node src/api/loginApi.js",
-    "dev": "concurrently \"npm run server\" \"npm run login_api\" \"npm run start\"  ",
-    "startonmac": "PORT=3001 react-scripts start",
-    "devonmac": "concurrently \"npm run server\" \"npm run login_api\" \"npm run startonmac\"  ",
+    "startonmac": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

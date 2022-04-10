@@ -21,10 +21,11 @@ const UserProfileInformation = (props) => {
   const { info } = props;
   console.log("INFO :", info);
   const history = useHistory();
-  const [fullName, setfullName] = useState("");
-  const [userName, setuserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobileNumber, setmobileNumber] = useState();
+  const [fullName, setfullName] = useState(info.fullName);
+  const [userName, setuserName] = useState(info.userName);
+  const [email, setEmail] = useState(info.email);
+  const [mobileNumber, setmobileNumber] = useState(info.mobileNumber);
+  const [userAvatar, setUserAvatar] = useState(null);
   let error = [];
 
   //get methods for all fields.
@@ -77,16 +78,16 @@ const UserProfileInformation = (props) => {
     console.log("errors are", error);
     //If no errors, we then go on and patch the user.
     if (error.length === 0) {
-      const data = {
-        avatar:
-          "https://thumbs.dreamstime.com/z/fashion-model-woman-golden-bright-sparkles-girl-golden-skin-hair-portrait-closeup-fashion-model-woman-golden-bright-113010779.jpg",
-        fullName: fullName,
-        userName: userName,
-        mobileNumber: mobileNumber,
-        email: email,
-      };
+      const formData = new FormData();
+      formData.append("image", userAvatar);
+      formData.append("fullName", fullName);
+      formData.append("userName", userName);
+      formData.append("mobileNumber", mobileNumber);
+      formData.append("email", email);
       //Get the id of the user.
-      updateUser(info._id, data)
+      console.log("formData");
+      console.log(formData);
+      updateUser(info._id, formData)
         .then((res) => {
           props.dispatch(handleUser(res.data.user._id));
           toast.success("Succesfully Updated.", toastStyler);
@@ -100,10 +101,6 @@ const UserProfileInformation = (props) => {
     }
     //on submit, set states to empty again.
     event.preventDefault();
-    setfullName("");
-    setuserName("");
-    setEmail("");
-    setmobileNumber("");
     error = [];
   };
 
@@ -175,14 +172,14 @@ const UserProfileInformation = (props) => {
                   />
                 </div>
                 <div className="userUpdateItem">
-                  <label>Email* (Any valid email)</label>
+                  <label>Email</label>
                   <input
                     type="email"
                     placeholder={info.email}
                     className="userUpdateInput"
                     onChange={getEmail}
                     value={email}
-                    required
+                    disabled
                   />
                 </div>
                 <div className="userUpdateItem">
@@ -210,10 +207,15 @@ const UserProfileInformation = (props) => {
               <div className="userUpdateRight">
                 <div className="userUpdateUpload">
                   <img className="userUpdateImg" src={info.avatar} alt="" />
-                  {/* <label htmlFor="file">
+                  <label htmlFor="file">
                     <Publish className="userUpdateIcon" />
-                  </label> */}
-                  <input type="file" id="file" style={{ display: "none" }} />
+                  </label>
+                  <input
+                    type="file"
+                    id="file"
+                    style={{ display: "none" }}
+                    onChange={(e) => setUserAvatar(e.target.files[0])}
+                  />
                 </div>
                 <button className="userUpdateButton" onClick={handleSubmit}>
                   Update

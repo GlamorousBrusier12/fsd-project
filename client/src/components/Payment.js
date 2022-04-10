@@ -189,7 +189,6 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100); //A random number to use as an id
       newAddress.id = id;
-
       postDeliveryAddress(newAddress)
         .then((response) => response.json())
         .then((data) => {
@@ -232,7 +231,6 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newCard.id = id;
-
       postCard(newCard)
         .then((response) => response.json())
         .then((data) => {
@@ -265,7 +263,7 @@ function Payment(props) {
     } else {
       const id = Math.ceil(Math.random() * 100);
       newUpi.id = id;
-
+      console.log(newUpi);
       postUpi(newUpi)
         .then((response) => response.json())
         .then((data) => {
@@ -310,7 +308,7 @@ function Payment(props) {
       orders: orders,
       orderedOn: date,
     };
-
+    console.log(data, "The information to be posted");
     postOrder(data)
       .then((data) => {
         console.log("Successfully PATCHED", data);
@@ -524,7 +522,7 @@ function Payment(props) {
                     name="address"
                     onClick={paymentDetailsChange}
                     value={`
-              ${upi.name}, ${upi.cardNo}, ${upi.phoneNo}
+              ${upi.userName}, ${upi.cardNo}, ${upi.mobileNumber}
             `}
                   />
                   <label for={"debit" + index + 1}>
@@ -681,7 +679,7 @@ function Payment(props) {
         </p>
       </div>
 
-      {/* <Link
+      <Link
         to={{
           pathname: "/confirmation",
           //Sending the info required in the confirmation page on clicking
@@ -692,22 +690,22 @@ function Payment(props) {
             paymentStatus: paymentStatus,
           },
         }}
-      > */}
-      <button
-        className="proceed-btn"
-        onClick={() => {
-          addToOrders();
-          props.dispatch(emptyCart()); //Emptying cart after order is placed
-        }}
-        // disabled={
-        //   paymentStatus === "Payment Method" ||
-        //   selectedAddress === "Shipping Address" ||
-        //   selectedPayment === "Payment Details"
-        // }
       >
-        Proceed <i class="fas fa-arrow-right"></i>
-      </button>
-      {/* </Link> */}
+        <button
+          className="proceed-btn"
+          onClick={() => {
+            addToOrders();
+            props.dispatch(emptyCart()); //Emptying cart after order is placed
+          }}
+          disabled={
+            paymentStatus === "Payment Method" ||
+            selectedAddress === "Shipping Address" ||
+            selectedPayment === "Payment Details"
+          }
+        >
+          Proceed <i class="fas fa-arrow-right"></i>
+        </button>
+      </Link>
     </div>
   );
 }

@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       // dataProvied is the url where it has to get data from.
-      <Admin dataProvider={jsonServerProvider("http://localhost:3000")}>
+      <Admin dataProvider={jsonServerProvider("http://localhost:8000")}>
         <Resource
           name="products"
           list={Products}
