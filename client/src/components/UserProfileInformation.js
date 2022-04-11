@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { handleUser } from "../actions";
@@ -19,8 +18,7 @@ import { connect } from "react-redux";
 const UserProfileInformation = (props) => {
   //We now need to set the data which originally is a empty object
   const { info } = props;
-  console.log("INFO :", info);
-  const history = useHistory();
+  // console.log("INFO :", info);
   const [fullName, setfullName] = useState(info.fullName);
   const [userName, setuserName] = useState(info.userName);
   const [email, setEmail] = useState(info.email);
@@ -85,8 +83,6 @@ const UserProfileInformation = (props) => {
       formData.append("mobileNumber", mobileNumber);
       formData.append("email", email);
       //Get the id of the user.
-      console.log("formData");
-      console.log(formData);
       updateUser(info._id, formData)
         .then((res) => {
           props.dispatch(handleUser(res.data.user._id));

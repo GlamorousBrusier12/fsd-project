@@ -5,6 +5,7 @@ import "../styles/home.css";
 import Categories from "./Categories";
 import { getAllProducts, getUserById } from "../utils/api";
 import { handleUser } from "../actions";
+import Loader from "./Loader";
 const Home = () => {
   const [deals, setDeals] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -28,7 +29,7 @@ const Home = () => {
   }, []);
 
   return loading === true ? (
-    <p>loading...</p>
+    <Loader />
   ) : (
     <div>
       <Categories />
