@@ -193,16 +193,6 @@ const UserProfileInformation = (props) => {
                     required
                   />
                 </div>
-                {/* <div className="userUpdateItem">
-                  <label>Profile Picture</label>
-                  <input
-                    type="file"
-                    name="image"
-                    onChange={handleFileInputChange}
-                    value={}
-                    required
-                  />
-                </div> */}
               </div>
               <div className="userUpdateRight">
                 <div className="userUpdateUpload">
