@@ -15,6 +15,7 @@ import {
   postDeliveryAddress,
   postOrder,
 } from "../utils/api";
+import ConfirmationPage from "./ConfirmationPage";
 
 function Payment(props) {
   //Taking user data from store(redux)
@@ -474,7 +475,26 @@ function Payment(props) {
         </p>
       </div>
 
-      <Link
+      <form action="/create-checkout-session" target="blank" method="POST">
+        <div className="product-price-btn">
+          <button
+            type="submit"
+            className="proceed-btn"
+            onClick={() => {
+              addToOrders();
+              props.dispatch(emptyCart()); //Emptying cart after order is placed
+            }}
+            disabled={
+              paymentStatus === "Payment Method" ||
+              selectedAddress === "Shipping Address" ||
+              selectedPayment === "Payment Details"
+            }
+          >
+            Proceed <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+      {/* <Link
         to={{
           pathname: "/confirmation",
           //Sending the info required in the confirmation page on clicking
@@ -484,23 +504,8 @@ function Payment(props) {
             selectedPayment: selectedPayment,
             paymentStatus: paymentStatus,
           },
-        }}
-      >
-        <button
-          className="proceed-btn"
-          onClick={() => {
-            addToOrders();
-            props.dispatch(emptyCart()); //Emptying cart after order is placed
-          }}
-          disabled={
-            paymentStatus === "Payment Method" ||
-            selectedAddress === "Shipping Address" ||
-            selectedPayment === "Payment Details"
-          }
-        >
-          Proceed <i class="fas fa-arrow-right"></i>
-        </button>
-      </Link>
+        }} 
+      ></Link> */}
     </div>
   );
 }
