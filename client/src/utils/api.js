@@ -32,7 +32,7 @@ export function queryEmail(emailId) {
 
 // post a review
 export function updateUser(userId, userDetails) {
-  console.log(userDetails);
+  // console.log(userDetails);`
   return axios.patch(`/user/${userId}`, userDetails, {
     headers: {
       Accept: "multipart/form-data",
