@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-function ConfirmationPage() {
+function ConfirmationPage(props) {
   useEffect(() => {
     window.scrollTo(0, 0); //Scroll to top once you open the page
   });
   //Getting required contents from previous route
   const location = useLocation();
-  const { products, selectedAddress, selectedPayment, paymentStatus } =
-    location.state;
+  const { products, selectedAddress, selectedPayment, paymentStatus } = props;
   return (
     <div className="confirmation">
       <div className="confirmation-heading">

@@ -45,6 +45,7 @@ class App extends Component {
               </Route>
               <Route path="/payment">
                 <Payment />
+                {/* <ProductDisplay /> */}
               </Route>
               <Route path="/reviewform">
                 <ReviewForm />
