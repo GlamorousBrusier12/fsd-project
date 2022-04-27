@@ -26,7 +26,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Admin from "./Admin";
 import NewProduct from "./NewProduct";
-import editProduct from "./editProduct";
+import editProduct from "./editProduct"; //eslint-disable-line
 class App extends Component {
   constructor(props) {
     super();

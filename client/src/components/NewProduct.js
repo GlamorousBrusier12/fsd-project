@@ -3,10 +3,9 @@ import AdminSidebar from "./AdminSidebar";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-import { toastStyler } from "../commonEquipment";
+import { toastStyler } from "../commonEquipment"; // eslint-disable-line
 import { connect } from "react-redux";
-import { handleUser } from "../actions";
-import { createProduct, postCard } from "../utils/api";
+import { createProduct } from "../utils/api";
 
 const NewProduct = (props) => {
   const history = useHistory();
