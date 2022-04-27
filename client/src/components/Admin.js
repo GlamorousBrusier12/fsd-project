@@ -121,15 +121,15 @@ const Admin = (props) => {
       <div className="adressList">
         <div className="userTitleContainer">
           <h1 className="userTitle">Admin Portal</h1>
-          <Link to="/newCard">
-            <button className="userAddButton">Add Product</button>
+          <Link to="/newProduct">
+            <button className="userButton">Add Product</button>
           </Link>
         </div>
         <DataGrid
           rows={data}
           disableSelectionOnClick
           columns={columns}
-          pageSize={6}
+          pageSize={5}
           rowsPerPageOptions={[5]}
           checkboxSelection
           rowHeight={80}
