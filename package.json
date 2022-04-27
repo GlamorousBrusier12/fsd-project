@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.26.1",
+    "cors": "^2.8.5",
     "react-stripe": "^0.1.0",
     "react-stripe-checkout": "^2.6.3",
     "stripe": "^8.219.0"

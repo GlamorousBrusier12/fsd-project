@@ -9,7 +9,20 @@ export function getAllProducts() {
 export function getOneProduct(productId) {
   return axios.get(`/product/${productId}`);
 }
+// creates a product
+export function createProduct(details) {
+  return axios.post(`/product/`, details);
+}
 
+// updates a product
+export function updateProduct(productId, details) {
+  return axios.patch(`/product/${productId}`, details);
+}
+
+// deletes a product
+export function deleteProduct(productId) {
+  return axios.delete(`/product/${productId}`);
+}
 // create a user
 export function createUser(userDetails) {
   return axios.post("/user", userDetails, {
@@ -44,6 +57,15 @@ export function updateUser(userId, userDetails) {
 export function getReviews(productId) {
   return axios.get(`/review/${productId}`);
 }
+export function postReview(reviewDetails) {
+  return axios.post("/review", reviewDetails, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
+    },
+  });
+}
 
 // get all faq
 export function getFaqs(productId) {
@@ -53,16 +75,6 @@ export function getFaqs(productId) {
 // get all address
 export function getAddresses(userId) {
   return axios.get(`/address/${userId}`);
-}
-
-export function postReview(reviewDetails) {
-  return axios.post("/review", reviewDetails, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem("JWTToken"),
-    },
-  });
 }
 
 // get all orders
