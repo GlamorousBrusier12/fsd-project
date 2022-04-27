@@ -6,26 +6,29 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { connect } from "react-redux";
 import { handleUser } from "../actions";
-import { postCard } from "../utils/api";
+import { createProduct, postCard } from "../utils/api";
 
 const NewProduct = (props) => {
   const history = useHistory();
   //We have different useStates for different areas.
-  const [id, setId] = useState("");
+  const [image, setImage] = useState(
+    "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13971574/2021/4/6/834f746e-b578-447b-b0fd-6cb2766640d81617705069948-Puma-Men-Tshirts-2901617705069081-1.jpg"
+  );
   const [productName, setProductName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [discount, setDiscount] = useState("");
   const [type, setType] = useState("");
+  const [description, setDescription] = useState("anything");
 
   let newUser = { ...props.user };
   let error = [];
 
   //Updating the state as he enters the data
 
-  const getid = (event) => {
-    setId(event.target.value);
+  const getImage = (event) => {
+    setImage(event.target.value);
   };
   const getproductName = (event) => {
     setProductName(event.target.value);
@@ -53,36 +56,28 @@ const NewProduct = (props) => {
 
     if (error.length === 0) {
       const data = {
-        userId: props.user._id,
-        productType: type,
-        discount: discount,
-        price: price,
-        quantity: quantity,
-        productname: productName,
+        productName,
+        type,
+        discount,
+        price,
+        quantity,
+        category,
+        image,
+        description,
       };
-
-      //newUser.debitCards.push(data);
-      //adding the new debit card.
-      // let newArray = [...props.user.debitCards, data];
-
-      // newUser.debitCards = newArray;
-
-      // let url = "http://localhost:8000/api/users" + props.user._id;
-      //Fetching the data with post method
-
-      postCard(data)
+      console.log(data);
+      createProduct(data)
         .then((data) => {
-          console.log("Successfully PATCHED", data);
-          props.dispatch(handleUser(props.user._id));
-          toast.success("Succesfully added Debit Card", toastStyler);
-          setId("");
-          setProductName("");
-          setQuantity("");
-          setCategory("");
-          setType("");
-          setPrice("");
-          setDiscount("");
-          history.push("/Admin");
+          console.log("Successfully added", data);
+          // props.dispatch(handleUser(props.user._id));
+          // toast.success("Succesfully added Debit Card", toastStyler);
+          // setProductName("");
+          // setQuantity("");
+          // setCategory("");
+          // setType("");
+          // setPrice("");
+          // setDiscount("");
+          // history.push("/Admin");
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -90,7 +85,7 @@ const NewProduct = (props) => {
         });
     } else {
       toast.error("Form submission failed");
-      setId("");
+      setImage("");
       setProductName("");
       setQuantity("");
       setCategory("");
@@ -110,16 +105,6 @@ const NewProduct = (props) => {
       <div className="newCard">
         <h1 className="newUserTitle">ProductDetails</h1>
         <form className="newUserForm">
-          <div className="newUserItem">
-            <label>ProductId* </label>
-            <input
-              type="text"
-              placeholder="p1021u2uo2oyy2199"
-              onChange={getid}
-              value={id}
-              required
-            />
-          </div>
           <div className="newUserItem">
             <label>ProductName* </label>
             <input

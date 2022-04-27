@@ -18,7 +18,7 @@ const Admin = (props) => {
 
   const [data, setData] = useState([]);
   // console.log("Hi");
-  let newUser = props.user;
+  // let newUser = props.user;
   useEffect(() => {
     Promise.resolve(
       getAllProducts().then((res) => {
