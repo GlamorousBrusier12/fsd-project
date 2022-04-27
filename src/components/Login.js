@@ -15,7 +15,6 @@ function Login(props) {
   }
   const [useremail, setUserEmail] = useState(" ");
   const [password1, setPassword] = useState(" ");
-  const [JWTToken, setJWTToken] = useState(" ");
   const history = useHistory();
   const incorrectCredentials = useRef(null);
 
