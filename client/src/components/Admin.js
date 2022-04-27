@@ -91,6 +91,24 @@ const Admin = (props) => {
       width: 100,
     },
     {
+      field: "edit",
+      headerName: "EDIT",
+      width: 150,
+      renderCell: (params) => {
+        return (
+          <>
+            <button
+              className="userListEdit"
+              onClick={() => handleDelete(params.row.id)}
+              style={{ backgroundColor: "rgb(235, 83, 83)" }}
+            >
+              Edit
+            </button>
+          </>
+        );
+      },
+    },
+    {
       field: "action",
       headerName: "Action",
       width: 150,
