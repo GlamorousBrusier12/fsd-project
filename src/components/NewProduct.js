@@ -10,16 +10,14 @@ import { createProduct } from "../utils/api";
 const NewProduct = (props) => {
   const history = useHistory();
   //We have different useStates for different areas.
-  const [image, setImage] = useState(
-    "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13971574/2021/4/6/834f746e-b578-447b-b0fd-6cb2766640d81617705069948-Puma-Men-Tshirts-2901617705069081-1.jpg"
-  );
+  const [image, setImage] = useState("");
   const [productName, setProductName] = useState("");
   const [quantity, setQuantity] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [discount, setDiscount] = useState("");
   const [type, setType] = useState("");
-  const [description, setDescription] = useState("anything");
+  const [description, setDescription] = useState("");
 
   let newUser = { ...props.user };
   let error = [];
@@ -31,6 +29,9 @@ const NewProduct = (props) => {
   };
   const getproductName = (event) => {
     setProductName(event.target.value);
+  };
+  const getdescription = (event) => {
+    setDescription(event.target.value);
   };
   const getquantity = (event) => {
     setQuantity(event.target.value);
@@ -111,6 +112,26 @@ const NewProduct = (props) => {
               placeholder="Chetan Guduru"
               onChange={getproductName}
               value={productName}
+              required
+            />
+          </div>
+          <div className="newUserItem">
+            <label>ProductImage* </label>
+            <input
+              type="text"
+              placeholder="Link"
+              onChange={getImage}
+              value={image}
+              required
+            />
+          </div>
+          <div className="newUserItem">
+            <label>ProductDescription* </label>
+            <input
+              type="text"
+              placeholder="Puma bags for trekking"
+              onChange={getdescription}
+              value={description}
               required
             />
           </div>
