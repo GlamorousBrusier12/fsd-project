@@ -154,18 +154,21 @@ function Payment(props) {
       "Content-Type": "application/json",
     };
 
-    return fetch(`http://localhost:8000/api/create-checkout-session`, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(body),
-    })
+    return fetch(
+      `https://electorent-api.herokuapp.com/api/create-checkout-session`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify(body),
+      }
+    )
       .then((response) => {
         console.log("RESPONSE ", response);
         const { status } = response;
         console.log("STATUS ", status);
         addToOrders();
         props.dispatch(emptyCart());
-        history.push("/");
+        history.push("/userProfile");
       })
       .catch((error) => console.log(error));
   };
