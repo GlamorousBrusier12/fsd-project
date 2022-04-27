@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import "../styles/Payment.css";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
@@ -16,13 +16,15 @@ import {
   postOrder,
 } from "../utils/api";
 import ConfirmationPage from "./ConfirmationPage";
+import "dotenv/config";
+import StripeCheckout from "react-stripe-checkout";
 
 function Payment(props) {
   //Taking user data from store(redux)
+  const history = useHistory();
   const user = props.user;
   const userId = user._id;
   console.log(userId);
-  // const { deliveryAdress, upi, debitCards } = user;
   //Products and previous route info taken using useLocation() in react-router-dom
   const location = useLocation();
   let { products, prevPath } = location.state;
@@ -35,6 +37,11 @@ function Payment(props) {
   const [upi, setUpi] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [product, setProduct] = useState({
+    name: "React from FB",
+    price: 10,
+    productBy: "facebook",
+  });
 
   const [paymentStatus, setPaymentStaus] = useState("Payment Method");
   useEffect(() => {
@@ -101,189 +108,6 @@ function Payment(props) {
   const [selectedAddress, setSelectedAddress] = useState("Shipping Address");
   const [selectedPayment, setSelectedPayment] = useState("Payment Details");
 
-  //Setting state for storing newly entered information
-  const [newAddress, setNewAddress] = useState({
-    userName: "",
-    email: "",
-    address: "",
-    mobileNumber: "",
-    pincode: "",
-    userId: "",
-  });
-
-  const [newCard, setNewCard] = useState({
-    nameOnCard: "",
-    cardNo: "",
-    expiry: "",
-    cardType: "",
-    cvv: "",
-    avatar: "",
-  });
-
-  const [newUpi, setNewUpi] = useState({
-    userName: "",
-    cardNo: "",
-    mobileNumber: "",
-    upiType: "",
-    userId: "",
-    avatar: "",
-  });
-
-  //Handling change in the respective forms
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewAddress((prevValues) => {
-      return {
-        ...prevValues,
-        [name]: value,
-      };
-    });
-  };
-
-  const handleCardChange = (e) => {
-    const { name, value } = e.target;
-    setNewCard((prevValues) => {
-      return {
-        ...prevValues,
-        [name]: value,
-      };
-    });
-  };
-
-  const handleUpiChange = (e) => {
-    const { name, value } = e.target;
-    setNewUpi((prevValues) => {
-      return {
-        ...prevValues,
-        [name]: value,
-      };
-    });
-  };
-
-  //Add the addresses entered into the form to the json-server
-  const patchAddressToServer = (e) => {
-    if (
-      newAddress.Name.length === 0 ||
-      newAddress.email.length === 0 ||
-      newAddress.address.length === 0 ||
-      newAddress.city.length === 0 ||
-      newAddress.state.length === 0 ||
-      newAddress.zip.length === 0 ||
-      newAddress.phoneNo.length === 0
-    ) {
-      toast.warning(
-        "No field can remain empty in the Address Form",
-        toastStyler
-      );
-    } else if (!newAddress.email.includes("@")) {
-      toast.warning("Not a valid email address", toastStyler);
-    } else if (newAddress.phoneNo.length !== 10) {
-      toast.warning(
-        "Not a valid Phone Number. Should contain 10 digits",
-        toastStyler
-      );
-    } else if (newAddress.zip.length !== 6) {
-      toast.warning(
-        "Not a valid Pincode/Zip. Should contain 6 digits",
-        toastStyler
-      );
-    } else {
-      const id = Math.ceil(Math.random() * 100); //A random number to use as an id
-      newAddress.id = id;
-      postDeliveryAddress(newAddress)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Successfully Added", data);
-          toast.success("Address Added", toastStyler);
-          //Clearing the form after success
-          setNewAddress({
-            Name: "",
-            email: "",
-            address: "",
-            city: "",
-            state: "",
-            phoneNo: "",
-            zip: "",
-          });
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
-    e.preventDefault();
-  };
-
-  //Add the card info entered into the form to the json-server
-  const patchCardsToServer = (e) => {
-    if (newCard.name.length === 0) {
-      toast.warning("Name field in Card info cant be empty", toastStyler);
-    } else if (newCard.type.length === 0) {
-      toast.warning("Type field in Card info cant be empty", toastStyler);
-    } else if (
-      newCard.expiry.length !== 5 ||
-      newCard.expiry.indexOf("/") !== 2
-    ) {
-      toast.warning("Incorrect expiry", toastStyler);
-    } else if (newCard.cardNo.length !== 12) {
-      toast.warning(
-        "Incorrect cardNo cardNo should be 12 digits long",
-        toastStyler
-      );
-    } else {
-      const id = Math.ceil(Math.random() * 100);
-      newCard.id = id;
-      postCard(newCard)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Successfully PATCHED", data);
-          setNewCard({
-            cardName: "",
-            cardsNum: "",
-            expiry: "",
-            type: "",
-          });
-          toast.success("Card Added", toastStyler);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
-    e.preventDefault();
-  };
-
-  //Add the upi info entered into the form to the json-server
-  const patchUpiToServer = (e) => {
-    if (newUpi.name.length === 0) {
-      toast.warning("Name field in Card info cant be empty", toastStyler);
-    } else if (newUpi.type.length === 0) {
-      toast.warning("Type field in Card info cant be empty", toastStyler);
-    } else if (!newUpi.cardNo.includes("@")) {
-      toast.warning("Incorrect upi id", toastStyler);
-    } else if (newUpi.phoneNo.length !== 10) {
-      toast.warning("Phone Number should be 10 digits long", toastStyler);
-    } else {
-      const id = Math.ceil(Math.random() * 100);
-      newUpi.id = id;
-      console.log(newUpi);
-      postUpi(newUpi)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Successfully PATCHED", data);
-          setNewUpi({
-            name: "",
-            cardNo: "",
-            phoneNo: "",
-            type: "",
-          });
-          toast.success("Upi information added", toastStyler);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
-    e.preventDefault();
-  };
-
   //Select the payment method (debit/credit/upi)
   const paymentChange = (e) => {
     setPaymentStaus(e.target.value);
@@ -313,11 +137,37 @@ function Payment(props) {
     postOrder(data)
       .then((data) => {
         console.log("Successfully PATCHED", data);
-        toast.success("Information added", toastStyler);
+        // toast.success("Information added", toastStyler);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
+  };
+
+  //Make Payment
+  const makePayment = (token) => {
+    const body = {
+      token,
+      product,
+    };
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    return fetch(`http://localhost:8000/api/create-checkout-session`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body),
+    })
+      .then((response) => {
+        console.log("RESPONSE ", response);
+        const { status } = response;
+        console.log("STATUS ", status);
+        addToOrders();
+        props.dispatch(emptyCart());
+        history.push("/");
+      })
+      .catch((error) => console.log(error));
   };
 
   return loading === true ? (
@@ -355,9 +205,8 @@ function Payment(props) {
         </div>
       </div>
 
-      <div className="payment-method">
+      {/* <div className="payment-method">
         <h1>Payment: </h1>
-        {/* Form for selecting the Payment Method(debit,credit,upi) */}
         <form>
           <div className="address-list">
             <p>Please select your preffered payment method:</p>
@@ -396,7 +245,6 @@ function Payment(props) {
         </form>
         <div className="payment-list">
           <h2>Saved {paymentStatus === "upi" ? "Upi" : "Cards"}</h2>
-          {/* Displaying the existing cards for selecting */}
           {(paymentStatus === "debit" || paymentStatus === "credit") &&
             debitCards.map((card, index) => {
               return (
@@ -417,7 +265,6 @@ function Payment(props) {
                 </div>
               );
             })}
-          {/* Displaying the existing upi info for selecting */}
           {paymentStatus === "upi" &&
             upi.map((upi, index) => {
               return (
@@ -439,7 +286,7 @@ function Payment(props) {
               );
             })}
         </div>
-      </div>
+      </div> */}
       {/* Showing the item summary of the products the user is going to buy*/}
       <div className="item-summary">
         <h1>Item Summary</h1>
@@ -475,15 +322,20 @@ function Payment(props) {
         </p>
       </div>
 
-      <form action="/create-checkout-session" target="blank" method="POST">
+      <StripeCheckout
+        stripeKey="pk_test_51KsCW0SD3dBrJmKp66wybLcbOXwPOFCs2QuIeggi5S10TcWm8Ds8FvaY65XiIIfd1pZS4M8LvaNBWKeC2NXv5L1m00VRu25T0Q"
+        token={makePayment}
+        name="Buy Now"
+        amount={product.price * 100}
+      >
         <div className="product-price-btn">
           <button
             type="submit"
             className="proceed-btn"
-            onClick={() => {
-              addToOrders();
-              props.dispatch(emptyCart()); //Emptying cart after order is placed
-            }}
+            // onClick={() => {
+            //   addToOrders();
+            //   props.dispatch(emptyCart()); //Emptying cart after order is placed
+            // }}
             disabled={
               paymentStatus === "Payment Method" ||
               selectedAddress === "Shipping Address" ||
@@ -493,19 +345,7 @@ function Payment(props) {
             Proceed <i class="fas fa-arrow-right"></i>
           </button>
         </div>
-      </form>
-      {/* <Link
-        to={{
-          pathname: "/confirmation",
-          //Sending the info required in the confirmation page on clicking
-          state: {
-            products: products,
-            selectedAddress: selectedAddress,
-            selectedPayment: selectedPayment,
-            paymentStatus: paymentStatus,
-          },
-        }} 
-      ></Link> */}
+      </StripeCheckout>
     </div>
   );
 }
