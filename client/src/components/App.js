@@ -24,6 +24,9 @@ import Payment from "./Payment";
 import ConfirmationPage from "./ConfirmationPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Admin from "./Admin";
+import NewProduct from "./NewProduct";
+import editProduct from "./editProduct";
 class App extends Component {
   constructor(props) {
     super();
@@ -94,6 +97,15 @@ class App extends Component {
               </Route>
               <Route path="/cart">
                 <Cart />
+              </Route>
+              <Route path="/admin">
+                <Admin />
+              </Route>
+              <Route path="/newProduct">
+                <NewProduct />
+              </Route>
+              <Route path="/editProduct">
+                <editProduct />
               </Route>
               <Route path="/">
                 <Home />
