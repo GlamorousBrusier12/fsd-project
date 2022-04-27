@@ -10,8 +10,7 @@ import { toast } from "react-toastify";
 import { toastStyler } from "../commonEquipment";
 import { handleUser } from "../actions";
 import { connect } from "react-redux";
-import { deleteCard, getAllProducts } from "../utils/api";
-import { getCards } from "../utils/api";
+import { deleteProduct, getAllProducts } from "../utils/api";
 
 const Admin = (props) => {
   //Since  debit cards is an array, we initiate the array.
@@ -33,6 +32,8 @@ const Admin = (props) => {
     );
   }, []);
 
+  const handleEdit=(id)=>{
+  }
   //This function handles delete on clicking taking the id as param.
   const handleDelete = (id) => {
     //We delete this particular id.
@@ -42,10 +43,8 @@ const Admin = (props) => {
     setData(afterDelete);
     //Set this as the new delivery adress
 
-    deleteCard(id).then((response) => {
+    deleteProduct(id).then((response) => {
       console.log(response);
-
-      props.dispatch(handleUser(props.user._id));
     });
     // .then((data) => {
     //   console.log("Successfully Deleted", data);
@@ -54,7 +53,7 @@ const Admin = (props) => {
     //   console.error("Error:", error);
     // });
 
-    toast.warning("Debit Card Deleted", toastStyler);
+    toast.warning("Product Deleted", toastStyler);
   };
 
   //This is the schema for rendering the adresses in the table.
@@ -99,7 +98,7 @@ const Admin = (props) => {
           <>
             <button
               className="userListEdit"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleEdit(params.row.id)}
               style={{ backgroundColor: "rgb(235, 83, 83)" }}
             >
               Edit
