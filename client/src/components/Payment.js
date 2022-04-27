@@ -205,7 +205,7 @@ function Payment(props) {
         </div>
       </div>
 
-      {/* <div className="payment-method">
+      <div className="payment-method">
         <h1>Payment: </h1>
         <form>
           <div className="address-list">
@@ -286,7 +286,7 @@ function Payment(props) {
               );
             })}
         </div>
-      </div> */}
+      </div>
       {/* Showing the item summary of the products the user is going to buy*/}
       <div className="item-summary">
         <h1>Item Summary</h1>
