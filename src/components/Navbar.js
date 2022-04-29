@@ -55,7 +55,7 @@ const Navbar = (props) => {
     <div className="navbar-container">
       <div className="links">
         <Link to="/">
-          <h1>Electorentooooo</h1>
+          <h1>Electorent</h1>
         </Link>
       </div>
       <div className="search-container">
