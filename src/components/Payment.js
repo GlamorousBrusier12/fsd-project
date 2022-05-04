@@ -326,7 +326,7 @@ function Payment(props) {
       </div>
 
       <StripeCheckout
-        stripeKey="pk_live_51KsCW0SD3dBrJmKpiqTMJUwrZF7BdBA7wRj2SzeFy0bogKxTZcg3k05C7iaMDfdB6HvgLIaF66JgG0IF8BIyOJ0I00sOxZCD8n"
+        stripeKey="pk_test_51KsCW0SD3dBrJmKptgdGWmPbXWFHyM72BxI8ZnDTyL8OICtx6NmL61b3TFhZ4eCiyaW5Rsw8oWK85bhL0PQa8WNA00EvVYe6X4"
         token={makePayment}
         name="Buy Now"
         amount={product.price * 100}
