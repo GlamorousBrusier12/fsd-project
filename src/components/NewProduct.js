@@ -186,13 +186,6 @@ const NewProduct = (props) => {
               required
             />
           </div>
-          <div className="newUserItem">
-            <label>Active</label>
-            <select className="newUserSelect" name="active" id="active">
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
 
           <button
             className="newUserButton"

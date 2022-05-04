@@ -41,7 +41,7 @@ const Navbar = (props) => {
   const updateSearchWord = () => {
     // search word from the state
     // search the products based on the searchWord in the reducer(redux)
-    console.log('search word: ', searchWord);
+    console.log("search word: ", searchWord);
     let searchResults = allProducts.filter((product) => {
       let productTitle = product.productName.toLowerCase();
       let searWord = searchWord.toLowerCase();

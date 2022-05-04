@@ -168,7 +168,7 @@ function Payment(props) {
         console.log("STATUS ", status);
         addToOrders();
         props.dispatch(emptyCart());
-        history.push("/");
+        history.push("/userProfile");
       })
       .catch((error) => console.log(error));
   };
