@@ -154,11 +154,14 @@ function Payment(props) {
       "Content-Type": "application/json",
     };
 
-    return fetch(`http://localhost:8000/api/create-checkout-session`, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(body),
-    })
+    return fetch(
+      `https://electorent-api.herokuapp.com/api/create-checkout-session`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify(body),
+      }
+    )
       .then((response) => {
         console.log("RESPONSE ", response);
         const { status } = response;
@@ -323,7 +326,7 @@ function Payment(props) {
       </div>
 
       <StripeCheckout
-        stripeKey="pk_test_51KsCW0SD3dBrJmKp66wybLcbOXwPOFCs2QuIeggi5S10TcWm8Ds8FvaY65XiIIfd1pZS4M8LvaNBWKeC2NXv5L1m00VRu25T0Q"
+        stripeKey="pk_live_51KsCW0SD3dBrJmKpiqTMJUwrZF7BdBA7wRj2SzeFy0bogKxTZcg3k05C7iaMDfdB6HvgLIaF66JgG0IF8BIyOJ0I00sOxZCD8n"
         token={makePayment}
         name="Buy Now"
         amount={product.price * 100}
