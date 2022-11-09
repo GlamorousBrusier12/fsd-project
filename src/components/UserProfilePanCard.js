@@ -40,7 +40,7 @@ const UserProfilePanCard = (props) => {
       setFullName(newUser.fullName);
       setDob(newUser.dob);
       setmobileNumber(newUser.mobileNumber);
-      setPanNumber("IXFPK2334K");
+      setPanNumber("ABCD12334");
     });
   }, []);
 
