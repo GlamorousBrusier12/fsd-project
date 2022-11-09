@@ -95,7 +95,7 @@ const UserProfilePanCard = (props) => {
         setFullName(newUser.fullName);
         setDob(newUser.dob);
         setmobileNumber(newUser.mobileNumber);
-        setPanNumber("IXFPK2334K");
+        setPanNumber("ABCD1234");
       });
 
       props.dispatch(handleUser(props.info._id));
@@ -170,7 +170,7 @@ const UserProfilePanCard = (props) => {
                     type="text"
                     className="userUpdateInput"
                     onChange={getPanNumber}
-                    value={"IXFPK2334K"}
+                    value={"ABCD1234"}
                     required
                   />
                 </div>
