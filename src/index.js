@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import "./web.config";
 import axios from "axios";
 // axios.defaults.baseURL = "http://localhost:8000/api";
-axios.defaults.baseURL = "https://electorent-api.herokuapp.com/api";
+axios.defaults.baseURL = "https://electorent.up.railway.app/api";
 const store = configureStore();
 
 ReactDOM.render(
